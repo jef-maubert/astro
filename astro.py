@@ -9,7 +9,7 @@ import datetime
 from datetime import timezone
 import constants
 
-from waypoint import Waypoint
+from waypoint import Waypoint, format_angle
 from boat import Boat
 
 NB_ROTATING_LOG = 3
@@ -84,13 +84,14 @@ class AstroApp :
             self.app_config.write(configfile)
 
     def init_menu(self):
-        self.list_of_menu.append({"code": "I", "title":"[I]nitialize Position", "function":self.init_position})
-        self.list_of_menu.append({"code": "L", "title":"Display [L]ast Position", "function":self.display_last_position})
-        self.list_of_menu.append({"code": "C", "title":"Display [C]urrent Pos", "function":self.display_current_position})
-        self.list_of_menu.append({"code": "A", "title":"Enter new [A]stro", "function":self.new_astro})
-        self.list_of_menu.append({"code": "H", "title":"Caculate c[H]apeau", "function":self.chapeau})
-        self.list_of_menu.append({"code": "E", "title":"[E]xit", "function":None})
-
+        self.list_of_menu.append({"code": "I", "title":"Initialize Position", "function":self.init_position})
+        self.list_of_menu.append({"code": "S", "title":"Set course and speed", "function":self.set_speed_and_course})
+        self.list_of_menu.append({"code": "L", "title":"Display last Position", "function":self.display_last_position})
+        self.list_of_menu.append({"code": "C", "title":"Display current Pos", "function":self.display_current_position})
+        self.list_of_menu.append({"code": "A", "title":"Enter new astro", "function":self.new_astro})
+        self.list_of_menu.append({"code": "N", "title":"Caculate new position", "function":self.chapeau})
+        self.list_of_menu.append({"code": "E", "title":"Exit", "function":None})
+        
     def start_astro(self):
         os.makedirs(constants.LOG_DIRECTORY, exist_ok=True)
         self.init_log()
@@ -100,8 +101,8 @@ class AstroApp :
     def run_once(self):
         print("Menu")
         for menu in self.list_of_menu:
-            print("  "+menu["title"])
-        menu_choice = input ("Your choice : ")
+            print("  " + menu["code"] + " - " + menu["title"])
+        menu_choice = input ("Your choice ? ")
         for menu in self.list_of_menu:
             if menu_choice.upper() == menu["code"].upper():
                 if menu["function"]:
@@ -111,23 +112,76 @@ class AstroApp :
         print("Invalid choice")
         return True
 
+    def enter_date(self):
+        date_dt = datetime.datetime.now()
+        date_default = date_dt.strftime(constants.DATE_FORMATTER.split(" ")[0]) 
+        date_default = date_default.replace("-", "/")
+        date_prompt = "Date (dd/mm/yyyy) [" + date_default + "] ? "
+        date_input = input (date_prompt)
+        new_date = date_input if date_input else date_default 
+        new_date = new_date.replace("/", "-")
+        print ("new date = {}".format(new_date))
+        return new_date 
+
+    def enter_time(self):
+        time_prompt = "Time (hh:mm:ss) [now] ? "
+        time_input = input (time_prompt)
+        time_dt = datetime.datetime.now()
+        time_default = time_dt.strftime(constants.DATE_FORMATTER.split(" ")[1]) 
+        new_time = time_input if time_input else time_default 
+        print ("new time = {}".format(new_time))
+        return new_time 
+    
+    def enter_angle(self, default_value, value_is_longitude=False):
+        default_value = format_angle(default_value)
+        if value_is_longitude:
+            prompt = "Longitude (DDD°mm.m'(W/E)) ["+default_value+"] ? "
+        else:
+            prompt = "Latitude (DD°mm.m'(N/S)) ["+default_value+"] ? "
+        new_angle = input(prompt)
+        return new_angle
+        
     def init_position(self):
-        self.app_logger.warning('Not yet implemented')
+        self.app_logger.info('Initialize the boat position')
+        new_date = self.enter_date()
+        new_time = self.enter_time()
+        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
+        new_latitude = self.enter_angle(self.my_boat.last_waypoint.latitude, value_is_longitude=False)
+        new_longitude = self.enter_angle(self.my_boat.last_waypoint.longitude, value_is_longitude=True)
+        self.my_boat.set_new_position(Waypoint ("last position", new_latitude, new_longitude), new_waypoint_dt)
+
+    def set_speed_and_course(self):
+        self.app_logger.info('Set the course and the speed')
+
+        default_speed = self.my_boat.speed
+        prompt = "Speed (xx.x) [{}] ? ".format(default_speed)
+        speed_input = input(prompt)
+        new_speed = float(speed_input) if speed_input else default_speed
+
+        default_course = self.my_boat.course
+        prompt = "Course (xx) [{}] ? ".format(default_course)
+        course_input = input(prompt)
+        new_course = int(course_input) if course_input else default_course
+
+        self.my_boat.set_speed_and_course(new_speed, new_course)
 
     def display_last_position(self):
+        self.app_logger.info('Display the last recorded position of the boat')
         self.app_logger.info("at %s %s", self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER), self.my_boat.format_last_position())
 
     def display_current_position(self):
+        self.app_logger.info('Display the current position of the boat based on last position and course and speed from that time')
         now = datetime.datetime.now()
         now_string = now.strftime(constants.DATE_FORMATTER)
         self.app_logger.info("now (%s) %s", now_string, self.my_boat.format_current_position())
 
     def new_astro(self):
+        self.app_logger.info('Enter a new sun sight, and calculate the height angles azimut and intercept')
         self.app_logger.warning('Not yet implemented')
 
     def chapeau(self):
+        self.app_logger.info('Calculate a new positon based on 2 or 3 couples (azimut, intercept)')
         self.app_logger.warning('Not yet implemented')
-
     
 def main () :
     my_app = AstroApp()

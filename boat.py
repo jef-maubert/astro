@@ -10,6 +10,14 @@ class Boat:
         self.speed = speed
         self.app_logger = app_logger
 
+    def set_new_position(self, new_waypoint, new_waypoint_datetime):
+        self.last_waypoint = new_waypoint
+        self.last_waypoint_datetime = new_waypoint_datetime
+
+    def set_speed_and_course(self, speed, course):
+        self.course = course
+        self.speed = speed
+
     def format_last_position(self):
         return self.last_waypoint
 
@@ -18,8 +26,8 @@ class Boat:
         elapsed_time = now - self.last_waypoint_datetime
         nb_second_since_last_pos = elapsed_time.total_seconds()
         distance = self.speed * nb_second_since_last_pos / 3600
-        self.app_logger.debug ("%.1f NM run - course %.0f°", distance, self.course)
-        return self.last_waypoint.move_to(self.course, distance, "moved")
+        self.app_logger.debug ("%.1f NM since last position at %.1f Knots - course %.0f°", distance, self.speed, self.course)
+        return self.last_waypoint.move_to(self.course, distance, "estimated")
 
     def __repr__(self):
         result = "at {} position {}".format(self.last_waypoint_datetime, self.last_waypoint)

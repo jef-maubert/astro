@@ -93,13 +93,13 @@ class Waypoint:
         self.longitude = scan_degree(longitude)
         self.speed = speed
 
-    def __repr0__(self):
+    def __repr__(self):
         result = "{} : ({} , {})".format(self.name,
             format_angle(self.latitude, output_format=DMM_FORMAT, value_is_longitude=False),
             format_angle(self.longitude, output_format=DMM_FORMAT, value_is_longitude=True))
         return result
 
-    def __repr__(self):
+    def __repr0__(self):
         result = "{}; {}; {}".format(self.name,
             format_angle(self.latitude, output_format=DMM_FORMAT, value_is_longitude=False),
             format_angle(self.longitude, output_format=DMM_FORMAT, value_is_longitude=True))
