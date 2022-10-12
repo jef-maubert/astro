@@ -528,3 +528,214 @@
 12 13:13:44 - INFO - astro.py - load_config-53 - Loading configuration from file "astro.ini"
 12 15:20:33 - INFO - astro.py - init_log-47 - Starting astro version V1.0
 12 15:20:33 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:05:52 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:05:52 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:05:56 - INFO - astro.py - display_current_position-172 - Display the current position of the boat based on last position and course and speed from that time
+12 20:05:56 - DEBUG - boat.py - format_current_position-35 - 149.1 NM since last position at 15.0 Knots - course 20°
+12 20:05:56 - INFO - astro.py - display_current_position-175 - now (12-10-2022 20:05:56) estimated : (50°22.4'N , 003°27.5'W)
+12 20:06:03 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:06:12 - DEBUG - boat.py - get_position_at-27 - 27.6 NM since last position at 15.0 Knots - course 20°
+12 20:07:04 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:07:04 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:07:06 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:07:11 - DEBUG - boat.py - get_position_at-27 - 27.6 NM since last position at 15.0 Knots - course 20°
+12 20:07:28 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:07:28 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:07:31 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:07:35 - DEBUG - boat.py - get_position_at-27 - 27.6 NM since last position at 15.0 Knots - course 20°
+12 20:08:03 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:08:03 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:08:07 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:08:10 - DEBUG - boat.py - get_position_at-27 - 27.6 NM since last position at 15.0 Knots - course 20°
+12 20:10:08 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:10:08 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:10:10 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:10:13 - DEBUG - boat.py - get_position_at-27 - 27.6 NM since last position at 15.0 Knots - course 20°
+12 20:12:58 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:12:58 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:13:00 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:13:01 - DEBUG - boat.py - get_position_at-27 - 150.9 NM since last position at 15.0 Knots - course 20°
+12 20:13:01 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-44 - found field :"angle;refraction"
+12 20:15:53 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:15:53 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:15:55 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:15:56 - DEBUG - boat.py - get_position_at-27 - 151.6 NM since last position at 15.0 Knots - course 20°
+12 20:15:56 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"angle"
+12 20:15:56 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"refraction"
+12 20:17:40 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:17:40 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:17:42 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:17:43 - DEBUG - boat.py - get_position_at-27 - 152.0 NM since last position at 15.0 Knots - course 20°
+12 20:17:43 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"angle"
+12 20:17:43 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"refraction"
+12 20:18:35 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:18:35 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:18:37 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:18:38 - DEBUG - boat.py - get_position_at-27 - 152.3 NM since last position at 15.0 Knots - course 20°
+12 20:18:38 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"angle"
+12 20:18:38 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"refraction"
+12 20:19:34 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:19:34 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:19:36 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:19:37 - DEBUG - boat.py - get_position_at-27 - 152.5 NM since last position at 15.0 Knots - course 20°
+12 20:19:37 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"angle"
+12 20:19:37 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"refraction"
+12 20:19:37 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-49 - for angle = 9°, refraction = 6.0'
+12 20:19:39 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:19:56 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:19:56 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:20:03 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:20:05 - DEBUG - boat.py - get_position_at-27 - 152.6 NM since last position at 15.0 Knots - course 20°
+12 20:20:05 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"angle"
+12 20:20:05 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-47 - found field :"refraction"
+12 20:20:05 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-49 - for angle = 9°, refraction = 6.0'
+12 20:25:27 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:25:27 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:25:30 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:25:32 - DEBUG - boat.py - get_position_at-27 - 154.0 NM since last position at 15.0 Knots - course 20°
+12 20:28:05 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:28:05 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:28:07 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:28:08 - DEBUG - boat.py - get_position_at-27 - 154.6 NM since last position at 15.0 Knots - course 20°
+12 20:32:06 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:32:06 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:32:08 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:32:09 - DEBUG - boat.py - get_position_at-27 - 155.7 NM since last position at 15.0 Knots - course 20°
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 9°, refraction = 6.0'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 11°, refraction = 5.0'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 15°, refraction = 3.6'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 20°, refraction = 2.6'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 30°, refraction = 1.7'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 40°, refraction = 1.2'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 50°, refraction = 0.8'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 60°, refraction = 0.6'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 70°, refraction = 0.4'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 80°, refraction = 0.2'
+12 20:32:09 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-52 - for angle = 90°, refraction = 0.0'
+12 20:38:18 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:38:18 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:38:20 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:38:21 - DEBUG - boat.py - get_position_at-27 - 157.2 NM since last position at 15.0 Knots - course 20°
+12 20:38:21 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-59 - for angle = 16°, refraction = 3.6'
+12 20:40:37 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:40:37 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:40:39 - INFO - astro.py - new_astro-178 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:40:40 - DEBUG - boat.py - get_position_at-27 - 157.8 NM since last position at 15.0 Knots - course 20°
+12 20:40:40 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-58 - for angle = 14°, refraction = 3.6'
+12 20:42:51 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:42:51 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:42:56 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:42:58 - DEBUG - boat.py - get_position_at-27 - 158.4 NM since last position at 15.0 Knots - course 20°
+12 20:44:26 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:44:26 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:44:29 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:44:30 - DEBUG - boat.py - get_position_at-27 - 158.7 NM since last position at 15.0 Knots - course 20°
+12 20:44:33 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-58 - for angle = 14°, refraction = 3.6'
+12 20:44:36 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:44:47 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 20:44:47 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 20:45:07 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 20:45:08 - DEBUG - boat.py - get_position_at-27 - 158.9 NM since last position at 15.0 Knots - course 20°
+12 20:45:13 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-58 - for angle = 45°, refraction = 1.2'
+12 21:37:43 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 21:37:43 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 21:37:45 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 21:37:47 - DEBUG - boat.py - get_position_at-27 - 172.1 NM since last position at 15.0 Knots - course 20°
+12 21:37:51 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction-66 - for angle = 45°, refraction = 1.2'
+12 21:37:51 - DEBUG - observation.py - fixe_angle_function_of_eye_height-40 - for eye height = 2m, eye height correction = 0.8'
+12 21:52:50 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 21:52:50 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 21:52:52 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 21:52:53 - DEBUG - boat.py - get_position_at-27 - 175.8 NM since last position at 15.0 Knots - course 20°
+12 21:52:57 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction_minute-60 - for angle = 45°, refraction = 1.2'
+12 21:52:57 - DEBUG - observation.py - fixe_angle_function_of_eye_height-65 - for eye height = 2m, eye height correction = 45.3'
+12 21:54:08 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 21:54:08 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 21:54:16 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 21:54:17 - DEBUG - boat.py - get_position_at-27 - 176.2 NM since last position at 15.0 Knots - course 20°
+12 21:54:20 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction_minute-60 - for angle = 45°, refraction = 1.2'
+12 21:54:20 - DEBUG - observation.py - fixe_angle_function_of_eye_height-65 - for eye height = 2m, eye height correction = 0.0'
+12 21:55:18 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 21:55:18 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 21:55:24 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 21:55:25 - DEBUG - boat.py - get_position_at-27 - 176.5 NM since last position at 15.0 Knots - course 20°
+12 21:55:30 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 21:55:30 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 21:55:33 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 21:55:42 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 21:55:42 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 21:55:47 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 21:55:48 - DEBUG - boat.py - get_position_at-27 - 176.6 NM since last position at 15.0 Knots - course 20°
+12 21:55:50 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction_minute-60 - for angle = 45°, refraction = 1.2'
+12 21:55:50 - DEBUG - observation.py - fixe_angle_function_of_eye_height-65 - for eye height = 2m, eye height correction = 2.7'
+12 21:56:16 - INFO - astro.py - new_astro-183 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 21:56:17 - DEBUG - boat.py - get_position_at-27 - 176.7 NM since last position at 15.0 Knots - course 20°
+12 21:56:19 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction_minute-60 - for angle = 25°, refraction = 2.6'
+12 21:56:19 - DEBUG - observation.py - fixe_angle_function_of_eye_height-65 - for eye height = 2m, eye height correction = 2.7'
+12 22:10:40 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:10:40 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:10:45 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:10:49 - DEBUG - boat.py - get_position_at-28 - 180.3 NM since last position at 15.0 Knots - course 20°
+12 22:10:55 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction_minute-60 - for angle = 45°, refraction = 1.2'
+12 22:11:40 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:11:40 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:11:42 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:11:46 - DEBUG - boat.py - get_position_at-28 - 180.5 NM since last position at 15.0 Knots - course 20°
+12 22:11:50 - DEBUG - observation.py - fixe_angle_function_of_athmosperic_refraction_minute-60 - for angle = 45°, refraction = 1.2'
+12 22:11:50 - DEBUG - observation.py - fixe_angle_function_of_eye_height-65 - for eye height = 4m, eye height correction = 3.8'
+12 22:19:18 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:19:18 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:20:37 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:20:37 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:21:03 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:21:03 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:21:29 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:21:29 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:21:34 - INFO - astro.py - set_speed_and_course-168 - Set the course and the speed
+12 22:21:42 - INFO - astro.py - display_current_position-187 - Display the current position of the boat based on last position and course and speed from that time
+12 22:21:42 - DEBUG - boat.py - format_current_position-36 - 73.2 NM since last position at 6.0 Knots - course 180°
+12 22:21:42 - INFO - astro.py - display_current_position-190 - now (12-10-2022 22:21:42) estimated : (46°49.1'N , 004°45.6'W)
+12 22:21:56 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:22:04 - DEBUG - boat.py - get_position_at-28 - 73.2 NM since last position at 6.0 Knots - course 180°
+12 22:22:08 - DEBUG - observation.py - calculate_athmosperic_refraction_minute-59 - for angle = 45°, refraction = 1.2'
+12 22:22:08 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-64 - for eye height = 4m, eye height correction = 3.8'
+12 22:22:14 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:22:14 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:22:18 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:24:03 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:24:03 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:24:20 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:24:20 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:24:24 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:24:28 - DEBUG - boat.py - get_position_at-28 - 73.5 NM since last position at 6.0 Knots - course 180°
+12 22:24:50 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:24:50 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:24:52 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:24:56 - DEBUG - boat.py - get_position_at-28 - 73.5 NM since last position at 6.0 Knots - course 180°
+12 22:24:58 - DEBUG - observation.py - calculate_athmosperic_refraction_minute-59 - for angle = 45°, refraction = 1.2'
+12 22:24:58 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-64 - for eye height = 4m, eye height correction = 3.8'
+12 22:25:04 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:26:08 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:26:08 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:26:11 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:26:16 - DEBUG - boat.py - get_position_at-28 - 73.7 NM since last position at 6.0 Knots - course 180°
+12 22:26:18 - DEBUG - observation.py - calculate_athmosperic_refraction_minute-59 - for angle = 45°, refraction = 1.2'
+12 22:26:18 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-64 - for eye height = 4m, eye height correction = 3.8'
+12 22:26:19 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:26:23 - DEBUG - boat.py - get_position_at-28 - 73.7 NM since last position at 6.0 Knots - course 180°
+12 22:26:27 - DEBUG - observation.py - calculate_athmosperic_refraction_minute-59 - for angle = 45°, refraction = 1.2'
+12 22:26:27 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-64 - for eye height = 4m, eye height correction = 3.8'
+12 22:26:31 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:26:31 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:26:33 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:26:36 - DEBUG - boat.py - get_position_at-28 - 73.7 NM since last position at 6.0 Knots - course 180°
+12 22:26:40 - DEBUG - observation.py - calculate_athmosperic_refraction_minute-59 - for angle = 51°, refraction = 0.8'
+12 22:26:40 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-64 - for eye height = 4m, eye height correction = 3.8'
+12 22:28:14 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:28:14 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
+12 22:28:17 - INFO - astro.py - new_astro-193 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 22:28:19 - DEBUG - boat.py - get_position_at-28 - 73.9 NM since last position at 6.0 Knots - course 180°
+12 22:28:21 - DEBUG - observation.py - calculate_athmosperic_refraction_minute-59 - for angle : 45°, refraction = 1.2'
+12 22:28:21 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-64 - for eye height : 4m, eye height correction = 3.8'
+12 22:51:20 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 22:51:20 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
