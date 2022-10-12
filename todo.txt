@@ -1,0 +1,17 @@
+menu : 
+	Init :	
+		input (last latitude, last longitude, route, speed)
+	Display : 
+		print (last point, current point)
+	astro : 
+		input (Ho, heure)
+		print (correction, he, hc, interrcept, azimut)
+	chapeau : 
+		print (list of observation)
+		input (suggesded shift)	 
+	estime
+	exit:
+	
+class Boat
+	last_point 
+	last_point_dt
