@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
-import math
 import os
 import sys
 import logging
 import logging.handlers
 import configparser
 import datetime
-from datetime import timezone
 import constants
 
 from waypoint import Waypoint, format_angle
 from boat import Boat
+from observation import Observation
 
 NB_ROTATING_LOG = 3
 MESSAGE_FORMAT_FILE = '{asctime:s} - {levelname} - {filename:s} - {funcName:s}-{lineno:d} - {message:s}'
@@ -177,6 +176,8 @@ class AstroApp :
 
     def new_astro(self):
         self.app_logger.info('Enter a new sun sight, and calculate the height angles azimut and intercept')
+        new_date = self.enter_date()
+        new_time = self.enter_time()
         self.app_logger.warning('Not yet implemented')
 
     def chapeau(self):

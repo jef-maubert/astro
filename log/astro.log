@@ -520,3 +520,11 @@
 12 12:06:17 - INFO - astro.py - display_current_position-173 - Display the current position of the boat based on last position and course and speed from that time
 12 12:06:17 - DEBUG - boat.py - format_current_position-29 - 29.2 NM since last position at 15.0 Knots - course 20°
 12 12:06:17 - INFO - astro.py - display_current_position-176 - now (12-10-2022 12:06:17) estimated : (48°29.7'N , 004°30.6'W)
+12 13:06:02 - INFO - astro.py - display_last_position-169 - Display the last recorded position of the boat
+12 13:06:02 - INFO - astro.py - display_last_position-170 - at 12-10-2022 10:09:33 last position : (48°02.3'N , 004°45.6'W)
+12 13:06:27 - INFO - astro.py - new_astro-179 - Enter a new sun sight, and calculate the height angles azimut and intercept
+12 13:06:27 - WARNING - astro.py - new_astro-180 - Not yet implemented
+12 13:13:44 - INFO - astro.py - init_log-48 - Starting astro version V1.0
+12 13:13:44 - INFO - astro.py - load_config-53 - Loading configuration from file "astro.ini"
+12 15:20:33 - INFO - astro.py - init_log-47 - Starting astro version V1.0
+12 15:20:33 - INFO - astro.py - load_config-52 - Loading configuration from file "astro.ini"
