@@ -43,6 +43,7 @@ class AstroApp :
         console_log_format = logging.Formatter(fmt=MESSAGE_FORMAT_CONSOLE, datefmt='%d %H:%M:%S', style="{")
         console_log_handler = logging.StreamHandler()
         console_log_handler.setLevel("DEBUG")
+        console_log_handler.setLevel("INFO")
         console_log_handler.setFormatter(console_log_format)
         self.app_logger.addHandler(console_log_handler)
         self.app_logger.info('Starting %s version %s', self.app_name, constants.VERSION)
@@ -134,7 +135,7 @@ class AstroApp :
             new_date_year = date_dt.year
         new_date_year = new_date_year+2000 if new_date_year < 100 else new_date_year
         new_date = "{:02d}-{:02d}-{:04d}".format(new_date_day, new_date_month, new_date_year)
-        print ("new date = {}".format(new_date))
+        self.app_logger.debug("New date = %s",new_date)
         return new_date 
 
     def enter_time(self):
@@ -147,7 +148,7 @@ class AstroApp :
             new_time = time_input if time_input else time_default 
             if re.match (regex_for_validation, new_time):
                 break
-        print ("new time = {}".format(new_time))
+        self.app_logger.debug("New time = %s",new_time)
         return new_time 
     
     def enter_angle(self, default_value, value_is_longitude=False):
@@ -183,7 +184,7 @@ class AstroApp :
             if re.match (regex_for_validation, eye_height_input):
                 break
         new_eye_height = float(eye_height_input)
-        print ("new eye_height = {}m".format(new_eye_height))
+        self.app_logger.debug("New eye_height = %.0f m", new_eye_height)
         return new_eye_height
         
     def init_position(self):
