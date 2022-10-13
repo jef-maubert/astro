@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
+import re
 import logging
 import logging.handlers
 import configparser
@@ -118,18 +119,34 @@ class AstroApp :
         date_default = date_dt.strftime(constants.DATE_FORMATTER.split(" ")[0]) 
         date_default = date_default.replace("-", "/")
         date_prompt = "Date (dd/mm/yyyy) [" + date_default + "] ? "
-        date_input = input (date_prompt)
-        new_date = date_input if date_input else date_default 
+        regex_for_validation = "\d{1,2}\/\d{1,2}(\/\d{2,4})?" 
+        while True:
+            date_input = input (date_prompt)
+            new_date = date_input if date_input else date_default 
+            if re.match (regex_for_validation, new_date):
+                break
         new_date = new_date.replace("/", "-")
+        new_date_day = int(new_date.split("-")[0])
+        new_date_month = int(new_date.split("-")[1])
+        try:
+            new_date_year = int(new_date.split("-")[2])
+        except IndexError:
+            new_date_year = date_dt.year
+        new_date_year = new_date_year+2000 if new_date_year < 100 else new_date_year
+        new_date = "{:02d}-{:02d}-{:04d}".format(new_date_day, new_date_month, new_date_year)
         print ("new date = {}".format(new_date))
         return new_date 
 
     def enter_time(self):
         time_prompt = "Time (hh:mm:ss) [now] ? "
-        time_input = input (time_prompt)
-        time_dt = datetime.datetime.now()
-        time_default = time_dt.strftime(constants.DATE_FORMATTER.split(" ")[1]) 
-        new_time = time_input if time_input else time_default 
+        regex_for_validation = "\d{1,2}:\d{1,2}:\d{1,2}"
+        while True:
+            time_input = input (time_prompt)
+            time_dt = datetime.datetime.now()
+            time_default = time_dt.strftime(constants.DATE_FORMATTER.split(" ")[1]) 
+            new_time = time_input if time_input else time_default 
+            if re.match (regex_for_validation, new_time):
+                break
         print ("new time = {}".format(new_time))
         return new_time 
     
@@ -137,21 +154,35 @@ class AstroApp :
         default_value = format_angle(default_value)
         if value_is_longitude:
             prompt = "Longitude (DDD°mm.m'(W/E)) ["+default_value+"] ? "
+            regex_for_validation = "\d{1,2}°\d{1,2}.\d'[WE]?"
         else:
             prompt = "Latitude (DD°mm.m'(N/S)) ["+default_value+"] ? "
-        new_angle = input(prompt)
+            regex_for_validation = "\d{1,3}°\d{1,2}.\d'[NS]?"
+        while True:
+            new_angle = input(prompt)
+            if re.match (regex_for_validation, new_angle):
+                break
         return new_angle
 
     def enter_ho(self):
         prompt = "ho (DD.mm) ? "
-        new_ho = float(input(prompt))
-        return new_ho
+        regex_for_validation = "\d{1,2}(.\d)?"
+        while True:
+            new_ho_str = input(prompt)
+            if re.match (regex_for_validation, new_ho_str):
+                break
+        return float(new_ho_str)
     
     def enter_eye_height(self):
-        eye_height_default = self.my_boat.eye_height
+        eye_height_default = str(self.my_boat.eye_height)
         eye_height_prompt = "Eye height (hh)m [{}] ? ".format(eye_height_default)
-        eye_height_input = input (eye_height_prompt)
-        new_eye_height = float(eye_height_input) if eye_height_input else eye_height_default
+        regex_for_validation = "\d{1,2}"
+        while True:
+            eye_height_input = input (eye_height_prompt)
+            eye_height_input = eye_height_input if eye_height_input else eye_height_default
+            if re.match (regex_for_validation, eye_height_input):
+                break
+        new_eye_height = float(eye_height_input)
         print ("new eye_height = {}m".format(new_eye_height))
         return new_eye_height
         
@@ -194,12 +225,13 @@ class AstroApp :
         new_date = self.enter_date()
         new_time = self.enter_time()
         self.my_boat.eye_height = self.enter_eye_height()
+        new_ho = self.enter_ho()
         
         observation_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
         observation_position = self.my_boat.get_position_at(observation_dt)
         
-        my_observation = Observation (observation_dt, observation_position, eye_height = self.my_boat.eye_height, app_logger = self.app_logger)
-        my_observation.calculate_he_and_az(self.enter_ho())
+        my_observation = Observation (observation_dt, observation_position, self.my_boat.eye_height, app_logger = self.app_logger)
+        my_observation.calculate_he_and_az(new_ho)
 
     def chapeau(self):
         self.app_logger.info('Calculate a new positon based on 2 or 3 couples (azimut, intercept)')

@@ -1,15 +1,26 @@
 # -*- coding: utf-8 -*-
 import math
 import datetime
+import time
 import csv
-
+from waypoint import format_angle
+'''
+to be used with file coming from https://navastro.com/downloads/catalogue.php
+'''
 EARTH_RADIUS_KM  = 6400.0
+
+def convert_ho249_angle_to_angle(ho249_angle):
+    degree_part = ho249_angle.split(" ")[0]
+    minute_part = ho249_angle.split(" ")[1]
+    print("degree_part = {},  minute_part = {}".format(degree_part, minute_part))
+    angle = float(degree_part)+float(minute_part)/60.0
+    return angle
 
 class Observation:
     '''
     class for start calculation, all angles are extressed in degre, minuts
     '''
-    def __init__(self, date_time, position, eye_height = 2, app_logger = None):
+    def __init__(self, date_time, position, eye_height, app_logger = None):
         self.date_time = date_time
         self.position = position
         self.eye_height = eye_height
@@ -28,8 +39,35 @@ class Observation:
         self.azimut = 0.0
 
     def load_ho_249(self):
-        return
-
+        month_name_french = ["", "Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jul", "Aou", "Sep", "Oct", "Nov", "Dec"] 
+        ho249_file_name = "Ephemerides {}.txt".format(self.date_time.year)
+        date_target = "{:4d} {} {:2d}".format (self.date_time.year, month_name_french[self.date_time.month].upper(), self.date_time.day)
+        with open(ho249_file_name, encoding="ansi") as ho249_file:
+            for line in ho249_file.readlines():
+                list_of_fields = line.split("|")
+                if len(list_of_fields) < 10 :
+                    continue
+                if list_of_fields[1].upper().strip(" ") == date_target:
+                    ahv0 = convert_ho249_angle_to_angle(list_of_fields[3].strip(" "))
+                    ahv0_var = float(list_of_fields[4].strip(" "))
+                    decl_raw = list_of_fields[5].strip(" ")
+                    decl_sign = -1.0 if "S" in decl_raw else 1.0
+                    decl_raw = decl_raw.replace("S", "").replace("N", "")
+                    decl = decl_sign * convert_ho249_angle_to_angle(decl_raw.strip(" "))
+                    decl_var = float(list_of_fields[6].strip(" "))
+                    self.app_logger.info ('Found entry for "%s" : decl = %s ahv0 = %s', 
+                                          date_target, 
+                                          format_angle(decl), 
+                                          format_angle(ahv0, value_is_longitude=True)) 
+                    
+                    utc_offset_hour = time.timezone/3600
+                    utc_offset_hour -= time.localtime().tm_isdst
+                    self.app_logger.info ('utc_offset_hour = %d hours', utc_offset_hour)
+                    return decl, decl_var, ahv0, ahv0_var
+                # else:
+                #     self.app_logger.debug('skipping entry for "%s"', list_of_fields[1]) 
+        self.app_logger.warning('Can\'t find any entry for "%s" in file "%s"', date_target, ho249_file_name) 
+                
     def calculate_decl_from_ho249(self):
         self.decl = 40.0
 
@@ -68,6 +106,7 @@ class Observation:
 
     def calculate_he_and_az(self, height_observed):
         self.height_observed = height_observed
+        self.load_ho_249()
         self.calculate_decl_from_ho249()
         self.calculate_ahv0_from_ho249()
         self.load_athmospheric_refraction_minute_from_file()
