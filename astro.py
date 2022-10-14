@@ -16,6 +16,7 @@ from observation import Observation
 NB_ROTATING_LOG = 3
 MESSAGE_FORMAT_FILE = '{asctime:s} - {levelname} - {filename:s} - {funcName:s}-{lineno:d} - {message:s}'
 MESSAGE_FORMAT_CONSOLE = '{levelname} - {message:s}'
+MESSAGE_FORMAT_CONSOLE = '{message:s}'
 
 class AstroApp :
     def __init__(self):
@@ -42,7 +43,6 @@ class AstroApp :
         file_log_handler.setFormatter(file_log_format)
         self.app_logger.addHandler(file_log_handler)
 
-
         console_log_format = logging.Formatter(fmt=MESSAGE_FORMAT_CONSOLE, datefmt='%d %H:%M:%S', style="{")
         self.console_log_handler = logging.StreamHandler()
         self.console_log_handler.setLevel(self.log_level)
@@ -54,7 +54,7 @@ class AstroApp :
         self.app_config = configparser.ConfigParser()
         my_config_filename = "{}.ini".format(self.app_name)
         self.app_logger.info('Loading configuration from file "%s"', my_config_filename )
-        self.app_config.read(my_config_filename)
+        self.app_config.read(my_config_filename, encoding="utf-8")
         log_level = self.app_config.get('LOG', 'level', fallback=constants.DEFAULT_LOG_LEVEL).upper()
         if log_level in ("DEBUG", "INFO"):
             self.log_level = log_level
@@ -94,8 +94,7 @@ class AstroApp :
         self.app_config.set('BOAT', 'eye_height', str(self.my_boat.eye_height))
 
         my_config_filename = "{}.ini".format(self.app_name)
-#        with open(my_config_filename, 'w', encoding="utf-8") as configfile:
-        with open(my_config_filename, 'w') as configfile:
+        with open(my_config_filename, 'w', encoding="utf-8") as configfile:
             self.app_config.write(configfile)
 
     def init_menu(self):
@@ -114,6 +113,7 @@ class AstroApp :
         self.init_menu()
 
     def run_once(self):
+        print("")
         print("Menu")
         for menu in self.list_of_menu:
             print("  " + menu["code"] + " - " + menu["title"])

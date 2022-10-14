@@ -56,7 +56,7 @@ class Observation:
         ho249_file_name = "Ephemerides {}.txt".format(self.date_time.year)
         date_target = "{:4d} {} {:2d}".format (self.date_time.year, month_name_french[self.date_time.month].upper(), self.date_time.day)
         ho249_results = dict()
-        with open(ho249_file_name, encoding="ansi") as ho249_file:
+        with open(ho249_file_name, encoding="cp1256") as ho249_file:
             for line in ho249_file.readlines():
                 list_of_fields = line.split("|")
                 if len(list_of_fields) < 10 :

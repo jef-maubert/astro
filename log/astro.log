@@ -608,3 +608,127 @@
 14 14:32:23 - DEBUG - observation.py - calculate_az-182 - Azimut by atan : -008° 
 14 14:32:23 - INFO - observation.py - calculate_az-183 - Azimut : +188° 
 14 14:32:23 - INFO - observation.py - calculate_he_and_az-203 - Intercept : -11.8 NM
+14 16:12:03 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 16:12:03 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 16:12:03 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 16:12:09 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 16:12:09 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 16:12:09 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 16:14:01 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 16:14:01 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 16:14:01 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 16:14:16 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 16:14:16 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 16:14:16 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 16:14:19 - INFO - astro.py - new_astro-237 - Enter a new sun sight, and calculate the height angles azimut and intercept
+14 16:14:20 - DEBUG - astro.py - enter_date-149 - New date = 14-10-2022
+14 16:14:20 - DEBUG - astro.py - enter_time-162 - New time = 16:14:20
+14 16:14:20 - DEBUG - astro.py - enter_eye_height-199 - New eye_height = 2 m
+14 16:14:26 - DEBUG - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+14 16:14:26 - DEBUG - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 14 00:00:00 : decl = 08°03.2'S (var -0.93'),  ahv0 = 183°28.3'(var 15.002°)
+14 16:14:26 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
+14 16:14:26 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 14.23889 hours
+14 16:14:26 - INFO - observation.py - calculate_decl_from_ho249-107 - at 16:14:20 decl = 08°16.4'S
+14 16:14:26 - INFO - observation.py - calculate_ahv0_from_ho249-117 - At 16:14:20 ahv0 = 037°05.0', ahvg = 032°19.4'
+14 16:14:26 - DEBUG - observation.py - calculate_athmospheric_refraction_minute_by_tan-148 - for angle : 45°, refraction = 1.0'
+14 16:14:26 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-153 - for eye height : 2 m, eye height correction = 2.7'
+14 16:14:26 - INFO - observation.py - calculate_he_and_az-197 - Sextant height corrected : +45°12' 
+14 16:14:26 - INFO - observation.py - calculate_he-166 - Height estimated : +26°53' 
+14 16:14:26 - DEBUG - observation.py - calculate_az-181 - Azimut by asin : +036° 
+14 16:14:26 - DEBUG - observation.py - calculate_az-182 - Azimut by atan : -036° 
+14 16:14:26 - INFO - observation.py - calculate_az-183 - Azimut : +216° 
+14 16:14:26 - INFO - observation.py - calculate_he_and_az-203 - Intercept : 1099.4 NM
+14 16:22:08 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 16:22:08 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 16:22:08 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 16:22:09 - INFO - astro.py - new_astro-237 - Enter a new sun sight, and calculate the height angles azimut and intercept
+14 16:22:11 - DEBUG - astro.py - enter_date-149 - New date = 14-10-2022
+14 16:22:11 - DEBUG - astro.py - enter_time-162 - New time = 16:22:11
+14 16:22:12 - DEBUG - astro.py - enter_eye_height-199 - New eye_height = 2 m
+14 16:22:13 - DEBUG - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+14 16:22:13 - DEBUG - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 14 00:00:00 : decl = 08°03.2'S (var -0.93'),  ahv0 = 183°28.3'(var 15.002°)
+14 16:22:13 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
+14 16:22:13 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 14.36972 hours
+14 16:22:13 - INFO - observation.py - calculate_decl_from_ho249-107 - at 16:22:11 decl = 08°16.6'S
+14 16:22:13 - INFO - observation.py - calculate_ahv0_from_ho249-117 - At 16:22:11 ahv0 = 039°02.8', ahvg = 034°17.2'
+14 16:22:13 - DEBUG - observation.py - calculate_athmospheric_refraction_minute_by_tan-148 - for angle : 45°, refraction = 1.0'
+14 16:22:13 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-153 - for eye height : 2 m, eye height correction = 2.7'
+14 16:22:13 - INFO - observation.py - calculate_he_and_az-197 - Sextant height corrected : +45°12' 
+14 16:22:13 - INFO - observation.py - calculate_he-166 - Height estimated : +26°05' 
+14 16:22:13 - DEBUG - observation.py - calculate_az-181 - Azimut by asin : +038° 
+14 16:22:13 - DEBUG - observation.py - calculate_az-182 - Azimut by atan : -038° 
+14 16:22:13 - INFO - observation.py - calculate_az-183 - Azimut : +218° 
+14 16:22:13 - INFO - observation.py - calculate_he_and_az-203 - Intercept : 1147.3 NM
+14 16:23:20 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 16:23:20 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 16:23:20 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 16:23:22 - INFO - astro.py - new_astro-237 - Enter a new sun sight, and calculate the height angles azimut and intercept
+14 16:23:22 - DEBUG - astro.py - enter_date-149 - New date = 14-10-2022
+14 16:23:22 - DEBUG - astro.py - enter_time-162 - New time = 16:23:22
+14 16:23:23 - DEBUG - astro.py - enter_eye_height-199 - New eye_height = 2 m
+14 16:23:25 - DEBUG - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+14 16:23:25 - DEBUG - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 14 00:00:00 : decl = 08°03.2'S (var -0.93'),  ahv0 = 183°28.3'(var 15.002°)
+14 16:23:25 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
+14 16:23:25 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 14.38944 hours
+14 16:23:25 - INFO - observation.py - calculate_decl_from_ho249-107 - at 16:23:22 decl = 08°16.6'S
+14 16:23:25 - INFO - observation.py - calculate_ahv0_from_ho249-117 - At 16:23:22 ahv0 = 039°20.5', ahvg = 034°34.9'
+14 16:23:25 - DEBUG - observation.py - calculate_athmospheric_refraction_minute_by_tan-148 - for angle : 45°, refraction = 1.0'
+14 16:23:25 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-153 - for eye height : 2 m, eye height correction = 2.7'
+14 16:23:25 - INFO - observation.py - calculate_he_and_az-197 - Sextant height corrected : +45°12' 
+14 16:23:25 - INFO - observation.py - calculate_he-166 - Height estimated : +25°58' 
+14 16:23:25 - DEBUG - observation.py - calculate_az-181 - Azimut by asin : +038° 
+14 16:23:25 - DEBUG - observation.py - calculate_az-182 - Azimut by atan : -038° 
+14 16:23:25 - INFO - observation.py - calculate_az-183 - Azimut : +218° 
+14 16:23:25 - INFO - observation.py - calculate_he_and_az-203 - Intercept : 1154.8 NM
+14 16:38:35 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 16:38:35 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 16:38:35 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 16:38:43 - INFO - astro.py - display_current_position-231 - Display the current position of the boat based on last position and course and speed from that time
+14 16:38:43 - DEBUG - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+14 16:38:43 - INFO - astro.py - display_current_position-234 - now (14-10-2022 16:38:43) estimated : (48°02.3'N , 004°45.6'W)
+14 16:39:05 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 16:39:05 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 16:39:05 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 16:39:08 - INFO - astro.py - new_astro-238 - Enter a new sun sight, and calculate the height angles azimut and intercept
+14 16:39:09 - DEBUG - astro.py - enter_date-150 - New date = 14-10-2022
+14 16:39:09 - DEBUG - astro.py - enter_time-163 - New time = 16:39:09
+14 16:39:09 - DEBUG - astro.py - enter_eye_height-200 - New eye_height = 2 m
+14 16:39:12 - DEBUG - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+14 16:39:12 - DEBUG - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 14 00:00:00 : decl = 08°03.2'S (var -0.93'),  ahv0 = 183°28.3'(var 15.002°)
+14 16:39:12 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
+14 16:39:12 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 14.65250 hours
+14 16:39:12 - INFO - observation.py - calculate_decl_from_ho249-107 - at 16:39:09 decl = 08°16.8'S
+14 16:39:12 - INFO - observation.py - calculate_ahv0_from_ho249-117 - At 16:39:09 ahv0 = 043°17.3', ahvg = 038°31.7'
+14 16:39:12 - DEBUG - observation.py - calculate_athmospheric_refraction_minute_by_tan-148 - for angle : 45°, refraction = 1.0'
+14 16:39:12 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-153 - for eye height : 2 m, eye height correction = 2.7'
+14 16:39:12 - INFO - observation.py - calculate_he_and_az-197 - Sextant height corrected : +45°12' 
+14 16:39:12 - INFO - observation.py - calculate_he-166 - Height estimated : +24°14' 
+14 16:39:12 - DEBUG - observation.py - calculate_az-181 - Azimut by asin : +042° 
+14 16:39:12 - DEBUG - observation.py - calculate_az-182 - Azimut by atan : -042° 
+14 16:39:12 - INFO - observation.py - calculate_az-183 - Azimut : +222° 
+14 16:39:12 - INFO - observation.py - calculate_he_and_az-203 - Intercept : 1258.0 NM
+14 16:39:31 - INFO - astro.py - display_current_position-232 - Display the current position of the boat based on last position and course and speed from that time
+14 16:39:31 - DEBUG - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+14 16:39:31 - INFO - astro.py - display_current_position-235 - now (14-10-2022 16:39:31) estimated : (48°02.3'N , 004°45.6'W)
+14 16:41:07 - INFO - astro.py - init_position-204 - Initialize the boat position
+14 16:41:12 - DEBUG - astro.py - enter_date-150 - New date = 14-10-2022
+14 16:41:14 - DEBUG - astro.py - enter_time-163 - New time = 16:41:14
+14 16:41:19 - INFO - astro.py - set_speed_and_course-213 - Set the course and the speed
+14 16:42:25 - INFO - astro.py - new_astro-238 - Enter a new sun sight, and calculate the height angles azimut and intercept
+14 16:42:25 - DEBUG - astro.py - enter_date-150 - New date = 14-10-2022
+14 16:42:26 - DEBUG - astro.py - enter_time-163 - New time = 16:42:26
+14 16:42:26 - DEBUG - astro.py - enter_eye_height-200 - New eye_height = 2 m
+14 16:42:28 - DEBUG - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+14 16:42:28 - DEBUG - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 14 00:00:00 : decl = 08°03.2'S (var -0.93'),  ahv0 = 183°28.3'(var 15.002°)
+14 16:42:28 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
+14 16:42:28 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 14.70722 hours
+14 16:42:28 - INFO - observation.py - calculate_decl_from_ho249-107 - at 16:42:26 decl = 08°16.9'S
+14 16:42:28 - INFO - observation.py - calculate_ahv0_from_ho249-117 - At 16:42:26 ahv0 = 044°06.6', ahvg = 039°21.0'
+14 16:42:28 - DEBUG - observation.py - calculate_athmospheric_refraction_minute_by_tan-148 - for angle : 23°, refraction = 2.4'
+14 16:42:28 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-153 - for eye height : 2 m, eye height correction = 2.7'
+14 16:42:28 - INFO - observation.py - calculate_he_and_az-197 - Sextant height corrected : +23°11' 
+14 16:42:28 - INFO - observation.py - calculate_he-166 - Height estimated : +23°52' 
+14 16:42:28 - DEBUG - observation.py - calculate_az-181 - Azimut by asin : +043° 
+14 16:42:28 - DEBUG - observation.py - calculate_az-182 - Azimut by atan : -043° 
+14 16:42:28 - INFO - observation.py - calculate_az-183 - Azimut : +223° 
+14 16:42:28 - INFO - observation.py - calculate_he_and_az-203 - Intercept : -40.9 NM
