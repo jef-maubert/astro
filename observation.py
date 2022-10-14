@@ -1,13 +1,13 @@
-# -*- coding: utf-8 -*-
-import math
-import datetime
-import time
-import csv
-from waypoint import format_angle
+    # -*- coding: utf-8 -*-
 '''
 to be used with file coming from https://navastro.com/downloads/catalogue.php
 '''
-EARTH_RADIUS_KM  = 6400.0
+import math
+import time
+import csv
+from waypoint import format_angle
+from waypoint import INPUT_TYPE_DECL, INPUT_TYPE_AHV, INPUT_TYPE_HEIGHT, INPUT_TYPE_AZIMUT
+EARTH_RADIUS_KM  = 6366.0
 
 def convert_ho249_angle_to_angle(ho249_angle, display_trace=False):
     ho249_angle = ho249_angle.strip(" ")
@@ -18,6 +18,15 @@ def convert_ho249_angle_to_angle(ho249_angle, display_trace=False):
         print("degree_part = {},  minute_part = {}".format(degree_part, minute_part))
     angle = float(degree_part)+float(minute_part)/60.0
     return angle
+
+def radian2degree (angle_radian):
+    return angle_radian * 180.0 / math.pi
+
+def degree2radian (angle_degree):
+    return angle_degree * math.pi / 180.0
+
+def sign_of (value):
+    return 1 if value > 0 else -1
 
 class Observation:
     '''
@@ -34,6 +43,7 @@ class Observation:
         self.sun_half_lumb_minute = 13.0
         self.decl = 0.0
         self.ahv0 = 0.0
+        self.ahvg = 0.0
 
         self.height_observed = 0.0
         self.height_corrected = 0.0
@@ -42,7 +52,7 @@ class Observation:
         self.azimut = 0.0
 
     def extract_ephemerides_from_ho249(self):
-        month_name_french = ["", "Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jul", "Aou", "Sep", "Oct", "Nov", "Dec"] 
+        month_name_french = ["", "Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jul", "Aou", "Sep", "Oct", "Nov", "Dec"]
         ho249_file_name = "Ephemerides {}.txt".format(self.date_time.year)
         date_target = "{:4d} {} {:2d}".format (self.date_time.year, month_name_french[self.date_time.month].upper(), self.date_time.day)
         ho249_results = dict()
@@ -57,49 +67,58 @@ class Observation:
 
                     ahv0_var = float(list_of_fields[4].strip(" "))
                     ho249_results.update({"ahv0_var":ahv0_var})
-                    
+
                     decl_raw = list_of_fields[5]
                     decl_sign = -1.0 if "S" in decl_raw else 1.0
                     decl_raw = decl_raw.replace("S", "").replace("N", "")
-                    decl = decl_sign * convert_ho249_angle_to_angle(decl_raw.strip(" "))
+                    decl = decl_sign * convert_ho249_angle_to_angle(decl_raw)
                     ho249_results.update({"decl":decl})
- 
+
                     decl_var = float(list_of_fields[6].strip(" "))
-                    sign_decl_bool = (decl>0) * (decl_var>0) 
+                    sign_decl_bool = (decl>0) * (decl_var>0)
                     if not sign_decl_bool:
-                        decl_var *= -1.0 
+                        decl_var *= -1.0
                     ho249_results.update({"decl_var":decl_var})
-                    
-                    self.app_logger.debug ('At %s 00:00:00 : decl = %s (var %s\'),  ahv0 = %s(var %s°)', 
-                                          date_target, 
-                                          format_angle(decl), decl_var,
-                                          format_angle(ahv0, value_is_longitude=True)[:-1], ahv0_var) 
-                    
+
+                    self.app_logger.debug ('at %s 00:00:00 : decl = %s (var %s\'),  ahv0 = %s(var %s°)',
+                                          date_target,
+                                          format_angle(decl, INPUT_TYPE_DECL), decl_var,
+                                          format_angle(ahv0, INPUT_TYPE_AHV), ahv0_var)
+
                     return ho249_results
                 # else:
-                #     self.app_logger.debug('skipping entry for "%s"', list_of_fields[1]) 
-        self.app_logger.warning('Can\'t find any entry for "%s" in file "%s"', date_target, ho249_file_name) 
+                #     self.app_logger.debug('skipping entry for "%s"', list_of_fields[1])
+        self.app_logger.warning('Can\'t find any entry for "%s" in file "%s"', date_target, ho249_file_name)
         return None
-    
+
     def calculate_nb_utc_hour_since_midnight(self):
         now = self.date_time
-        nb_local_hour_since_midnight = now.hour + now.minute/60.0 + now.second/3600.0 
+        nb_local_hour_since_midnight = now.hour + now.minute/60.0 + now.second/3600.0
         utc_offset_hour = time.timezone/3600.0
         utc_offset_hour -= time.localtime().tm_isdst
         self.app_logger.debug ('utc_offset_hour = %d hours', utc_offset_hour)
         nb_utc_hour_since_midnight = nb_local_hour_since_midnight + utc_offset_hour
         self.app_logger.debug ('utc_time = %.5f hours', nb_utc_hour_since_midnight)
         return nb_utc_hour_since_midnight
-        
+
     def calculate_decl_from_ho249(self, ho249_results, nb_utc_hour_since_midnight):
         time_target = self.date_time.strftime("%H:%M:%S")
-        self.decl = ho249_results["decl"] + (ho249_results["decl_var"] * nb_utc_hour_since_midnight) / 60.0 
-        self.app_logger.info ('at %s decl = %s ', time_target, format_angle(self.decl)) 
+        self.decl = ho249_results["decl"] + (ho249_results["decl_var"] * nb_utc_hour_since_midnight) / 60.0
+        self.app_logger.info ('at %s decl = %s', time_target, format_angle(self.decl, INPUT_TYPE_DECL))
 
     def calculate_ahv0_from_ho249(self, ho249_results, nb_utc_hour_since_midnight):
         time_target = self.date_time.strftime("%H:%M:%S")
-        self.ahv0= ho249_results["ahv0"] + ho249_results["ahv0_var"] * nb_utc_hour_since_midnight 
-        self.app_logger.info ('At %s ahv0 = %s ', time_target, format_angle(self.ahv0, value_is_longitude=True)[:-1]) 
+        self.ahv0 = ho249_results["ahv0"] + ho249_results["ahv0_var"] * nb_utc_hour_since_midnight
+        while self.ahv0 > 360.0:
+            self.ahv0 -= 360.0
+        self.ahvg = self.ahv0 + self.position.longitude
+        while self.ahvg > 360.0 :
+            self.ahvg -= 360.0
+        self.app_logger.info ('At %s ahv0 = %s, ahvg = %s',
+                              time_target,
+                              format_angle(self.ahv0, INPUT_TYPE_AHV),
+                              format_angle(self.ahvg, INPUT_TYPE_AHV))
+
 
     def load_athmospheric_refraction_minute_from_file(self):
         with open('atmospheric_refraction.csv', encoding="utf8") as atmospheric_refraction_file:
@@ -114,7 +133,8 @@ class Observation:
                 self.list_of_athmospheric_refraction_minute.append({"angle":float(line["angle"]), "refraction":float(line["refraction"])})
         return
 
-    def calculate_athmospheric_refraction_minute(self):
+    def calculate_athmospheric_refraction_minute_by_table(self):
+        self.load_athmospheric_refraction_minute_from_file()
         gap_to_exact_value = 999.9
         self.athmospheric_refraction_minute = 0.0
         for athmospheric_refraction_minute in self.list_of_athmospheric_refraction_minute:
@@ -123,13 +143,44 @@ class Observation:
                 self.athmospheric_refraction_minute = athmospheric_refraction_minute['refraction']
         self.app_logger.debug("for angle : %.0f°, refraction = %.1f'", float(self.height_observed), float(self.athmospheric_refraction_minute))
 
+    def calculate_athmospheric_refraction_minute_by_tan(self):
+        self.athmospheric_refraction_minute = 1.0 / math.tan(degree2radian(self.height_observed))
+        self.app_logger.debug("for angle : %.0f°, refraction = %.1f'", float(self.height_observed), float(self.athmospheric_refraction_minute))
+
     def calculate_horizon_dip_function_of_eye_height(self):
         self.eye_height_correction_minute = 0.0
-        self.eye_height_correction_minute = math.sqrt(2.0 * self.eye_height / (EARTH_RADIUS_KM * 1000.0)) * 180.0 * 60.0 / math.pi 
+        self.eye_height_correction_minute = radian2degree(math.sqrt(2.0 * self.eye_height / (EARTH_RADIUS_KM * 1000.0))) * 60.0
         self.app_logger.debug("for eye height : %.0f m, eye height correction = %.1f'", float(self.eye_height), float(self.eye_height_correction_minute))
 
-    def fixe_angle_function_of_half_lumb(self):
-        self.sun_half_lumb_minute = 13.0
+    def calculate_half_lumb_angle(self):
+        self.sun_half_lumb_minute = 16.0
+
+    def calculate_he(self):
+        sin_phi  = math.sin(degree2radian(self.position.latitude))
+        sin_decl = math.sin(degree2radian(self.decl))
+        cos_phi  = math.cos(degree2radian(self.position.latitude))
+        cos_decl = math.cos(degree2radian(self.decl))
+        cos_ahvg = math.cos(degree2radian(self.ahvg))
+        self.height_estimated = radian2degree(math.asin(sin_phi * sin_decl + cos_phi * cos_decl * cos_ahvg))
+
+        self.app_logger.info("Height estimated : %s ", format_angle(self.height_estimated, INPUT_TYPE_HEIGHT))
+
+    def calculate_az(self):
+        sin_ahvg = math.sin(degree2radian(self.ahvg))
+        tan_decl = math.tan(degree2radian(self.decl))
+        cos_phi  = math.cos(degree2radian(self.position.latitude))
+        sin_phi  = math.sin(degree2radian(self.position.latitude))
+        cos_ahvg = math.cos(degree2radian(self.ahvg))
+        azimut_by_atan = radian2degree(math.atan(sin_ahvg/(tan_decl*cos_phi - sin_phi*cos_ahvg)))
+        
+        cos_decl = math.cos(degree2radian(self.decl))
+        cos_he   = math.cos(degree2radian(self.height_estimated))
+        azimut_by_asin = radian2degree(math.asin(sin_ahvg*cos_decl/cos_he))
+        # Magic formula found by jef in 1983 !!!
+        self.azimut = 90 * (sign_of(azimut_by_atan) + sign_of(azimut_by_asin) +2 ) - azimut_by_atan
+        self.app_logger.debug("Azimut by asin : %s ", format_angle(azimut_by_asin, INPUT_TYPE_AZIMUT))
+        self.app_logger.debug("Azimut by atan : %s ", format_angle(azimut_by_atan, INPUT_TYPE_AZIMUT))
+        self.app_logger.info("Azimut : %s ", format_angle(self.azimut, INPUT_TYPE_AZIMUT))
 
     def calculate_he_and_az(self, height_observed):
         self.height_observed = height_observed
@@ -138,14 +189,16 @@ class Observation:
             nb_utc_hour_sdince_midnight = self.calculate_nb_utc_hour_since_midnight()
             self.calculate_decl_from_ho249(ho249_results, nb_utc_hour_sdince_midnight)
             self.calculate_ahv0_from_ho249(ho249_results, nb_utc_hour_sdince_midnight)
-            self.load_athmospheric_refraction_minute_from_file()
-            self.calculate_athmospheric_refraction_minute()
+#            self.calculate_athmospheric_refraction_minute_by_table()
+            self.calculate_athmospheric_refraction_minute_by_tan()
             self.calculate_horizon_dip_function_of_eye_height()
-            self.fixe_angle_function_of_half_lumb()
+            self.calculate_half_lumb_angle()
             self.height_corrected = self.height_observed + (self.sun_half_lumb_minute - self.athmospheric_refraction_minute - self.eye_height_correction_minute) / 60.0
-    
-            self.height_estimated = 0.0
-            self.azimut = 0.0
-    
-            self.intercept = (self.height_estimated - self.height_corrected) * 60.0 
+            self.app_logger.info("Sextant height corrected : %s ", format_angle(self.height_corrected, INPUT_TYPE_HEIGHT))
+
+            self.calculate_he()
+            self.calculate_az()
+
+            self.intercept = (self.height_corrected - self.height_estimated) * 60.0
+            self.app_logger.info("Intercept : %.1f NM", self.intercept )
 
