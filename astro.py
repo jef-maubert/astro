@@ -179,7 +179,7 @@ class AstroApp :
         return new_angle
 
     def enter_ho(self):
-        prompt = "ho (DD.mm) ? "
+        prompt = "Sextant angle (DD.mm) ? "
         regex_for_validation = "\d{1,2}(.\d)?"
         while True:
             new_ho_str = input(prompt)
@@ -229,7 +229,7 @@ class AstroApp :
         self.app_logger.info("at %s %s", self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER), self.my_boat.format_last_position())
 
     def display_current_position(self):
-        self.app_logger.info('Display the current position of the boat based on last position and course and speed from that time')
+        self.app_logger.info('Current position of the boat based on last position and course and speed from that time')
         now = datetime.datetime.now()
         now_string = now.strftime(constants.DATE_FORMATTER)
         self.app_logger.info("now (%s) %s", now_string, self.my_boat.format_current_position())

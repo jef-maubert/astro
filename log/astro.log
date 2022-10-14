@@ -732,3 +732,13 @@
 14 16:42:28 - DEBUG - observation.py - calculate_az-182 - Azimut by atan : -043° 
 14 16:42:28 - INFO - observation.py - calculate_az-183 - Azimut : +223° 
 14 16:42:28 - INFO - observation.py - calculate_he_and_az-203 - Intercept : -40.9 NM
+14 17:06:19 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 17:06:19 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 17:06:19 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 17:06:45 - INFO - astro.py - init_log-51 - Starting astro version V1.0
+14 17:06:45 - INFO - astro.py - load_config-56 - Loading configuration from file "astro.ini"
+14 17:06:45 - DEBUG - astro.py - load_config-62 - log level set to "INFO"
+14 17:06:46 - INFO - astro.py - new_astro-238 - Enter a new sun sight, and calculate the height angles azimut and intercept
+14 17:06:49 - DEBUG - astro.py - enter_date-150 - New date = 14-10-2022
+14 17:06:50 - DEBUG - astro.py - enter_time-163 - New time = 17:06:50
+14 17:06:51 - DEBUG - astro.py - enter_eye_height-200 - New eye_height = 2 m
