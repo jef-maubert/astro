@@ -20,14 +20,13 @@ MESSAGE_FORMAT_CONSOLE = '{levelname} - {message:s}'
 MESSAGE_FORMAT_CONSOLE = '{message:s}'
 
 TURTLE_SIZE_X = 600
-TURTLE_SIZE_Y = 800
+TURTLE_SIZE_Y = 600
 BIG_PEN = 3
 SMALL_PEN = 1
-LINE_COLOR = "black"
-TEXT_COLOR = "black"
-LIMIT_COLOR = "green"
-ARROW_COLOR = "lightgrey"
-FONT_SIZE = 6
+HEIGHT_LINE_COLOR = "black"
+LAST_POSITION_COLOR = "blue"
+FONT_SIZE = 10
+LINE_DOT_NUMBER = 10
 
 class AstroApp :
     def __init__(self):
@@ -40,8 +39,6 @@ class AstroApp :
         self.list_of_observations = []
         self.console_log_handler = None
         self.log_level = constants.DEFAULT_LOG_LEVEL
-        self.image_size_x = 50.0
-        self.image_size_y = 50.0
         self.screen = None
         self.tess = None
 
@@ -264,44 +261,17 @@ class AstroApp :
         my_observation.calculate_he_and_az(new_ho)
         self.list_of_observations.append(my_observation)
 
-    def draw_circle(self, radius, color=LINE_COLOR):
-        old_pen = self.tess.pensize()
-        old_color = self.tess.pencolor()
-        self.tess.up()
-        self.tess.setheading(0)
-        self.tess.goto(radius,0)
-        self.tess.setheading(90)
-        self.tess.circle(radius)
-        self.tess.pencolor(old_color)
-        self.tess.pensize(old_pen)
-        
-    def draw_cross(self, cross_size, color=LINE_COLOR):
-        old_pen = self.tess.pensize()
-        old_color = self.tess.pencolor()
-        self.tess.pensize(SMALL_PEN)
-        self.tess.pencolor(color)
-        self.tess.setheading(45)
-        self.tess.forward(cross_size)
-        self.tess.backward(cross_size * 2)
-        self.tess.forward(cross_size)
-        self.tess.setheading(135)
-        self.tess.forward(cross_size)
-        self.tess.backward(cross_size * 2)
-        self.tess.forward(cross_size)
-        self.tess.pencolor(old_color)
-        self.tess.pensize(old_pen)
-
-    def start_turtle (self):
+    def start_turtle (self, image_size):
         turtle.setup(width=TURTLE_SIZE_X, height=TURTLE_SIZE_Y)
         turtle.tracer (10)
         self.screen = turtle.Screen()
 
-        self.screen.setworldcoordinates(-self.image_size_x, -self.image_size_y, self.image_size_x, self.image_size_y)
+        self.screen.setworldcoordinates(-image_size, -image_size, image_size, image_size)
         self.screen.bgcolor("white")
         self.screen.title(self.app_name + " (Version :" + constants.VERSION+ ")")
         self.tess = turtle.Turtle()
 
-        self.tess.pencolor(LINE_COLOR)
+        self.tess.pencolor(LAST_POSITION_COLOR)
         self.tess.pensize(BIG_PEN)
         self.tess.hideturtle()
         self.tess.speed("fastest")
@@ -310,13 +280,67 @@ class AstroApp :
         self.screen.exitonclick()
         turtle.bye()
 
+    def draw_last_position(self, position_circle_radius, color=LAST_POSITION_COLOR):
+        self.app_logger.info('Drawing last position')
+        old_pen = self.tess.pensize()
+        old_color = self.tess.pencolor()
+        self.tess.pensize(SMALL_PEN)
+        self.tess.pencolor(color)
+        self.tess.dot()
+        self.tess.up()
+        self.tess.goto(0,0)
+        self.tess.setheading(0)
+        self.tess.forward(position_circle_radius)
+        self.tess.down()
+        self.tess.setheading(90)
+        self.tess.circle(position_circle_radius)
+        self.tess.up()
+        self.tess.setheading(90)
+        self.tess.forward(position_circle_radius)
+        self.tess.down()
+        last_position_time_str = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER.split(" ")[1])
+        self.tess.write(last_position_time_str, font=("Arial", FONT_SIZE, "normal"), align="left")
+        self.tess.up()
+        self.tess.goto(0,0)
+        self.tess.down()
+        self.tess.pencolor(old_color)
+        self.tess.pensize(old_pen)
+        
+    def draw_intercept(self, date_time, azimut, intercept, image_size, color=LAST_POSITION_COLOR):
+        self.app_logger.info('Drawing intercept %.1f NM in Az %.0f°', intercept, azimut)
+        old_pen = self.tess.pensize()
+        old_color = self.tess.pencolor()
+        self.tess.pensize(SMALL_PEN)
+        self.tess.pencolor(color)
+        self.tess.up()
+        self.tess.goto(0,0)
+        self.tess.down()
+        self.tess.setheading(90.0 - azimut)
+        dash_length = intercept/ (2.0 * LINE_DOT_NUMBER)
+        for dash_index in range (LINE_DOT_NUMBER):
+            self.tess.forward(dash_length)
+            self.tess.up()
+            self.tess.forward(dash_length)
+            self.tess.down()
+        self.tess.left(90)
+        self.tess.forward(image_size)
+        self.tess.backward(2*image_size)
+        self.tess.pencolor(old_color)
+        self.tess.pensize(old_pen)
+
     def chapeau(self):
         self.app_logger.info('Display all the observations (azimut, intercept)')
-        self.start_turtle()
-        self.draw_cross(1)
-#○        self.draw_circle(1)
+        max_intercept = 0.0
         for observation in self.list_of_observations :
-            observation.display() 
+            if max_intercept < abs(observation.intercept) :
+                max_intercept = abs(observation.intercept)
+        image_size = max_intercept * 2.0
+        self.app_logger.info('image size = %f', image_size)
+        self.start_turtle(image_size)
+        self.draw_last_position(image_size / 25.0)
+
+        for observation in self.list_of_observations :
+            self.draw_intercept(observation.date_time, observation.azimut, observation.intercept, image_size)
         self.finish_turtle()
 
 def main () :

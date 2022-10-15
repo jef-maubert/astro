@@ -9,3 +9,5 @@
 log/astro.log
 *.log
 *.log
+*.3
+log/astro.log

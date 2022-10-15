@@ -200,7 +200,4 @@ class Observation:
 
             self.intercept = (self.height_corrected - self.height_estimated) * 60.0
             self.app_logger.info("Intercept : %.1f NM", self.intercept )
-
-    def display(self):
-        self.app_logger.warning("Observation display not yet implemented")
         
