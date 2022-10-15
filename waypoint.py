@@ -95,7 +95,7 @@ def format_angle(angle_value, input_type, output_format=DMM_FORMAT):
             angle_formatted= "{}{:03.0f}°".format(sign_letter, angle_value)
         elif input_type == INPUT_TYPE_HEIGHT:
             angle_formatted= "{}{:08.5f}°".format(sign_letter, angle_value)
-        else : 
+        else :
             return "Format {} notsupported".format(input_type)
 
     if output_format == DMM_FORMAT:
@@ -114,7 +114,7 @@ def format_angle(angle_value, input_type, output_format=DMM_FORMAT):
             angle_formatted= "{}{:03d}°".format(sign_letter, integer_part)
         elif input_type == INPUT_TYPE_HEIGHT:
             angle_formatted= "{}{:02d}°{:02.0f}'".format(sign_letter, integer_part, decimal_part)
-        else : 
+        else :
             return "Format {} notsupported".format(input_type)
 
     return angle_formatted

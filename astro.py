@@ -6,6 +6,7 @@ import logging
 import logging.handlers
 import configparser
 import datetime
+import turtle
 import constants
 
 from waypoint import Waypoint, format_angle
@@ -18,6 +19,16 @@ MESSAGE_FORMAT_FILE = '{asctime:s} - {levelname} - {filename:s} - {funcName:s}-{
 MESSAGE_FORMAT_CONSOLE = '{levelname} - {message:s}'
 MESSAGE_FORMAT_CONSOLE = '{message:s}'
 
+TURTLE_SIZE_X = 600
+TURTLE_SIZE_Y = 800
+BIG_PEN = 3
+SMALL_PEN = 1
+LINE_COLOR = "black"
+TEXT_COLOR = "black"
+LIMIT_COLOR = "green"
+ARROW_COLOR = "lightgrey"
+FONT_SIZE = 6
+
 class AstroApp :
     def __init__(self):
         self.app_full_name = os.path.basename(sys.argv[0])
@@ -26,8 +37,13 @@ class AstroApp :
         self.app_config = None
         self.my_boat = None
         self.list_of_menu = []
+        self.list_of_observations = []
         self.console_log_handler = None
         self.log_level = constants.DEFAULT_LOG_LEVEL
+        self.image_size_x = 50.0
+        self.image_size_y = 50.0
+        self.screen = None
+        self.tess = None
 
     def init_log(self):
         log_filename = os.path.join(constants.LOG_DIRECTORY, self.app_name + ".log")
@@ -246,15 +262,67 @@ class AstroApp :
 
         my_observation = Observation (observation_dt, observation_position, self.my_boat.eye_height, app_logger = self.app_logger)
         my_observation.calculate_he_and_az(new_ho)
+        self.list_of_observations.append(my_observation)
+
+    def draw_circle(self, radius, color=LINE_COLOR):
+        old_pen = self.tess.pensize()
+        old_color = self.tess.pencolor()
+        self.tess.up()
+        self.tess.setheading(0)
+        self.tess.goto(radius,0)
+        self.tess.setheading(90)
+        self.tess.circle(radius)
+        self.tess.pencolor(old_color)
+        self.tess.pensize(old_pen)
+        
+    def draw_cross(self, cross_size, color=LINE_COLOR):
+        old_pen = self.tess.pensize()
+        old_color = self.tess.pencolor()
+        self.tess.pensize(SMALL_PEN)
+        self.tess.pencolor(color)
+        self.tess.setheading(45)
+        self.tess.forward(cross_size)
+        self.tess.backward(cross_size * 2)
+        self.tess.forward(cross_size)
+        self.tess.setheading(135)
+        self.tess.forward(cross_size)
+        self.tess.backward(cross_size * 2)
+        self.tess.forward(cross_size)
+        self.tess.pencolor(old_color)
+        self.tess.pensize(old_pen)
+
+    def start_turtle (self):
+        turtle.setup(width=TURTLE_SIZE_X, height=TURTLE_SIZE_Y)
+        turtle.tracer (10)
+        self.screen = turtle.Screen()
+
+        self.screen.setworldcoordinates(-self.image_size_x, -self.image_size_y, self.image_size_x, self.image_size_y)
+        self.screen.bgcolor("white")
+        self.screen.title(self.app_name + " (Version :" + constants.VERSION+ ")")
+        self.tess = turtle.Turtle()
+
+        self.tess.pencolor(LINE_COLOR)
+        self.tess.pensize(BIG_PEN)
+        self.tess.hideturtle()
+        self.tess.speed("fastest")
+
+    def finish_turtle (self):
+        self.screen.exitonclick()
+        turtle.bye()
 
     def chapeau(self):
-        self.app_logger.info('Calculate a new positon based on 2 or 3 couples (azimut, intercept)')
-        self.app_logger.warning('Not yet implemented')
+        self.app_logger.info('Display all the observations (azimut, intercept)')
+        self.start_turtle()
+        self.draw_cross(1)
+#○        self.draw_circle(1)
+        for observation in self.list_of_observations :
+            observation.display() 
+        self.finish_turtle()
 
 def main () :
     my_app = AstroApp()
     my_app.start_astro()
-    while(True):
+    while True:
         if not my_app.run_once():
             break
     my_app.save_config()

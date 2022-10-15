@@ -1,4 +1,4 @@
-    # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 '''
 to be used with file coming from https://navastro.com/downloads/catalogue.php
 '''
@@ -131,7 +131,6 @@ class Observation:
             #     self.app_logger.debug('found field :"%s"',field)
             for line in csv_reader:
                 self.list_of_athmospheric_refraction_minute.append({"angle":float(line["angle"]), "refraction":float(line["refraction"])})
-        return
 
     def calculate_athmospheric_refraction_minute_by_table(self):
         self.load_athmospheric_refraction_minute_from_file()
@@ -172,7 +171,7 @@ class Observation:
         sin_phi  = math.sin(degree2radian(self.position.latitude))
         cos_ahvg = math.cos(degree2radian(self.ahvg))
         azimut_by_atan = radian2degree(math.atan(sin_ahvg/(tan_decl*cos_phi - sin_phi*cos_ahvg)))
-        
+
         cos_decl = math.cos(degree2radian(self.decl))
         cos_he   = math.cos(degree2radian(self.height_estimated))
         azimut_by_asin = radian2degree(math.asin(sin_ahvg*cos_decl/cos_he))
@@ -202,3 +201,6 @@ class Observation:
             self.intercept = (self.height_corrected - self.height_estimated) * 60.0
             self.app_logger.info("Intercept : %.1f NM", self.intercept )
 
+    def display(self):
+        self.app_logger.warning("Observation display not yet implemented")
+        
