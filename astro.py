@@ -12,7 +12,7 @@ from waypoint import Waypoint, format_angle
 from waypoint import INPUT_TYPE_LATITUDE, INPUT_TYPE_LONGITUDE
 from boat import Boat
 from observation import Observation
-#from display_hat import DisplayHat
+from display_hat import DisplayHat
 
 NB_ROTATING_LOG = 3
 MESSAGE_FORMAT_FILE = '{asctime:s} - {levelname} - {filename:s} - {funcName:s}-{lineno:d} - {message:s}'
@@ -295,8 +295,8 @@ class AstroApp:
     def chapeau(self):
         self.app_logger.info('Display all the observations (azimut, intercept)')
         self.app_logger.info('Please use "display_hat.py"')
-        # my_hat_display = DisplayHat()
-        # my_hat_display.launch_display_hat(self.app_logger, self.app_name)
+        my_hat_display = DisplayHat()
+        my_hat_display.launch_display_hat(self.app_logger, self.app_name)
 
 def main () :
     my_app = AstroApp()

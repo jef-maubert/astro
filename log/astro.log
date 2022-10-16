@@ -869,3 +869,142 @@
 16 17:17:37 - INFO - astro.py - load_config-67 - Loading configuration from file "astro.ini"
 16 17:17:37 - DEBUG - astro.py - load_config-73 - log level set to "INFO"
 16 17:17:37 - INFO - astro.py - load_config-96 - 5 observation(s) loaded from file "astro.ini"
+16 17:22:31 - INFO - astro.py - init_log-62 - Starting astro version V2.0
+16 17:22:31 - INFO - astro.py - load_config-67 - Loading configuration from file "astro.ini"
+16 17:22:31 - DEBUG - astro.py - load_config-73 - log level set to "INFO"
+16 17:22:31 - INFO - astro.py - load_config-96 - 5 observation(s) loaded from file "astro.ini"
+16 17:22:36 - INFO - astro.py - chapeau-296 - Display all the observations (azimut, intercept)
+16 17:22:36 - INFO - astro.py - chapeau-297 - Please use "display_hat.py"
+16 17:22:36 - INFO - display_hat.py - load_config-66 - Loading configuration from file "astro.ini"
+16 17:22:36 - INFO - display_hat.py - load_config-81 - 6 observation(s) loaded from file "astro.ini"
+16 17:22:36 - INFO - display_hat.py - display_hat-192 - Display all the observations (azimut, intercept)
+16 17:22:36 - DEBUG - display_hat.py - display_hat-198 - image size = 10.200000
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 0 NM
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 1 NM
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 2 NM
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 3 NM
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 4 NM
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 5 NM
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 6 NM
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 7 NM
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 8 NM
+16 17:22:36 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 9 NM
+16 17:22:36 - INFO - display_hat.py - draw_last_position-103 - Drawing last position
+16 17:22:36 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 2.0 NM in Az 95°
+16 17:22:36 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 3.4 NM in Az 130°
+16 17:22:36 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 2.1 NM in Az 185°
+16 17:22:36 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 1.5 NM in Az 213°
+16 17:22:36 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 1.5 NM in Az 245°
+16 17:22:36 - INFO - display_hat.py - draw_legend-146 - Drawing legend
+16 17:22:46 - INFO - astro.py - new_astro-281 - Enter a new sun sight, and calculate the height angles azimut and intercept
+16 17:22:47 - DEBUG - astro.py - enter_date-182 - New date = 16-10-2022
+16 17:22:48 - DEBUG - astro.py - enter_time-195 - New time = 17:22:48
+16 17:22:51 - DEBUG - astro.py - enter_eye_height-243 - New eye_height = 2 m
+16 17:22:53 - DEBUG - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+16 17:22:53 - DEBUG - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 16 00:00:00 : decl = 08°47.7'S (var -0.92'),  ahv0 = 183°35.1'(var 15.002°)
+16 17:22:53 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
+16 17:22:53 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 15.38000 hours
+16 17:22:53 - INFO - observation.py - calculate_decl_from_ho249-107 - at 17:22:48 decl = 09°01.8'S
+16 17:22:53 - INFO - observation.py - calculate_ahv0_from_ho249-117 - At 17:22:48 ahv0 = 054°18.9', ahvg = 049°33.3'
+16 17:22:53 - DEBUG - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 10°, refraction = 5.7'
+16 17:22:53 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
+16 17:22:53 - INFO - observation.py - calculate_he_and_az-196 - Sextant height corrected : +10°08' 
+16 17:22:53 - INFO - observation.py - calculate_he-165 - Height estimated : +18°10' 
+16 17:22:53 - DEBUG - observation.py - calculate_az-180 - Azimut by asin : +052° 
+16 17:22:53 - DEBUG - observation.py - calculate_az-181 - Azimut by atan : -052° 
+16 17:22:53 - INFO - observation.py - calculate_az-182 - Azimut : +232° 
+16 17:22:53 - INFO - observation.py - calculate_he_and_az-202 - Intercept : -481.9 NM
+16 17:23:04 - INFO - astro.py - new_astro-281 - Enter a new sun sight, and calculate the height angles azimut and intercept
+16 17:23:06 - DEBUG - astro.py - enter_date-182 - New date = 16-10-2022
+16 17:23:07 - DEBUG - astro.py - enter_time-195 - New time = 17:23:07
+16 17:23:09 - DEBUG - astro.py - enter_eye_height-243 - New eye_height = 2 m
+16 17:23:10 - DEBUG - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+16 17:23:10 - DEBUG - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 16 00:00:00 : decl = 08°47.7'S (var -0.92'),  ahv0 = 183°35.1'(var 15.002°)
+16 17:23:10 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
+16 17:23:10 - DEBUG - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 15.38528 hours
+16 17:23:10 - INFO - observation.py - calculate_decl_from_ho249-107 - at 17:23:07 decl = 09°01.9'S
+16 17:23:10 - INFO - observation.py - calculate_ahv0_from_ho249-117 - At 17:23:07 ahv0 = 054°23.7', ahvg = 049°38.1'
+16 17:23:10 - DEBUG - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 18°, refraction = 3.1'
+16 17:23:10 - DEBUG - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
+16 17:23:10 - INFO - observation.py - calculate_he_and_az-196 - Sextant height corrected : +18°10' 
+16 17:23:10 - INFO - observation.py - calculate_he-165 - Height estimated : +18°07' 
+16 17:23:10 - DEBUG - observation.py - calculate_az-180 - Azimut by asin : +052° 
+16 17:23:10 - DEBUG - observation.py - calculate_az-181 - Azimut by atan : -052° 
+16 17:23:10 - INFO - observation.py - calculate_az-182 - Azimut : +232° 
+16 17:23:10 - INFO - observation.py - calculate_he_and_az-202 - Intercept : 3.2 NM
+16 17:23:16 - INFO - astro.py - chapeau-296 - Display all the observations (azimut, intercept)
+16 17:23:16 - INFO - astro.py - chapeau-297 - Please use "display_hat.py"
+16 17:23:16 - INFO - display_hat.py - load_config-66 - Loading configuration from file "astro.ini"
+16 17:23:16 - INFO - display_hat.py - load_config-81 - 7 observation(s) loaded from file "astro.ini"
+16 17:23:16 - INFO - display_hat.py - display_hat-192 - Display all the observations (azimut, intercept)
+16 17:23:16 - DEBUG - display_hat.py - display_hat-198 - image size = 10.200000
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 0 NM
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 1 NM
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 2 NM
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 3 NM
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 4 NM
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 5 NM
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 6 NM
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 7 NM
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 8 NM
+16 17:23:16 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 9 NM
+16 17:23:16 - INFO - display_hat.py - draw_last_position-103 - Drawing last position
+16 17:23:16 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 2.0 NM in Az 95°
+16 17:23:16 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 3.4 NM in Az 130°
+16 17:23:16 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 2.1 NM in Az 185°
+16 17:23:16 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 1.5 NM in Az 213°
+16 17:23:16 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 1.5 NM in Az 245°
+16 17:23:16 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 3.2 NM in Az 232°
+16 17:23:16 - INFO - display_hat.py - draw_legend-146 - Drawing legend
+16 17:34:06 - INFO - astro.py - init_log-62 - Starting astro version V2.0
+16 17:34:06 - INFO - astro.py - load_config-67 - Loading configuration from file "astro.ini"
+16 17:34:06 - DEBUG - astro.py - load_config-73 - log level set to "INFO"
+16 17:34:06 - INFO - astro.py - load_config-96 - 6 observation(s) loaded from file "astro.ini"
+16 17:34:08 - INFO - astro.py - chapeau-296 - Display all the observations (azimut, intercept)
+16 17:34:08 - INFO - astro.py - chapeau-297 - Please use "display_hat.py"
+16 17:34:08 - INFO - display_hat.py - load_config-66 - Loading configuration from file "astro.ini"
+16 17:34:08 - INFO - display_hat.py - load_config-81 - 7 observation(s) loaded from file "astro.ini"
+16 17:34:08 - INFO - display_hat.py - display_hat-192 - Display all the observations (azimut, intercept)
+16 17:34:08 - DEBUG - display_hat.py - display_hat-198 - image size = 10.200000
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 0 NM
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 1 NM
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 2 NM
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 3 NM
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 4 NM
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 5 NM
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 6 NM
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 7 NM
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 8 NM
+16 17:34:08 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 9 NM
+16 17:34:08 - INFO - display_hat.py - draw_last_position-103 - Drawing last position
+16 17:34:08 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 2.0 NM in Az 95°
+16 17:34:08 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 3.4 NM in Az 130°
+16 17:34:08 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 2.1 NM in Az 185°
+16 17:34:08 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 1.5 NM in Az 213°
+16 17:34:08 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 1.5 NM in Az 245°
+16 17:34:08 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 3.2 NM in Az 232°
+16 17:34:08 - INFO - display_hat.py - draw_legend-146 - Drawing legend
+16 17:34:11 - INFO - astro.py - chapeau-296 - Display all the observations (azimut, intercept)
+16 17:34:11 - INFO - astro.py - chapeau-297 - Please use "display_hat.py"
+16 17:34:11 - INFO - display_hat.py - load_config-66 - Loading configuration from file "astro.ini"
+16 17:34:11 - INFO - display_hat.py - load_config-81 - 7 observation(s) loaded from file "astro.ini"
+16 17:34:11 - INFO - display_hat.py - display_hat-192 - Display all the observations (azimut, intercept)
+16 17:34:11 - DEBUG - display_hat.py - display_hat-198 - image size = 10.200000
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 0 NM
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 1 NM
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 2 NM
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 3 NM
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 4 NM
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 5 NM
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 6 NM
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 7 NM
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 8 NM
+16 17:34:12 - INFO - display_hat.py - draw_target_circle-126 - Drawing circle 9 NM
+16 17:34:12 - INFO - display_hat.py - draw_last_position-103 - Drawing last position
+16 17:34:12 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 2.0 NM in Az 95°
+16 17:34:12 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 3.4 NM in Az 130°
+16 17:34:12 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 2.1 NM in Az 185°
+16 17:34:12 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 1.5 NM in Az 213°
+16 17:34:12 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 1.5 NM in Az 245°
+16 17:34:12 - INFO - display_hat.py - draw_intercept-164 - Drawing intercept 3.2 NM in Az 232°
+16 17:34:12 - INFO - display_hat.py - draw_legend-146 - Drawing legend

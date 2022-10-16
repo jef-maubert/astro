@@ -81,9 +81,9 @@ class DisplayHat:
             self.app_logger.info('%d observation(s) loaded from file "%s"', observation_number, my_config_filename )
 
     def start_turtle (self, image_size):
-        turtle.setup(width=TURTLE_SIZE_X, height=TURTLE_SIZE_Y)
-        turtle.tracer (10)
         self.screen = turtle.Screen()
+        self.screen.setup(width=TURTLE_SIZE_X, height=TURTLE_SIZE_Y)
+        self.screen.tracer (10)
 
         self.screen.setworldcoordinates(-image_size, -image_size, image_size, image_size)
         self.screen.bgcolor("white")
