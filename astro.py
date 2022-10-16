@@ -12,6 +12,7 @@ from waypoint import Waypoint, format_angle
 from waypoint import INPUT_TYPE_LATITUDE, INPUT_TYPE_LONGITUDE
 from boat import Boat
 from observation import Observation
+#from display_hat import DisplayHat
 
 NB_ROTATING_LOG = 3
 MESSAGE_FORMAT_FILE = '{asctime:s} - {levelname} - {filename:s} - {funcName:s}-{lineno:d} - {message:s}'
@@ -37,8 +38,7 @@ class AstroApp:
         self.list_of_menu = []
         self.console_log_handler = None
         self.log_level = constants.DEFAULT_LOG_LEVEL
-        self.screen = None
-        self.tess = None
+        self.next_observation_number = 1
 
     def init_log(self):
         log_filename = os.path.join(constants.LOG_DIRECTORY, self.app_name + ".log")
@@ -87,9 +87,10 @@ class AstroApp:
         self.my_boat = Boat(last_position, last_pos_dt, speed, course, eye_height, self.app_logger)
         self.next_observation_number = 1
         try:
-            while(True):
+            while True:
                 section_name = 'OBSERVATION_{}'.format(self.next_observation_number)
-                intercept = float(self.app_config.get(section_name, 'intercept'))
+                # tip : check if the section exist
+                self.app_config.get(section_name, 'intercept')
                 self.next_observation_number += 1
         except:
             self.app_logger.info('%d observation(s) loaded from file "%s"', self.next_observation_number-1, my_config_filename )
@@ -116,7 +117,7 @@ class AstroApp:
         with open(my_config_filename, 'w', encoding="utf-8") as configfile:
             self.app_config.write(configfile)
 
-    def save_observation_config(self, observation):
+    def save_observation_in_config(self, observation):
         section_name = 'OBSERVATION_{}'.format(self.next_observation_number)
         try:
             self.app_config.add_section(section_name)
@@ -134,7 +135,7 @@ class AstroApp:
         self.list_of_menu.append({"code": "L", "title":"Display last Position", "function":self.display_last_position})
         self.list_of_menu.append({"code": "C", "title":"Display current Position", "function":self.display_current_position})
         self.list_of_menu.append({"code": "A", "title":"Enter new astro", "function":self.new_astro})
-        self.list_of_menu.append({"code": "N", "title":"Calculate new position", "function":self.chapeau})
+        self.list_of_menu.append({"code": "D", "title":"Display all observations", "function":self.chapeau})
         self.list_of_menu.append({"code": "E", "title":"Exit", "function":None})
 
     def start_astro(self):
@@ -218,6 +219,17 @@ class AstroApp:
                 break
         return float(new_ho_str)
 
+    def enter_boolean (self, prompt, default_value= True):
+        default_value_str = "Y" if default_value else "N"
+        prompt = "{} (Y/N) [{}]? ".format(prompt, default_value_str)
+        regex_for_validation = "[yYnN]"
+        while True:
+            bool_str = input(prompt)
+            bool_str = bool_str if bool_str else default_value_str
+            if re.match (regex_for_validation, bool_str):
+                break
+        return bool_str in ("Y", "y")
+
     def enter_eye_height(self):
         eye_height_default = str(self.my_boat.eye_height)
         eye_height_prompt = "Eye height (hh)m [{}] ? ".format(eye_height_default)
@@ -277,10 +289,14 @@ class AstroApp:
 
         my_observation = Observation (observation_dt, observation_position, self.my_boat.eye_height, app_logger = self.app_logger)
         my_observation.calculate_he_and_az(new_ho)
-        self.save_observation_config(my_observation)
+        if self.enter_boolean ("Save it"):
+            self.save_observation_in_config(my_observation)
 
     def chapeau(self):
         self.app_logger.info('Display all the observations (azimut, intercept)')
+        self.app_logger.info('Please use "display_hat.py"')
+        # my_hat_display = DisplayHat()
+        # my_hat_display.launch_display_hat(self.app_logger, self.app_name)
 
 def main () :
     my_app = AstroApp()

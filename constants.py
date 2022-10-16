@@ -5,7 +5,7 @@ Created on Tue Oct 11 00:25:41 2022
 @author: jef
 """
 
-VERSION = "V1.0"
+VERSION = "V2.0"
 
 LOG_DIRECTORY = "log"
 DEFAULT_LOG_LEVEL = "DEBUG"
