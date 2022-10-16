@@ -27,7 +27,7 @@ LAST_POSITION_COLOR = "blue"
 FONT_SIZE = 10
 LINE_DOT_NUMBER = 10
 
-class AstroApp :
+class AstroApp:
     def __init__(self):
         self.app_full_name = os.path.basename(sys.argv[0])
         self.app_name = os.path.splitext(self.app_full_name)[0]
@@ -35,7 +35,6 @@ class AstroApp :
         self.app_config = None
         self.my_boat = None
         self.list_of_menu = []
-        self.list_of_observations = []
         self.console_log_handler = None
         self.log_level = constants.DEFAULT_LOG_LEVEL
         self.screen = None
@@ -86,6 +85,14 @@ class AstroApp :
         last_position = Waypoint("last position", last_latitude, last_longitude)
 
         self.my_boat = Boat(last_position, last_pos_dt, speed, course, eye_height, self.app_logger)
+        self.next_observation_number = 1
+        try:
+            while(True):
+                section_name = 'OBSERVATION_{}'.format(self.next_observation_number)
+                intercept = float(self.app_config.get(section_name, 'intercept'))
+                self.next_observation_number += 1
+        except:
+            self.app_logger.info('%d observation(s) loaded from file "%s"', self.next_observation_number-1, my_config_filename )
 
     def save_config(self):
         try:
@@ -108,6 +115,18 @@ class AstroApp :
         my_config_filename = "{}.ini".format(self.app_name)
         with open(my_config_filename, 'w', encoding="utf-8") as configfile:
             self.app_config.write(configfile)
+
+    def save_observation_config(self, observation):
+        section_name = 'OBSERVATION_{}'.format(self.next_observation_number)
+        try:
+            self.app_config.add_section(section_name)
+        except:
+            pass
+
+        self.app_config.set(section_name, 'intercept', "{:.1f}".format(observation.intercept))
+        self.app_config.set(section_name, 'azimut', "{:.1f}".format(observation.azimut))
+        self.app_config.set(section_name, 'date_time', observation.date_time.strftime(constants.DATE_FORMATTER))
+        self.save_config()
 
     def init_menu(self):
         self.list_of_menu.append({"code": "I", "title":"Initialize Position", "function":self.init_position})
@@ -258,109 +277,10 @@ class AstroApp :
 
         my_observation = Observation (observation_dt, observation_position, self.my_boat.eye_height, app_logger = self.app_logger)
         my_observation.calculate_he_and_az(new_ho)
-        self.list_of_observations.append(my_observation)
-
-    def start_turtle (self, image_size):
-        import turtle
-        turtle.setup(width=TURTLE_SIZE_X, height=TURTLE_SIZE_Y)
-        turtle.tracer (10)
-        self.screen = turtle.Screen()
-
-        self.screen.setworldcoordinates(-image_size, -image_size, image_size, image_size)
-        self.screen.bgcolor("white")
-        self.screen.title(self.app_name + " (Version :" + constants.VERSION+ ")")
-        self.tess = turtle.Turtle()
-
-        self.tess.pencolor(LAST_POSITION_COLOR)
-        self.tess.pensize(BIG_PEN)
-        self.tess.hideturtle()
-        self.tess.speed("fastest")
-
-    def finish_turtle (self):
-        import turtle
-        self.screen.exitonclick()
-        turtle.bye()
-
-    def draw_last_position(self, position_circle_radius, color=LAST_POSITION_COLOR):
-        self.app_logger.info('Drawing last position')
-        old_pen = self.tess.pensize()
-        old_color = self.tess.pencolor()
-        self.tess.pensize(SMALL_PEN)
-        self.tess.pencolor(color)
-        self.tess.dot()
-        self.tess.up()
-        self.tess.goto(0,0)
-        self.tess.setheading(0)
-        self.tess.forward(position_circle_radius)
-        self.tess.down()
-        self.tess.setheading(90)
-        self.tess.circle(position_circle_radius)
-        self.tess.up()
-        self.tess.setheading(90)
-        self.tess.forward(position_circle_radius)
-        self.tess.down()
-        last_position_time_str = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER.split(" ")[1])
-        self.tess.write(last_position_time_str, font=("Arial", FONT_SIZE, "normal"), align="left")
-        self.tess.up()
-        self.tess.goto(0,0)
-        self.tess.down()
-        self.tess.pencolor(old_color)
-        self.tess.pensize(old_pen)
-
-    def draw_legend(self, image_size, color=HEIGHT_LINE_COLOR):
-        self.app_logger.info('Drawing legend')
-        old_pen = self.tess.pensize()
-        old_color = self.tess.pencolor()
-        self.tess.pensize(SMALL_PEN)
-        self.tess.pencolor(color)
-        self.tess.up()
-        self.tess.goto(-image_size,image_size - 1)
-        self.tess.setheading(0)
-        self.tess.down()
-        self.tess.forward(1)
-        self.tess.write("1 NM", font=("Arial", FONT_SIZE, "normal"), align="left")
-        self.tess.up()
-        self.tess.goto(0,0)
-        self.tess.down()
-        self.tess.pencolor(old_color)
-        self.tess.pensize(old_pen)
-    
-    def draw_intercept(self, date_time, azimut, intercept, image_size, color=LAST_POSITION_COLOR):
-        self.app_logger.info('Drawing intercept %.1f NM in Az %.0f°', intercept, azimut)
-        old_pen = self.tess.pensize()
-        old_color = self.tess.pencolor()
-        self.tess.pensize(SMALL_PEN)
-        self.tess.pencolor(color)
-        self.tess.up()
-        self.tess.goto(0,0)
-        self.tess.down()
-        self.tess.setheading(90.0 - azimut)
-        dash_length = intercept/ (2.0 * LINE_DOT_NUMBER)
-        for dash_index in range (LINE_DOT_NUMBER):
-            self.tess.forward(dash_length)
-            self.tess.up()
-            self.tess.forward(dash_length)
-            self.tess.down()
-        self.tess.left(90)
-        self.tess.forward(image_size)
-        self.tess.backward(2*image_size)
-        self.tess.pencolor(old_color)
-        self.tess.pensize(old_pen)
+        self.save_observation_config(my_observation)
 
     def chapeau(self):
         self.app_logger.info('Display all the observations (azimut, intercept)')
-        max_intercept = 1.0
-        for observation in self.list_of_observations :
-            if max_intercept < abs(observation.intercept) :
-                max_intercept = abs(observation.intercept)
-        image_size = max_intercept * 2.0
-        self.app_logger.debug('image size = %f', image_size)
-        self.start_turtle(image_size)
-        self.draw_last_position(image_size / 25.0)
-        self.draw_legend(image_size)
-        for observation in self.list_of_observations :
-            self.draw_intercept(observation.date_time, observation.azimut, observation.intercept, image_size)
-        self.finish_turtle()
 
 def main () :
     my_app = AstroApp()
