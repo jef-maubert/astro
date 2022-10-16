@@ -6,6 +6,7 @@ import logging
 import logging.handlers
 import configparser
 import datetime
+import turtle
 import constants
 
 from waypoint import Waypoint, format_angle
@@ -261,7 +262,6 @@ class AstroApp :
         self.list_of_observations.append(my_observation)
 
     def start_turtle (self, image_size):
-        import turtle
         turtle.setup(width=TURTLE_SIZE_X, height=TURTLE_SIZE_Y)
         turtle.tracer (10)
         self.screen = turtle.Screen()
@@ -277,7 +277,6 @@ class AstroApp :
         self.tess.speed("fastest")
 
     def finish_turtle (self):
-        import turtle
         self.screen.exitonclick()
         turtle.bye()
 
