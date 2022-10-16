@@ -6,6 +6,7 @@ import logging
 import logging.handlers
 import configparser
 import datetime
+import platform
 import constants
 
 from waypoint import Waypoint, format_angle
@@ -294,9 +295,12 @@ class AstroApp:
 
     def chapeau(self):
         self.app_logger.info('Display all the observations (azimut, intercept)')
-        self.app_logger.info('Please use "display_hat.py"')
-        my_hat_display = DisplayHat()
-        my_hat_display.launch_display_hat(self.app_logger, self.app_name)
+        self.app_logger.info('platform = "%s"', platform.system())
+        if platform.system().lower() in ("windows", "linux"):
+            my_hat_display = DisplayHat()
+            my_hat_display.launch_display_hat(self.app_logger, self.app_name)
+        else:
+            self.app_logger.info('Please use "display_hat.py"')
 
 def main () :
     my_app = AstroApp()

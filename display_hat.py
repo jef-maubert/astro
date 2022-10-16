@@ -100,7 +100,7 @@ class DisplayHat:
         turtle.bye()
 
     def draw_last_position(self, square_size, color=LAST_POSITION_COLOR):
-        self.app_logger.info('Drawing last position')
+        self.app_logger.debug('Drawing last position')
         old_pen = self.tess.pensize()
         old_color = self.tess.pencolor()
         self.tess.pensize(SMALL_PEN)
@@ -123,7 +123,7 @@ class DisplayHat:
         self.tess.pensize(old_pen)
 
     def draw_target_circle(self, radius, pen_size, color=TARGET_COLOR):
-        self.app_logger.info('Drawing circle %.0f NM', radius)
+        self.app_logger.debug('Drawing circle %.0f NM', radius)
         old_pen = self.tess.pensize()
         old_color = self.tess.pencolor()
         self.tess.pensize(pen_size)
@@ -143,7 +143,7 @@ class DisplayHat:
         self.tess.pensize(old_pen)
 
     def draw_legend(self, image_size, color=LEGEND_COLOR):
-        self.app_logger.info('Drawing legend')
+        self.app_logger.debug('Drawing legend')
         old_pen = self.tess.pensize()
         old_color = self.tess.pencolor()
         self.tess.pensize(SMALL_PEN)
@@ -189,7 +189,6 @@ class DisplayHat:
         self.tess.pencolor(old_color)
 
     def display_hat(self):
-        self.app_logger.info('Display all the observations (azimut, intercept)')
         max_intercept = 1.0
         for observation in self.list_of_observations :
             if max_intercept < abs(observation["intercept"]) :
