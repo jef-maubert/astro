@@ -20,7 +20,7 @@ BIG_PEN = 2
 SMALL_PEN = 1
 
 LEGEND_COLOR = "black"
-LAST_POSITION_COLOR = "green"
+LAST_POSITION_COLOR = "black"
 TARGET_COLOR = "grey"
 FONT_SIZE = 10
 RATIO_IMAGE_INTERCEPT = 3
@@ -37,7 +37,9 @@ class DisplayHat:
         self.log_level = constants.DEFAULT_LOG_LEVEL
         self.screen = None
         self.tess = None
-        self.list_of_intercept_color = ["blue", "orange", "red", "violet"]
+        self.list_of_intercept_color = ["blue", "orange", "green", "red", "violet"]
+        self.map_size_x = 20.0
+        self.map_size_x = 20.0
 
     def init_log(self):
         log_filename = os.path.join(constants.LOG_DIRECTORY, self.app_name + ".log")
@@ -80,12 +82,29 @@ class DisplayHat:
         except:
             self.app_logger.info('%d observation(s) loaded from file "%s"', observation_number, my_config_filename )
 
-    def start_turtle (self, image_size):
+    def start_turtle (self, min_map_size):
         self.screen = turtle.Screen()
-        self.screen.setup(width=TURTLE_SIZE_X, height=TURTLE_SIZE_Y)
+
+        screenTk = self.screen.getcanvas().winfo_toplevel()
+        screenTk.attributes("-fullscreen", True)
+
+        #tip : turtle.Screen().getcanvas() is equivalant to tkinter.root
+        screen_width = self.screen.getcanvas().winfo_screenwidth()
+        screen_height = self.screen.getcanvas().winfo_screenheight()
+        self.app_logger.debug("screen width = %d, screen_height = %d", screen_width,  screen_height)
+        ratio_x_y = float(screen_width) / float(screen_height)
+#        self.screen.setup(width=TURTLE_SIZE_X, height=TURTLE_SIZE_Y)
         self.screen.tracer (10)
 
-        self.screen.setworldcoordinates(-image_size, -image_size, image_size, image_size)
+        if ratio_x_y >1:
+            self.map_size_x = min_map_size * ratio_x_y
+            self.map_size_y =min_map_size
+        else:
+            self.map_size_x = min_map_size
+            self.map_size_y =min_map_size * ratio_x_y
+        self.app_logger.debug('map size %.1f NM * %.1f NM', self.map_size_x , self.map_size_y)
+
+        self.screen.setworldcoordinates(-self.map_size_x, -self.map_size_y, self.map_size_x, self.map_size_y)
         self.screen.bgcolor("white")
         self.screen.title(self.app_name + " (Version :" + constants.VERSION+ ")")
         self.tess = turtle.Turtle()
@@ -142,25 +161,28 @@ class DisplayHat:
         self.tess.pencolor(old_color)
         self.tess.pensize(old_pen)
 
-    def draw_legend(self, image_size, color=LEGEND_COLOR):
+    def calculate_legende_size(self, min_map_size):
+        self.legend_length = 1.0
+        
+    def draw_legend(self, color=LEGEND_COLOR):
         self.app_logger.debug('Drawing legend')
         old_pen = self.tess.pensize()
         old_color = self.tess.pencolor()
         self.tess.pensize(SMALL_PEN)
         self.tess.pencolor(color)
         self.tess.up()
-        self.tess.goto(-image_size,image_size - 1)
+        self.tess.goto(-self.map_size_x, self.map_size_y * 0.95)
         self.tess.setheading(0)
         self.tess.down()
-        self.tess.forward(1)
-        self.tess.write("1 NM", font=("Arial", FONT_SIZE, "normal"), align="left")
+        self.tess.forward(self.legend_length)
+        self.tess.write("{:.0f} NM".format(self.legend_length), font=("Arial", FONT_SIZE, "normal"), align="left")
         self.tess.up()
         self.tess.goto(0,0)
         self.tess.down()
         self.tess.pencolor(old_color)
         self.tess.pensize(old_pen)
     
-    def draw_intercept(self, observation_rank, date_time, azimut, intercept, image_size):
+    def draw_intercept(self, observation_rank, date_time, azimut, intercept):
         self.app_logger.info('Drawing intercept %.1f NM in Az %.0f°', intercept, azimut)
         old_pen = self.tess.pensize()
         self.tess.pensize(SMALL_PEN)
@@ -174,11 +196,12 @@ class DisplayHat:
         self.tess.forward(intercept)
         self.tess.left(90)
         self.tess.pensize(BIG_PEN)
-        self.tess.forward(image_size)
-        self.tess.backward(2*image_size)
+        intercept_length = max(self.map_size_x, self.map_size_y)
+        self.tess.forward(intercept_length)
+        self.tess.backward(2.0 * intercept_length)
 
         self.tess.up()
-        self.tess.goto(-image_size,image_size - (observation_rank+1))
+        self.tess.goto(-self.map_size_x, self.map_size_y * (1.0 - (observation_rank+1)*0.05)) 
         self.tess.setheading(0)
         self.tess.down()
         date_time_str = date_time.split(" ")[1]
@@ -193,18 +216,20 @@ class DisplayHat:
         for observation in self.list_of_observations :
             if max_intercept < abs(observation["intercept"]) :
                 max_intercept = abs(observation["intercept"])
-        image_size = max_intercept * RATIO_IMAGE_INTERCEPT
-        self.app_logger.debug('image size = %f', image_size)
-        self.start_turtle(image_size)
+        min_map_size = max_intercept * RATIO_IMAGE_INTERCEPT
+        self.app_logger.debug('min map size = %.1fNM', min_map_size)
+
+        self.calculate_legende_size(min_map_size)
+        self.start_turtle(min_map_size)
         for i in range(10):
             pen_size = BIG_PEN if i % 5 == 4 else SMALL_PEN
             self.draw_target_circle(i, pen_size)
-        self.draw_last_position(image_size / 25.0)
+        self.draw_last_position(min_map_size / 25.0)    # (min_map_size / 25.0) matches a small square for the estimate point
         observation_rank = 1
         for observation in self.list_of_observations :
-            self.draw_intercept(observation_rank, observation["date_time"], observation["azimut"], observation["intercept"], image_size)
+            self.draw_intercept(observation_rank, observation["date_time"], observation["azimut"], observation["intercept"])
             observation_rank += 1
-        self.draw_legend(image_size)
+        self.draw_legend()
         self.finish_turtle()
 
     def launch_display_hat(self, app_logger, config_name) :

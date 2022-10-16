@@ -17,8 +17,8 @@ from display_hat import DisplayHat
 
 NB_ROTATING_LOG = 3
 MESSAGE_FORMAT_FILE = '{asctime:s} - {levelname} - {filename:s} - {funcName:s}-{lineno:d} - {message:s}'
-MESSAGE_FORMAT_CONSOLE = '{levelname} - {message:s}'
-MESSAGE_FORMAT_CONSOLE = '{message:s}'
+MESSAGE_FORMAT_CONSOLE_KK = '{levelname} - {message:s}'
+MESSAGE_FORMAT_CONSOLE = '{levelname}{message:s}'
 
 TURTLE_SIZE_X = 600
 TURTLE_SIZE_Y = 600
@@ -57,6 +57,10 @@ class AstroApp:
 
         console_log_format = logging.Formatter(fmt=MESSAGE_FORMAT_CONSOLE, datefmt='%d %H:%M:%S', style="{")
         self.console_log_handler = logging.StreamHandler()
+        self.console_log_handler.setLevel(self.log_level)
+        logging.addLevelName(logging.DEBUG, "")
+        logging.addLevelName(logging.INFO, "")
+        logging.addLevelName(logging.WARNING, "!!! ")
         self.console_log_handler.setLevel(self.log_level)
         self.console_log_handler.setFormatter(console_log_format)
         self.app_logger.addHandler(self.console_log_handler)
@@ -295,8 +299,16 @@ class AstroApp:
 
     def chapeau(self):
         self.app_logger.info('Display all the observations (azimut, intercept)')
-        self.app_logger.info('platform = "%s"', platform.system())
-        if platform.system().lower() in ("windows", "linux"):
+        turtle_available = True
+        if platform.system().lower()  == "windows" :
+            turtle_available = True
+        elif platform.system().lower()  == "linux":
+            try : 
+                platform.system().fredesktop_os_release()
+            except: 
+                turtle_available = False
+
+        if turtle_available:
             my_hat_display = DisplayHat()
             my_hat_display.launch_display_hat(self.app_logger, self.app_name)
         else:
