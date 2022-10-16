@@ -6,6 +6,7 @@ import logging.handlers
 import configparser
 import datetime
 import turtle
+import platform
 import constants
 
 NB_ROTATING_LOG = 3
@@ -27,7 +28,8 @@ RATIO_IMAGE_INTERCEPT = 3
 LINE_DOT_NUMBER = 10
 
 class DisplayHat:
-    def __init__(self):
+    def __init__(self, verbose=True):
+        self.verbose = verbose
         self.app_full_name = os.path.basename(sys.argv[0])
         self.app_name = os.path.splitext(self.app_full_name)[0]
         self.app_logger = None
@@ -40,6 +42,15 @@ class DisplayHat:
         self.list_of_intercept_color = ["blue", "orange", "green", "red", "violet"]
         self.map_size_x = 20.0
         self.map_size_x = 20.0
+        
+        self.turtle_bye_required = True
+        if platform.system().lower()  == "windows" :
+            self.turtle_bye_required = True
+        elif platform.system().lower()  == "linux":
+            try : 
+                platform.system().fredesktop_os_release()
+            except: 
+                self.turtle_bye_required = False
 
     def init_log(self):
         log_filename = os.path.join(constants.LOG_DIRECTORY, self.app_name + ".log")
@@ -80,7 +91,8 @@ class DisplayHat:
                 self.list_of_observations.append({"date_time":observation_dt, "azimut":azimut, "intercept": intercept})
                 observation_number += 1
         except:
-            self.app_logger.info('%d observation(s) loaded from file "%s"', observation_number, my_config_filename )
+            if self.verbose:
+                self.app_logger.info('%d observation(s) loaded from file "%s"', observation_number-1, my_config_filename )
 
     def start_turtle (self, min_map_size):
         self.screen = turtle.Screen()
@@ -101,7 +113,7 @@ class DisplayHat:
             self.map_size_y =min_map_size
         else:
             self.map_size_x = min_map_size
-            self.map_size_y =min_map_size * ratio_x_y
+            self.map_size_y =min_map_size / ratio_x_y
         self.app_logger.debug('map size %.1f NM * %.1f NM', self.map_size_x , self.map_size_y)
 
         self.screen.setworldcoordinates(-self.map_size_x, -self.map_size_y, self.map_size_x, self.map_size_y)
@@ -116,7 +128,8 @@ class DisplayHat:
 
     def finish_turtle (self):
         self.screen.exitonclick()
-        turtle.bye()
+        if self.turtle_bye_required:
+            turtle.bye()
 
     def draw_last_position(self, square_size, color=LAST_POSITION_COLOR):
         self.app_logger.debug('Drawing last position')
@@ -183,7 +196,8 @@ class DisplayHat:
         self.tess.pensize(old_pen)
     
     def draw_intercept(self, observation_rank, date_time, azimut, intercept):
-        self.app_logger.info('Drawing intercept %.1f NM in Az %.0f°', intercept, azimut)
+        if self.verbose:
+            self.app_logger.info('Drawing intercept %.1f NM in Az %03.0f°', intercept, azimut)
         old_pen = self.tess.pensize()
         self.tess.pensize(SMALL_PEN)
         old_color = self.tess.pencolor()
@@ -205,7 +219,7 @@ class DisplayHat:
         self.tess.setheading(0)
         self.tess.down()
         date_time_str = date_time.split(" ")[1]
-        observation_title = "{} : {:.1f} NM / {:.1f}°".format(date_time_str, intercept, azimut)
+        observation_title = "{} : {:.1f} NM / {:03.0f}°".format(date_time_str, intercept, azimut)
         self.tess.write(observation_title, font=("Arial", FONT_SIZE, "normal"), align="left")
 
         self.tess.pensize(old_pen)

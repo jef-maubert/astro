@@ -283,7 +283,7 @@ class AstroApp:
         self.app_logger.info("now (%s) %s", now_string, self.my_boat.format_current_position())
 
     def new_astro(self):
-        self.app_logger.info('Enter a new sun sight, and calculate the height angles azimut and intercept')
+        self.app_logger.info('Enter a new sun sight, and calculate the height angles, azimut and intercept')
         new_date = self.enter_date()
         new_time = self.enter_time()
         self.my_boat.eye_height = self.enter_eye_height()
@@ -297,6 +297,25 @@ class AstroApp:
         if self.enter_boolean ("Save it"):
             self.save_observation_in_config(my_observation)
 
+    def load_observations(self):
+        observation_number = 1
+        list_of_observations = []
+        try:
+            while(True):
+                section_name = 'OBSERVATION_{}'.format(observation_number)
+                intercept = float(self.app_config.get(section_name, 'intercept'))
+                azimut = float(self.app_config.get(section_name, 'azimut'))
+                observation_dt = self.app_config.get(section_name, 'date_time')
+                list_of_observations.append({"date_time":observation_dt, "azimut":azimut, "intercept": intercept})
+                observation_number += 1
+        except:
+            self.app_logger.info('%d observation(s) loaded from configuration file', observation_number-1)
+        observation_rank = 1
+        for observation in list_of_observations :
+            self.app_logger.info('%d) %s intercept = %.1f NM, Az = %03.0f°', observation_rank, observation["date_time"], 
+                                 observation["intercept"], observation["azimut"])
+            observation_rank += 1
+
     def chapeau(self):
         self.app_logger.info('Display all the observations (azimut, intercept)')
         turtle_available = True
@@ -308,11 +327,12 @@ class AstroApp:
             except: 
                 turtle_available = False
 
+        self.load_observations()
         if turtle_available:
-            my_hat_display = DisplayHat()
+            my_hat_display = DisplayHat(verbose=False)
             my_hat_display.launch_display_hat(self.app_logger, self.app_name)
         else:
-            self.app_logger.info('Please use "display_hat.py"')
+            self.app_logger.info('Please launch "display_hat.py"')
 
 def main () :
     my_app = AstroApp()
