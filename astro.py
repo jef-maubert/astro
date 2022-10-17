@@ -152,7 +152,7 @@ class AstroApp:
         self.list_of_menu.append({"code": "C", "title":"Display current position", "function":self.display_current_position})
         self.list_of_menu.append({"code": "A", "title":"Enter new astro", "function":self.new_astro})
         self.list_of_menu.append({"code": "D", "title":"Display all observations", "function":self.display_astro})
-        self.list_of_menu.append({"code": "R", "title":"Reset the position", "function":self.reset_position})
+        self.list_of_menu.append({"code": "F", "title":"Fix the position", "function":self.reset_position})
         self.list_of_menu.append({"code": "E", "title":"Exit", "function":None})
 
     def start_astro(self):
@@ -183,7 +183,7 @@ class AstroApp:
             date_default = date_default.replace("-", "/")
         year_default = int(date_default[-4:])
         date_prompt = "Date (dd/mm/yyyy) [{}] ? ".format(date_default)
-        regex_for_validation = "\d{1,2}\/\d{1,2}(\/\d{2,4})?"
+        regex_for_validation = "^\d{1,2}\/\d{1,2}(\/\d{2,4})?$"
         while True:
             date_input = input (date_prompt)
             new_date = date_input if date_input else date_default
@@ -205,7 +205,7 @@ class AstroApp:
         if not time_default:
             time_default= "now"
         time_prompt = "Time (hh:mm:ss) [{}] ? ".format(time_default)
-        regex_for_validation = "\d{1,2}:\d{1,2}:\d{1,2}"
+        regex_for_validation = "^\d{1,2}:\d{1,2}:\d{1,2}$"
         while True:
             time_input = input (time_prompt)
             time_dt = datetime.datetime.now()
@@ -221,10 +221,10 @@ class AstroApp:
         default_value = format_angle(default_value, input_type)
         if input_type == INPUT_TYPE_LATITUDE:
             prompt = "Latitude (DD°mm.m'(N/S)) ["+default_value+"] ? "
-            regex_for_validation = "\d{1,2}°\d{1,2}.\d'[NS]?"
+            regex_for_validation = "^\d{1,2}°\d{1,2}\.\d'[NnSs]?$"
         elif input_type == INPUT_TYPE_LONGITUDE:
             prompt = "Longitude (DDD°mm.m'(W/E)) ["+default_value+"] ? "
-            regex_for_validation = "\d{1,3}°\d{1,2}.\d'[WE]?"
+            regex_for_validation = "^\d{1,3}°\d{1,2}\.\d'[WwEe]?$"
         while True:
             angle_input = input(prompt)
             new_angle = angle_input if angle_input else default_value
@@ -234,7 +234,7 @@ class AstroApp:
 
     def enter_ho(self):
         prompt = "Sextant angle (DD.mm) ? "
-        regex_for_validation = "\d{1,2}(.\d)?"
+        regex_for_validation = "^\d{1,2}(\.\d)?$"
         while True:
             new_ho_str = input(prompt)
             if re.match (regex_for_validation, new_ho_str):
@@ -246,7 +246,7 @@ class AstroApp:
     def enter_boolean (self, prompt, default_value= True):
         default_value_str = "Y" if default_value else "N"
         prompt = "{} (Y/N) [{}]? ".format(prompt, default_value_str)
-        regex_for_validation = "[yYnN]"
+        regex_for_validation = "^[yYnN]$"
         while True:
             bool_str = input(prompt)
             bool_str = bool_str if bool_str else default_value_str
@@ -257,7 +257,7 @@ class AstroApp:
     def enter_eye_height(self):
         eye_height_default = str(self.my_boat.eye_height)
         eye_height_prompt = "Eye height (hh)m [{}] ? ".format(eye_height_default)
-        regex_for_validation = "\d{1,2}"
+        regex_for_validation = "^\d{1,2}$"
         while True:
             eye_height_input = input (eye_height_prompt)
             eye_height_input = eye_height_input if eye_height_input else eye_height_default
@@ -285,7 +285,7 @@ class AstroApp:
 
         default_distance = 0.0
         prompt = "Distance in NM (xxx.x) [{}] ? ".format(default_distance)
-        regex_for_validation = "\d{1,3}.?\d?"
+        regex_for_validation = "^\d{1,3}\.?\d?$"
         while True:
             distance_input = input (prompt)
             distance_input  = distance_input if distance_input else str(default_distance)
@@ -295,7 +295,7 @@ class AstroApp:
 
         default_azimut = 0
         prompt = "Azimut (xxx) [{}] ? ".format(default_azimut)
-        regex_for_validation = "\d{1,3}"
+        regex_for_validation = "^\d{1,3}$"
         while True:
             azimut_input = input(prompt)
             azimut_input  = azimut_input if azimut_input else str(default_azimut)
@@ -321,7 +321,7 @@ class AstroApp:
 
         default_speed = self.my_boat.speed
         prompt = "Speed in knots (xx.x) [{}] ? ".format(default_speed)
-        regex_for_validation = "\d{1,2}.?\d?"
+        regex_for_validation = "^\d{1,2}\.?\d?$"
         while True:
             speed_input = input (prompt)
             speed_input  = speed_input if speed_input else str(default_speed)
@@ -331,7 +331,7 @@ class AstroApp:
 
         default_course = int(self.my_boat.course)
         prompt = "course (xxx) [{}] ? ".format(default_course)
-        regex_for_validation = "\d{1,3}"
+        regex_for_validation = "^\d{1,3}$"
         while True:
             course_input = input(prompt)
             course_input  = course_input if course_input else str(default_course)
@@ -397,6 +397,7 @@ class AstroApp:
         if platform.system().lower()  == "windows" :
             turtle_available = True
         elif platform.system().lower()  == "linux":
+            platform.system().fredesktop_os_release()
             try :
                 platform.system().fredesktop_os_release()
             except:
