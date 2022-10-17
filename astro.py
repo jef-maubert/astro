@@ -5,6 +5,7 @@ import re
 import logging
 import logging.handlers
 import configparser
+from configparser import NoSectionError, DuplicateSectionError
 import datetime
 import platform
 import constants
@@ -58,7 +59,7 @@ class AstroApp:
         console_log_format = logging.Formatter(fmt=MESSAGE_FORMAT_CONSOLE, datefmt='%d %H:%M:%S', style="{")
         self.console_log_handler = logging.StreamHandler()
         self.console_log_handler.setLevel(self.log_level)
-        logging.addLevelName(logging.DEBUG, "")
+        logging.addLevelName(logging.DEBUG, "- ")
         logging.addLevelName(logging.INFO, "")
         logging.addLevelName(logging.WARNING, "!!! ")
         self.console_log_handler.setLevel(self.log_level)
@@ -97,17 +98,17 @@ class AstroApp:
                 # tip : check if the section exist
                 self.app_config.get(section_name, 'intercept')
                 self.next_observation_number += 1
-        except:
+        except NoSectionError:
             self.app_logger.info('%d observation(s) loaded from file "%s"', self.next_observation_number-1, my_config_filename )
 
     def save_config(self):
         try:
             self.app_config.add_section('BOAT')
-        except:
+        except DuplicateSectionError:
             pass
         try:
             self.app_config.add_section('LOG')
-        except:
+        except DuplicateSectionError:
             pass
 
         self.app_config.set('LOG', 'level',self.log_level)
@@ -126,7 +127,7 @@ class AstroApp:
         section_name = 'OBSERVATION_{}'.format(self.next_observation_number)
         try:
             self.app_config.add_section(section_name)
-        except:
+        except NoSectionError:
             pass
 
         self.app_config.set(section_name, 'intercept', "{:.1f}".format(observation.intercept))
@@ -134,13 +135,24 @@ class AstroApp:
         self.app_config.set(section_name, 'date_time', observation.date_time.strftime(constants.DATE_FORMATTER))
         self.save_config()
 
+    def remove_all_observations(self):
+        observation_index = 1
+        while observation_index < self.next_observation_number :
+            section_name = 'OBSERVATION_{}'.format(observation_index)
+            self.app_logger.info('Removing section "%s"', section_name)
+            self.app_config.remove_section(section_name)
+            observation_index += 1
+        self.next_observation_number = 1
+        self.save_config()
+
     def init_menu(self):
-        self.list_of_menu.append({"code": "I", "title":"Initialize Position", "function":self.init_position})
+        self.list_of_menu.append({"code": "I", "title":"Initialize position", "function":self.init_position})
         self.list_of_menu.append({"code": "S", "title":"Set course and speed", "function":self.set_speed_and_course})
-        self.list_of_menu.append({"code": "L", "title":"Display last Position", "function":self.display_last_position})
-        self.list_of_menu.append({"code": "C", "title":"Display current Position", "function":self.display_current_position})
+        self.list_of_menu.append({"code": "L", "title":"Display last position", "function":self.display_last_position})
+        self.list_of_menu.append({"code": "C", "title":"Display current position", "function":self.display_current_position})
         self.list_of_menu.append({"code": "A", "title":"Enter new astro", "function":self.new_astro})
-        self.list_of_menu.append({"code": "D", "title":"Display all observations", "function":self.chapeau})
+        self.list_of_menu.append({"code": "D", "title":"Display all observations", "function":self.display_astro})
+        self.list_of_menu.append({"code": "R", "title":"Reset the position", "function":self.reset_position})
         self.list_of_menu.append({"code": "E", "title":"Exit", "function":None})
 
     def start_astro(self):
@@ -227,7 +239,9 @@ class AstroApp:
             new_ho_str = input(prompt)
             if re.match (regex_for_validation, new_ho_str):
                 break
-        return float(new_ho_str)
+        full_degree = new_ho_str.split(".")[0]
+        part_degree =new_ho_str.split(".")[1] if "." in new_ho_str else 0.0
+        return float(full_degree) + float(part_degree)/60.0
 
     def enter_boolean (self, prompt, default_value= True):
         default_value_str = "Y" if default_value else "N"
@@ -262,6 +276,40 @@ class AstroApp:
         new_longitude = self.enter_position_coordinate(self.my_boat.last_waypoint.longitude, INPUT_TYPE_LONGITUDE)
         self.my_boat.set_new_position(Waypoint ("last position", new_latitude, new_longitude), new_waypoint_dt)
 
+    def reset_position(self):
+        self.app_logger.info('Shift the boat position (distance / azimut)')
+        self.app_logger.info('that will reset all the observations')
+        new_date = self.enter_date()
+        new_time = self.enter_time()
+        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
+
+        default_distance = 0.0
+        prompt = "Distance in NM (xxx.x) [{}] ? ".format(default_distance)
+        regex_for_validation = "\d{1,3}.?\d?"
+        while True:
+            distance_input = input (prompt)
+            distance_input  = distance_input if distance_input else str(default_distance)
+            if re.match (regex_for_validation, distance_input):
+                break
+        distance = float(distance_input) if distance_input else default_distance
+
+        default_azimut = 0
+        prompt = "Azimut (xxx) [{}] ? ".format(default_azimut)
+        regex_for_validation = "\d{1,3}"
+        while True:
+            azimut_input = input(prompt)
+            azimut_input  = azimut_input if azimut_input else str(default_azimut)
+            if re.match (regex_for_validation, azimut_input):
+                break
+        azimut = int(azimut_input) if azimut_input else default_azimut
+
+        new_position = self.my_boat.last_waypoint.move_to(azimut, distance, "estimated")
+
+        new_latitude_str = format_angle(new_position.latitude, input_type = INPUT_TYPE_LATITUDE)
+        new_longitude_str = format_angle(new_position.longitude, input_type = INPUT_TYPE_LONGITUDE)
+        self.my_boat.set_new_position(Waypoint ("last position", new_latitude_str, new_longitude_str), new_waypoint_dt)
+        self.remove_all_observations()
+
     def set_speed_and_course(self):
         self.app_logger.info('Set the course and the speed')
 
@@ -272,7 +320,7 @@ class AstroApp:
         new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
 
         default_speed = self.my_boat.speed
-        prompt = "Speed (xx.x) [{}] ? ".format(default_speed)
+        prompt = "Speed in knots (xx.x) [{}] ? ".format(default_speed)
         regex_for_validation = "\d{1,2}.?\d?"
         while True:
             speed_input = input (prompt)
@@ -282,7 +330,7 @@ class AstroApp:
         new_speed = float(speed_input) if speed_input else default_speed
 
         default_course = int(self.my_boat.course)
-        prompt = "Course (xxx) [{}] ? ".format(default_course)
+        prompt = "course (xxx) [{}] ? ".format(default_course)
         regex_for_validation = "\d{1,3}"
         while True:
             course_input = input(prompt)
@@ -292,6 +340,7 @@ class AstroApp:
         new_course = int(course_input) if course_input else default_course
 
         new_waypoint = self.my_boat.get_position_at(new_waypoint_dt)
+
         new_latitude_str = format_angle(new_waypoint.latitude, input_type = INPUT_TYPE_LATITUDE)
         new_longitude_str = format_angle(new_waypoint.longitude, input_type = INPUT_TYPE_LONGITUDE)
         self.my_boat.set_new_position(Waypoint ("last position", new_latitude_str, new_longitude_str), new_waypoint_dt)
@@ -327,14 +376,14 @@ class AstroApp:
         observation_number = 1
         list_of_observations = []
         try:
-            while(True):
+            while True:
                 section_name = 'OBSERVATION_{}'.format(observation_number)
                 intercept = float(self.app_config.get(section_name, 'intercept'))
                 azimut = float(self.app_config.get(section_name, 'azimut'))
                 observation_dt = self.app_config.get(section_name, 'date_time')
                 list_of_observations.append({"date_time":observation_dt, "azimut":azimut, "intercept": intercept})
                 observation_number += 1
-        except:
+        except NoSectionError:
             self.app_logger.info('%d observation(s) loaded from configuration file', observation_number-1)
         observation_rank = 1
         for observation in list_of_observations :
@@ -342,7 +391,7 @@ class AstroApp:
                                  observation["intercept"], observation["azimut"])
             observation_rank += 1
 
-    def chapeau(self):
+    def display_astro(self):
         self.app_logger.info('Display all the observations (azimut, intercept)')
         turtle_available = True
         if platform.system().lower()  == "windows" :

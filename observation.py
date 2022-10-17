@@ -151,8 +151,9 @@ class Observation:
         self.eye_height_correction_minute = radian2degree(math.sqrt(2.0 * self.eye_height / (EARTH_RADIUS_KM * 1000.0))) * 60.0
         self.app_logger.debug("for eye height : %.0f m, eye height correction = %.1f'", float(self.eye_height), float(self.eye_height_correction_minute))
 
-    def calculate_half_lumb_angle(self):
+    def calculate_half_sun_lumb_angle(self):
         self.sun_half_lumb_minute = 16.0
+        self.app_logger.debug("half_sun_lumb_angle = %.1f'", float(self.sun_half_lumb_minute))
 
     def calculate_he(self):
         sin_phi  = math.sin(degree2radian(self.position.latitude))
@@ -191,9 +192,11 @@ class Observation:
 #            self.calculate_athmospheric_refraction_minute_by_table()
             self.calculate_athmospheric_refraction_minute_by_tan()
             self.calculate_horizon_dip_function_of_eye_height()
-            self.calculate_half_lumb_angle()
+            self.calculate_half_sun_lumb_angle()
             self.height_corrected = self.height_observed + (self.sun_half_lumb_minute - self.athmospheric_refraction_minute - self.eye_height_correction_minute) / 60.0
-            self.app_logger.info("Sextant height corrected : %s ", format_angle(self.height_corrected, INPUT_TYPE_HEIGHT))
+            self.app_logger.info("Sextant height observed %s - corrected : %s ", 
+                                 format_angle(self.height_observed, INPUT_TYPE_HEIGHT),
+                                 format_angle(self.height_corrected, INPUT_TYPE_HEIGHT))
 
             self.calculate_he()
             self.calculate_az()
