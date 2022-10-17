@@ -472,3 +472,243 @@
 16 22:52:00 -  - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
 16 22:52:00 -  - display_hat.py - draw_last_position-135 - Drawing last position
 16 22:52:00 -  - display_hat.py - draw_legend-181 - Drawing legend
+17 08:44:35 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 08:44:35 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 08:44:35 -  - astro.py - load_config-78 - log level set to "INFO"
+17 08:44:35 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 08:44:42 -  - astro.py - set_speed_and_course-262 - Set the course and the speed
+17 08:45:10 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 08:45:10 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 08:45:10 -  - astro.py - load_config-78 - log level set to "INFO"
+17 08:45:10 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 08:45:12 -  - astro.py - set_speed_and_course-262 - Set the course and the speed
+17 08:48:25 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 08:48:25 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 08:48:25 -  - astro.py - load_config-78 - log level set to "INFO"
+17 08:48:25 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 08:48:32 -  - astro.py - set_speed_and_course-263 - Set the course and the speed
+17 08:49:00 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 08:49:00 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 08:49:00 -  - astro.py - load_config-78 - log level set to "INFO"
+17 08:49:00 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 08:49:09 -  - astro.py - set_speed_and_course-263 - Set the course and the speed
+17 08:49:13 -  - astro.py - enter_date-189 - New date = 16-10-2022
+17 08:49:56 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 08:49:56 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 08:49:56 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 08:49:56 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 08:50:01 -  - astro.py - set_speed_and_course-263 - Set the course and the speed
+17 08:50:05 -  - astro.py - enter_date-189 - New date = 16-10-2022
+17 08:59:20 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 08:59:20 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 08:59:20 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 08:59:20 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 08:59:23 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 08:59:27 -  - astro.py - enter_date-189 - New date = 16-10-2022
+17 08:59:46 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 08:59:46 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 08:59:46 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 08:59:46 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 08:59:48 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:00:30 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:00:30 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:00:30 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:00:30 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:00:33 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:00:36 -  - astro.py - enter_date-189 - New date = 14-10-2022
+17 09:00:42 -  - astro.py - enter_time-205 - New time = 16:41:14
+17 09:00:50 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:00:51 -  - astro.py - enter_date-189 - New date = 14-10-2022
+17 09:00:52 -  - astro.py - enter_time-205 - New time = 16:41:14
+17 09:01:15 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:01:16 -  - astro.py - enter_date-189 - New date = 14-10-2022
+17 09:01:17 -  - astro.py - enter_time-205 - New time = 16:41:14
+17 09:01:22 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:01:23 -  - astro.py - enter_date-189 - New date = 14-10-2022
+17 09:01:24 -  - astro.py - enter_time-205 - New time = 16:41:14
+17 09:01:35 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:01:36 -  - astro.py - enter_date-189 - New date = 14-10-2022
+17 09:01:36 -  - astro.py - enter_time-205 - New time = 16:41:14
+17 09:10:22 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:10:22 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:10:22 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:10:22 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:10:28 -  - astro.py - init_position-257 - Initialize the boat position
+17 09:10:33 -  - astro.py - enter_date-189 - New date = 17-10-2022
+17 09:10:45 -  - astro.py - enter_time-205 - New time = 08:00:00
+17 09:22:45 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:22:47 -  - astro.py - enter_date-189 - New date = 17-10-2022
+17 09:22:51 -  - astro.py - enter_time-205 - New time = 08:00:00
+17 09:24:30 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:24:30 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:24:30 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:24:30 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:24:35 -  - astro.py - display_last_position-299 - Last recorded position of the boat
+17 09:24:35 -  - astro.py - display_last_position-300 - at 14-10-2022 16:41:14 last position : (48°02.3'N , 004°45.6'W)
+17 09:24:39 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:24:40 -  - astro.py - enter_date-189 - New date = 14-10-2022
+17 09:24:42 -  - astro.py - enter_time-205 - New time = 16:41:14
+17 09:26:12 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:26:12 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:26:12 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:26:12 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:26:14 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:26:15 -  - astro.py - enter_date-189 - New date = 14-10-2022
+17 09:26:16 -  - astro.py - enter_time-205 - New time = 16:41:14
+17 09:26:17 -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+17 09:31:15 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:31:15 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:31:15 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:31:15 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:31:24 -  - astro.py - display_last_position-301 - Last recorded position of the boat
+17 09:31:24 -  - astro.py - display_last_position-302 - at 14-10-2022 16:41:14 last position : (48°02.3'N , 004°45.6'W)
+17 09:31:27 -  - astro.py - init_position-257 - Initialize the boat position
+17 09:31:29 -  - astro.py - enter_date-189 - New date = 17-10-2022
+17 09:31:33 -  - astro.py - enter_time-205 - New time = 08:00:00
+17 09:32:24 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:32:24 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:32:24 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:32:24 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:32:26 -  - astro.py - display_last_position-301 - Last recorded position of the boat
+17 09:32:26 -  - astro.py - display_last_position-302 - at 17-10-2022 08:00:00 last position : (45°00.0'N , 005°00.0'E)
+17 09:32:29 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:32:30 -  - astro.py - enter_date-189 - New date = 17-10-2022
+17 09:32:31 -  - astro.py - enter_time-205 - New time = 08:00:00
+17 09:32:34 -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+17 09:32:46 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:32:46 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:32:46 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:32:46 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:32:50 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:32:50 -  - astro.py - enter_date-189 - New date = 17-10-2022
+17 09:32:51 -  - astro.py - enter_time-205 - New time = 08:00:00
+17 09:32:51 -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+17 09:32:54 -  - astro.py - display_last_position-301 - Last recorded position of the boat
+17 09:32:54 -  - astro.py - display_last_position-302 - at 17-10-2022 08:00:00 last position : (45°00.0'N , 005°00.0'E)
+17 09:32:58 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:33:01 -  - astro.py - enter_date-189 - New date = 17-10-2022
+17 09:33:03 -  - astro.py - enter_time-205 - New time = 08:00:00
+17 09:33:07 -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+17 09:33:10 -  - astro.py - display_current_position-305 - Current position of the boat based on last position and course and speed from that time
+17 09:33:10 -  - boat.py - format_current_position-36 - 9.3 NM since last position at 6.0 Knots - course 180°
+17 09:33:10 -  - astro.py - display_current_position-308 - now (17-10-2022 09:33:10) estimated : (44°50.7'N , 005°00.0'E)
+17 09:33:30 -  - astro.py - display_last_position-301 - Last recorded position of the boat
+17 09:33:30 -  - astro.py - display_last_position-302 - at 17-10-2022 08:00:00 last position : (45°00.0'N , 005°00.0'E)
+17 09:34:06 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:34:07 -  - astro.py - enter_date-189 - New date = 17-10-2022
+17 09:34:08 -  - astro.py - enter_time-205 - New time = 08:00:00
+17 09:34:13 -  - boat.py - get_position_at-28 - 0.0 NM since last position at 6.0 Knots - course 180°
+17 09:34:17 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:34:17 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:34:17 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:34:17 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:34:19 -  - astro.py - display_current_position-305 - Current position of the boat based on last position and course and speed from that time
+17 09:34:19 -  - boat.py - format_current_position-36 - 9.4 NM since last position at 6.0 Knots - course 0°
+17 09:34:19 -  - astro.py - display_current_position-308 - now (17-10-2022 09:34:19) estimated : (45°09.4'N , 005°00.0'E)
+17 09:35:01 -  - astro.py - set_speed_and_course-266 - Set the course and the speed
+17 09:35:02 -  - astro.py - enter_date-189 - New date = 17-10-2022
+17 09:35:11 -  - astro.py - enter_time-205 - New time = 09:00:00
+17 09:35:16 -  - boat.py - get_position_at-28 - 6.0 NM since last position at 6.0 Knots - course 0°
+17 09:35:20 -  - astro.py - display_current_position-305 - Current position of the boat based on last position and course and speed from that time
+17 09:35:20 -  - boat.py - format_current_position-36 - 7.1 NM since last position at 12.0 Knots - course 0°
+17 09:35:20 -  - astro.py - display_current_position-308 - now (17-10-2022 09:35:20) estimated : (45°13.1'N , 005°00.0'E)
+17 09:35:45 -  - astro.py - chapeau-345 - Display all the observations (azimut, intercept)
+17 09:35:45 -  - astro.py - load_observations-337 - 6 observation(s) loaded from configuration file
+17 09:35:45 -  - astro.py - load_observations-340 - 1) 16-10-2022 09:48:53 intercept = 1.0 NM, Az = 095°
+17 09:35:45 -  - astro.py - load_observations-340 - 2) 16-10-2022 12:48:53 intercept = 3.4 NM, Az = 130°
+17 09:35:45 -  - astro.py - load_observations-340 - 3) 16-10-2022 15:48:53 intercept = 5.5 NM, Az = 180°
+17 09:35:45 -  - astro.py - load_observations-340 - 4) 16-10-2022 16:03:32 intercept = 5.0 NM, Az = 213°
+17 09:35:45 -  - astro.py - load_observations-340 - 5) 16-10-2022 18:03:32 intercept = 1.5 NM, Az = 245°
+17 09:35:45 -  - astro.py - load_observations-340 - 6) 16-10-2022 17:23:07 intercept = 3.2 NM, Az = 232°
+17 09:35:45 -  - display_hat.py - load_config-79 - Loading configuration from file "astro.ini"
+17 09:35:45 -  - display_hat.py - display_hat-234 - min map size = 16.5NM
+17 09:35:46 -  - display_hat.py - start_turtle-106 - screen width = 1920, screen_height = 1080
+17 09:35:46 -  - display_hat.py - start_turtle-117 - map size 29.3 NM * 16.5 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 0 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 1 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 2 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 3 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 4 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 5 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 6 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 7 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 8 NM
+17 09:35:46 -  - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
+17 09:35:46 -  - display_hat.py - draw_last_position-135 - Drawing last position
+17 09:35:46 -  - display_hat.py - draw_legend-181 - Drawing legend
+17 09:36:41 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:36:41 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:36:41 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:36:41 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:36:59 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:36:59 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:36:59 -  - astro.py - load_config-78 - log level set to "DEBUG"
+17 09:36:59 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:37:04 -  - astro.py - chapeau-345 - Display all the observations (azimut, intercept)
+17 09:37:04 -  - astro.py - load_observations-337 - 6 observation(s) loaded from configuration file
+17 09:37:04 -  - astro.py - load_observations-340 - 1) 16-10-2022 09:48:53 intercept = 1.0 NM, Az = 095Â°
+17 09:37:04 -  - astro.py - load_observations-340 - 2) 16-10-2022 12:48:53 intercept = 3.4 NM, Az = 130Â°
+17 09:37:04 -  - astro.py - load_observations-340 - 3) 16-10-2022 15:48:53 intercept = 5.5 NM, Az = 180Â°
+17 09:37:04 -  - astro.py - load_observations-340 - 4) 16-10-2022 16:03:32 intercept = 5.0 NM, Az = 213Â°
+17 09:37:04 -  - astro.py - load_observations-340 - 5) 16-10-2022 18:03:32 intercept = 1.5 NM, Az = 245Â°
+17 09:37:04 -  - astro.py - load_observations-340 - 6) 16-10-2022 17:23:07 intercept = 3.2 NM, Az = 232Â°
+17 09:37:04 -  - display_hat.py - load_config-79 - Loading configuration from file "astro.ini"
+17 09:37:04 -  - display_hat.py - display_hat-234 - min map size = 16.5NM
+17 09:37:04 -  - display_hat.py - start_turtle-106 - screen width = 1920, screen_height = 1080
+17 09:37:04 -  - display_hat.py - start_turtle-117 - map size 29.3 NM * 16.5 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 0 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 1 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 2 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 3 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 4 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 5 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 6 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 7 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 8 NM
+17 09:37:04 -  - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
+17 09:37:04 -  - display_hat.py - draw_last_position-135 - Drawing last position
+17 09:37:04 -  - display_hat.py - draw_legend-181 - Drawing legend
+17 09:37:50 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:37:50 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:37:50 -  - astro.py - load_config-78 - log level set to "INFO"
+17 09:37:50 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:38:04 -  - astro.py - display_current_position-305 - Current position of the boat based on last position and course and speed from that time
+17 09:38:04 -  - boat.py - format_current_position-36 - 7.6 NM since last position at 12.0 Knots - course 0°
+17 09:38:04 -  - astro.py - display_current_position-308 - now (17-10-2022 09:38:04) estimated : (45°13.6'N , 005°00.0'E)
+17 09:38:23 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:38:23 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:38:23 -  - astro.py - load_config-78 - log level set to "INFO"
+17 09:38:23 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:38:35 -  - astro.py - display_current_position-305 - Current position of the boat based on last position and course and speed from that time
+17 09:38:35 -  - boat.py - format_current_position-36 - 7.7 NM since last position at 12.0 Knots - course 0°
+17 09:38:35 -  - astro.py - display_current_position-308 - now (17-10-2022 09:38:35) estimated : (45°13.7'N , 005°00.0'E)
+17 09:40:12 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:40:12 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:40:12 -  - astro.py - load_config-78 - log level set to "INFO"
+17 09:40:12 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:40:15 -  - astro.py - display_current_position-305 - Current position of the boat based on last position and course and speed from that time
+17 09:40:15 -  - astro.py - display_current_position-308 - running 12.0 knots in the 0Â°
+17 09:40:15 -  - boat.py - format_current_position-36 - 8.1 NM since last position at 12.0 Knots - course 0°
+17 09:40:15 -  - astro.py - display_current_position-309 - now (17-10-2022 09:40:15) estimated : (45°14.1'N , 005°00.0'E)
+17 09:40:49 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:40:49 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:40:49 -  - astro.py - load_config-78 - log level set to "INFO"
+17 09:40:49 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:40:52 -  - astro.py - display_current_position-305 - Current position of the boat based on last position and course and speed from that time
+17 09:40:52 -  - astro.py - display_current_position-308 - running 12.0 knots in the 000Â°
+17 09:40:52 -  - boat.py - format_current_position-36 - 8.2 NM since last position at 12.0 Knots - course 0°
+17 09:40:52 -  - astro.py - display_current_position-309 - now (17-10-2022 09:40:52) estimated : (45°14.2'N , 005°00.0'E)
+17 09:43:58 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:43:58 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:43:58 -  - astro.py - load_config-78 - log level set to "INFO"
+17 09:43:58 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:44:01 -  - astro.py - display_current_position-305 - Current position of the boat based on last position and course and speed from that time
+17 09:44:01 -  - astro.py - display_current_position-308 - running 12.0 knots in the +000°
+17 09:44:01 -  - boat.py - format_current_position-36 - 8.8 NM since last position at 12.0 Knots - course 0°
+17 09:44:01 -  - astro.py - display_current_position-309 - now (17-10-2022 09:44:01) estimated : (45°14.8'N , 005°00.0'E)
+17 09:44:53 -  - astro.py - init_log-67 - Starting astro version V2.0
+17 09:44:53 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+17 09:44:53 -  - astro.py - load_config-78 - log level set to "INFO"
+17 09:44:53 -  - astro.py - load_config-101 - 6 observation(s) loaded from file "astro.ini"
+17 09:44:56 -  - astro.py - display_last_position-301 - Last recorded position of the boat
+17 09:44:56 -  - astro.py - display_last_position-302 - at 17-10-2022 09:00:00 last position : (45°06.0'N , 005°00.0'E)

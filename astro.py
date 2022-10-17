@@ -10,7 +10,7 @@ import platform
 import constants
 
 from waypoint import Waypoint, format_angle
-from waypoint import INPUT_TYPE_LATITUDE, INPUT_TYPE_LONGITUDE
+from waypoint import INPUT_TYPE_LATITUDE, INPUT_TYPE_LONGITUDE, INPUT_TYPE_AZIMUT
 from boat import Boat
 from observation import Observation
 from display_hat import DisplayHat
@@ -164,11 +164,13 @@ class AstroApp:
         print("Invalid choice")
         return True
 
-    def enter_date(self):
-        date_dt = datetime.datetime.now()
-        date_default = date_dt.strftime(constants.DATE_FORMATTER.split(" ")[0])
-        date_default = date_default.replace("-", "/")
-        date_prompt = "Date (dd/mm/yyyy) [" + date_default + "] ? "
+    def enter_date(self, date_default=None):
+        if not date_default :
+            date_dt = datetime.datetime.now()
+            date_default = date_dt.strftime(constants.DATE_FORMATTER.split(" ")[0])
+            date_default = date_default.replace("-", "/")
+        year_default = int(date_default[-4:])
+        date_prompt = "Date (dd/mm/yyyy) [{}] ? ".format(date_default)
         regex_for_validation = "\d{1,2}\/\d{1,2}(\/\d{2,4})?"
         while True:
             date_input = input (date_prompt)
@@ -181,19 +183,22 @@ class AstroApp:
         try:
             new_date_year = int(new_date.split("-")[2])
         except IndexError:
-            new_date_year = date_dt.year
+            new_date_year = year_default
         new_date_year = new_date_year+2000 if new_date_year < 100 else new_date_year
         new_date = "{:02d}-{:02d}-{:04d}".format(new_date_day, new_date_month, new_date_year)
         self.app_logger.debug("New date = %s",new_date)
         return new_date
 
-    def enter_time(self):
-        time_prompt = "Time (hh:mm:ss) [now] ? "
+    def enter_time(self, time_default=None):
+        if not time_default:
+            time_default= "now"
+        time_prompt = "Time (hh:mm:ss) [{}] ? ".format(time_default)
         regex_for_validation = "\d{1,2}:\d{1,2}:\d{1,2}"
         while True:
             time_input = input (time_prompt)
             time_dt = datetime.datetime.now()
-            time_default = time_dt.strftime(constants.DATE_FORMATTER.split(" ")[1])
+            if time_default == "now":
+                time_default = time_dt.strftime(constants.DATE_FORMATTER.split(" ")[1])
             new_time = time_input if time_input else time_default
             if re.match (regex_for_validation, new_time):
                 break
@@ -260,26 +265,47 @@ class AstroApp:
     def set_speed_and_course(self):
         self.app_logger.info('Set the course and the speed')
 
+        last_posit_date = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER).split(" ")[0].replace ("-", "/")
+        last_posit_time = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER).split(" ")[1]
+        new_date = self.enter_date(date_default = last_posit_date)
+        new_time = self.enter_time(time_default = last_posit_time)
+        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
+
         default_speed = self.my_boat.speed
         prompt = "Speed (xx.x) [{}] ? ".format(default_speed)
-        speed_input = input(prompt)
+        regex_for_validation = "\d{1,2}.?\d?"
+        while True:
+            speed_input = input (prompt)
+            speed_input  = speed_input if speed_input else str(default_speed)
+            if re.match (regex_for_validation, speed_input):
+                break
         new_speed = float(speed_input) if speed_input else default_speed
 
-        default_course = self.my_boat.course
-        prompt = "Course (xx) [{}] ? ".format(default_course)
-        course_input = input(prompt)
+        default_course = int(self.my_boat.course)
+        prompt = "Course (xxx) [{}] ? ".format(default_course)
+        regex_for_validation = "\d{1,3}"
+        while True:
+            course_input = input(prompt)
+            course_input  = course_input if course_input else str(default_course)
+            if re.match (regex_for_validation, course_input):
+                break
         new_course = int(course_input) if course_input else default_course
 
+        new_waypoint = self.my_boat.get_position_at(new_waypoint_dt)
+        new_latitude_str = format_angle(new_waypoint.latitude, input_type = INPUT_TYPE_LATITUDE)
+        new_longitude_str = format_angle(new_waypoint.longitude, input_type = INPUT_TYPE_LONGITUDE)
+        self.my_boat.set_new_position(Waypoint ("last position", new_latitude_str, new_longitude_str), new_waypoint_dt)
         self.my_boat.set_speed_and_course(new_speed, new_course)
 
     def display_last_position(self):
-        self.app_logger.info('Display the last recorded position of the boat')
+        self.app_logger.info('Last recorded position of the boat')
         self.app_logger.info("at %s %s", self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER), self.my_boat.format_last_position())
 
     def display_current_position(self):
         self.app_logger.info('Current position of the boat based on last position and course and speed from that time')
         now = datetime.datetime.now()
         now_string = now.strftime(constants.DATE_FORMATTER)
+        self.app_logger.info("running %.1f knots in the %s", self.my_boat.speed, format_angle(self.my_boat.course, input_type = INPUT_TYPE_AZIMUT))
         self.app_logger.info("now (%s) %s", now_string, self.my_boat.format_current_position())
 
     def new_astro(self):
@@ -312,7 +338,7 @@ class AstroApp:
             self.app_logger.info('%d observation(s) loaded from configuration file', observation_number-1)
         observation_rank = 1
         for observation in list_of_observations :
-            self.app_logger.info('%d) %s intercept = %.1f NM, Az = %03.0f°', observation_rank, observation["date_time"], 
+            self.app_logger.info('%d) %s intercept = %.1f NM, Az = %03.0f°', observation_rank, observation["date_time"],
                                  observation["intercept"], observation["azimut"])
             observation_rank += 1
 
@@ -322,9 +348,9 @@ class AstroApp:
         if platform.system().lower()  == "windows" :
             turtle_available = True
         elif platform.system().lower()  == "linux":
-            try : 
+            try :
                 platform.system().fredesktop_os_release()
-            except: 
+            except:
                 turtle_available = False
 
         self.load_observations()
