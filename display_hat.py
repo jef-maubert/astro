@@ -22,7 +22,7 @@ SMALL_PEN = 1
 
 LEGEND_COLOR = "black"
 LAST_POSITION_COLOR = "black"
-TARGET_COLOR = "grey"
+TARGET_COLOR = "lightgrey"
 FONT_SIZE = 10
 RATIO_IMAGE_INTERCEPT = 3
 LINE_DOT_NUMBER = 10
@@ -174,6 +174,23 @@ class DisplayHat:
         self.tess.pencolor(old_color)
         self.tess.pensize(old_pen)
 
+    def draw_azimut(self, azimut, color=TARGET_COLOR, pen_size= SMALL_PEN):
+        self.app_logger.debug('Drawing azimut %.0f°', azimut)
+        old_pen = self.tess.pensize()
+        old_color = self.tess.pencolor()
+        self.tess.pensize(pen_size)
+        self.tess.pencolor(color)
+        self.tess.up()
+        self.tess.goto(0,0)
+        self.tess.down()
+        self.tess.setheading(90.0 - azimut)
+        self.tess.forward(100)
+        self.tess.up()
+        self.tess.goto(0,0)
+        self.tess.down()
+        self.tess.pencolor(old_color)
+        self.tess.pensize(old_pen)
+
     def calculate_legende_size(self, min_map_size):
         self.legend_length = 1.0
         
@@ -238,6 +255,11 @@ class DisplayHat:
         for i in range(10):
             pen_size = BIG_PEN if i % 5 == 4 else SMALL_PEN
             self.draw_target_circle(i, pen_size)
+        AZIMUT_SPACE = 10.0
+        nb_azimut = 360.0 / AZIMUT_SPACE
+        for i in range(int(nb_azimut)):
+            pen_size = BIG_PEN if i % 3 == 0 else SMALL_PEN
+            self.draw_azimut(i *AZIMUT_SPACE, pen_size=pen_size)
         self.draw_last_position(min_map_size / 25.0)    # (min_map_size / 25.0) matches a small square for the estimate point
         observation_rank = 1
         for observation in self.list_of_observations :

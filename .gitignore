@@ -16,3 +16,5 @@ log/astro.log
 astro.ini
 log/astro.log.3
 log/astro.log
+log/astro.log
+*.log

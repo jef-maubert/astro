@@ -363,3 +363,26 @@
 18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
 18 00:17:17 - -  - display_hat.py - draw_last_position-135 - Drawing last position
 18 00:17:17 - -  - display_hat.py - draw_legend-181 - Drawing legend
+18 00:21:55 -  - astro.py - init_log-68 - Starting astro version V2.0
+18 00:21:55 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
+18 00:21:55 - -  - astro.py - load_config-79 - log level set to "INFO"
+18 00:21:55 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
+18 00:21:59 -  - astro.py - display_astro-395 - Display all the observations (azimut, intercept)
+18 00:21:59 -  - astro.py - load_observations-387 - 1 observation(s) loaded from configuration file
+18 00:21:59 -  - astro.py - load_observations-390 - 1) 17-10-2022 12:00:00 intercept = 1.0 NM, Az = 155°
+18 00:21:59 -  - display_hat.py - load_config-79 - Loading configuration from file "astro.ini"
+18 00:21:59 - -  - display_hat.py - display_hat-234 - min map size = 3.0NM
+18 00:22:00 - -  - display_hat.py - start_turtle-106 - screen width = 1920, screen_height = 1080
+18 00:22:00 - -  - display_hat.py - start_turtle-117 - map size 5.3 NM * 3.0 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 0 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 1 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 2 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 3 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 4 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 5 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 6 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 7 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 8 NM
+18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
+18 00:22:00 - -  - display_hat.py - draw_last_position-135 - Drawing last position
+18 00:22:00 - -  - display_hat.py - draw_legend-181 - Drawing legend

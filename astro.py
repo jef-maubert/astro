@@ -397,10 +397,9 @@ class AstroApp:
         if platform.system().lower()  == "windows" :
             turtle_available = True
         elif platform.system().lower()  == "linux":
-            platform.system().fredesktop_os_release()
             try :
                 platform.system().fredesktop_os_release()
-            except:
+            except AttributeError:
                 turtle_available = False
 
         self.load_observations()
