@@ -7,7 +7,10 @@ import configparser
 import datetime
 import turtle
 import platform
+import math
 import constants
+
+from waypoint import Waypoint, format_angle, INPUT_TYPE_AZIMUT
 
 NB_ROTATING_LOG = 3
 MESSAGE_FORMAT_FILE = '{asctime:s} - {levelname} - {filename:s} - {funcName:s}-{lineno:d} - {message:s}'
@@ -26,6 +29,9 @@ TARGET_COLOR = "lightgrey"
 FONT_SIZE = 10
 RATIO_IMAGE_INTERCEPT = 3
 LINE_DOT_NUMBER = 10
+
+def degree2radian (angle_degree):
+    return angle_degree * math.pi / 180.0
 
 class DisplayHat:
     def __init__(self, verbose=True):
@@ -241,7 +247,77 @@ class DisplayHat:
 
         self.tess.pensize(old_pen)
         self.tess.pencolor(old_color)
+        
+    def display_intersection (self, suggested_fix, radius):
+        self.tess.up()
+        self.tess.goto(0.0, 0.0)
+        self.tess.setheading(90.0 - suggested_fix["azimut"])
+        self.tess.forward(suggested_fix["distance"])
+        self.tess.dot()
 
+        self.tess.up()
+        self.tess.setheading(0)
+        self.tess.forward(radius)
+        self.tess.setheading(90)
+        self.tess.down()
+        self.tess.circle(radius, steps=20)
+
+        self.tess.up()
+        self.tess.setheading(45)
+        self.tess.forward(radius)
+        fix_summary = "{:.1f} NM / {}".format(suggested_fix["distance"], format_angle(suggested_fix["azimut"], INPUT_TYPE_AZIMUT))
+        self.tess.write(fix_summary, font=("Arial", FONT_SIZE, "normal"), align="left")
+
+    def calculate_intersection (self, list_of_observations, app_logger):
+        self.app_logger = app_logger
+        self.list_of_observations = list_of_observations
+        # Calculate linear_equation  
+        for observation in self.list_of_observations :
+            azimut = degree2radian(observation["azimut"])
+            lin_eq_a = -math.tan(azimut)
+            lin_eq_b = observation["intercept"] / math.cos(azimut)
+            observation.update({"lin_eq_a": lin_eq_a}) 
+            observation.update({"lin_eq_b": lin_eq_b}) 
+            self.app_logger.debug('linear equation of observation %s : y = %f * x + %f ', observation["date_time"], observation["lin_eq_a"], observation["lin_eq_b"])
+
+        # calculate intersection points (x,y)
+        observation_index = 0
+        nb_observations = len(self.list_of_observations)
+        sum_cross_point_x = 0.0
+        sum_cross_point_y = 0.0
+        for observation_index in range (nb_observations):
+            observation_1 = self.list_of_observations[observation_index]
+            observation_2 = self.list_of_observations[(observation_index+1) % nb_observations]
+            self.app_logger.debug('calculate intersection of observations %s and %s', observation_1["date_time"], observation_2["date_time"])
+            line_1_a = observation_1["lin_eq_a"] 
+            line_1_b = observation_1["lin_eq_b"] 
+            line_2_a = observation_2["lin_eq_a"] 
+            line_2_b = observation_2["lin_eq_b"] 
+
+            cross_point_x = (line_2_b-line_1_b) / (line_1_a - line_2_a)
+            cross_point_y = (line_1_a * line_2_b -line_1_b * line_2_a) / (line_1_a - line_2_a)
+            sum_cross_point_x += cross_point_x
+            sum_cross_point_y += cross_point_y
+        cross_point_x = sum_cross_point_x / nb_observations
+        cross_point_y = sum_cross_point_y / nb_observations
+
+        # calculate suggested fix (distance, azimut)
+        azimut = 0.0
+        try:
+            ratio = cross_point_x / cross_point_y
+            azimut = math.atan(ratio) * 180.0 /math.pi
+        except ZeroDivisionError:
+            azimut = 90.0
+        if azimut <= 0:
+            azimut += 180.0
+        if cross_point_x < 0:
+            azimut += 180.0
+
+        suggested_fix = dict()
+        suggested_fix.update({"distance" : math.sqrt(cross_point_x * cross_point_x + cross_point_y * cross_point_y)})
+        suggested_fix.update({"azimut" : azimut})
+        return suggested_fix
+        
     def display_hat(self):
         max_intercept = 1.0
         for observation in self.list_of_observations :
@@ -262,10 +338,13 @@ class DisplayHat:
             self.draw_azimut(i *AZIMUT_SPACE, pen_size=pen_size)
         self.draw_last_position(min_map_size / 25.0)    # (min_map_size / 25.0) matches a small square for the estimate point
         observation_rank = 1
+        self.draw_legend()
         for observation in self.list_of_observations :
             self.draw_intercept(observation_rank, observation["date_time"], observation["azimut"], observation["intercept"])
             observation_rank += 1
-        self.draw_legend()
+        suggested_fix = self.calculate_intersection (self.list_of_observations, self.app_logger)
+        self.display_intersection (suggested_fix, min_map_size / 25.0 / 2)
+
         self.finish_turtle()
 
     def launch_display_hat(self, app_logger, config_name) :

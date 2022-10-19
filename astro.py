@@ -152,7 +152,7 @@ class AstroApp:
         self.list_of_menu.append({"code": "C", "title":"Display current position", "function":self.display_current_position})
         self.list_of_menu.append({"code": "A", "title":"Enter new astro", "function":self.new_astro})
         self.list_of_menu.append({"code": "D", "title":"Display all observations", "function":self.display_astro})
-        self.list_of_menu.append({"code": "F", "title":"Fix the position", "function":self.reset_position})
+        self.list_of_menu.append({"code": "F", "title":"Fix the position", "function":self.fix_position})
         self.list_of_menu.append({"code": "E", "title":"Exit", "function":None})
 
     def start_astro(self):
@@ -255,7 +255,7 @@ class AstroApp:
         return bool_str in ("Y", "y")
 
     def enter_eye_height(self):
-        eye_height_default = str(self.my_boat.eye_height)
+        eye_height_default = "{:.0f}".format(self.my_boat.eye_height)
         eye_height_prompt = "Eye height (hh)m [{}] ? ".format(eye_height_default)
         regex_for_validation = "^\d{1,2}$"
         while True:
@@ -275,40 +275,6 @@ class AstroApp:
         new_latitude = self.enter_position_coordinate(self.my_boat.last_waypoint.latitude, INPUT_TYPE_LATITUDE)
         new_longitude = self.enter_position_coordinate(self.my_boat.last_waypoint.longitude, INPUT_TYPE_LONGITUDE)
         self.my_boat.set_new_position(Waypoint ("last position", new_latitude, new_longitude), new_waypoint_dt)
-
-    def reset_position(self):
-        self.app_logger.info('Shift the boat position (distance / azimut)')
-        self.app_logger.info('that will reset all the observations')
-        new_date = self.enter_date()
-        new_time = self.enter_time()
-        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
-
-        default_distance = 0.0
-        prompt = "Distance in NM (xxx.x) [{}] ? ".format(default_distance)
-        regex_for_validation = "^\d{1,3}\.?\d?$"
-        while True:
-            distance_input = input (prompt)
-            distance_input  = distance_input if distance_input else str(default_distance)
-            if re.match (regex_for_validation, distance_input):
-                break
-        distance = float(distance_input) if distance_input else default_distance
-
-        default_azimut = 0
-        prompt = "Azimut (xxx) [{}] ? ".format(default_azimut)
-        regex_for_validation = "^\d{1,3}$"
-        while True:
-            azimut_input = input(prompt)
-            azimut_input  = azimut_input if azimut_input else str(default_azimut)
-            if re.match (regex_for_validation, azimut_input):
-                break
-        azimut = int(azimut_input) if azimut_input else default_azimut
-
-        new_position = self.my_boat.last_waypoint.move_to(azimut, distance, "estimated")
-
-        new_latitude_str = format_angle(new_position.latitude, input_type = INPUT_TYPE_LATITUDE)
-        new_longitude_str = format_angle(new_position.longitude, input_type = INPUT_TYPE_LONGITUDE)
-        self.my_boat.set_new_position(Waypoint ("last position", new_latitude_str, new_longitude_str), new_waypoint_dt)
-        self.remove_all_observations()
 
     def set_speed_and_course(self):
         self.app_logger.info('Set the course and the speed')
@@ -390,6 +356,7 @@ class AstroApp:
             self.app_logger.info('%d) %s intercept = %.1f NM, Az = %03.0f°', observation_rank, observation["date_time"],
                                  observation["intercept"], observation["azimut"])
             observation_rank += 1
+        return list_of_observations
 
     def display_astro(self):
         self.app_logger.info('Display all the observations (azimut, intercept)')
@@ -408,6 +375,44 @@ class AstroApp:
             my_hat_display.launch_display_hat(self.app_logger, self.app_name)
         else:
             self.app_logger.info('Please launch "display_hat.py"')
+
+    def fix_position(self):
+        my_hat_display = DisplayHat(verbose=False)
+        list_of_observations = self.load_observations()
+        suggested_fix = my_hat_display.calculate_intersection (list_of_observations, self.app_logger)
+
+        self.app_logger.info('Fix the boat position (distance / azimut)')
+        self.app_logger.info('that will reset all the observations')
+        new_date = self.enter_date()
+        new_time = self.enter_time()
+        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
+
+        default_distance = "{:.1f}".format(suggested_fix["distance"])
+        prompt = "Distance in NM (xxx.x) [{}] ? ".format(default_distance)
+        regex_for_validation = "^\d{1,3}\.?\d?$"
+        while True:
+            distance_input = input (prompt)
+            distance_input  = distance_input if distance_input else default_distance
+            if re.match (regex_for_validation, distance_input):
+                break
+        distance = float(distance_input) if distance_input else default_distance
+
+        default_azimut = "{:.0f}".format(suggested_fix["azimut"])
+        prompt = "Azimut (xxx) [{}] ? ".format(default_azimut)
+        regex_for_validation = "^\d{1,3}$"
+        while True:
+            azimut_input = input(prompt)
+            azimut_input  = azimut_input if azimut_input else default_azimut
+            if re.match (regex_for_validation, azimut_input):
+                break
+        azimut = int(azimut_input) if azimut_input else default_azimut
+
+        new_position = self.my_boat.last_waypoint.move_to(azimut, distance, "estimated")
+
+        new_latitude_str = format_angle(new_position.latitude, input_type = INPUT_TYPE_LATITUDE)
+        new_longitude_str = format_angle(new_position.longitude, input_type = INPUT_TYPE_LONGITUDE)
+        self.my_boat.set_new_position(Waypoint ("last position", new_latitude_str, new_longitude_str), new_waypoint_dt)
+        self.remove_all_observations()
 
 def main () :
     my_app = AstroApp()
