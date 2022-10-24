@@ -154,3 +154,7 @@
 24 21:05:08 -  - aa.py - load_config-108 - Loading configuration from file "astro.ini"
 24 21:05:08 - -  - aa.py - load_config-114 - log level set to "INFO"
 24 21:05:08 -  - aa.py - load_config-137 - 3 observation(s) loaded from file "astro.ini"
+24 21:06:49 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 21:06:49 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 21:06:49 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 21:06:49 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
