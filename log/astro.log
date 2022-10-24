@@ -203,3 +203,12 @@
 24 22:24:31 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
 24 22:24:39 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
 24 22:24:42 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:30:25 -  - aa.py - init_log-43 - Starting astro version V2.0
+24 22:30:25 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 22:30:25 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 22:30:25 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 22:30:39 -  - aa.py - init_log-43 - Starting astro version V2.0
+24 22:30:39 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 22:30:39 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 22:30:39 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 22:30:43 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"

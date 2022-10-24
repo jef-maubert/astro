@@ -7,6 +7,7 @@ Created on Mon Oct 24 17:34:57 2022
 import os
 import logging
 import logging.handlers
+import tkinter as tk
 
 import constants
 from astro_data import AstroData
