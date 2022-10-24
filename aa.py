@@ -48,7 +48,7 @@ class AstroTk(tk.Tk):
     def on_button_modif_course_and_speed(self):
          return
      
-    def update_display(self):
+    def init_display(self):
          self.last_pos_text.configure(text=self.data.last_pos)
          self.last_pos_dt_text.configure(text=self.data.last_pos_dt)
          
@@ -60,7 +60,7 @@ class AstroData ():
 def main () :
     my_data = AstroData()
     my_app = AstroTk(None, my_data )
-    my_app.update_display()
+    my_app.init_display()
     my_app.mainloop()
 
 if __name__ == "__main__":
