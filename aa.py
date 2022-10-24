@@ -17,16 +17,16 @@ import datetime
 import platform
 
 import constants
+from astro_data import AstroData
+from astro_view import AstroTk
 from waypoint import Waypoint, format_angle
 from waypoint import INPUT_TYPE_LATITUDE, INPUT_TYPE_LONGITUDE, INPUT_TYPE_AZIMUT
 from boat import Boat
 from observation import Observation
 from display_hat import DisplayHat
 
-
-
-
-PADX_STD = 5
+PADX_STD = 2
+PADY_STD = 4
 
 class AstroTk(tk.Tk):
 
@@ -35,10 +35,6 @@ class AstroTk(tk.Tk):
         self.parent = parent
         self.data = data
         self.app_logger = app_logger
-        self.last_position = tk.StringVar()
-        self.last_position_dt = tk.StringVar()
-        self.current_position = tk.StringVar()
-        self.current_position_dt = tk.StringVar()
         self.initialize()
         
     def initialize(self):
@@ -46,43 +42,63 @@ class AstroTk(tk.Tk):
         self.grid()
         
         last_pos_frame = tk.LabelFrame(self, text="Last position", borderwidth=2, relief=tk.GROOVE)
-        last_pos_frame.grid(column=0, row=0, sticky='ENWS', padx=PADX_STD, pady=2)
-        self.last_pos_dt_text = tk.Label(last_pos_frame)
-        self.last_pos_dt_text.grid(row=0, column=0, padx=PADX_STD, sticky="EW")
-        self.last_pos_text = tk.Label(last_pos_frame)
-        self.last_pos_text.grid(row=1, column=0, padx=PADX_STD, sticky="EW")
-        self.btn_modif_last_pos = tk.Button(last_pos_frame, text="modify", command=self.on_button_modif_last_pos)
-        self.btn_modif_last_pos.grid(row=0, column=1, padx=PADX_STD, sticky="EW")
+        last_pos_frame.grid(column=0, row=0, sticky='ENWS', padx=PADX_STD, pady=PADY_STD)
+        self.last_pos_dt = tk.Label(last_pos_frame)
+        self.last_pos_dt.grid(row=0, column=0, padx=PADX_STD, sticky="W")
+        self.last_pos = tk.Label(last_pos_frame)
+        self.last_pos.grid(row=1, column=0, padx=PADX_STD, sticky="W")
+        self.btn_modif_last_pos = tk.Button(last_pos_frame, text="Modify", command=self.on_button_modif_last_pos)
+        self.btn_modif_last_pos.grid(row=0, column=1, padx=PADX_STD, sticky="NS")
  
         course_and_speed_frame = tk.LabelFrame(self, text="Course and speed", borderwidth=2, relief=tk.GROOVE)
-        course_and_speed_frame.grid(column=0, row=1, sticky='ENWS', padx=PADX_STD, pady=2)
-        self.btn_modif_course_and_speed = tk.Button(course_and_speed_frame, text="modify", command=self.on_button_modif_course_and_speed)
-        self.btn_modif_course_and_speed.grid(row=0, column=1, padx=PADX_STD, sticky="EW")
+        course_and_speed_frame.grid(column=0, row=1, sticky='ENWS', padx=PADX_STD, pady=PADY_STD)
+        self.course = tk.Label(course_and_speed_frame)
+        self.course.grid(row=0, column=0, padx=PADX_STD, sticky="W")
+        self.speed= tk.Label(course_and_speed_frame)
+        self.speed.grid(row=1, column=0, padx=PADX_STD, sticky="W")
+        self.btn_modif_course_and_speed = tk.Button(course_and_speed_frame, text="Modify", command=self.on_button_modif_course_and_speed)
+        self.btn_modif_course_and_speed.grid(row=0, column=1, padx=PADX_STD, sticky="NS")
 
         current_pos_frame = tk.LabelFrame(self, text="Current position", borderwidth=2, relief=tk.GROOVE)
-        current_pos_frame.grid(column=0, row=2, sticky='ENWS', padx=PADX_STD, pady=2)
+        current_pos_frame.grid(column=0, row=2, sticky='ENWS', padx=PADX_STD, pady=PADY_STD)
+        self.current_pos_dt = tk.Label(current_pos_frame)
+        self.current_pos_dt.grid(row=0, column=0, padx=PADX_STD, sticky="W")
+        self.current_pos = tk.Label(current_pos_frame)
+        self.current_pos.grid(row=1, column=0, padx=PADX_STD, sticky="W")
         self.btn_modif_current_pos = tk.Button(current_pos_frame, text="Observation", command=self.on_button_new_obs)
-        self.btn_modif_current_pos.grid(row=0, column=1, padx=PADX_STD, sticky="EW")
+        self.btn_modif_current_pos.grid(row=0, column=1, padx=PADX_STD, sticky="NS")
 
     def on_button_modif_last_pos(self):
         now = datetime.datetime.now().strftime(constants.DATE_FORMATTER)
-        self.last_pos_dt_text.configure(text=now)
+        self.current_pos.configure(text=now)
 
     def on_button_modif_course_and_speed(self):
-        self.app_logger.info('Click on button "Modif course and speed')
+        self.app_logger.info('Click on button "Modif course and speed"')
 
     def on_button_new_obs(self):
-        self.app_logger.info('Click on button "New obs')
+        self.app_logger.info('Click on button "New obs"')
      
     def init_display(self):
-        self.last_pos_text.configure(text=self.data.last_pos)
-        self.last_pos_dt_text.configure(text=self.data.last_pos_dt)
+        self.display_last_position()
+        self.display_course_and_speed()
+
+    def display_course_and_speed(self):
+        self.course.configure(text="Course : {}".format(format_angle(self.data.my_boat.course, INPUT_TYPE_AZIMUT)))
+        self.speed.configure(text="Speed : {} knots".format(self.data.my_boat.speed))
+    
+    def display_last_position(self):
+        self.last_pos_dt.configure(text=self.data.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER))
+        last_position_str = "{}   {}".format(format_angle(self.data.my_boat.last_waypoint.latitude, INPUT_TYPE_LATITUDE), 
+                                           format_angle(self.data.my_boat.last_waypoint.longitude, INPUT_TYPE_LONGITUDE))
+        self.last_pos.configure(text=last_position_str)
          
 class AstroData ():
-    def __init__(self, app_name, app_logger):
-        self.my_boat = None
+    def __init__(self, app_name, app_logger, console_log_handler):
         self.app_name = app_name
         self.app_logger = app_logger
+        self.console_log_handler = console_log_handler
+        self.app_config = None
+        self.my_boat = None
         self.last_pos = "45°25.3'N 004°54.5'E"
         self.last_pos_dt = "25/01/2022 18:42:30"
 
@@ -148,12 +164,13 @@ def init_log(app_name):
     console_log_handler.setFormatter(console_log_format)
     app_logger.addHandler(console_log_handler)
     app_logger.info('Starting %s version %s', app_name, constants.VERSION)
-    return app_logger
+    return app_logger, console_log_handler
 
 def main () :
     os.makedirs(constants.LOG_DIRECTORY, exist_ok=True)
-    app_logger = init_log("astro")
-    my_data = AstroData("astro", app_logger)
+    app_logger, console_log_handler = init_log("astro")
+    my_data = AstroData("astro", app_logger, console_log_handler)
+    my_data.load_config()
     my_app = AstroTk(None, my_data , app_logger)
     my_app.init_display()
     my_app.mainloop()
