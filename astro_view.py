@@ -22,6 +22,7 @@ from waypoint import INPUT_TYPE_LATITUDE, INPUT_TYPE_LONGITUDE, INPUT_TYPE_AZIMU
 from boat import Boat
 from observation import Observation
 from display_hat import DisplayHat
+from course_speed_dlg import CourseSpeedDlg
 
 PADX_STD = 2
 PADY_STD = 4
@@ -72,17 +73,25 @@ class AstroTk(tk.Tk):
 
     def on_button_modif_course_and_speed(self):
         self.app_logger.info('Click on button "Modif course and speed"')
+        my_course_and_speed_dlg = CourseSpeedDlg(self, "Course and speed", 
+                                                     self.data.my_boat.last_waypoint_datetime, 
+                                                     self.data.my_boat.course, self.data.my_boat.speed)
+        if my_course_and_speed_dlg.result:
+            self.nMaxLogLines = my_course_and_speed_dlg.result[0]
+            self.data.my_boat.course= my_course_and_speed_dlg.result[1]
+            self.data.my_boat.speed = my_course_and_speed_dlg.result[2]
+            self.update_display()
 
     def on_button_new_obs(self):
         self.app_logger.info('Click on button "New obs"')
      
-    def init_display(self):
+    def update_display(self):
         self.display_last_position()
         self.display_course_and_speed()
 
     def display_course_and_speed(self):
         self.course.configure(text="Course : {}".format(format_angle(self.data.my_boat.course, INPUT_TYPE_AZIMUT)))
-        self.speed.configure(text="Speed : {} knots".format(self.data.my_boat.speed))
+        self.speed.configure(text="Speed : {:.1f} Knots".format(self.data.my_boat.speed))
     
     def display_last_position(self):
         self.last_pos_dt.configure(text=self.data.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER))

@@ -48,7 +48,7 @@ def main () :
     my_data = AstroData("astro", app_logger, console_log_handler)
     my_data.load_config()
     my_app = AstroTk(None, my_data , app_logger)
-    my_app.init_display()
+    my_app.update_display()
     my_app.mainloop()
 
 if __name__ == "__main__":
