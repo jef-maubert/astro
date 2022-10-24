@@ -5,6 +5,7 @@ Created on Mon Oct 24 17:34:57 2022
 @author: jef
 """
 import tkinter as tk
+import datetime
 import constants
 PADX_STD = 5
 
@@ -41,7 +42,8 @@ class AstroTk(tk.Tk):
         self.btn_modif_current_pos.grid(row=0, column=1, padx=PADX_STD, sticky="EW")
 
     def on_button_modif_last_pos(self):
-         return
+        now = datetime.datetime.now().strftime(constants.DATE_FORMATTER)
+        self.last_pos_dt_text.configure(text=now)
 
     def on_button_modif_course_and_speed(self):
          return
