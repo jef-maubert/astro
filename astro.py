@@ -62,7 +62,6 @@ class AstroApp:
         logging.addLevelName(logging.DEBUG, "- ")
         logging.addLevelName(logging.INFO, "")
         logging.addLevelName(logging.WARNING, "!!! ")
-        self.console_log_handler.setLevel(self.log_level)
         self.console_log_handler.setFormatter(console_log_format)
         self.app_logger.addHandler(self.console_log_handler)
         self.app_logger.info('Starting %s version %s', self.app_name, constants.VERSION)

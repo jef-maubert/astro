@@ -1066,3 +1066,14 @@
 24 11:02:02 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
 24 11:02:02 - -  - astro.py - load_config-79 - log level set to "INFO"
 24 11:02:02 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
+24 20:11:07 -  - aa.py - init_log-150 - Starting astro version V2.0
+24 20:11:16 -  - aa.py - init_log-150 - Starting astro version V2.0
+24 20:12:53 -  - aa.py - init_log-150 - Starting astro version V2.0
+24 20:12:55 -  - aa.py - on_button_modif_course_and_speed-72 - Click on button "Modif course and speed
+24 20:12:57 -  - aa.py - on_button_new_obs-75 - Click on button "New obs
+24 20:13:13 -  - astro.py - init_log-67 - Starting astro version V2.0
+24 20:13:13 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+24 20:13:13 - -  - astro.py - load_config-78 - log level set to "INFO"
+24 20:13:13 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
+24 20:13:19 -  - astro.py - display_last_position-315 - Last recorded position of the boat
+24 20:13:19 -  - astro.py - display_last_position-316 - at 16-10-2022 22:00:00 last position : (45°00.0'N , 005°00.0'E)
