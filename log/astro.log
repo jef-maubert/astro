@@ -1062,3 +1062,7 @@
 19 13:00:12 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
 19 13:00:12 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
 19 13:00:12 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
+24 11:02:02 -  - astro.py - init_log-68 - Starting astro version V2.0
+24 11:02:02 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
+24 11:02:02 - -  - astro.py - load_config-79 - log level set to "INFO"
+24 11:02:02 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
