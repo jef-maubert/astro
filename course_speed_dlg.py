@@ -6,13 +6,16 @@ Created on Mon Oct 24 21:35:57 2022
 """
 
 import tkinter as tk
+import constants
 class CourseSpeedDlg(tk.Toplevel):
 
     def __init__(self, parent, title, last_modif_dt, course, speed):
-        self.last_modif_dt_var = tk.StringVar()
-        self.last_modif_dt_var.set(last_modif_dt)
+        self.date_var = tk.StringVar()
+        self.date_var.set(last_modif_dt.strftime(constants.DATE_FORMATTER).split(" ")[0])
+        self.time_var = tk.StringVar()
+        self.time_var.set(last_modif_dt.strftime(constants.DATE_FORMATTER).split(" ")[1])
         self.course_var = tk.IntVar() 
-        self.course_var.set(course)
+        self.course_var.set(int(course))
         self.speed_var = tk.DoubleVar()
         self.speed_var.set(speed)
 
@@ -22,6 +25,7 @@ class CourseSpeedDlg(tk.Toplevel):
         if title:
             self.title(title)
         self.parent = parent
+        self.app_logger = self.parent.app_logger
         self.result = None
 
         widBody = tk.Frame(self)
@@ -34,9 +38,11 @@ class CourseSpeedDlg(tk.Toplevel):
         if not self.initial_focus:
             self.initial_focus = self
 
+        ADD_GEOMETRY = 50
         self.protocol("WM_DELETE_WINDOW", self.cancel)
-        self.geometry("+%d+%d" % (parent.winfo_rootx()+50,
-                                  parent.winfo_rooty()+50))
+        geometry_value = "+%d+%d" % (parent.winfo_rootx()+ADD_GEOMETRY, parent.winfo_rooty()+ADD_GEOMETRY)
+        self.geometry(geometry_value)
+        self.app_logger.debug ('geometry = "%s"',geometry_value)
         self.initial_focus.focus_set()
         self.wait_window(self)
 
@@ -46,14 +52,22 @@ class CourseSpeedDlg(tk.Toplevel):
         # create dialog body.  return widget that should have
         # initial focus.  this method should be overridden
         nextPropRow=0
-        tk.Label (master, text="speed").grid (row=nextPropRow, sticky= "EW", padx=5, pady=5);
+        tk.Label (master, text="from").grid (row=nextPropRow, sticky= "W", padx=5, pady=5);
+        self.wid_date = tk.Entry(master, textvariable= self.date_var)
+        self.wid_date.grid(row=nextPropRow, column=1, sticky= "W")
+        self.wid_date = tk.Entry(master, textvariable= self.time_var)
+        self.wid_date.grid(row=nextPropRow, column=2, sticky= "W")
+        nextPropRow+=1
+        tk.Label (master, text="New speed").grid (row=nextPropRow, sticky= "W", padx=5, pady=5);
         self.wid_speeed = tk.Entry(master, textvariable= self.speed_var)
         self.wid_speeed.grid(row=nextPropRow, column=1, sticky= "W")
+        tk.Label (master, text=" Knots").grid (row=nextPropRow, column=2, sticky= "W", padx=5, pady=5);
         nextPropRow+=1
 
-        tk.Label (master, text="Course ").grid (row=nextPropRow, sticky= "EW", padx=5, pady=5);
+        tk.Label (master, text="New Course ").grid (row=nextPropRow, sticky= "W", padx=5, pady=5);
         self.wid_course= tk.Entry(master, textvariable= self.course_var)
         self.wid_course.grid(row=nextPropRow, column=1, sticky= "W")
+        tk.Label (master, text=" °").grid (row=nextPropRow, column=2, sticky= "W", padx=5, pady=5);
         nextPropRow+=1
 
         return self.wid_course
@@ -104,4 +118,4 @@ class CourseSpeedDlg(tk.Toplevel):
     # command hooks
 
     def validate(self):
-        return 1 # override
+        return 0 # override
