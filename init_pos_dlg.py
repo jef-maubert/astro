@@ -119,10 +119,10 @@ class InitPosDlg(tk.Toplevel):
 
         self.list_of_entry_validation.append({"category":"date", "variable":self.date_var, "widget":self.date_wid, "pattern":"^\d{1,2}\/\d{1,2}(\/\d{2,4})?$"})
         self.list_of_entry_validation.append({"category":"time", "variable":self.time_var, "widget":self.time_wid, "pattern":"^\d{1,2}:\d{1,2}:\d{1,2}$"})
-        self.list_of_entry_validation.append({"category":"degre", "variable":self.lat_deg_var, "widget":self.lat_deg_wid, "pattern":"^\d{1,2}$"})
-        self.list_of_entry_validation.append({"category":"minute", "variable":self.lat_min_var, "widget":self.lat_min_wid, "pattern":"^\d{1,2}\.?\d?$"})
-        self.list_of_entry_validation.append({"category":"degre", "variable":self.long_deg_var, "widget":self.long_deg_wid, "pattern":"^\d{1,3}$"})
-        self.list_of_entry_validation.append({"category":"minute", "variable":self.long_min_var, "widget":self.long_min_wid, "pattern":"^\d{1,2}\.?\d?$"})
+        self.list_of_entry_validation.append({"category":"degre", "variable":self.lat_deg_var, "widget":self.lat_deg_wid, "pattern":"^\d{1,2}$", "max":90})
+        self.list_of_entry_validation.append({"category":"minute", "variable":self.lat_min_var, "widget":self.lat_min_wid, "pattern":"^\d{1,2}\.?\d?$", "max":60})
+        self.list_of_entry_validation.append({"category":"degre", "variable":self.long_deg_var, "widget":self.long_deg_wid, "pattern":"^\d{1,3}$", "max":180})
+        self.list_of_entry_validation.append({"category":"minute", "variable":self.long_min_var, "widget":self.long_min_wid, "pattern":"^\d{1,2}\.?\d?$", "max":60})
         next_prop_row+=1
         return self.time_wid
 
@@ -177,9 +177,14 @@ class InitPosDlg(tk.Toplevel):
             pattern = entry_validation["pattern"]
             value = entry_validation["variable"].get()
             widget = entry_validation["widget"]
+            max_value = entry_validation.get("max")
             if re.fullmatch(pattern, value) is None:
                 category = entry_validation["category"]
                 self.app_logger.warning('%s is a not correct value for "%s". it should match "%s"', value, pattern, category)
+                widget.configure(fg="red")
+                all_entry_ok = False
+            elif max_value and int(value) >= max_value:
+                self.app_logger.warning('%s is too high ( it should be < %d)', value, max_value)
                 widget.configure(fg="red")
                 all_entry_ok = False
             else:

@@ -5,6 +5,7 @@ to be used with file coming from https://navastro.com/downloads/catalogue.php
 import math
 import time
 import csv
+import constants
 from waypoint import format_angle
 from waypoint import INPUT_TYPE_DECL, INPUT_TYPE_AHV, INPUT_TYPE_HEIGHT, INPUT_TYPE_AZIMUT
 EARTH_RADIUS_KM  = 6366.0
@@ -28,6 +29,9 @@ def degree2radian (angle_degree):
 def sign_of (value):
     return 1 if value > 0 else -1
 
+RESULT_WARNING_TEXT = "!!! "
+RESULT_HEADER_TEXT = "==> "
+RESULT_TEXT_TEXT = "    "
 class Observation:
     '''
     class for start calculation, all angles are extressed in degre, minuts
@@ -50,6 +54,16 @@ class Observation:
         self.height_estimated = 0.0
         self.intercept = 0.0
         self.azimut = 0.0
+        self.result = ""
+        
+    def result_warning_append(self, result_line):
+        self.result += "{}{}\n".format(RESULT_WARNING_TEXT, result_line)
+
+    def result_header_append(self, result_line):
+        self.result += "{}{}\n".format(RESULT_HEADER_TEXT, result_line)
+
+    def result_text_append(self, result_line):
+        self.result += "{}{}\n".format(RESULT_TEXT_TEXT, result_line)
 
     def extract_ephemerides_from_ho249(self):
         month_name_french = ["", "Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jul", "Aou", "Sep", "Oct", "Nov", "Dec"]
@@ -79,24 +93,27 @@ class Observation:
                     if not sign_decl_bool:
                         decl_var *= -1.0
                     ho249_results.update({"decl_var":decl_var})
-
+                    self.result_header_append ('at {} 00:00:00'.format(date_target))
+                    self.result_text_append ('decl = {} (var {})'.format(format_angle(decl, INPUT_TYPE_DECL), decl_var))
+                    self.result_text_append ('ahv0 = {} (var {})'.format(format_angle(ahv0, INPUT_TYPE_DECL), ahv0_var))
                     self.app_logger.debug ('at %s 00:00:00 : decl = %s (var %s\'),  ahv0 = %s(var %s°)',
                                           date_target,
                                           format_angle(decl, INPUT_TYPE_DECL), decl_var,
                                           format_angle(ahv0, INPUT_TYPE_AHV), ahv0_var)
-
                     return ho249_results
                 # else:
                 #     self.app_logger.debug('skipping entry for "%s"', list_of_fields[1])
+        self.result_warning_append ('Can\'t find any entry for "{}" in file "{}"'.format(date_target, ho249_file_name))
         self.app_logger.warning('Can\'t find any entry for "%s" in file "%s"', date_target, ho249_file_name)
         return None
 
     def calculate_nb_utc_hour_since_midnight(self):
-        now = self.date_time
-        nb_local_hour_since_midnight = now.hour + now.minute/60.0 + now.second/3600.0
+        nb_local_hour_since_midnight = self.date_time.hour + self.date_time.minute/60.0 + self.date_time.second/3600.0
         utc_offset_hour = time.timezone/3600.0
         utc_offset_hour -= time.localtime().tm_isdst
+        self.result_header_append ('at {}'.format(self.date_time.strftime(constants.DATE_DISPLAY_FORMATTER)))
         self.app_logger.debug ('utc_offset_hour = %d hours', utc_offset_hour)
+        self.result_text_append ('utc_offset_hour = {} hours'.format(utc_offset_hour))
         nb_utc_hour_since_midnight = nb_local_hour_since_midnight + utc_offset_hour
         self.app_logger.debug ('utc_time = %.5f hours', nb_utc_hour_since_midnight)
         return nb_utc_hour_since_midnight
@@ -104,6 +121,7 @@ class Observation:
     def calculate_decl_from_ho249(self, ho249_results, nb_utc_hour_since_midnight):
         time_target = self.date_time.strftime("%H:%M:%S")
         self.decl = ho249_results["decl"] + (ho249_results["decl_var"] * nb_utc_hour_since_midnight) / 60.0
+        self.result_text_append ('decl = ' + format_angle(self.decl, INPUT_TYPE_DECL))
         self.app_logger.info ('at %s decl = %s', time_target, format_angle(self.decl, INPUT_TYPE_DECL))
 
     def calculate_ahv0_from_ho249(self, ho249_results, nb_utc_hour_since_midnight):
@@ -114,6 +132,9 @@ class Observation:
         self.ahvg = self.ahv0 + self.position.longitude
         while self.ahvg > 360.0 :
             self.ahvg -= 360.0
+        self.result_text_append ('ahv0 = {}, ahvg = {}'.format(
+            format_angle(self.ahv0, INPUT_TYPE_AHV), 
+            format_angle(self.ahvg, INPUT_TYPE_AHV)))
         self.app_logger.info ('At %s ahv0 = %s, ahvg = %s',
                               time_target,
                               format_angle(self.ahv0, INPUT_TYPE_AHV),

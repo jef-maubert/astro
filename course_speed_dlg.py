@@ -76,7 +76,7 @@ class CourseSpeedDlg(tk.Toplevel):
         self.list_of_entry_validation.append({"category":"date", "variable":self.date_var, "widget":self.date_wid, "pattern":"^\d{1,2}\/\d{1,2}(\/\d{2,4})?$"})
         self.list_of_entry_validation.append({"category":"time", "variable":self.time_var, "widget":self.time_wid, "pattern":"^\d{1,2}:\d{1,2}:\d{1,2}$"})
         self.list_of_entry_validation.append({"category":"speed", "variable":self.speed_var, "widget":self.speed_wid, "pattern":"^\d{1,2}\.?\d?$"})
-        self.list_of_entry_validation.append({"category":"course", "variable":self.course_var, "widget":self.course_wid, "pattern":"^\d{1,3}$"})
+        self.list_of_entry_validation.append({"category":"course", "variable":self.course_var, "widget":self.course_wid, "pattern":"^\d{1,3}$", "max":360})
         next_prop_row+=1
         return self.time_wid
 
@@ -130,9 +130,14 @@ class CourseSpeedDlg(tk.Toplevel):
             pattern = entry_validation["pattern"]
             value = entry_validation["variable"].get()
             widget = entry_validation["widget"]
+            max_value = entry_validation.get("max")
             if re.fullmatch(pattern, value) is None:
                 category = entry_validation["category"]
                 self.app_logger.warning('%s is a not correct value for "%s". it should match "%s"', value, pattern, category)
+                widget.configure(fg="red")
+                all_entry_ok = False
+            elif max_value and int(value) >= max_value:
+                self.app_logger.warning('%s is too high ( it should be < %d)', value, max_value)
                 widget.configure(fg="red")
                 all_entry_ok = False
             else:

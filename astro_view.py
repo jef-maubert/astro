@@ -12,12 +12,13 @@ import logging.handlers
 import configparser
 from configparser import NoSectionError, DuplicateSectionError
 import tkinter as tk
+from tkinter import messagebox
 import datetime
 import platform
 
 import constants
 from waypoint import Waypoint, format_angle
-from waypoint import INPUT_TYPE_LATITUDE, INPUT_TYPE_LONGITUDE, INPUT_TYPE_AZIMUT
+from waypoint import INPUT_TYPE_LATITUDE, INPUT_TYPE_LONGITUDE, INPUT_TYPE_AZIMUT, INPUT_TYPE_HEIGHT
 from boat import Boat
 from observation import Observation
 from display_hat import DisplayHat
@@ -138,10 +139,20 @@ class AstroTk(tk.Tk):
         my_observation_dlg = ObservationdDlg(self, "New sun observation")
         if my_observation_dlg.result:
             new_dt_str = my_observation_dlg.result[0]
-            new_waypoint_dt = datetime.datetime.strptime(new_dt_str, constants.DATE_DISPLAY_FORMATTER)
-            new_eye_height_str = my_observation_dlg.result[1]
-            new_obs_height_str = my_observation_dlg.result[2]
+            observation_dt = datetime.datetime.strptime(new_dt_str, constants.DATE_DISPLAY_FORMATTER)
+            self.data.my_boat.eye_height = my_observation_dlg.result[1]
+
+            obs_height = my_observation_dlg.result[2]
+            self.app_logger.debug('At %s with eye height = %dm, Height observed = %s', 
+                                 observation_dt.strftime(constants.DATE_DISPLAY_FORMATTER), 
+                                 self.data.my_boat.eye_height,
+                                 format_angle(obs_height, INPUT_TYPE_HEIGHT))
             self.update_display()
+            observation_position = self.data.my_boat.get_position_at(observation_dt)
+            my_observation = Observation (observation_dt, observation_position, self.data.my_boat.eye_height, app_logger = self.app_logger)
+            my_observation.calculate_he_and_az(obs_height)
+            tk.messagebox.showinfo("Result", my_observation.result)
+            
 
     def on_button_display_all_observations(self):
         self.app_logger.info('Click on button "Display all observations"')
