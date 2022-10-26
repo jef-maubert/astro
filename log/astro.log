@@ -149,3 +149,17 @@
 26 13:54:30 - -  - observation.py - calculate_az-159 - Azimut by atan : -012° 
 26 13:54:30 -  - observation.py - calculate_az-160 - Azimut : +192° 
 26 13:54:30 -  - observation.py - calculate_he_and_az-181 - Intercept : -279.2 NM
+26 13:58:46 -  - astro.py - save_config-124 - Configuration saved in file astro.ini
+26 13:58:49 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:58:49 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 13:58:49 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 13:58:49 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 13:58:49 - -  - boat.py - format_current_position-36 - 1391.9 NM since last position at 6.0 Knots - course 180°
+26 13:58:51 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
+26 13:58:57 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 13:59:32 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:59:32 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 13:59:32 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 13:59:32 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 13:59:32 - -  - boat.py - format_current_position-36 - 1392.0 NM since last position at 6.0 Knots - course 180°
+26 13:59:36 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini

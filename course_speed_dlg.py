@@ -40,12 +40,6 @@ class CourseSpeedDlg(tk.Toplevel):
         if not self.initial_focus:
             self.initial_focus = self
 
-        ADD_GEOMETRY = 50
-        self.protocol("WM_DELETE_WINDOW", self.on_cancel_button)
-        geometry_value = "%dx%d" % (parent.winfo_rootx()+ADD_GEOMETRY, parent.winfo_rooty()+ADD_GEOMETRY)
-        geometry_value = "%dx%d" % (300, 200)
-        self.geometry(geometry_value)
-        self.app_logger.debug ('geometry = "%s"',geometry_value)
         self.initial_focus.focus_set()
         self.wait_window(self)
 
@@ -74,7 +68,7 @@ class CourseSpeedDlg(tk.Toplevel):
         tk.Label (master, text=" Knots").grid (row=next_prop_row, column=2, **grid_unit_dict)
         next_prop_row+=1
 
-        tk.Label (master, text="New Course\n(ZZZ)").grid (row=next_prop_row, **grid_dict)
+        tk.Label (master, text="New Course\n(CCC)").grid (row=next_prop_row, **grid_dict)
         self.course_wid= tk.Entry(master, textvariable= self.course_var, **entry_dict)
         self.course_wid.grid(row=next_prop_row, column=1, **grid_dict)
         tk.Label (master, text=" °").grid (row=next_prop_row, column=2, **grid_unit_dict)
