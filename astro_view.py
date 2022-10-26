@@ -151,8 +151,11 @@ class AstroTk(tk.Tk):
             observation_position = self.data.my_boat.get_position_at(observation_dt)
             my_observation = Observation (observation_dt, observation_position, self.data.my_boat.eye_height, app_logger = self.app_logger)
             my_observation.calculate_he_and_az(obs_height)
-            tk.messagebox.showinfo("Result", my_observation.result)
-            
+            result_displayed = my_observation.result + "\nDo you want to save it ?"
+            confirm_before_saving = tk.messagebox.askyesno("Result", result_displayed)
+            if confirm_before_saving :
+                self.data.save_observation_in_config(my_observation)
+
 
     def on_button_display_all_observations(self):
         self.app_logger.info('Click on button "Display all observations"')

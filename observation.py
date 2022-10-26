@@ -143,15 +143,18 @@ class Observation:
     def calculate_athmospheric_refraction_minute_by_tan(self):
         self.athmospheric_refraction_minute = 1.0 / math.tan(degree2radian(self.height_observed))
         self.app_logger.debug("for angle : %.0f°, refraction = %.1f'", float(self.height_observed), float(self.athmospheric_refraction_minute))
+        self.result_text_append("for angle : {:.0f}°, refraction = {:.1f}'".format(self.height_observed, self.athmospheric_refraction_minute))
 
     def calculate_horizon_dip_function_of_eye_height(self):
         self.eye_height_correction_minute = 0.0
         self.eye_height_correction_minute = radian2degree(math.sqrt(2.0 * self.eye_height / (EARTH_RADIUS_KM * 1000.0))) * 60.0
         self.app_logger.debug("for eye height : %.0f m, eye height correction = %.1f'", float(self.eye_height), float(self.eye_height_correction_minute))
+        self.result_text_append("for eye height : {:.0f} m, eye height correction = {:.1f}'".format(self.eye_height, self.eye_height_correction_minute))
 
     def calculate_half_sun_lumb_angle(self):
         self.sun_half_lumb_minute = 16.0
         self.app_logger.debug("half_sun_lumb_angle = %.1f'", float(self.sun_half_lumb_minute))
+        self.result_text_append("half_sun_lumb_angle = {:.1f}'".format(self.sun_half_lumb_minute))
 
     def calculate_he(self):
         sin_phi  = math.sin(degree2radian(self.position.latitude))
@@ -162,6 +165,7 @@ class Observation:
         self.height_estimated = radian2degree(math.asin(sin_phi * sin_decl + cos_phi * cos_decl * cos_ahvg))
 
         self.app_logger.info("Height estimated : %s ", format_angle(self.height_estimated, INPUT_TYPE_HEIGHT))
+        self.result_header_append("Height estimated = "+format_angle(self.height_estimated, INPUT_TYPE_HEIGHT))
 
     def calculate_az(self):
         sin_ahvg = math.sin(degree2radian(self.ahvg))
@@ -176,9 +180,10 @@ class Observation:
         azimut_by_asin = radian2degree(math.asin(sin_ahvg*cos_decl/cos_he))
         # Magic formula found by jef in 1983 !!!
         self.azimut = 90 * (sign_of(azimut_by_atan) + sign_of(azimut_by_asin) +2 ) - azimut_by_atan
-        self.app_logger.debug("Azimut by asin : %s ", format_angle(azimut_by_asin, INPUT_TYPE_AZIMUT))
-        self.app_logger.debug("Azimut by atan : %s ", format_angle(azimut_by_atan, INPUT_TYPE_AZIMUT))
-        self.app_logger.info("Azimut : %s ", format_angle(self.azimut, INPUT_TYPE_AZIMUT))
+        self.app_logger.debug("Azimut by asin = %s ", format_angle(azimut_by_asin, INPUT_TYPE_AZIMUT))
+        self.app_logger.debug("Azimut by atan = %s ", format_angle(azimut_by_atan, INPUT_TYPE_AZIMUT))
+        self.app_logger.info("Azimut = %s ", format_angle(self.azimut, INPUT_TYPE_AZIMUT))
+        self.result_header_append("Azimut = "+format_angle(self.azimut, INPUT_TYPE_HEIGHT))
 
     def calculate_he_and_az(self, height_observed):
         self.height_observed = height_observed
@@ -187,10 +192,12 @@ class Observation:
             nb_utc_hour_sdince_midnight = self.calculate_nb_utc_hour_since_midnight()
             self.calculate_decl_from_ho249(ho249_results, nb_utc_hour_sdince_midnight)
             self.calculate_ahv0_from_ho249(ho249_results, nb_utc_hour_sdince_midnight)
+            self.result_header_append("Sextant height observed = {}".format(format_angle(self.height_observed, INPUT_TYPE_HEIGHT)))
             self.calculate_athmospheric_refraction_minute_by_tan()
             self.calculate_horizon_dip_function_of_eye_height()
             self.calculate_half_sun_lumb_angle()
             self.height_corrected = self.height_observed + (self.sun_half_lumb_minute - self.athmospheric_refraction_minute - self.eye_height_correction_minute) / 60.0
+            self.result_header_append("Sextant height corrected = {}".format(format_angle(self.height_corrected, INPUT_TYPE_HEIGHT)))
             self.app_logger.info("Sextant height observed %s - corrected : %s ", 
                                  format_angle(self.height_observed, INPUT_TYPE_HEIGHT),
                                  format_angle(self.height_corrected, INPUT_TYPE_HEIGHT))
@@ -199,5 +206,6 @@ class Observation:
             self.calculate_az()
 
             self.intercept = (self.height_corrected - self.height_estimated) * 60.0
-            self.app_logger.info("Intercept : %.1f NM", self.intercept )
+            self.app_logger.info("Intercept : %.1f NM", self.intercept)
+            self.result_header_append("Intercept : {:.1f} NM".format(self.intercept ))
         
