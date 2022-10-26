@@ -14,7 +14,7 @@ class Boat:
         self.last_waypoint = new_waypoint
         self.last_waypoint_datetime = new_waypoint_datetime
 
-    def set_speed_and_course(self, speed, course):
+    def set_course_and_speed(self, course, speed):
         self.course = course
         self.speed = speed
 

@@ -146,7 +146,7 @@ class AstroApp:
 
     def init_menu(self):
         self.list_of_menu.append({"code": "I", "title":"Initialize position", "function":self.init_position})
-        self.list_of_menu.append({"code": "S", "title":"Set course and speed", "function":self.set_speed_and_course})
+        self.list_of_menu.append({"code": "S", "title":"Set course and speed", "function":self.set_course_and_speed})
         self.list_of_menu.append({"code": "L", "title":"Display last position", "function":self.display_last_position})
         self.list_of_menu.append({"code": "C", "title":"Display current position", "function":self.display_current_position})
         self.list_of_menu.append({"code": "A", "title":"Enter new astro", "function":self.new_astro})
@@ -275,7 +275,7 @@ class AstroApp:
         new_longitude = self.enter_position_coordinate(self.my_boat.last_waypoint.longitude, INPUT_TYPE_LONGITUDE)
         self.my_boat.set_new_position(Waypoint ("last position", new_latitude, new_longitude), new_waypoint_dt)
 
-    def set_speed_and_course(self):
+    def set_course_and_speed(self):
         self.app_logger.info('Set the course and the speed')
 
         last_posit_date = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER).split(" ")[0].replace ("-", "/")
@@ -309,7 +309,7 @@ class AstroApp:
         new_latitude_str = format_angle(new_waypoint.latitude, input_type = INPUT_TYPE_LATITUDE)
         new_longitude_str = format_angle(new_waypoint.longitude, input_type = INPUT_TYPE_LONGITUDE)
         self.my_boat.set_new_position(Waypoint ("last position", new_latitude_str, new_longitude_str), new_waypoint_dt)
-        self.my_boat.set_speed_and_course(new_speed, new_course)
+        self.my_boat.set_course_and_speed(new_course, new_speed)
 
     def display_last_position(self):
         self.app_logger.info('Last recorded position of the boat')
