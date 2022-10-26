@@ -119,29 +119,6 @@ class Observation:
                               format_angle(self.ahv0, INPUT_TYPE_AHV),
                               format_angle(self.ahvg, INPUT_TYPE_AHV))
 
-
-    def load_athmospheric_refraction_minute_from_file(self):
-        with open('atmospheric_refraction.csv', encoding="utf8") as atmospheric_refraction_file:
-            dialect = csv.Sniffer().sniff(atmospheric_refraction_file.read(1024))
-            atmospheric_refraction_file.seek(0)
-
-            csv_reader = csv.DictReader(atmospheric_refraction_file, dialect=dialect)
-            list_of_fields = next(csv_reader)
-            # for field in list_of_fields:
-            #     self.app_logger.debug('found field :"%s"',field)
-            for line in csv_reader:
-                self.list_of_athmospheric_refraction_minute.append({"angle":float(line["angle"]), "refraction":float(line["refraction"])})
-
-    def calculate_athmospheric_refraction_minute_by_table(self):
-        self.load_athmospheric_refraction_minute_from_file()
-        gap_to_exact_value = 999.9
-        self.athmospheric_refraction_minute = 0.0
-        for athmospheric_refraction_minute in self.list_of_athmospheric_refraction_minute:
-            if gap_to_exact_value > abs(self.height_observed - athmospheric_refraction_minute['angle']):
-                gap_to_exact_value = abs(self.height_observed - athmospheric_refraction_minute['angle'])
-                self.athmospheric_refraction_minute = athmospheric_refraction_minute['refraction']
-        self.app_logger.debug("for angle : %.0f°, refraction = %.1f'", float(self.height_observed), float(self.athmospheric_refraction_minute))
-
     def calculate_athmospheric_refraction_minute_by_tan(self):
         self.athmospheric_refraction_minute = 1.0 / math.tan(degree2radian(self.height_observed))
         self.app_logger.debug("for angle : %.0f°, refraction = %.1f'", float(self.height_observed), float(self.athmospheric_refraction_minute))
@@ -189,7 +166,6 @@ class Observation:
             nb_utc_hour_sdince_midnight = self.calculate_nb_utc_hour_since_midnight()
             self.calculate_decl_from_ho249(ho249_results, nb_utc_hour_sdince_midnight)
             self.calculate_ahv0_from_ho249(ho249_results, nb_utc_hour_sdince_midnight)
-#            self.calculate_athmospheric_refraction_minute_by_table()
             self.calculate_athmospheric_refraction_minute_by_tan()
             self.calculate_horizon_dip_function_of_eye_height()
             self.calculate_half_sun_lumb_angle()
