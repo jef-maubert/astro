@@ -80,7 +80,7 @@ class AstroApp:
         last_longitude = self.app_config.get('BOAT', 'last_longitude', fallback=constants.DEFAULT_LONGITUDE)
         last_pos_dt_str = self.app_config.get('BOAT', 'last_pos_dt', fallback=None)
         if last_pos_dt_str :
-            last_pos_dt = datetime.datetime.strptime(last_pos_dt_str, constants.DATE_FORMATTER)
+            last_pos_dt = datetime.datetime.strptime(last_pos_dt_str, constants.DATE_SERIAL_FORMATTER)
         else:
             last_pos_dt = datetime.datetime.now()
         speed = float(self.app_config.get('BOAT', 'speed', fallback=constants.DEFAULT_SPEED))
@@ -113,7 +113,7 @@ class AstroApp:
         self.app_config.set('LOG', 'level',self.log_level)
         self.app_config.set('BOAT', 'last_latitude', self.my_boat.last_waypoint.format_latitude())
         self.app_config.set('BOAT', 'last_longitude', self.my_boat.last_waypoint.format_longitude())
-        self.app_config.set('BOAT', 'last_pos_dt', str(self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER)))
+        self.app_config.set('BOAT', 'last_pos_dt', str(self.my_boat.last_waypoint_datetime.strftime(constants.DATE_SERIAL_FORMATTER)))
         self.app_config.set('BOAT', 'course', str(self.my_boat.course))
         self.app_config.set('BOAT', 'speed', str(self.my_boat.speed))
         self.app_config.set('BOAT', 'eye_height', str(self.my_boat.eye_height))
@@ -121,6 +121,7 @@ class AstroApp:
         my_config_filename = "{}.ini".format(self.app_name)
         with open(my_config_filename, 'w', encoding="utf-8") as configfile:
             self.app_config.write(configfile)
+        self.app_logger.info('Configuration saved in file %s', my_config_filename)
 
     def save_observation_in_config(self, observation):
         section_name = 'OBSERVATION_{}'.format(self.next_observation_number)
@@ -131,7 +132,7 @@ class AstroApp:
 
         self.app_config.set(section_name, 'intercept', "{:.1f}".format(observation.intercept))
         self.app_config.set(section_name, 'azimut', "{:.1f}".format(observation.azimut))
-        self.app_config.set(section_name, 'date_time', observation.date_time.strftime(constants.DATE_FORMATTER))
+        self.app_config.set(section_name, 'date_time', observation.date_time.strftime(constants.DATE_SERIAL_FORMATTER))
         self.save_config()
 
     def remove_all_observations(self):
@@ -176,10 +177,10 @@ class AstroApp:
         return True
 
     def enter_date(self, date_default=None):
+        DATE_FIELD_SEPARATOR = "/"
         if not date_default :
             date_dt = datetime.datetime.now()
-            date_default = date_dt.strftime(constants.DATE_FORMATTER.split(" ")[0])
-            date_default = date_default.replace("-", "/")
+            date_default = date_dt.strftime(constants.DATE_DISPLAY_FORMATTER.split(" ")[0])
         year_default = int(date_default[-4:])
         date_prompt = "Date (dd/mm/yyyy) [{}] ? ".format(date_default)
         regex_for_validation = "^\d{1,2}\/\d{1,2}(\/\d{2,4})?$"
@@ -188,15 +189,14 @@ class AstroApp:
             new_date = date_input if date_input else date_default
             if re.match (regex_for_validation, new_date):
                 break
-        new_date = new_date.replace("/", "-")
-        new_date_day = int(new_date.split("-")[0])
-        new_date_month = int(new_date.split("-")[1])
+        new_date_day = int(new_date.split(DATE_FIELD_SEPARATOR)[0])
+        new_date_month = int(new_date.split(DATE_FIELD_SEPARATOR)[1])
         try:
-            new_date_year = int(new_date.split("-")[2])
+            new_date_year = int(new_date.split(DATE_FIELD_SEPARATOR)[2])
         except IndexError:
             new_date_year = year_default
         new_date_year = new_date_year+2000 if new_date_year < 100 else new_date_year
-        new_date = "{:02d}-{:02d}-{:04d}".format(new_date_day, new_date_month, new_date_year)
+        new_date = "{:02d}{}{:02d}{}{:04d}".format(new_date_day, DATE_FIELD_SEPARATOR, new_date_month, DATE_FIELD_SEPARATOR, new_date_year)
         self.app_logger.debug("New date = %s",new_date)
         return new_date
 
@@ -209,7 +209,7 @@ class AstroApp:
             time_input = input (time_prompt)
             time_dt = datetime.datetime.now()
             if time_default == "now":
-                time_default = time_dt.strftime(constants.DATE_FORMATTER.split(" ")[1])
+                time_default = time_dt.strftime(constants.DATE_DISPLAY_FORMATTER.split(" ")[1])
             new_time = time_input if time_input else time_default
             if re.match (regex_for_validation, new_time):
                 break
@@ -270,7 +270,7 @@ class AstroApp:
         self.app_logger.info('Initialize the boat position')
         new_date = self.enter_date()
         new_time = self.enter_time()
-        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
+        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_DISPLAY_FORMATTER)
         new_latitude = self.enter_position_coordinate(self.my_boat.last_waypoint.latitude, INPUT_TYPE_LATITUDE)
         new_longitude = self.enter_position_coordinate(self.my_boat.last_waypoint.longitude, INPUT_TYPE_LONGITUDE)
         self.my_boat.set_new_position(Waypoint ("last position", new_latitude, new_longitude), new_waypoint_dt)
@@ -278,11 +278,11 @@ class AstroApp:
     def set_course_and_speed(self):
         self.app_logger.info('Set the course and the speed')
 
-        last_posit_date = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER).split(" ")[0].replace ("-", "/")
-        last_posit_time = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER).split(" ")[1]
+        last_posit_date = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_DISPLAY_FORMATTER).split(" ")[0]
+        last_posit_time = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_DISPLAY_FORMATTER).split(" ")[1]
         new_date = self.enter_date(date_default = last_posit_date)
         new_time = self.enter_time(time_default = last_posit_time)
-        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
+        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_DISPLAY_FORMATTER)
 
         default_speed = self.my_boat.speed
         prompt = "Speed in knots (xx.x) [{}] ? ".format(default_speed)
@@ -313,12 +313,12 @@ class AstroApp:
 
     def display_last_position(self):
         self.app_logger.info('Last recorded position of the boat')
-        self.app_logger.info("at %s %s", self.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER), self.my_boat.format_last_position())
+        self.app_logger.info("at %s %s", self.my_boat.last_waypoint_datetime.strftime(constants.DATE_DISPLAY_FORMATTER), self.my_boat.format_last_position())
 
     def display_current_position(self):
         self.app_logger.info('Current position of the boat based on last position and course and speed from that time')
         now = datetime.datetime.now()
-        now_string = now.strftime(constants.DATE_FORMATTER)
+        now_string = now.strftime(constants.DATE_DISPLAY_FORMATTER)
         self.app_logger.info("running %.1f knots in the %s", self.my_boat.speed, format_angle(self.my_boat.course, input_type = INPUT_TYPE_AZIMUT))
         self.app_logger.info("now (%s) %s", now_string, self.my_boat.format_current_position())
 
@@ -329,7 +329,7 @@ class AstroApp:
         self.my_boat.eye_height = self.enter_eye_height()
         new_ho = self.enter_ho()
 
-        observation_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
+        observation_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_DISPLAY_FORMATTER)
         observation_position = self.my_boat.get_position_at(observation_dt)
 
         my_observation = Observation (observation_dt, observation_position, self.my_boat.eye_height, app_logger = self.app_logger)
@@ -384,7 +384,7 @@ class AstroApp:
         self.app_logger.info('that will reset all the observations')
         new_date = self.enter_date()
         new_time = self.enter_time()
-        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_FORMATTER)
+        new_waypoint_dt = datetime.datetime.strptime(new_date + " " + new_time, constants.DATE_DISPLAY_FORMATTER)
 
         default_distance = "{:.1f}".format(suggested_fix["distance"])
         prompt = "Distance in NM (xxx.x) [{}] ? ".format(default_distance)

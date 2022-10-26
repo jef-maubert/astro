@@ -34,7 +34,8 @@ class Boat:
         nb_second_since_last_pos = elapsed_time.total_seconds()
         distance = self.speed * nb_second_since_last_pos / 3600
         self.app_logger.debug ("%.1f NM since last position at %.1f Knots - course %.0f°", distance, self.speed, self.course)
-        return self.last_waypoint.move_to(self.course, distance, "estimated")
+        current_waypoint = self.last_waypoint.move_to(self.course, distance, "estimated")
+        return current_waypoint
 
     def __repr__(self):
         result = "at {} position {}".format(self.last_waypoint_datetime, self.last_waypoint)

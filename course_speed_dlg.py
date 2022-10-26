@@ -12,9 +12,9 @@ class CourseSpeedDlg(tk.Toplevel):
 
     def __init__(self, parent, title, last_modif_dt, course, speed):
         self.date_var = tk.StringVar()
-        self.date_var.set(last_modif_dt.strftime(constants.DATE_FORMATTER).split(" ")[0].replace("-", "/"))
+        self.date_var.set(last_modif_dt.strftime(constants.DATE_DISPLAY_FORMATTER).split(" ")[0])
         self.time_var = tk.StringVar()
-        self.time_var.set(last_modif_dt.strftime(constants.DATE_FORMATTER).split(" ")[1])
+        self.time_var.set(last_modif_dt.strftime(constants.DATE_DISPLAY_FORMATTER).split(" ")[1])
         self.course_var = tk.StringVar()
         self.course_var.set("{:03.0f}".format(course))
         self.speed_var = tk.StringVar()
@@ -43,6 +43,7 @@ class CourseSpeedDlg(tk.Toplevel):
         ADD_GEOMETRY = 50
         self.protocol("WM_DELETE_WINDOW", self.on_cancel_button)
         geometry_value = "%dx%d" % (parent.winfo_rootx()+ADD_GEOMETRY, parent.winfo_rooty()+ADD_GEOMETRY)
+        geometry_value = "%dx%d" % (300, 200)
         self.geometry(geometry_value)
         self.app_logger.debug ('geometry = "%s"',geometry_value)
         self.initial_focus.focus_set()

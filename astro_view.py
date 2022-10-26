@@ -13,7 +13,6 @@ import configparser
 from configparser import NoSectionError, DuplicateSectionError
 import tkinter as tk
 import datetime
-import datetime
 import platform
 
 import constants
@@ -79,20 +78,29 @@ class AstroTk(tk.Tk):
         self.current_pos_dt.grid(row=0, column=0, **grid_dict)
         self.current_pos = tk.Label(current_pos_frame)
         self.current_pos.grid(row=1, column=0, **grid_dict)
+        self.btn_refresh_current_pos = tk.Button(current_pos_frame, text="Refresh", command=self.on_button_refresh_pos)
+        self.btn_refresh_current_pos.grid(row=0, column=1, **grid_dict)
         self.btn_modif_current_pos = tk.Button(current_pos_frame, text="Observation", command=self.on_button_new_obs)
-        self.btn_modif_current_pos.grid(row=0, column=1, rowspan=2, **grid_dict)
+        self.btn_modif_current_pos.grid(row=1, column=1, **grid_dict)
+
+        next_row += 1
+        self.btn_quit = tk.Button(self, text="Quit", command=self.on_button_quit)
+        self.btn_quit.grid(column=0, row=next_row, **grid_dict)
+
+    def on_button_quit(self):
+        self.destroy()
 
     def on_button_modif_last_pos(self):
-        now = datetime.datetime.now().strftime(constants.DATE_FORMATTER)
-        self.current_pos.configure(text=now)
+        now = datetime.datetime.now().strftime(constants.DATE_SERIAL_FORMATTER)
+        self.current_pos_dt.configure(text=now)
 
     def on_button_modif_course_and_speed(self):
         my_course_and_speed_dlg = CourseSpeedDlg(self, "Course and speed",
                                                      self.data.my_boat.last_waypoint_datetime,
                                                      self.data.my_boat.course, self.data.my_boat.speed)
         if my_course_and_speed_dlg.result:
-            new_dt= my_course_and_speed_dlg.result[0].replace ("/", "-")
-            new_waypoint_dt = datetime.datetime.strptime(new_dt, constants.DATE_FORMATTER)
+            new_dt= my_course_and_speed_dlg.result[0]
+            new_waypoint_dt = datetime.datetime.strptime(new_dt, constants.DATE_DISPLAY_FORMATTER)
             new_waypoint = self.data.my_boat.get_position_at(new_waypoint_dt)
             new_latitude_str = format_angle(new_waypoint.latitude, input_type = INPUT_TYPE_LATITUDE)
             new_longitude_str = format_angle(new_waypoint.longitude, input_type = INPUT_TYPE_LONGITUDE)
@@ -101,6 +109,9 @@ class AstroTk(tk.Tk):
             new_course = float(my_course_and_speed_dlg.result[1])
             new_speed = float(my_course_and_speed_dlg.result[2])
             self.data.my_boat.set_course_and_speed(new_course, new_speed)
+            self.update_display()
+
+    def on_button_refresh_pos(self):
             self.update_display()
 
     def on_button_new_obs(self):
@@ -116,13 +127,16 @@ class AstroTk(tk.Tk):
         self.speed.configure(text="Speed : {:.1f} Knots".format(self.data.my_boat.speed))
 
     def display_last_position(self):
-        self.last_pos_dt.configure(text=self.data.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER))
+        self.last_pos_dt.configure(text=self.data.my_boat.last_waypoint_datetime.strftime(constants.DATE_DISPLAY_FORMATTER))
         last_position_str = "{}   {}".format(format_angle(self.data.my_boat.last_waypoint.latitude, INPUT_TYPE_LATITUDE),
                                            format_angle(self.data.my_boat.last_waypoint.longitude, INPUT_TYPE_LONGITUDE))
         self.last_pos.configure(text=last_position_str)
 
     def display_current_position(self):
-        self.current_pos_dt.configure(text=self.data.my_boat.last_waypoint_datetime.strftime(constants.DATE_FORMATTER))
-        current_position_str = "{}   {}".format(format_angle(self.data.my_boat.last_waypoint.latitude, INPUT_TYPE_LATITUDE),
-                                           format_angle(self.data.my_boat.last_waypoint.longitude, INPUT_TYPE_LONGITUDE))
+        now = datetime.datetime.now()
+        now_string = now.strftime(constants.DATE_DISPLAY_FORMATTER)
+        self.current_pos_dt.configure(text=now_string)
+        current_position_wp = self.data.my_boat.format_current_position()
+        current_position_str = "{}   {}".format(format_angle(current_position_wp.latitude, INPUT_TYPE_LATITUDE),
+                                           format_angle(current_position_wp.longitude, INPUT_TYPE_LONGITUDE))
         self.current_pos.configure(text=current_position_str)

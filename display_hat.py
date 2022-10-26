@@ -85,7 +85,7 @@ class DisplayHat:
         self.app_logger.info('Loading configuration from file "%s"', my_config_filename )
         self.app_config.read(my_config_filename, encoding="utf-8")
         last_pos_dt_str = self.app_config.get('BOAT', 'last_pos_dt', fallback=None)
-        self.last_position_time = datetime.datetime.strptime(last_pos_dt_str, constants.DATE_FORMATTER)
+        self.last_position_time = datetime.datetime.strptime(last_pos_dt_str, constants.DATE_SERIAL_FORMATTER)
 
         observation_number = 1
         try:
@@ -149,7 +149,7 @@ class DisplayHat:
         self.tess.goto(square_size/2, square_size/2)
         self.tess.down()
         self.tess.setheading(180)
-        last_position_time_str = self.last_position_time.strftime(constants.DATE_FORMATTER.split(" ")[1])
+        last_position_time_str = self.last_position_time.strftime(constants.DATE_DISPLAY_FORMATTER.split(" ")[1])
         self.tess.write(last_position_time_str, font=("Arial", FONT_SIZE, "normal"), align="left")
         for i in range(4):
             self.tess.forward(square_size)

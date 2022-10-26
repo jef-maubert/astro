@@ -19,6 +19,7 @@ MESSAGE_FORMAT_CONSOLE_KK = '{levelname} - {message:s}'
 MESSAGE_FORMAT_CONSOLE = '{levelname}{message:s}'
 
 def init_log(app_name):
+    os.makedirs(constants.LOG_DIRECTORY, exist_ok=True)
     log_filename = os.path.join(constants.LOG_DIRECTORY, app_name + ".log")
     app_logger = logging.getLogger(app_name)
     logging.basicConfig(level=logging.DEBUG)
@@ -43,14 +44,16 @@ def init_log(app_name):
     app_logger.info('Starting %s version %s', app_name, constants.VERSION)
     return app_logger, console_log_handler
 
-def main () :
-    os.makedirs(constants.LOG_DIRECTORY, exist_ok=True)
+def main () :    
     app_logger, console_log_handler = init_log("astro")
     my_data = AstroData("astro", app_logger, console_log_handler)
     my_data.load_config()
+    
     my_app = AstroTk(None, my_data , app_logger)
     my_app.update_display()
+    
     my_app.mainloop()
+    my_data.save_config()
 
 if __name__ == "__main__":
     main()
