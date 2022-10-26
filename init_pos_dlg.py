@@ -31,7 +31,7 @@ class InitPosDlg(tk.Toplevel):
 
         latitude_str = format_angle (waypoint.latitude,INPUT_TYPE_LATITUDE) 
         longitude_str = format_angle (waypoint.longitude,INPUT_TYPE_LONGITUDE) 
-        self.app_logger.info('lattitude : "%s", lattitude : "%s"', latitude_str, longitude_str)
+        self.app_logger.info('Input - lattitude : "%s", lattitude : "%s"', latitude_str, longitude_str)
         
         self.lat_deg_var = tk.StringVar()
         self.lat_deg_var.set(latitude_str.split("°")[0])
@@ -49,9 +49,9 @@ class InitPosDlg(tk.Toplevel):
         self.long_min_var.set(longitude_str.split("°")[1].split("'")[0])
         self.long_sign_var = tk.StringVar()
         if waypoint.longitude > 0 :
-            self.long_sign_var.set ("W")
-        else:
             self.long_sign_var.set ("E")
+        else:
+            self.long_sign_var.set ("W")
 
         self.list_of_entry_validation = []
 
@@ -119,6 +119,10 @@ class InitPosDlg(tk.Toplevel):
 
         self.list_of_entry_validation.append({"category":"date", "variable":self.date_var, "widget":self.date_wid, "pattern":"^\d{1,2}\/\d{1,2}(\/\d{2,4})?$"})
         self.list_of_entry_validation.append({"category":"time", "variable":self.time_var, "widget":self.time_wid, "pattern":"^\d{1,2}:\d{1,2}:\d{1,2}$"})
+        self.list_of_entry_validation.append({"category":"degre", "variable":self.lat_deg_var, "widget":self.lat_deg_wid, "pattern":"^\d{1,2}$"})
+        self.list_of_entry_validation.append({"category":"minute", "variable":self.lat_min_var, "widget":self.lat_min_wid, "pattern":"^\d{1,2}\.?\d?$"})
+        self.list_of_entry_validation.append({"category":"degre", "variable":self.long_deg_var, "widget":self.long_deg_wid, "pattern":"^\d{1,3}$"})
+        self.list_of_entry_validation.append({"category":"minute", "variable":self.long_min_var, "widget":self.long_min_wid, "pattern":"^\d{1,2}\.?\d?$"})
         next_prop_row+=1
         return self.time_wid
 
@@ -153,10 +157,11 @@ class InitPosDlg(tk.Toplevel):
         self.on_cancel_button()
 
     def apply(self):
-        course = self.course_var.get()
-        speed = self.speed_var.get()
         last_modif_dt = "{} {}".format(self.date_var.get(), self.time_var.get())
-        self.result = last_modif_dt, course, speed
+        latitude_str = "{:02d}°{:04.1f}'{}".format(int(self.lat_deg_var.get()), float(self.lat_min_var.get()), self.lat_sign_var.get())
+        longitude_str = "{:03d}°{:04.1f}'{}".format(int(self.long_deg_var.get()), float(self.long_min_var.get()), self.long_sign_var.get())
+        self.app_logger.info('Output - lattitude : "%s", lattitude : "%s"', latitude_str, longitude_str)
+        self.result = last_modif_dt, latitude_str, longitude_str
 
     def on_cancel_button(self, event=None):
         # put focus back to the parent window
