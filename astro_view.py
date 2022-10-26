@@ -22,6 +22,7 @@ from boat import Boat
 from observation import Observation
 from display_hat import DisplayHat
 from course_speed_dlg import CourseSpeedDlg
+from init_pos_dlg import InitPosDlg
 
 PADX_STD = 2
 PADY_STD = 4
@@ -91,8 +92,15 @@ class AstroTk(tk.Tk):
         self.destroy()
 
     def on_button_modif_last_pos(self):
-        now = datetime.datetime.now().strftime(constants.DATE_SERIAL_FORMATTER)
-        self.current_pos_dt.configure(text=now)
+        my_last_pos_dlg = InitPosDlg(self, "Course and speed",
+                                                     self.data.my_boat.last_waypoint_datetime,
+                                                     self.data.my_boat.last_waypoint)
+        if my_last_pos_dlg.result:
+            new_waypoint_dt = my_last_pos_dlg.result[0]
+            new_latitude_str = my_last_pos_dlg.result[1]
+            new_longitude_str = my_last_pos_dlg.result[2]
+            self.data.my_boat.set_new_position(Waypoint ("last position", new_latitude_str, new_longitude_str), new_waypoint_dt)
+            self.update_display()
 
     def on_button_modif_course_and_speed(self):
         my_course_and_speed_dlg = CourseSpeedDlg(self, "Course and speed",

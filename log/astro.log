@@ -163,3 +163,154 @@
 26 13:59:32 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
 26 13:59:32 - -  - boat.py - format_current_position-36 - 1392.0 NM since last position at 6.0 Knots - course 180°
 26 13:59:36 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 14:03:32 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 14:03:32 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 14:03:32 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 14:03:32 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 14:03:32 - -  - boat.py - format_current_position-36 - 1392.4 NM since last position at 6.0 Knots - course 180°
+26 14:03:40 - !!!  - course_speed_dlg.py - validate-135 - h22:00:00 is a not correct value for "^\d{1,2}:\d{1,2}:\d{1,2}$". it should match "time"
+26 14:03:49 - !!!  - course_speed_dlg.py - validate-135 - 6.0k is a not correct value for "^\d{1,2}\.?\d?$". it should match "speed"
+26 14:03:49 - !!!  - course_speed_dlg.py - validate-135 - 1800 is a not correct value for "^\d{1,3}$". it should match "course"
+26 14:04:08 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 6.0 Knots - course 180°
+26 14:04:08 - -  - boat.py - format_current_position-36 - 1160.3 NM since last position at 5.0 Knots - course 180°
+26 14:04:16 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
+26 14:04:16 - -  - boat.py - format_current_position-36 - 928.3 NM since last position at 4.0 Knots - course 180°
+26 14:04:26 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 4.0 Knots - course 180°
+26 14:04:26 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 14:04:53 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 14:34:35 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 14:34:35 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 14:34:35 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 14:34:35 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 14:34:35 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 14:34:45 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 14:34:45 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 14:34:45 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 14:34:45 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 14:34:45 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 14:35:06 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 14:47:34 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 14:47:34 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 14:47:34 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 14:47:34 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 14:47:34 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 14:48:53 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 14:48:53 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 14:48:53 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 14:48:53 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 14:48:53 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 14:48:57 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 14:55:53 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 14:55:55 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 14:55:55 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 14:55:55 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 14:55:55 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 14:55:55 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 14:55:59 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 14:56:43 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 14:56:49 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 14:56:49 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 14:56:49 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 14:56:49 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 14:56:49 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 14:56:51 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 14:59:16 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 14:59:19 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 14:59:19 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 14:59:19 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 14:59:19 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 14:59:19 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 14:59:21 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 14:59:56 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 14:59:59 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 14:59:59 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 14:59:59 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 14:59:59 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 14:59:59 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:00:01 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 15:01:59 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 15:02:13 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:05:21 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:05:21 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:05:21 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:05:21 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:05:21 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:05:23 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 15:05:49 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:12:33 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:12:33 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:12:33 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:12:33 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:12:33 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:12:35 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 15:12:49 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:13:59 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:13:59 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:13:59 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:13:59 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:13:59 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:14:01 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 15:14:50 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:29:31 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:29:31 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:29:31 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:29:31 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:29:32 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:29:33 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 15:29:43 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:30:00 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:30:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:30:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:30:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:30:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:30:01 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 15:30:50 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:32:40 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:32:40 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:32:40 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:32:40 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:32:40 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:32:42 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
+26 15:32:53 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:42:09 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:42:09 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:42:09 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:42:09 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:42:09 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:42:26 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°13.0'N", lattitude : "005°52.3'E"
+26 15:42:32 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:44:22 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:44:22 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:44:22 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:44:22 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:44:22 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:44:25 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
+26 15:44:40 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:53:33 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:53:33 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:53:33 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:53:33 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:53:33 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:53:35 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
+26 15:53:41 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:54:00 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:54:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:54:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:54:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:54:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:54:01 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
+26 15:54:04 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:56:36 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:56:36 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:56:36 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:56:36 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:56:36 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:56:38 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
+26 15:56:44 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+26 15:57:14 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 15:57:14 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 15:57:14 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 15:57:14 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 15:57:14 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+26 15:57:15 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
+26 15:57:29 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini

@@ -132,7 +132,7 @@ class CourseSpeedDlg(tk.Toplevel):
             widget = entry_validation["widget"]
             if re.fullmatch(pattern, value) is None:
                 category = entry_validation["category"]
-                self.app_logger.warning('%s is a not correct value for "%s". it shoud match "%s"', value, pattern, category)
+                self.app_logger.warning('%s is a not correct value for "%s". it should match "%s"', value, pattern, category)
                 widget.configure(fg="red")
                 all_entry_ok = False
             else:
