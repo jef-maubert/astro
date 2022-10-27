@@ -30,7 +30,7 @@ def sign_of (value):
     return 1 if value > 0 else -1
 
 RESULT_WARNING_TEXT = "!!! "
-RESULT_HEADER_TEXT = "==> "
+RESULT_HEADER_TEXT = ""
 RESULT_TEXT_TEXT = "    "
 class Observation:
     '''
@@ -41,7 +41,6 @@ class Observation:
         self.position = position
         self.eye_height = eye_height
         self.app_logger = app_logger
-        self.list_of_athmospheric_refraction_minute = []
         self.athmospheric_refraction_minute = 0.0
         self.eye_height_correction_minute = 0.0
         self.sun_half_lumb_minute = 13.0
@@ -93,7 +92,7 @@ class Observation:
                     if not sign_decl_bool:
                         decl_var *= -1.0
                     ho249_results.update({"decl_var":decl_var})
-                    self.result_header_append ('at {} 00:00:00'.format(date_target))
+                    self.result_header_append ('At {} 00:00:00'.format(date_target))
                     self.result_text_append ('decl = {} (var {})'.format(format_angle(decl, INPUT_TYPE_DECL), decl_var))
                     self.result_text_append ('ahv0 = {} (var {})'.format(format_angle(ahv0, INPUT_TYPE_DECL), ahv0_var))
                     self.app_logger.debug ('at %s 00:00:00 : decl = %s (var %s\'),  ahv0 = %s(var %s°)',
@@ -111,7 +110,7 @@ class Observation:
         nb_local_hour_since_midnight = self.date_time.hour + self.date_time.minute/60.0 + self.date_time.second/3600.0
         utc_offset_hour = time.timezone/3600.0
         utc_offset_hour -= time.localtime().tm_isdst
-        self.result_header_append ('at {}'.format(self.date_time.strftime(constants.DATE_DISPLAY_FORMATTER)))
+        self.result_header_append ('At {}'.format(self.date_time.strftime(constants.DATE_DISPLAY_FORMATTER)))
         self.app_logger.debug ('utc_offset_hour = %d hours', utc_offset_hour)
         self.result_text_append ('utc_offset_hour = {} hours'.format(utc_offset_hour))
         nb_utc_hour_since_midnight = nb_local_hour_since_midnight + utc_offset_hour
@@ -142,14 +141,14 @@ class Observation:
 
     def calculate_athmospheric_refraction_minute_by_tan(self):
         self.athmospheric_refraction_minute = 1.0 / math.tan(degree2radian(self.height_observed))
-        self.app_logger.debug("for angle : %.0f°, refraction = %.1f'", float(self.height_observed), float(self.athmospheric_refraction_minute))
-        self.result_text_append("for angle : {:.0f}°, refraction = {:.1f}'".format(self.height_observed, self.athmospheric_refraction_minute))
+        self.app_logger.debug("for angle : %.0f°, refraction = -%.1f'", float(self.height_observed), float(self.athmospheric_refraction_minute))
+        self.result_text_append("angle : {:.0f}° -> refraction = -{:.1f}'".format(self.height_observed, self.athmospheric_refraction_minute))
 
     def calculate_horizon_dip_function_of_eye_height(self):
         self.eye_height_correction_minute = 0.0
         self.eye_height_correction_minute = radian2degree(math.sqrt(2.0 * self.eye_height / (EARTH_RADIUS_KM * 1000.0))) * 60.0
-        self.app_logger.debug("for eye height : %.0f m, eye height correction = %.1f'", float(self.eye_height), float(self.eye_height_correction_minute))
-        self.result_text_append("for eye height : {:.0f} m, eye height correction = {:.1f}'".format(self.eye_height, self.eye_height_correction_minute))
+        self.app_logger.debug("for eye height : %.0f m, eye height correction = -%.1f'", float(self.eye_height), float(self.eye_height_correction_minute))
+        self.result_text_append("Eye height : {:.0f} m -> correction = -{:.1f}'".format(self.eye_height, self.eye_height_correction_minute))
 
     def calculate_half_sun_lumb_angle(self):
         self.sun_half_lumb_minute = 16.0
@@ -183,7 +182,6 @@ class Observation:
         self.app_logger.debug("Azimut by asin = %s ", format_angle(azimut_by_asin, INPUT_TYPE_AZIMUT))
         self.app_logger.debug("Azimut by atan = %s ", format_angle(azimut_by_atan, INPUT_TYPE_AZIMUT))
         self.app_logger.info("Azimut = %s ", format_angle(self.azimut, INPUT_TYPE_AZIMUT))
-        self.result_header_append("Azimut = "+format_angle(self.azimut, INPUT_TYPE_HEIGHT))
 
     def calculate_he_and_az(self, height_observed):
         self.height_observed = height_observed
@@ -204,6 +202,8 @@ class Observation:
 
             self.calculate_he()
             self.calculate_az()
+            self.result_header_append("")
+            self.result_header_append("Azimut = "+format_angle(self.azimut, INPUT_TYPE_HEIGHT))
 
             self.intercept = (self.height_corrected - self.height_estimated) * 60.0
             self.app_logger.info("Intercept : %.1f NM", self.intercept)

@@ -6,6 +6,7 @@ Created on Mon Oct 24 17:34:57 2022
 """
 import tkinter as tk
 import datetime
+import platform
 
 import constants
 from waypoint import Waypoint, format_angle
@@ -27,6 +28,7 @@ class AstroTk(tk.Tk):
         self.parent = parent
         self.data = data
         self.app_logger = app_logger
+        self.turtle_already_started = False
         self.initialize()
 
     def initialize(self):
@@ -149,7 +151,28 @@ class AstroTk(tk.Tk):
 
 
     def on_button_display_all_observations(self):
-        self.app_logger.info('Click on button "Display all observations"')
+#TOFIX
+#TODO how to launch turtle twice
+        turtle_available = True
+        if platform.system().lower()  == "windows" :
+            turtle_available = True
+        elif platform.system().lower()  == "linux":
+            try :
+                platform.system().fredesktop_os_release()
+            except AttributeError:
+                turtle_available = False
+
+        if self.turtle_already_started : 
+            turtle_available = False
+
+        self.data.load_observations()
+
+        self.turtle_already_started = True 
+        if turtle_available:
+            my_hat_display = DisplayHat(verbose=False)
+            my_hat_display.launch_display_hat(self.app_logger, self.data.app_name)
+        else:
+            tk.messagebox.showinfo("Info", 'Please quit and launch "display_hat.py"')
 
     def on_button_fix_position(self):
         my_hat_display = DisplayHat(verbose=False)

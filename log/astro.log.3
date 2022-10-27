@@ -1,1107 +1,1131 @@
-17 20:09:36 -  *   - observation.py - calculate_decl_from_ho249-107 - at 12:00:00 decl = 09°18.8'S
-17 20:09:36 -  *   - observation.py - calculate_ahv0_from_ho249-117 - At 12:00:00 ahv0 = 333°39.5', ahvg = 338°39.5'
-17 20:09:36 -  -   - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 32°, refraction = 1.6'
-17 20:09:36 -  -   - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
-17 20:09:36 -  -   - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-17 20:09:36 -  *   - observation.py - calculate_he_and_az-197 - Sextant height corrected : +32°32' 
-17 20:09:36 -  *   - observation.py - calculate_he-166 - Height estimated : +32°23' 
-17 20:09:36 -  -   - observation.py - calculate_az-181 - Azimut by asin : -025° 
-17 20:09:36 -  -   - observation.py - calculate_az-182 - Azimut by atan : +025° 
-17 20:09:36 -  *   - observation.py - calculate_az-183 - Azimut : +154° 
-17 20:09:36 -  *   - observation.py - calculate_he_and_az-203 - Intercept : 9.4 NM
-17 20:12:17 -  *   - astro.py - init_log-68 - Starting astro version V2.0
-17 20:12:17 -  *   - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 20:12:17 -  -   - astro.py - load_config-79 - log level set to "DEBUG"
-17 20:12:17 -  *   - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 20:12:19 -  *   - astro.py - new_astro-359 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-17 20:12:21 -  -   - astro.py - enter_date-201 - New date = 17-10-2022
-17 20:12:21 -  -   - astro.py - enter_time-217 - New time = 20:12:21
-17 20:12:24 -  -   - astro.py - enter_eye_height-265 - New eye_height = 2 m
-17 20:12:30 -  -   - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 0°
-17 20:12:30 -  -   - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 17 00:00:00 : decl = 09°09.7'S (var -0.91'),  ahv0 = 183°38.3'(var 15.002°)
-17 20:12:30 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-17 20:12:30 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 18.20583 hours
-17 20:12:30 -  *   - observation.py - calculate_decl_from_ho249-107 - at 20:12:21 decl = 09°26.3'S
-17 20:12:30 -  *   - observation.py - calculate_ahv0_from_ho249-117 - At 20:12:21 ahv0 = 096°45.7', ahvg = 101°45.7'
-17 20:12:30 -  -   - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 32°, refraction = 1.6'
-17 20:12:30 -  -   - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
-17 20:12:30 -  -   - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-17 20:12:30 -  *   - observation.py - calculate_he_and_az-197 - Sextant height observed +32°20' - corrected : +32°31' 
-17 20:12:30 -  *   - observation.py - calculate_he-166 - Height estimated : -14°58' 
-17 20:12:30 -  -   - observation.py - calculate_az-181 - Azimut by asin : +088° 
-17 20:12:30 -  -   - observation.py - calculate_az-182 - Azimut by atan : +088° 
-17 20:12:30 -  *   - observation.py - calculate_az-183 - Azimut : +271° 
-17 20:12:30 -  *   - observation.py - calculate_he_and_az-205 - Intercept : 2849.1 NM
-17 20:17:29 -  *   - astro.py - init_log-68 - Starting astro version V2.0
-17 20:17:29 -  *   - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 20:17:29 -  -   - astro.py - load_config-79 - log level set to "DEBUG"
-17 20:17:29 -  *   - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 20:17:36 -  *   - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-17 20:17:37 -  -   - astro.py - enter_date-201 - New date = 17-10-2022
-17 20:17:40 -  -   - astro.py - enter_time-217 - New time = 12:00:00
-17 20:17:41 -  -   - astro.py - enter_eye_height-267 - New eye_height = 2 m
-17 20:17:45 -  -   - boat.py - get_position_at-28 - -0.0 NM since last position at 0.0 Knots - course 0°
-17 20:17:45 -  -   - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 17 00:00:00 : decl = 09°09.7'S (var -0.91'),  ahv0 = 183°38.3'(var 15.002°)
-17 20:17:45 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-17 20:17:45 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 10.00000 hours
-17 20:17:45 -  *   - observation.py - calculate_decl_from_ho249-107 - at 12:00:00 decl = 09°18.8'S
-17 20:17:45 -  *   - observation.py - calculate_ahv0_from_ho249-117 - At 12:00:00 ahv0 = 333°39.5', ahvg = 338°39.5'
-17 20:17:45 -  -   - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 33°, refraction = 1.6'
-17 20:17:45 -  -   - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
-17 20:17:45 -  -   - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-17 20:17:45 -  *   - observation.py - calculate_he_and_az-197 - Sextant height observed +32°34' - corrected : +32°46' 
-17 20:17:45 -  *   - observation.py - calculate_he-166 - Height estimated : +32°23' 
-17 20:17:45 -  -   - observation.py - calculate_az-181 - Azimut by asin : -025° 
-17 20:17:45 -  -   - observation.py - calculate_az-182 - Azimut by atan : +025° 
-17 20:17:45 -  *   - observation.py - calculate_az-183 - Azimut : +154° 
-17 20:17:45 -  *   - observation.py - calculate_he_and_az-205 - Intercept : 23.0 NM
-17 20:18:17 -  *   - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-17 20:18:18 -  -   - astro.py - enter_date-201 - New date = 17-10-2022
-17 20:18:21 -  -   - astro.py - enter_time-217 - New time = 12:00:00
-17 20:18:31 -  -   - astro.py - enter_eye_height-267 - New eye_height = 32 m
-17 20:18:36 -  -   - boat.py - get_position_at-28 - -0.0 NM since last position at 0.0 Knots - course 0°
-17 20:18:36 -  -   - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 17 00:00:00 : decl = 09°09.7'S (var -0.91'),  ahv0 = 183°38.3'(var 15.002°)
-17 20:18:36 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-17 20:18:36 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 10.00000 hours
-17 20:18:36 -  *   - observation.py - calculate_decl_from_ho249-107 - at 12:00:00 decl = 09°18.8'S
-17 20:18:36 -  *   - observation.py - calculate_ahv0_from_ho249-117 - At 12:00:00 ahv0 = 333°39.5', ahvg = 338°39.5'
-17 20:18:36 -  -   - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 32°, refraction = 1.6'
-17 20:18:36 -  -   - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 32 m, eye height correction = 10.9'
-17 20:18:36 -  -   - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-17 20:18:36 -  *   - observation.py - calculate_he_and_az-197 - Sextant height observed +32°12' - corrected : +32°15' 
-17 20:18:36 -  *   - observation.py - calculate_he-166 - Height estimated : +32°23' 
-17 20:18:36 -  -   - observation.py - calculate_az-181 - Azimut by asin : -025° 
-17 20:18:36 -  -   - observation.py - calculate_az-182 - Azimut by atan : +025° 
-17 20:18:36 -  *   - observation.py - calculate_az-183 - Azimut : +154° 
-17 20:18:36 -  *   - observation.py - calculate_he_and_az-205 - Intercept : -7.2 NM
-17 20:18:47 -  *   - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-17 20:18:48 -  -   - astro.py - enter_date-201 - New date = 17-10-2022
-17 20:18:51 -  -   - astro.py - enter_time-217 - New time = 12:00:00
-17 20:18:53 -  -   - astro.py - enter_eye_height-267 - New eye_height = 2 m
-17 20:21:07 -  *   - astro.py - init_log-68 - Starting astro version V2.0
-17 20:21:07 -  *   - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 20:21:07 -  -   - astro.py - load_config-79 - log level set to "DEBUG"
-17 20:21:07 -  *   - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 20:21:11 -  *   - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-17 20:21:12 -  -   - astro.py - enter_date-201 - New date = 17-10-2022
-17 20:21:17 -  -   - astro.py - enter_time-217 - New time = 20:21:17
-17 20:21:21 -  -   - astro.py - enter_eye_height-267 - New eye_height = 2 m
-17 20:21:23 -  -   - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 0°
-17 20:21:23 -  -   - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 17 00:00:00 : decl = 09°09.7'S (var -0.91'),  ahv0 = 183°38.3'(var 15.002°)
-17 20:21:23 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-17 20:21:23 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 18.35472 hours
-17 20:21:23 -  *   - observation.py - calculate_decl_from_ho249-107 - at 20:21:17 decl = 09°26.4'S
-17 20:21:23 -  *   - observation.py - calculate_ahv0_from_ho249-117 - At 20:21:17 ahv0 = 098°59.8', ahvg = 103°59.8'
-17 20:21:23 -  -   - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 12°, refraction = 4.7'
-17 20:21:23 -  -   - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
-17 20:21:23 -  -   - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-17 20:21:23 -  *   - observation.py - calculate_he_and_az-197 - Sextant height observed +12°00' - corrected : +12°09' 
-17 20:21:23 -  *   - observation.py - calculate_he-166 - Height estimated : -16°32' 
-17 20:21:23 -  -   - observation.py - calculate_az-181 - Azimut by asin : +086° 
-17 20:21:23 -  -   - observation.py - calculate_az-182 - Azimut by atan : +086° 
-17 20:21:23 -  *   - observation.py - calculate_az-183 - Azimut : +273° 
-17 20:21:23 -  *   - observation.py - calculate_he_and_az-205 - Intercept : 1720.9 NM
-17 20:21:50 -  *   - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-17 20:21:51 -  -   - astro.py - enter_date-201 - New date = 17-10-2022
-17 20:21:55 -  -   - astro.py - enter_time-217 - New time = 12:00:00
-17 20:21:57 -  -   - astro.py - enter_eye_height-267 - New eye_height = 2 m
-17 20:22:06 -  -   - boat.py - get_position_at-28 - -0.0 NM since last position at 0.0 Knots - course 0°
-17 20:22:06 -  -   - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 17 00:00:00 : decl = 09°09.7'S (var -0.91'),  ahv0 = 183°38.3'(var 15.002°)
-17 20:22:06 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-17 20:22:06 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 10.00000 hours
-17 20:22:06 -  *   - observation.py - calculate_decl_from_ho249-107 - at 12:00:00 decl = 09°18.8'S
-17 20:22:06 -  *   - observation.py - calculate_ahv0_from_ho249-117 - At 12:00:00 ahv0 = 333°39.5', ahvg = 338°39.5'
-17 20:22:06 -  -   - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 23°, refraction = 2.3'
-17 20:22:06 -  -   - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
-17 20:22:06 -  -   - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-17 20:22:06 -  *   - observation.py - calculate_he_and_az-197 - Sextant height observed +23°12' - corrected : +23°23' 
-17 20:22:06 -  *   - observation.py - calculate_he-166 - Height estimated : +32°23' 
-17 20:22:06 -  -   - observation.py - calculate_az-181 - Azimut by asin : -025° 
-17 20:22:06 -  -   - observation.py - calculate_az-182 - Azimut by atan : +025° 
-17 20:22:06 -  *   - observation.py - calculate_az-183 - Azimut : +154° 
-17 20:22:06 -  *   - observation.py - calculate_he_and_az-205 - Intercept : -539.7 NM
-17 20:22:47 -  *   - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-17 20:22:48 -  -   - astro.py - enter_date-201 - New date = 17-10-2022
-17 20:22:51 -  -   - astro.py - enter_time-217 - New time = 12:00:00
-17 20:22:53 -  -   - astro.py - enter_eye_height-267 - New eye_height = 2 m
-17 20:22:56 -  -   - boat.py - get_position_at-28 - -0.0 NM since last position at 0.0 Knots - course 0°
-17 20:22:56 -  -   - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 17 00:00:00 : decl = 09°09.7'S (var -0.91'),  ahv0 = 183°38.3'(var 15.002°)
-17 20:22:56 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-17 20:22:56 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 10.00000 hours
-17 20:22:56 -  *   - observation.py - calculate_decl_from_ho249-107 - at 12:00:00 decl = 09°18.8'S
-17 20:22:56 -  *   - observation.py - calculate_ahv0_from_ho249-117 - At 12:00:00 ahv0 = 333°39.5', ahvg = 338°39.5'
-17 20:22:56 -  -   - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 32°, refraction = 1.6'
-17 20:22:56 -  -   - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
-17 20:22:56 -  -   - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-17 20:22:56 -  *   - observation.py - calculate_he_and_az-197 - Sextant height observed +32°12' - corrected : +32°24' 
-17 20:22:56 -  *   - observation.py - calculate_he-166 - Height estimated : +32°23' 
-17 20:22:56 -  -   - observation.py - calculate_az-181 - Azimut by asin : -025° 
-17 20:22:56 -  -   - observation.py - calculate_az-182 - Azimut by atan : +025° 
-17 20:22:56 -  *   - observation.py - calculate_az-183 - Azimut : +154° 
-17 20:22:56 -  *   - observation.py - calculate_he_and_az-205 - Intercept : 1.0 NM
-17 20:23:03 -  *   - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-17 20:23:07 -  -   - astro.py - enter_date-201 - New date = 17-10-2022
-17 20:23:07 -  -   - astro.py - enter_time-217 - New time = 20:23:07
-17 20:23:08 -  -   - astro.py - enter_eye_height-267 - New eye_height = 2 m
-17 20:23:10 -  -   - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 0°
-17 20:23:10 -  -   - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 17 00:00:00 : decl = 09°09.7'S (var -0.91'),  ahv0 = 183°38.3'(var 15.002°)
-17 20:23:10 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-17 20:23:10 -  -   - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 18.38528 hours
-17 20:23:10 -  *   - observation.py - calculate_decl_from_ho249-107 - at 20:23:07 decl = 09°26.4'S
-17 20:23:10 -  *   - observation.py - calculate_ahv0_from_ho249-117 - At 20:23:07 ahv0 = 099°27.3', ahvg = 104°27.3'
-17 20:23:10 -  -   - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 12°, refraction = 4.7'
-17 20:23:10 -  -   - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
-17 20:23:10 -  -   - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-17 20:23:10 -  *   - observation.py - calculate_he_and_az-197 - Sextant height observed +12°00' - corrected : +12°09' 
-17 20:23:10 -  *   - observation.py - calculate_he-166 - Height estimated : -16°52' 
-17 20:23:10 -  -   - observation.py - calculate_az-181 - Azimut by asin : +086° 
-17 20:23:10 -  -   - observation.py - calculate_az-182 - Azimut by atan : +086° 
-17 20:23:10 -  *   - observation.py - calculate_az-183 - Azimut : +273° 
-17 20:23:10 -  *   - observation.py - calculate_he_and_az-205 - Intercept : 1740.4 NM
-17 20:23:13 -  *   - astro.py - display_astro-395 - Display all the observations (azimut, intercept)
-17 20:23:13 -  *   - astro.py - load_observations-387 - 2 observation(s) loaded from configuration file
-17 20:23:13 -  *   - astro.py - load_observations-390 - 1) 17-10-2022 12:00:00 intercept = 9.4 NM, Az = 155°
-17 20:23:13 -  *   - astro.py - load_observations-390 - 2) 17-10-2022 12:00:00 intercept = 1.0 NM, Az = 155°
-17 20:23:13 -  *   - display_hat.py - load_config-79 - Loading configuration from file "astro.ini"
-17 20:23:13 -  -   - display_hat.py - display_hat-234 - min map size = 28.2NM
-17 20:23:13 -  -   - display_hat.py - start_turtle-106 - screen width = 1920, screen_height = 1080
-17 20:23:13 -  -   - display_hat.py - start_turtle-117 - map size 50.1 NM * 28.2 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 0 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 1 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 2 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 3 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 4 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 5 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 6 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 7 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 8 NM
-17 20:23:13 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
-17 20:23:13 -  -   - display_hat.py - draw_last_position-135 - Drawing last position
-17 20:23:13 -  -   - display_hat.py - draw_legend-181 - Drawing legend
-17 20:24:00 -  *   - astro.py - init_log-68 - Starting astro version V2.0
-17 20:24:00 -  *   - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 20:24:00 -  -   - astro.py - load_config-79 - log level set to "DEBUG"
-17 20:24:00 -  *   - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 20:24:03 -  *   - astro.py - display_astro-395 - Display all the observations (azimut, intercept)
-17 20:24:03 -  *   - astro.py - load_observations-387 - 1 observation(s) loaded from configuration file
-17 20:24:03 -  *   - astro.py - load_observations-390 - 1) 17-10-2022 12:00:00 intercept = 1.0 NM, Az = 155°
-17 20:24:03 -  *   - display_hat.py - load_config-79 - Loading configuration from file "astro.ini"
-17 20:24:03 -  -   - display_hat.py - display_hat-234 - min map size = 3.0NM
-17 20:24:03 -  -   - display_hat.py - start_turtle-106 - screen width = 1920, screen_height = 1080
-17 20:24:03 -  -   - display_hat.py - start_turtle-117 - map size 5.3 NM * 3.0 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 0 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 1 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 2 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 3 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 4 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 5 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 6 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 7 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 8 NM
-17 20:24:03 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
-17 20:24:03 -  -   - display_hat.py - draw_last_position-135 - Drawing last position
-17 20:24:03 -  -   - display_hat.py - draw_legend-181 - Drawing legend
-17 20:24:37 -  *   - astro.py - init_log-68 - Starting astro version V2.0
-17 20:24:37 -  *   - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 20:24:37 -  -   - astro.py - load_config-79 - log level set to "INFO"
-17 20:24:37 -  *   - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 20:25:21 -  *   - astro.py - display_astro-395 - Display all the observations (azimut, intercept)
-17 20:25:21 -  *   - astro.py - load_observations-387 - 1 observation(s) loaded from configuration file
-17 20:25:21 -  *   - astro.py - load_observations-390 - 1) 17-10-2022 12:00:00 intercept = 1.0 NM, Az = 155Â°
-17 20:25:21 -  *   - display_hat.py - load_config-79 - Loading configuration from file "astro.ini"
-17 20:25:21 -  -   - display_hat.py - display_hat-234 - min map size = 3.0NM
-17 20:25:21 -  -   - display_hat.py - start_turtle-106 - screen width = 1920, screen_height = 1080
-17 20:25:21 -  -   - display_hat.py - start_turtle-117 - map size 5.3 NM * 3.0 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 0 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 1 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 2 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 3 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 4 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 5 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 6 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 7 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 8 NM
-17 20:25:21 -  -   - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
-17 20:25:21 -  -   - display_hat.py - draw_last_position-135 - Drawing last position
-17 20:25:21 -  -   - display_hat.py - draw_legend-181 - Drawing legend
-17 20:29:34 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 20:29:34 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 20:29:34 -  -   - astro.py - load_config-79 - log level set to "INFO"
-17 20:29:34 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 20:29:51 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 20:29:51 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 20:29:51 -  -   - astro.py - load_config-79 - log level set to "DEBUG"
-17 20:29:51 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 20:30:21 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 20:30:21 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 20:30:21 - -  - astro.py - load_config-79 - log level set to "DEBUG"
-17 20:30:21 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 20:30:43 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 20:30:43 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 20:30:43 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 20:30:43 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 22:16:19 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 22:16:19 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 22:16:19 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 22:16:19 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 22:16:23 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:16:24 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:16:25 - -  - astro.py - enter_time-217 - New time = 19:57:20
-17 22:16:29 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 0°
-17 22:16:35 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:16:36 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:16:37 - -  - astro.py - enter_time-217 - New time = 19:57:20
-17 22:17:34 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 22:17:34 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 22:17:34 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 22:17:34 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 22:17:40 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:17:41 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:17:42 - -  - astro.py - enter_time-217 - New time = 19:57:20
-17 22:17:49 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 0°
-17 22:17:55 -  - astro.py - reset_position-280 - Shift the boat position (distance / azimut)
-17 22:17:55 -  - astro.py - reset_position-281 - that will reset all the observations
-17 22:17:56 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:17:57 - -  - astro.py - enter_time-217 - New time = 22:17:57
-17 22:18:38 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 22:18:38 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 22:18:38 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 22:18:38 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 22:18:41 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:18:42 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:18:42 - -  - astro.py - enter_time-217 - New time = 19:57:20
-17 22:18:58 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 0°
-17 22:19:03 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:19:05 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:19:06 - -  - astro.py - enter_time-217 - New time = 19:57:20
-17 22:19:35 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 22:19:35 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 22:19:35 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 22:19:35 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 22:19:38 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:19:39 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:19:39 - -  - astro.py - enter_time-217 - New time = 19:57:20
-17 22:21:34 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 22:21:34 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 22:21:34 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 22:21:34 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 22:21:36 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:21:37 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:21:38 - -  - astro.py - enter_time-217 - New time = 19:57:20
-17 22:22:26 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 22:22:26 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 22:22:26 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 22:22:26 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 22:22:34 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:22:35 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:22:35 - -  - astro.py - enter_time-217 - New time = 19:57:20
-17 22:22:41 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 0°
-17 22:27:49 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 22:27:49 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 22:27:49 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 22:27:49 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 22:27:56 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:27:57 - -  - astro.py - enter_date-201 - New date = 17-10-2022
-17 22:27:57 - -  - astro.py - enter_time-217 - New time = 19:57:20
-17 22:44:38 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 0°
-17 22:44:44 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 22:44:44 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 22:44:44 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 22:44:44 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-17 22:44:48 -  - astro.py - init_position-271 - Initialize the boat position
-17 22:44:55 - -  - astro.py - enter_date-201 - New date = 17-12-2022
-17 22:44:58 - -  - astro.py - enter_time-217 - New time = 22:44:58
-17 22:46:44 -  - astro.py - display_last_position-350 - Last recorded position of the boat
-17 22:46:44 -  - astro.py - display_last_position-351 - at 17-12-2022 22:44:58 last position : (45°00.0'N , 005°00.0'E)
-17 22:46:57 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-17 22:47:28 - -  - astro.py - enter_date-201 - New date = 16-12-2022
-17 22:47:36 - -  - astro.py - enter_time-217 - New time = 22:00:00
-17 22:48:10 - -  - boat.py - get_position_at-28 - -0.0 NM since last position at 0.0 Knots - course 0°
-17 22:48:15 -  - astro.py - display_astro-395 - Display all the observations (azimut, intercept)
-17 22:48:15 -  - astro.py - load_observations-387 - 1 observation(s) loaded from configuration file
-17 22:48:15 -  - astro.py - load_observations-390 - 1) 17-10-2022 12:00:00 intercept = 1.0 NM, Az = 155°
-17 22:48:15 -  - display_hat.py - load_config-79 - Loading configuration from file "astro.ini"
-17 22:48:15 - -  - display_hat.py - display_hat-234 - min map size = 3.0NM
-17 22:48:16 - -  - display_hat.py - start_turtle-106 - screen width = 1920, screen_height = 1080
-17 22:48:16 - -  - display_hat.py - start_turtle-117 - map size 5.3 NM * 3.0 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 0 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 1 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 2 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 3 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 4 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 5 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 6 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 7 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 8 NM
-17 22:48:16 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
-17 22:48:16 - -  - display_hat.py - draw_last_position-135 - Drawing last position
-17 22:48:16 - -  - display_hat.py - draw_legend-181 - Drawing legend
-17 22:48:44 -  - astro.py - init_log-68 - Starting astro version V2.0
-17 22:48:44 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-17 22:48:44 - -  - astro.py - load_config-79 - log level set to "INFO"
-17 22:48:44 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-18 00:17:11 -  - astro.py - init_log-68 - Starting astro version V2.0
-18 00:17:11 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-18 00:17:11 - -  - astro.py - load_config-79 - log level set to "INFO"
-18 00:17:11 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-18 00:17:17 -  - astro.py - display_astro-395 - Display all the observations (azimut, intercept)
-18 00:17:17 -  - astro.py - load_observations-387 - 1 observation(s) loaded from configuration file
-18 00:17:17 -  - astro.py - load_observations-390 - 1) 17-10-2022 12:00:00 intercept = 1.0 NM, Az = 155°
-18 00:17:17 -  - display_hat.py - load_config-79 - Loading configuration from file "astro.ini"
-18 00:17:17 - -  - display_hat.py - display_hat-234 - min map size = 3.0NM
-18 00:17:17 - -  - display_hat.py - start_turtle-106 - screen width = 1920, screen_height = 1080
-18 00:17:17 - -  - display_hat.py - start_turtle-117 - map size 5.3 NM * 3.0 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 0 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 1 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 2 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 3 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 4 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 5 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 6 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 7 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 8 NM
-18 00:17:17 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
-18 00:17:17 - -  - display_hat.py - draw_last_position-135 - Drawing last position
-18 00:17:17 - -  - display_hat.py - draw_legend-181 - Drawing legend
-18 00:21:55 -  - astro.py - init_log-68 - Starting astro version V2.0
-18 00:21:55 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-18 00:21:55 - -  - astro.py - load_config-79 - log level set to "INFO"
-18 00:21:55 -  - astro.py - load_config-102 - 1 observation(s) loaded from file "astro.ini"
-18 00:21:59 -  - astro.py - display_astro-395 - Display all the observations (azimut, intercept)
-18 00:21:59 -  - astro.py - load_observations-387 - 1 observation(s) loaded from configuration file
-18 00:21:59 -  - astro.py - load_observations-390 - 1) 17-10-2022 12:00:00 intercept = 1.0 NM, Az = 155°
-18 00:21:59 -  - display_hat.py - load_config-79 - Loading configuration from file "astro.ini"
-18 00:21:59 - -  - display_hat.py - display_hat-234 - min map size = 3.0NM
-18 00:22:00 - -  - display_hat.py - start_turtle-106 - screen width = 1920, screen_height = 1080
-18 00:22:00 - -  - display_hat.py - start_turtle-117 - map size 5.3 NM * 3.0 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 0 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 1 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 2 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 3 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 4 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 5 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 6 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 7 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 8 NM
-18 00:22:00 - -  - display_hat.py - draw_target_circle-158 - Drawing circle 9 NM
-18 00:22:00 - -  - display_hat.py - draw_last_position-135 - Drawing last position
-18 00:22:00 - -  - display_hat.py - draw_legend-181 - Drawing legend
-19 11:02:29 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 11:02:29 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 11:02:29 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 11:02:29 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 11:02:37 -  - astro.py - display_astro-395 - Display all the observations (azimut, intercept)
-19 11:02:37 -  - astro.py - load_observations-387 - 3 observation(s) loaded from configuration file
-19 11:02:37 -  - astro.py - load_observations-390 - 1) 17-10-2022 12:00:00 intercept = 1.0 NM, Az = 155°
-19 11:02:37 -  - astro.py - load_observations-390 - 2) 17-10-2022 14:00:00 intercept = 1.6 NM, Az = 183°
-19 11:02:37 -  - astro.py - load_observations-390 - 3) 17-10-2022 17:00:00 intercept = 1.2 NM, Az = 226°
-19 11:02:37 -  - display_hat.py - load_config-83 - Loading configuration from file "astro.ini"
-19 11:02:37 - -  - display_hat.py - display_hat-295 - min map size = 4.8NM
-19 11:02:37 - -  - display_hat.py - start_turtle-110 - screen width = 1920, screen_height = 1080
-19 11:02:37 - -  - display_hat.py - start_turtle-121 - map size 8.5 NM * 4.8 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 0 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 1 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 2 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 3 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 4 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 5 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 6 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 7 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 8 NM
-19 11:02:37 - -  - display_hat.py - draw_target_circle-162 - Drawing circle 9 NM
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 0°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 10°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 20°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 30°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 40°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 50°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 60°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 70°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 80°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 90°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 100°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 110°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 120°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 130°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 140°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 150°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 160°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 170°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 180°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 190°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 200°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 210°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 220°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 230°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 240°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 250°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 260°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 270°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 280°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 290°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 300°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 310°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 320°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 330°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 340°
-19 11:02:37 - -  - display_hat.py - draw_azimut-182 - Drawing azimut 350°
-19 11:02:37 - -  - display_hat.py - draw_last_position-139 - Drawing last position
-19 11:02:37 - -  - display_hat.py - draw_legend-202 - Drawing legend
-19 11:02:38 - -  - display_hat.py - calculate_intersection-257 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + -1.105184 
-19 11:02:38 - -  - display_hat.py - calculate_intersection-257 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + -1.601912 
-19 11:02:38 - -  - display_hat.py - calculate_intersection-257 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + -1.730598 
-19 11:02:38 - -  - display_hat.py - calculate_intersection-267 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 11:02:38 - -  - display_hat.py - calculate_intersection-267 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 11:02:38 - -  - display_hat.py - calculate_intersection-267 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 11:49:19 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 11:49:19 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 11:49:19 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 11:49:19 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 11:49:21 -  - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-19 11:49:23 - -  - astro.py - enter_date-201 - New date = 19-10-2022
-19 11:49:23 - -  - astro.py - enter_time-217 - New time = 11:49:23
-19 11:51:45 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 11:51:45 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 11:51:45 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 11:51:45 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 11:51:47 -  - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-19 11:51:48 - -  - astro.py - enter_date-201 - New date = 19-10-2022
-19 11:51:48 - -  - astro.py - enter_time-217 - New time = 11:51:48
-19 11:51:48 - -  - astro.py - enter_eye_height-267 - New eye_height = 2 m
-19 11:51:56 - -  - boat.py - get_position_at-28 - -16825.6 NM since last position at 12.0 Knots - course 215°
-19 11:51:56 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 19 00:00:00 : decl = 09°53.4'S (var -0.9'),  ahv0 = 183°44.2'(var 15.002°)
-19 11:51:56 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-19 11:51:56 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 9.86333 hours
-19 11:51:56 -  - observation.py - calculate_decl_from_ho249-107 - at 11:51:48 decl = 10°02.3'S
-19 11:51:56 -  - observation.py - calculate_ahv0_from_ho249-117 - At 11:51:48 ahv0 = 331°42.4', ahvg = 165°22.8'
-19 11:51:56 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 25°, refraction = 2.1'
-19 11:51:56 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
-19 11:51:56 - -  - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-19 11:51:56 -  - observation.py - calculate_he_and_az-197 - Sextant height observed +25°00' - corrected : +25°11' 
-19 11:51:56 -  - observation.py - calculate_he-166 - Height estimated : +05°29' 
-19 11:51:56 - -  - observation.py - calculate_az-181 - Azimut by asin : +014° 
-19 11:51:56 - -  - observation.py - calculate_az-182 - Azimut by atan : -014° 
-19 11:51:56 -  - observation.py - calculate_az-183 - Azimut : +194° 
-19 11:51:56 -  - observation.py - calculate_he_and_az-205 - Intercept : 1182.6 NM
-19 11:52:42 -  - astro.py - display_current_position-354 - Current position of the boat based on last position and course and speed from that time
-19 11:52:42 -  - astro.py - display_current_position-357 - running 12.0 knots in the +215°
-19 11:52:42 - -  - boat.py - format_current_position-36 - -16825.5 NM since last position at 12.0 Knots - course 215°
-19 11:52:42 -  - astro.py - display_current_position-358 - now (19-10-2022 11:52:42) estimated : (274°42.6'N , 166°19.5'W)
-19 11:54:09 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 11:54:09 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 11:54:09 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 11:54:09 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 11:54:12 -  - astro.py - new_astro-361 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-19 11:54:13 - -  - astro.py - enter_date-201 - New date = 19-10-2022
-19 11:54:14 - -  - astro.py - enter_time-217 - New time = 11:54:14
-19 11:54:16 - -  - astro.py - enter_eye_height-267 - New eye_height = 2 m
-19 11:54:18 - -  - boat.py - get_position_at-28 - 742.8 NM since last position at 12.0 Knots - course 215°
-19 11:54:18 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 19 00:00:00 : decl = 09°53.4'S (var -0.9'),  ahv0 = 183°44.2'(var 15.002°)
-19 11:54:18 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-19 11:54:18 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 9.90389 hours
-19 11:54:18 -  - observation.py - calculate_decl_from_ho249-107 - at 11:54:14 decl = 10°02.3'S
-19 11:54:18 -  - observation.py - calculate_ahv0_from_ho249-117 - At 11:54:14 ahv0 = 332°18.9', ahvg = 328°03.3'
-19 11:54:18 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 25°, refraction = 2.1'
-19 11:54:18 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
-19 11:54:18 - -  - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-19 11:54:18 -  - observation.py - calculate_he_and_az-197 - Sextant height observed +25°00' - corrected : +25°11' 
-19 11:54:18 -  - observation.py - calculate_he-166 - Height estimated : +35°52' 
-19 11:54:18 - -  - observation.py - calculate_az-181 - Azimut by asin : -040° 
-19 11:54:18 - -  - observation.py - calculate_az-182 - Azimut by atan : +040° 
-19 11:54:18 -  - observation.py - calculate_az-183 - Azimut : +139° 
-19 11:54:18 -  - observation.py - calculate_he_and_az-205 - Intercept : -641.3 NM
-19 11:54:31 -  - astro.py - display_current_position-354 - Current position of the boat based on last position and course and speed from that time
-19 11:54:31 -  - astro.py - display_current_position-357 - running 12.0 knots in the +215°
-19 11:54:31 - -  - boat.py - format_current_position-36 - 742.9 NM since last position at 12.0 Knots - course 215°
-19 11:54:31 -  - astro.py - display_current_position-358 - now (19-10-2022 11:54:31) estimated : (34°51.4'N , 004°15.7'W)
-19 11:54:38 -  - astro.py - display_last_position-350 - Last recorded position of the boat
-19 11:54:38 -  - astro.py - display_last_position-351 - at 16-10-2022 22:00:00 last position : (45°00.0'N , 005°00.0'E)
-19 11:54:43 -  - astro.py - display_current_position-354 - Current position of the boat based on last position and course and speed from that time
-19 11:54:43 -  - astro.py - display_current_position-357 - running 12.0 knots in the +215°
-19 11:54:43 - -  - boat.py - format_current_position-36 - 742.9 NM since last position at 12.0 Knots - course 215°
-19 11:54:43 -  - astro.py - display_current_position-358 - now (19-10-2022 11:54:43) estimated : (34°51.4'N , 004°15.7'W)
-19 11:55:34 -  - astro.py - display_last_position-350 - Last recorded position of the boat
-19 11:55:34 -  - astro.py - display_last_position-351 - at 16-10-2022 22:00:00 last position : (45°00.0'N , 005°00.0'E)
-19 11:55:47 -  - astro.py - display_current_position-354 - Current position of the boat based on last position and course and speed from that time
-19 11:55:47 -  - astro.py - display_current_position-357 - running 12.0 knots in the +215°
-19 11:55:47 - -  - boat.py - format_current_position-36 - 743.2 NM since last position at 12.0 Knots - course 215°
-19 11:55:47 -  - astro.py - display_current_position-358 - now (19-10-2022 11:55:47) estimated : (34°51.2'N , 004°15.8'W)
-19 11:57:19 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-19 11:57:23 - -  - astro.py - enter_date-201 - New date = 16-10-2022
-19 11:57:24 - -  - astro.py - enter_time-217 - New time = 22:00:00
-19 11:57:31 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 12.0 Knots - course 215°
-19 11:57:34 -  - astro.py - display_current_position-354 - Current position of the boat based on last position and course and speed from that time
-19 11:57:34 -  - astro.py - display_current_position-357 - running 0.0 knots in the +215°
-19 11:57:34 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 215°
-19 11:57:34 -  - astro.py - display_current_position-358 - now (19-10-2022 11:57:34) estimated : (45°00.0'N , 005°00.0'E)
-19 11:57:40 -  - astro.py - set_speed_and_course-314 - Set the course and the speed
-19 11:57:41 - -  - astro.py - enter_date-201 - New date = 16-10-2022
-19 11:57:42 - -  - astro.py - enter_time-217 - New time = 22:00:00
-19 11:57:48 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 215°
-19 11:57:51 -  - astro.py - display_current_position-354 - Current position of the boat based on last position and course and speed from that time
-19 11:57:51 -  - astro.py - display_current_position-357 - running 5.0 knots in the +180°
-19 11:57:51 - -  - boat.py - format_current_position-36 - 309.8 NM since last position at 5.0 Knots - course 180°
-19 11:57:51 -  - astro.py - display_current_position-358 - now (19-10-2022 11:57:51) estimated : (39°50.2'N , 005°00.0'E)
-19 11:57:56 -  - astro.py - display_last_position-350 - Last recorded position of the boat
-19 11:57:56 -  - astro.py - display_last_position-351 - at 16-10-2022 22:00:00 last position : (45°00.0'N , 005°00.0'E)
-19 11:58:57 -  - astro.py - display_astro-395 - Display all the observations (azimut, intercept)
-19 11:58:57 -  - astro.py - load_observations-387 - 3 observation(s) loaded from configuration file
-19 11:58:57 -  - astro.py - load_observations-390 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155Â°
-19 11:58:57 -  - astro.py - load_observations-390 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183Â°
-19 11:58:57 -  - astro.py - load_observations-390 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226Â°
-19 11:58:57 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-19 11:58:57 - -  - display_hat.py - display_hat-325 - min map size = 4.8NM
-19 11:58:57 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-19 11:58:57 - -  - display_hat.py - start_turtle-123 - map size 8.5 NM * 4.8 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-19 11:58:57 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-19 11:58:57 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-19 11:58:57 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-19 11:58:57 - -  - display_hat.py - draw_legend-204 - Drawing legend
-19 11:58:58 - -  - display_hat.py - calculate_intersection-279 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 11:58:58 - -  - display_hat.py - calculate_intersection-279 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 11:58:58 - -  - display_hat.py - calculate_intersection-279 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 11:58:58 - -  - display_hat.py - calculate_intersection-289 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 11:58:58 - -  - display_hat.py - calculate_intersection-289 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 11:58:58 - -  - display_hat.py - calculate_intersection-289 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 12:49:51 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 12:49:51 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 12:49:51 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 12:49:51 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 12:49:55 -  - astro.py - display_astro-361 - Display all the observations (azimut, intercept)
-19 12:49:55 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 12:49:55 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 12:49:55 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 12:49:55 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 12:49:55 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-19 12:49:55 - -  - display_hat.py - display_hat-326 - min map size = 4.8NM
-19 12:49:56 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-19 12:49:56 - -  - display_hat.py - start_turtle-123 - map size 8.5 NM * 4.8 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-19 12:49:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-19 12:49:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-19 12:49:56 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-19 12:49:56 - -  - display_hat.py - draw_legend-204 - Drawing legend
-19 12:49:56 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 12:49:56 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 12:49:56 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 12:49:56 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 12:49:56 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 12:49:56 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 12:50:00 -  - astro.py - display_astro-361 - Display all the observations (azimut, intercept)
-19 12:50:00 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 12:50:00 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 12:50:00 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 12:50:00 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 12:50:00 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-19 12:50:00 - -  - display_hat.py - display_hat-326 - min map size = 4.8NM
-19 12:50:00 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-19 12:50:00 - -  - display_hat.py - start_turtle-123 - map size 8.5 NM * 4.8 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-19 12:50:00 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-19 12:50:00 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-19 12:50:00 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-19 12:50:00 - -  - display_hat.py - draw_legend-204 - Drawing legend
-19 12:50:01 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 12:50:01 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 12:50:01 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 12:50:01 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 12:50:01 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 12:50:01 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 12:51:22 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 12:51:22 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 12:51:22 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 12:51:22 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 12:51:25 -  - astro.py - display_astro-361 - Display all the observations (azimut, intercept)
-19 12:51:25 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 12:51:25 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 12:51:25 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 12:51:25 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 12:51:25 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-19 12:51:25 - -  - display_hat.py - display_hat-326 - min map size = 4.8NM
-19 12:51:25 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-19 12:51:25 - -  - display_hat.py - start_turtle-123 - map size 8.5 NM * 4.8 NM
-19 12:51:25 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-19 12:51:25 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-19 12:51:25 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-19 12:51:25 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-19 12:51:25 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-19 12:51:25 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-19 12:51:26 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-19 12:51:26 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-19 12:51:26 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-19 12:51:26 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-19 12:51:26 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-19 12:51:26 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-19 12:51:26 - -  - display_hat.py - draw_legend-204 - Drawing legend
-19 12:51:26 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 12:51:26 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 12:51:26 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 12:51:26 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 12:51:26 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 12:51:26 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 12:51:28 -  - astro.py - display_astro-361 - Display all the observations (azimut, intercept)
-19 12:51:28 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 12:51:28 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 12:51:28 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 12:51:28 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 12:51:28 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-19 12:51:28 - -  - display_hat.py - display_hat-326 - min map size = 4.8NM
-19 12:51:29 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-19 12:51:29 - -  - display_hat.py - start_turtle-123 - map size 8.5 NM * 4.8 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-19 12:51:29 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-19 12:51:29 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-19 12:51:29 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-19 12:51:29 - -  - display_hat.py - draw_legend-204 - Drawing legend
-19 12:51:29 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 12:51:29 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 12:51:29 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 12:51:29 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 12:51:29 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 12:51:29 - -  - display_hat.py - calculate_intersection-290 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 12:53:12 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 12:53:12 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 12:53:12 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 12:53:12 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 12:53:14 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 12:53:14 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 12:53:14 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 12:53:14 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 12:53:14 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 12:53:14 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 12:53:14 - -  - display_hat.py - calculate_intersection-280 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 12:57:06 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 12:57:06 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 12:57:06 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 12:57:06 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 12:57:08 -  - astro.py - display_astro-362 - Display all the observations (azimut, intercept)
-19 12:57:08 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 12:57:08 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 12:57:08 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 12:57:08 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 12:57:08 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-19 12:57:08 - -  - display_hat.py - display_hat-327 - min map size = 4.8NM
-19 12:57:08 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-19 12:57:08 - -  - display_hat.py - start_turtle-123 - map size 8.5 NM * 4.8 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-19 12:57:08 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-19 12:57:08 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-19 12:57:08 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-19 12:57:08 - -  - display_hat.py - draw_legend-204 - Drawing legend
-19 12:57:08 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 12:57:08 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 12:57:08 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 12:57:08 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 12:57:08 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 12:57:08 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 12:57:10 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 12:57:10 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 12:57:10 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 12:57:10 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 12:57:10 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 12:57:10 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 12:57:10 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 12:57:10 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 12:57:10 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 12:57:10 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 12:57:10 -  - astro.py - fix_position-384 - Fix the boat position (distance / azimut)
-19 12:57:10 -  - astro.py - fix_position-385 - that will reset all the observations
-19 12:57:14 - -  - astro.py - enter_date-201 - New date = 19-10-2022
-19 12:57:16 - -  - astro.py - enter_time-217 - New time = 12:57:16
-19 12:59:27 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 12:59:27 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 12:59:27 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 12:59:27 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 12:59:30 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 12:59:30 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 12:59:30 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 12:59:30 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 12:59:30 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 12:59:30 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 12:59:30 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 12:59:30 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 12:59:30 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 12:59:30 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 12:59:30 -  - astro.py - fix_position-384 - Fix the boat position (distance / azimut)
-19 12:59:30 -  - astro.py - fix_position-385 - that will reset all the observations
-19 12:59:31 - -  - astro.py - enter_date-201 - New date = 19-10-2022
-19 12:59:32 - -  - astro.py - enter_time-217 - New time = 12:59:32
-19 12:59:46 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 12:59:46 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 12:59:46 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 12:59:46 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 13:00:00 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 13:00:00 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 13:00:00 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 13:00:00 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 13:00:00 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 13:00:00 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 13:00:00 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 13:00:00 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 13:00:00 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 13:00:00 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-19 13:00:00 -  - astro.py - fix_position-384 - Fix the boat position (distance / azimut)
-19 13:00:00 -  - astro.py - fix_position-385 - that will reset all the observations
-19 13:00:02 - -  - astro.py - enter_date-201 - New date = 19-10-2022
-19 13:00:03 - -  - astro.py - enter_time-217 - New time = 13:00:03
-19 13:00:09 -  - astro.py - init_log-68 - Starting astro version V2.0
-19 13:00:09 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-19 13:00:09 - -  - astro.py - load_config-79 - log level set to "INFO"
-19 13:00:09 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-19 13:00:12 -  - astro.py - display_astro-362 - Display all the observations (azimut, intercept)
-19 13:00:12 -  - astro.py - load_observations-353 - 3 observation(s) loaded from configuration file
-19 13:00:12 -  - astro.py - load_observations-356 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-19 13:00:12 -  - astro.py - load_observations-356 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-19 13:00:12 -  - astro.py - load_observations-356 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-19 13:00:12 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-19 13:00:12 - -  - display_hat.py - display_hat-327 - min map size = 4.8NM
-19 13:00:12 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-19 13:00:12 - -  - display_hat.py - start_turtle-123 - map size 8.5 NM * 4.8 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-19 13:00:12 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-19 13:00:12 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-19 13:00:12 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-19 13:00:12 - -  - display_hat.py - draw_legend-204 - Drawing legend
-19 13:00:12 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-19 13:00:12 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-19 13:00:12 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-19 13:00:12 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-19 13:00:12 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-19 13:00:12 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
-24 11:02:02 -  - astro.py - init_log-68 - Starting astro version V2.0
-24 11:02:02 -  - astro.py - load_config-73 - Loading configuration from file "astro.ini"
-24 11:02:02 - -  - astro.py - load_config-79 - log level set to "INFO"
-24 11:02:02 -  - astro.py - load_config-102 - 3 observation(s) loaded from file "astro.ini"
-24 20:11:07 -  - aa.py - init_log-150 - Starting astro version V2.0
-24 20:11:16 -  - aa.py - init_log-150 - Starting astro version V2.0
-24 20:12:53 -  - aa.py - init_log-150 - Starting astro version V2.0
-24 20:12:55 -  - aa.py - on_button_modif_course_and_speed-72 - Click on button "Modif course and speed
-24 20:12:57 -  - aa.py - on_button_new_obs-75 - Click on button "New obs
-24 20:13:13 -  - astro.py - init_log-67 - Starting astro version V2.0
-24 20:13:13 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
-24 20:13:13 - -  - astro.py - load_config-78 - log level set to "INFO"
-24 20:13:13 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
-24 20:13:19 -  - astro.py - display_last_position-315 - Last recorded position of the boat
-24 20:13:19 -  - astro.py - display_last_position-316 - at 16-10-2022 22:00:00 last position : (45°00.0'N , 005°00.0'E)
-24 20:24:33 -  - aa.py - init_log-151 - Starting astro version V2.0
-24 20:24:33 -  - aa.py - load_config-93 - Loading configuration from file "astro.ini"
-24 20:27:32 -  - aa.py - init_log-152 - Starting astro version V2.0
-24 20:27:32 -  - aa.py - load_config-94 - Loading configuration from file "astro.ini"
-24 20:27:32 - -  - aa.py - load_config-100 - log level set to "INFO"
-24 20:27:32 -  - aa.py - load_config-123 - 3 observation(s) loaded from file "astro.ini"
-24 20:27:35 -  - aa.py - on_button_modif_course_and_speed-72 - Click on button "Modif course and speed
-24 20:27:37 -  - aa.py - on_button_new_obs-75 - Click on button "New obs
-24 20:27:39 -  - aa.py - on_button_modif_course_and_speed-72 - Click on button "Modif course and speed
-24 20:30:27 -  - aa.py - init_log-152 - Starting astro version V2.0
-24 20:30:27 -  - aa.py - load_config-94 - Loading configuration from file "astro.ini"
-24 20:30:27 - -  - aa.py - load_config-100 - log level set to "INFO"
-24 20:30:27 -  - aa.py - load_config-123 - 3 observation(s) loaded from file "astro.ini"
-24 20:30:49 -  - aa.py - init_log-152 - Starting astro version V2.0
-24 20:30:49 -  - aa.py - load_config-94 - Loading configuration from file "astro.ini"
-24 20:30:49 - -  - aa.py - load_config-100 - log level set to "INFO"
-24 20:30:49 -  - aa.py - load_config-123 - 3 observation(s) loaded from file "astro.ini"
-24 20:33:07 -  - aa.py - init_log-152 - Starting astro version V2.0
-24 20:33:07 -  - aa.py - load_config-94 - Loading configuration from file "astro.ini"
-24 20:33:07 - -  - aa.py - load_config-100 - log level set to "INFO"
-24 20:33:07 -  - aa.py - load_config-123 - 3 observation(s) loaded from file "astro.ini"
-24 20:34:45 -  - astro.py - init_log-67 - Starting astro version V2.0
-24 20:34:45 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
-24 20:34:45 - -  - astro.py - load_config-78 - log level set to "INFO"
-24 20:34:45 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
-24 20:34:49 -  - astro.py - display_current_position-319 - Current position of the boat based on last position and course and speed from that time
-24 20:34:49 -  - astro.py - display_current_position-322 - running 5.0 knots in the +180°
-24 20:34:49 - -  - boat.py - format_current_position-36 - 952.9 NM since last position at 5.0 Knots - course 180°
+24 20:34:49 -  - astro.py - display_current_position-323 - now (24-10-2022 20:34:49) estimated : (29°07.1'N , 005°00.0'E)
+24 20:37:26 -  - aa.py - init_log-152 - Starting astro version V2.0
+24 20:37:26 -  - aa.py - load_config-94 - Loading configuration from file "astro.ini"
+24 20:37:26 - -  - aa.py - load_config-100 - log level set to "INFO"
+24 20:37:26 -  - aa.py - load_config-123 - 3 observation(s) loaded from file "astro.ini"
+24 20:37:40 -  - aa.py - init_log-152 - Starting astro version V2.0
+24 20:37:40 -  - aa.py - load_config-94 - Loading configuration from file "astro.ini"
+24 20:37:40 - -  - aa.py - load_config-100 - log level set to "INFO"
+24 20:37:40 -  - aa.py - load_config-123 - 3 observation(s) loaded from file "astro.ini"
+24 20:39:02 -  - aa.py - init_log-154 - Starting astro version V2.0
+24 20:39:02 -  - aa.py - load_config-96 - Loading configuration from file "astro.ini"
+24 20:39:02 - -  - aa.py - load_config-102 - log level set to "INFO"
+24 20:39:02 -  - aa.py - load_config-125 - 3 observation(s) loaded from file "astro.ini"
+24 20:39:17 -  - aa.py - init_log-154 - Starting astro version V2.0
+24 20:39:17 -  - aa.py - load_config-96 - Loading configuration from file "astro.ini"
+24 20:39:17 - -  - aa.py - load_config-102 - log level set to "INFO"
+24 20:39:17 -  - aa.py - load_config-125 - 3 observation(s) loaded from file "astro.ini"
+24 20:40:47 -  - aa.py - init_log-157 - Starting astro version V2.0
+24 20:40:47 -  - aa.py - load_config-99 - Loading configuration from file "astro.ini"
+24 20:40:47 - -  - aa.py - load_config-105 - log level set to "INFO"
+24 20:40:47 -  - aa.py - load_config-128 - 3 observation(s) loaded from file "astro.ini"
+24 20:42:14 -  - aa.py - init_log-161 - Starting astro version V2.0
+24 20:42:14 -  - aa.py - load_config-103 - Loading configuration from file "astro.ini"
+24 20:42:14 - -  - aa.py - load_config-109 - log level set to "INFO"
+24 20:42:14 -  - aa.py - load_config-132 - 3 observation(s) loaded from file "astro.ini"
+24 20:43:40 -  - aa.py - init_log-169 - Starting astro version V2.0
+24 20:43:40 -  - aa.py - load_config-111 - Loading configuration from file "astro.ini"
+24 20:43:40 - -  - aa.py - load_config-117 - log level set to "INFO"
+24 20:43:40 -  - aa.py - load_config-140 - 3 observation(s) loaded from file "astro.ini"
+24 20:50:10 -  - aa.py - init_log-170 - Starting astro version V2.0
+24 20:50:10 -  - aa.py - load_config-112 - Loading configuration from file "astro.ini"
+24 20:50:10 - -  - aa.py - load_config-118 - log level set to "INFO"
+24 20:50:10 -  - aa.py - load_config-141 - 3 observation(s) loaded from file "astro.ini"
+24 20:50:42 -  - aa.py - init_log-170 - Starting astro version V2.0
+24 20:50:42 -  - aa.py - load_config-112 - Loading configuration from file "astro.ini"
+24 20:50:42 - -  - aa.py - load_config-118 - log level set to "INFO"
+24 20:50:42 -  - aa.py - load_config-141 - 3 observation(s) loaded from file "astro.ini"
+24 20:50:50 -  - aa.py - init_log-170 - Starting astro version V2.0
+24 20:50:50 -  - aa.py - load_config-112 - Loading configuration from file "astro.ini"
+24 20:50:50 - -  - aa.py - load_config-118 - log level set to "INFO"
+24 20:50:50 -  - aa.py - load_config-141 - 3 observation(s) loaded from file "astro.ini"
+24 20:50:54 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:51:03 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:51:04 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:51:07 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:51:09 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:51:09 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:51:10 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:51:10 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:51:11 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:51:44 -  - aa.py - init_log-170 - Starting astro version V2.0
+24 20:51:44 -  - aa.py - load_config-112 - Loading configuration from file "astro.ini"
+24 20:51:44 - -  - aa.py - load_config-118 - log level set to "INFO"
+24 20:51:44 -  - aa.py - load_config-141 - 3 observation(s) loaded from file "astro.ini"
+24 20:52:23 -  - aa.py - init_log-170 - Starting astro version V2.0
+24 20:52:23 -  - aa.py - load_config-112 - Loading configuration from file "astro.ini"
+24 20:52:23 - -  - aa.py - load_config-118 - log level set to "INFO"
+24 20:52:23 -  - aa.py - load_config-141 - 3 observation(s) loaded from file "astro.ini"
+24 20:52:34 -  - aa.py - init_log-170 - Starting astro version V2.0
+24 20:52:34 -  - aa.py - load_config-112 - Loading configuration from file "astro.ini"
+24 20:52:34 - -  - aa.py - load_config-118 - log level set to "INFO"
+24 20:52:34 -  - aa.py - load_config-141 - 3 observation(s) loaded from file "astro.ini"
+24 20:53:09 -  - aa.py - init_log-170 - Starting astro version V2.0
+24 20:53:09 -  - aa.py - load_config-112 - Loading configuration from file "astro.ini"
+24 20:53:09 - -  - aa.py - load_config-118 - log level set to "INFO"
+24 20:53:09 -  - aa.py - load_config-141 - 3 observation(s) loaded from file "astro.ini"
+24 20:53:11 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:53:12 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:53:14 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:53:15 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:53:16 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:53:16 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:53:17 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:53:17 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:53:18 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:53:41 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:53:41 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:53:42 -  - aa.py - on_button_modif_course_and_speed-80 - Click on button "Modif course and speed
+24 20:53:43 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:53:44 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:53:44 -  - aa.py - on_button_new_obs-83 - Click on button "New obs
+24 20:53:47 -  - aa.py - init_log-170 - Starting astro version V2.0
+24 20:53:47 -  - aa.py - load_config-112 - Loading configuration from file "astro.ini"
+24 20:54:00 -  - aa.py - init_log-166 - Starting astro version V2.0
+24 20:54:00 -  - aa.py - load_config-108 - Loading configuration from file "astro.ini"
+24 20:54:00 - -  - aa.py - load_config-114 - log level set to "INFO"
+24 20:54:00 -  - aa.py - load_config-137 - 3 observation(s) loaded from file "astro.ini"
+24 20:54:06 -  - aa.py - on_button_new_obs-79 - Click on button "New obs
+24 20:54:08 -  - aa.py - on_button_new_obs-79 - Click on button "New obs
+24 20:54:11 -  - aa.py - on_button_modif_course_and_speed-76 - Click on button "Modif course and speed
+24 20:54:26 -  - aa.py - on_button_modif_course_and_speed-76 - Click on button "Modif course and speed
+24 20:54:27 -  - aa.py - on_button_new_obs-79 - Click on button "New obs
+24 20:54:27 -  - aa.py - on_button_modif_course_and_speed-76 - Click on button "Modif course and speed
+24 20:54:32 -  - aa.py - on_button_modif_course_and_speed-76 - Click on button "Modif course and speed
+24 20:57:02 -  - aa.py - init_log-166 - Starting astro version V2.0
+24 20:57:02 -  - aa.py - load_config-108 - Loading configuration from file "astro.ini"
+24 20:57:02 - -  - aa.py - load_config-114 - log level set to "INFO"
+24 20:57:02 -  - aa.py - load_config-137 - 3 observation(s) loaded from file "astro.ini"
+24 20:57:12 -  - aa.py - init_log-166 - Starting astro version V2.0
+24 20:57:12 -  - aa.py - load_config-108 - Loading configuration from file "astro.ini"
+24 20:57:12 - -  - aa.py - load_config-114 - log level set to "INFO"
+24 20:57:12 -  - aa.py - load_config-137 - 3 observation(s) loaded from file "astro.ini"
+24 20:57:31 -  - aa.py - init_log-166 - Starting astro version V2.0
+24 20:57:31 -  - aa.py - load_config-108 - Loading configuration from file "astro.ini"
+24 20:57:31 - -  - aa.py - load_config-114 - log level set to "INFO"
+24 20:57:31 -  - aa.py - load_config-137 - 3 observation(s) loaded from file "astro.ini"
+24 20:57:38 -  - aa.py - init_log-166 - Starting astro version V2.0
+24 20:57:38 -  - aa.py - load_config-108 - Loading configuration from file "astro.ini"
+24 20:57:38 - -  - aa.py - load_config-114 - log level set to "INFO"
+24 20:57:38 -  - aa.py - load_config-137 - 3 observation(s) loaded from file "astro.ini"
+24 20:58:01 -  - aa.py - init_log-166 - Starting astro version V2.0
+24 20:58:01 -  - aa.py - load_config-108 - Loading configuration from file "astro.ini"
+24 20:58:01 - -  - aa.py - load_config-114 - log level set to "INFO"
+24 20:58:01 -  - aa.py - load_config-137 - 3 observation(s) loaded from file "astro.ini"
+24 20:59:32 -  - aa.py - init_log-167 - Starting astro version V2.0
+24 20:59:32 -  - aa.py - load_config-109 - Loading configuration from file "astro.ini"
+24 20:59:32 - -  - aa.py - load_config-115 - log level set to "INFO"
+24 20:59:32 -  - aa.py - load_config-138 - 3 observation(s) loaded from file "astro.ini"
+24 21:00:01 -  - aa.py - init_log-167 - Starting astro version V2.0
+24 21:00:01 -  - aa.py - load_config-109 - Loading configuration from file "astro.ini"
+24 21:00:01 - -  - aa.py - load_config-115 - log level set to "INFO"
+24 21:00:01 -  - aa.py - load_config-138 - 3 observation(s) loaded from file "astro.ini"
+24 21:00:11 -  - aa.py - on_button_modif_course_and_speed-77 - Click on button "Modif course and speed"
+24 21:00:12 -  - aa.py - on_button_modif_course_and_speed-77 - Click on button "Modif course and speed"
+24 21:00:35 -  - aa.py - init_log-167 - Starting astro version V2.0
+24 21:00:35 -  - aa.py - load_config-109 - Loading configuration from file "astro.ini"
+24 21:00:35 - -  - aa.py - load_config-115 - log level set to "INFO"
+24 21:00:35 -  - aa.py - load_config-138 - 3 observation(s) loaded from file "astro.ini"
+24 21:00:55 -  - aa.py - init_log-167 - Starting astro version V2.0
+24 21:00:55 -  - aa.py - load_config-109 - Loading configuration from file "astro.ini"
+24 21:00:55 - -  - aa.py - load_config-115 - log level set to "INFO"
+24 21:00:55 -  - aa.py - load_config-138 - 3 observation(s) loaded from file "astro.ini"
+24 21:00:58 -  - aa.py - on_button_modif_course_and_speed-77 - Click on button "Modif course and speed"
+24 21:00:58 -  - aa.py - on_button_modif_course_and_speed-77 - Click on button "Modif course and speed"
+24 21:01:02 -  - aa.py - on_button_new_obs-80 - Click on button "New obs"
+24 21:01:03 -  - aa.py - on_button_new_obs-80 - Click on button "New obs"
+24 21:01:03 -  - aa.py - on_button_new_obs-80 - Click on button "New obs"
+24 21:01:03 -  - aa.py - on_button_new_obs-80 - Click on button "New obs"
+24 21:01:04 -  - aa.py - on_button_modif_course_and_speed-77 - Click on button "Modif course and speed"
+24 21:01:05 -  - aa.py - on_button_modif_course_and_speed-77 - Click on button "Modif course and speed"
+24 21:01:19 -  - aa.py - init_log-167 - Starting astro version V2.0
+24 21:01:19 -  - aa.py - load_config-109 - Loading configuration from file "astro.ini"
+24 21:01:19 - -  - aa.py - load_config-115 - log level set to "INFO"
+24 21:01:19 -  - aa.py - load_config-138 - 3 observation(s) loaded from file "astro.ini"
+24 21:01:26 -  - aa.py - init_log-167 - Starting astro version V2.0
+24 21:01:26 -  - aa.py - load_config-109 - Loading configuration from file "astro.ini"
+24 21:01:26 - -  - aa.py - load_config-115 - log level set to "INFO"
+24 21:01:26 -  - aa.py - load_config-138 - 3 observation(s) loaded from file "astro.ini"
+24 21:05:04 -  - aa.py - init_log-166 - Starting astro version V2.0
+24 21:05:04 -  - aa.py - load_config-108 - Loading configuration from file "astro.ini"
+24 21:05:04 - -  - aa.py - load_config-114 - log level set to "INFO"
+24 21:05:04 -  - aa.py - load_config-137 - 3 observation(s) loaded from file "astro.ini"
+24 21:05:08 -  - aa.py - init_log-166 - Starting astro version V2.0
+24 21:05:08 -  - aa.py - load_config-108 - Loading configuration from file "astro.ini"
+24 21:05:08 - -  - aa.py - load_config-114 - log level set to "INFO"
+24 21:05:08 -  - aa.py - load_config-137 - 3 observation(s) loaded from file "astro.ini"
+24 21:06:49 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 21:06:49 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 21:06:49 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 21:06:49 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 21:50:09 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 21:50:09 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 21:50:09 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 21:50:09 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 21:50:26 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 21:50:26 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 21:50:26 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 21:50:26 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 21:50:35 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 21:50:35 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 21:50:35 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 21:50:35 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 21:50:37 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 21:51:35 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 21:51:35 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 21:51:35 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 21:51:35 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 21:51:38 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 21:51:42 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:19:44 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:19:56 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:20:58 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 22:20:58 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 22:20:58 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 22:20:58 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 22:21:01 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:21:08 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:21:12 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:21:56 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 22:21:56 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 22:21:56 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 22:21:56 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 22:21:57 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:24:07 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 22:24:07 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 22:24:07 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 22:24:07 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 22:24:08 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:24:29 -  - aa.py - init_log-42 - Starting astro version V2.0
+24 22:24:29 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 22:24:29 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 22:24:29 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 22:24:31 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:24:39 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:24:42 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+24 22:30:25 -  - aa.py - init_log-43 - Starting astro version V2.0
+24 22:30:25 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 22:30:25 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 22:30:25 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 22:30:39 -  - aa.py - init_log-43 - Starting astro version V2.0
+24 22:30:39 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+24 22:30:39 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+24 22:30:39 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+24 22:30:43 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:19:21 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:19:21 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:19:21 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:19:21 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:19:25 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:24:25 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:24:25 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:24:25 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:24:25 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:24:27 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:26:15 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:26:15 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:26:15 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:26:15 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:26:17 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:27:03 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:27:10 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:27:11 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:27:11 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:27:11 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:27:13 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:28:02 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:28:02 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:28:02 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:28:02 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:28:03 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:29:16 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:29:16 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:29:16 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:29:16 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:29:31 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:29:31 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:29:31 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:29:31 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:29:38 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:29:38 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:29:38 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:29:38 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:29:39 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:31:25 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:31:25 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:31:25 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:31:25 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:31:26 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:32:10 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:32:10 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:32:10 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:32:10 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:32:11 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:32:56 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:32:56 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:32:56 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:32:56 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:32:57 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:35:48 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:35:48 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:35:48 - -  - astro_data.py - load_config-45 - log level set to "INFO"
+25 13:35:48 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:35:50 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:35:50 - -  - course_speed_dlg.py - __init__-44 - geometry = "<bound method Wm.wm_geometry of <course_speed_dlg.CourseSpeedDlg object .!coursespeeddlg>>"
+25 13:36:31 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:36:31 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:36:31 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 13:36:31 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:36:33 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:36:33 - -  - course_speed_dlg.py - __init__-44 - geometry = "<bound method Wm.wm_geometry of <course_speed_dlg.CourseSpeedDlg object .!coursespeeddlg>>"
+25 13:37:37 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:37:37 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:37:37 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 13:37:37 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:37:39 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:37:39 - -  - course_speed_dlg.py - __init__-44 - geometry = "+240+263"
+25 13:38:41 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:38:41 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:38:41 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 13:38:41 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:38:43 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:38:43 - -  - course_speed_dlg.py - __init__-45 - geometry = "+241+264"
+25 13:39:23 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 13:39:23 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 13:39:23 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 13:39:23 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 13:39:25 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 13:39:25 - -  - course_speed_dlg.py - __init__-45 - geometry = "+84+107"
+25 17:36:00 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:36:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:36:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:36:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:36:01 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 17:36:01 - -  - course_speed_dlg.py - __init__-45 - geometry = "+214+237"
+25 17:41:11 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:41:11 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:41:11 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:41:11 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:41:12 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 17:41:12 - -  - course_speed_dlg.py - __init__-45 - geometry = "+240+263"
+25 17:41:15 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 17:41:15 - -  - course_speed_dlg.py - __init__-45 - geometry = "+240+263"
+25 17:41:23 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 17:41:23 - -  - course_speed_dlg.py - __init__-45 - geometry = "+240+263"
+25 17:41:26 -  - astro_view.py - on_button_modif_course_and_speed-75 - Click on button "Modif course and speed"
+25 17:41:26 - -  - course_speed_dlg.py - __init__-45 - geometry = "+240+263"
+25 17:48:41 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:48:41 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:48:41 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:48:41 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:49:16 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:49:26 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:49:31 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:49:31 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:49:31 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:49:31 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:49:35 -  - astro_view.py - on_button_modif_course_and_speed-77 - Click on button "Modif course and speed"
+25 17:49:35 - -  - course_speed_dlg.py - __init__-45 - geometry = "+110+133"
+25 17:53:21 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:53:21 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:53:21 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:53:21 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:54:06 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:54:06 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:54:06 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:54:06 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:54:48 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:54:48 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:54:48 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:54:48 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:55:40 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:55:40 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:55:40 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:55:40 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:56:32 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:56:32 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:56:32 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:56:32 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:56:41 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:56:41 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:56:41 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:56:52 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:56:52 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:56:52 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:56:52 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:57:48 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:57:48 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:57:48 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:57:48 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:58:34 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:58:34 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:58:34 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:58:34 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:58:36 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:58:36 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:58:36 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:58:36 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:59:00 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:59:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:59:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:59:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 17:59:09 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 17:59:09 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 17:59:09 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 17:59:09 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:00:12 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:00:12 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:00:12 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:00:12 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:00:38 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:00:38 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:00:38 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:00:38 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:01:27 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:01:27 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:01:27 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:01:27 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:01:53 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:01:53 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:01:53 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:01:53 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:02:13 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:02:13 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:02:13 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:02:13 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:02:37 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:02:37 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:02:37 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:02:37 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:03:02 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:03:02 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:03:02 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:03:02 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:06:41 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:06:41 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:06:41 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:06:41 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:06:42 -  - astro_view.py - on_button_modif_course_and_speed-82 - Click on button "Modif course and speed"
+25 18:06:42 - -  - course_speed_dlg.py - __init__-46 - geometry = "+266+289"
+25 18:09:05 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:09:05 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:09:05 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:09:05 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:09:07 -  - astro_view.py - on_button_modif_course_and_speed-82 - Click on button "Modif course and speed"
+25 18:09:07 - -  - course_speed_dlg.py - __init__-46 - geometry = "+84+107"
+25 18:09:26 -  - astro_view.py - on_button_modif_course_and_speed-82 - Click on button "Modif course and speed"
+25 18:09:26 - -  - course_speed_dlg.py - __init__-46 - geometry = "+84+107"
+25 18:11:11 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 18:11:11 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 18:11:11 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 18:11:11 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 18:11:13 -  - astro_view.py - on_button_modif_course_and_speed-82 - Click on button "Modif course and speed"
+25 18:11:13 - -  - course_speed_dlg.py - __init__-46 - geometry = "+110+133"
+25 18:11:40 -  - astro_view.py - on_button_modif_course_and_speed-82 - Click on button "Modif course and speed"
+25 18:11:40 - -  - course_speed_dlg.py - __init__-46 - geometry = "+110+133"
+25 23:42:53 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:42:53 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:42:53 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:42:53 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:43:32 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:43:32 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:43:32 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:43:32 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:44:04 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:44:04 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:44:04 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:44:04 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:44:32 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:44:32 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:44:32 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:44:32 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:46:43 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:46:43 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:46:43 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:46:43 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:46:59 -  - astro_view.py - on_button_modif_course_and_speed-82 - Click on button "Modif course and speed"
+25 23:46:59 - -  - course_speed_dlg.py - __init__-46 - geometry = "+162+185"
+25 23:53:44 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:53:44 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:53:44 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:53:44 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:54:26 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:54:26 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:54:26 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:54:26 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:55:36 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:55:36 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:55:36 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:55:36 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:55:51 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:55:51 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:55:51 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:55:51 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:56:10 -  - astro_view.py - on_button_modif_course_and_speed-82 - Click on button "Modif course and speed"
+25 23:56:10 - -  - course_speed_dlg.py - __init__-46 - geometry = "+292+315"
+25 23:56:40 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:56:40 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:56:40 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:56:40 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+25 23:58:36 -  - aa.py - init_log-43 - Starting astro version V2.0
+25 23:58:36 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+25 23:58:36 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+25 23:58:36 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:00:52 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:00:52 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:00:52 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:00:52 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:01:31 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:01:31 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:01:31 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:01:31 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:01:45 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:01:45 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:01:45 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:01:45 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:02:57 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:02:57 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:02:57 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:02:57 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:04:06 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:04:06 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:04:06 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:04:06 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:04:14 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:04:14 - -  - course_speed_dlg.py - __init__-46 - geometry = "+110+133"
+26 00:06:23 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:06:23 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:06:23 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:06:23 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:06:41 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:06:41 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:06:41 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:06:41 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:06:50 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:06:50 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:06:50 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:06:50 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:07:24 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:07:24 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:07:24 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:07:24 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:07:39 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:07:39 - -  - course_speed_dlg.py - __init__-46 - geometry = "+214+237"
+26 00:07:45 -  - astro_view.py - on_button_new_obs-98 - Click on button "New obs"
+26 00:07:45 -  - astro_view.py - on_button_new_obs-98 - Click on button "New obs"
+26 00:07:45 -  - astro_view.py - on_button_new_obs-98 - Click on button "New obs"
+26 00:07:46 -  - astro_view.py - on_button_new_obs-98 - Click on button "New obs"
+26 00:07:46 -  - astro_view.py - on_button_new_obs-98 - Click on button "New obs"
+26 00:07:46 -  - astro_view.py - on_button_new_obs-98 - Click on button "New obs"
+26 00:07:47 -  - astro_view.py - on_button_new_obs-98 - Click on button "New obs"
+26 00:07:47 -  - astro_view.py - on_button_new_obs-98 - Click on button "New obs"
+26 00:07:47 -  - astro_view.py - on_button_new_obs-98 - Click on button "New obs"
+26 00:07:48 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:07:48 - -  - course_speed_dlg.py - __init__-46 - geometry = "+214+237"
+26 00:08:14 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:08:14 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:08:14 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:08:14 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:08:23 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:08:23 - -  - course_speed_dlg.py - __init__-46 - geometry = "+266+289"
+26 00:10:39 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:10:39 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:10:39 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:10:39 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:10:52 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:10:52 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:10:52 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:10:52 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:10:56 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:10:56 - -  - course_speed_dlg.py - __init__-46 - geometry = "+84+107"
+26 00:12:56 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:12:56 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:12:56 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:12:56 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:12:58 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:12:58 - -  - course_speed_dlg.py - __init__-46 - geometry = "+84+107"
+26 00:13:53 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:13:53 - -  - course_speed_dlg.py - __init__-46 - geometry = "+84+107"
+26 00:14:07 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:14:07 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:14:07 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:14:07 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:14:21 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:14:21 - -  - course_speed_dlg.py - __init__-46 - geometry = "+136+159"
+26 00:30:58 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:30:58 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:30:58 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:30:58 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:31:02 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:31:02 - -  - course_speed_dlg.py - __init__-46 - geometry = "+214+237"
+26 00:32:48 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:33:05 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:33:05 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:33:05 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:33:05 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:33:08 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:33:08 - -  - course_speed_dlg.py - __init__-46 - geometry = "+266+289"
+26 00:35:43 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:35:43 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:35:43 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:35:43 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:35:45 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:35:45 - -  - course_speed_dlg.py - __init__-46 - geometry = "+292+315"
+26 00:40:04 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:40:04 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:40:04 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:40:18 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:40:18 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:40:18 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:40:18 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:40:23 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:40:23 - -  - course_speed_dlg.py - __init__-46 - geometry = "+60+83"
+26 00:40:49 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:40:49 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:40:49 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:40:49 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:40:50 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:40:50 - -  - course_speed_dlg.py - __init__-46 - geometry = "+112+135"
+26 00:41:50 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:41:50 - -  - course_speed_dlg.py - __init__-46 - geometry = "+112+135"
+26 00:44:54 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:44:54 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:44:54 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:44:54 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:44:56 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:44:56 - -  - course_speed_dlg.py - __init__-46 - geometry = "138x161"
+26 00:45:23 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:45:23 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:45:23 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:45:23 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:45:26 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:45:26 - -  - course_speed_dlg.py - __init__-46 - geometry = "164x187"
+26 00:45:40 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:45:40 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:45:40 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:45:40 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:45:44 -  - astro_view.py - on_button_modif_course_and_speed-87 - Click on button "Modif course and speed"
+26 00:45:44 - -  - course_speed_dlg.py - __init__-46 - geometry = "216x239"
+26 00:50:52 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:50:52 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:50:52 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:50:52 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:52:22 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:52:22 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:52:22 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:52:22 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:55:29 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:55:29 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:55:29 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:55:29 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:57:44 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:57:44 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:57:44 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:57:44 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 00:58:19 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 00:58:19 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 00:58:19 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 00:58:19 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:00:38 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:00:38 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:00:38 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:00:38 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:03:10 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:03:10 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:03:10 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:03:10 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:04:09 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:04:09 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:04:09 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:04:09 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:04:21 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:04:21 - -  - course_speed_dlg.py - __init__-46 - geometry = "292x315"
+26 01:09:30 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:09:30 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:09:30 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:09:30 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:09:32 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:09:32 - -  - course_speed_dlg.py - __init__-46 - geometry = "84x107"
+26 01:12:27 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:12:27 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:12:27 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:12:27 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:12:29 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:12:29 - -  - course_speed_dlg.py - __init__-46 - geometry = "136x159"
+26 01:17:37 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:17:37 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:17:37 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:17:37 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:17:39 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:18:30 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:18:30 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:18:30 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:18:30 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:18:32 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:18:32 - -  - course_speed_dlg.py - __init__-46 - geometry = "188x211"
+26 01:18:56 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:18:56 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:18:56 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:18:56 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:18:58 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:18:58 - -  - course_speed_dlg.py - __init__-46 - geometry = "214x237"
+26 01:20:16 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:20:16 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:20:16 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:20:16 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:20:19 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:20:34 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:20:34 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:20:34 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:20:34 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:20:39 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:20:39 - -  - course_speed_dlg.py - __init__-46 - geometry = "292x315"
+26 01:20:49 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:20:49 - -  - course_speed_dlg.py - __init__-46 - geometry = "292x315"
+26 01:23:23 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:23:23 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:23:23 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:23:23 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:23:24 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:23:24 - -  - course_speed_dlg.py - __init__-46 - geometry = "110x133"
+26 01:23:33 - !!!  - course_speed_dlg.py - on_ok_button-103 - speed input : "180"
+26 01:26:36 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:26:36 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:26:36 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:26:36 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:26:41 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:26:41 - -  - course_speed_dlg.py - __init__-46 - geometry = "162x185"
+26 01:26:48 - !!!  - course_speed_dlg.py - on_ok_button-103 - course input : "180" (<class 'int'>)
+26 01:27:13 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:27:13 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:27:13 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:27:13 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:27:15 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:27:15 - -  - course_speed_dlg.py - __init__-46 - geometry = "188x211"
+26 01:33:42 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 01:33:42 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 01:33:42 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 01:33:42 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 01:33:44 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:33:44 - -  - course_speed_dlg.py - __init__-46 - geometry = "240x263"
+26 01:33:50 - !!!  - course_speed_dlg.py - on_ok_button-103 - course input : "180.0" (<class 'str'>)
+26 01:33:50 - !!!  - course_speed_dlg.py - validate-131 - 180.0 is a not correct azimut
+26 01:33:55 - !!!  - course_speed_dlg.py - on_ok_button-103 - course input : "180.0" (<class 'str'>)
+26 01:33:55 - !!!  - course_speed_dlg.py - validate-131 - 180.0 is a not correct azimut
+26 01:33:56 - !!!  - course_speed_dlg.py - on_ok_button-103 - course input : "180.0" (<class 'str'>)
+26 01:33:56 - !!!  - course_speed_dlg.py - validate-131 - 180.0 is a not correct azimut
+26 01:33:57 - !!!  - course_speed_dlg.py - on_ok_button-103 - course input : "180.0" (<class 'str'>)
+26 01:33:57 - !!!  - course_speed_dlg.py - validate-131 - 180.0 is a not correct azimut
+26 01:33:58 - !!!  - course_speed_dlg.py - on_ok_button-103 - course input : "180.0" (<class 'str'>)
+26 01:33:58 - !!!  - course_speed_dlg.py - validate-131 - 180.0 is a not correct azimut
+26 01:34:01 - !!!  - course_speed_dlg.py - on_ok_button-103 - course input : "180.0" (<class 'str'>)
+26 01:34:01 - !!!  - course_speed_dlg.py - validate-131 - 180.0 is a not correct azimut
+26 01:34:11 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 01:34:11 - -  - course_speed_dlg.py - __init__-46 - geometry = "240x263"
+26 01:34:16 - !!!  - course_speed_dlg.py - on_ok_button-103 - course input : "180" (<class 'str'>)
+26 08:47:39 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 08:47:39 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 08:47:39 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 08:47:39 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 08:47:42 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 08:47:42 - -  - course_speed_dlg.py - __init__-46 - geometry = "214x237"
+26 08:49:30 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 08:49:30 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 08:49:30 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 08:49:30 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 08:49:32 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 08:49:32 - -  - course_speed_dlg.py - __init__-46 - geometry = "240x263"
+26 08:50:23 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 08:50:23 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 08:50:23 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 08:50:23 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 08:50:24 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 08:50:24 - -  - course_speed_dlg.py - __init__-46 - geometry = "266x289"
+26 08:50:56 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 08:50:56 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 08:50:56 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 08:50:56 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 08:50:57 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 08:50:57 - -  - course_speed_dlg.py - __init__-46 - geometry = "292x315"
+26 08:52:18 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 08:52:18 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 08:52:18 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 08:52:18 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 08:52:19 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 08:52:19 - -  - course_speed_dlg.py - __init__-47 - geometry = "84x107"
+26 08:52:39 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 08:52:39 - -  - course_speed_dlg.py - __init__-47 - geometry = "84x107"
+26 08:52:45 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 08:52:45 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 08:52:45 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 08:52:45 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 08:52:47 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 08:52:47 - -  - course_speed_dlg.py - __init__-47 - geometry = "110x133"
+26 08:52:54 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 08:52:54 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 08:52:54 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 08:52:54 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 08:52:58 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 08:52:58 - -  - course_speed_dlg.py - __init__-47 - geometry = "136x159"
+26 08:53:41 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 08:53:41 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 08:53:41 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 08:53:41 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 08:55:57 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 08:55:57 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 08:55:57 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 08:55:57 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 08:55:58 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 08:55:58 - -  - course_speed_dlg.py - __init__-46 - geometry = "214x237"
+26 08:56:02 - !!!  - course_speed_dlg.py - on_ok_button-104 - course input : "180" (<class 'str'>)
+26 09:07:48 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:07:48 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:07:48 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:07:48 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:07:50 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:08:40 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:08:40 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:08:40 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:08:40 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:08:42 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:08:42 - -  - course_speed_dlg.py - __init__-47 - geometry = "136x159"
+26 09:08:47 - !!!  - course_speed_dlg.py - on_ok_button-105 - course input : "180" (<class 'str'>)
+26 09:09:08 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:09:08 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:09:08 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:09:08 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:09:10 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:09:10 - -  - course_speed_dlg.py - __init__-47 - geometry = "162x185"
+26 09:09:11 - !!!  - course_speed_dlg.py - on_ok_button-105 - course input : "180" (<class 'str'>)
+26 09:12:57 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:12:57 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:12:57 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:12:57 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:12:58 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:12:58 - -  - course_speed_dlg.py - __init__-47 - geometry = "214x237"
+26 09:14:45 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:14:45 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:14:45 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:14:58 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:14:58 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:14:58 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:14:58 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:15:01 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:15:01 - -  - course_speed_dlg.py - __init__-47 - geometry = "266x289"
+26 09:25:34 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:25:34 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:25:34 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:25:34 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:25:36 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:25:36 - -  - course_speed_dlg.py - __init__-47 - geometry = "136x159"
+26 09:26:14 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:26:14 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:26:14 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:26:14 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:26:15 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:26:15 - -  - course_speed_dlg.py - __init__-47 - geometry = "188x211"
+26 09:26:22 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:26:22 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:26:22 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:26:22 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:26:57 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:26:57 - -  - course_speed_dlg.py - __init__-47 - geometry = "214x237"
+26 09:27:12 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:27:12 - -  - course_speed_dlg.py - __init__-47 - geometry = "214x237"
+26 09:27:16 - !!!  - course_speed_dlg.py - validate-135 - 180q is a not correct azimut
+26 09:27:18 - !!!  - course_speed_dlg.py - validate-135 - 180q is a not correct azimut
+26 09:30:50 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:30:50 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:30:50 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:30:50 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:30:51 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:30:51 - -  - course_speed_dlg.py - __init__-47 - geometry = "292x315"
+26 09:30:53 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
+26 09:30:58 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:30:58 - -  - course_speed_dlg.py - __init__-47 - geometry = "292x315"
+26 09:31:19 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:31:19 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:31:19 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:31:19 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:31:21 -  - astro_view.py - on_button_modif_course_and_speed-90 - Click on button "Modif course and speed"
+26 09:31:21 - -  - course_speed_dlg.py - __init__-47 - geometry = "84x107"
+26 09:31:25 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
+26 09:33:21 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:33:21 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:33:21 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:33:21 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:33:23 - -  - course_speed_dlg.py - __init__-47 - geometry = "162x185"
+26 09:33:24 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
+26 09:33:25 - -  - course_speed_dlg.py - __init__-47 - geometry = "162x185"
+26 09:33:29 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
+26 09:33:31 - -  - course_speed_dlg.py - __init__-47 - geometry = "162x185"
+26 09:33:37 - !!!  - course_speed_dlg.py - validate-135 - 180f is a not correct azimut
+26 09:33:43 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.1 Knots - course 180°
+26 09:33:47 - -  - course_speed_dlg.py - __init__-47 - geometry = "162x185"
+26 09:33:53 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.1 Knots - course 180°
+26 09:33:56 - -  - course_speed_dlg.py - __init__-47 - geometry = "162x185"
+26 09:34:01 - !!!  - course_speed_dlg.py - validate-135 - 0180 is a not correct azimut
+26 09:34:06 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.1 Knots - course 18°
+26 09:34:10 - -  - course_speed_dlg.py - __init__-47 - geometry = "162x185"
+26 09:38:30 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:38:30 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:38:30 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:38:30 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:39:30 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:39:30 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:39:30 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:39:30 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:39:32 - -  - course_speed_dlg.py - __init__-47 - geometry = "292x315"
+26 09:39:36 - !!!  - course_speed_dlg.py - validate-139 - 16-10-2022 is a not correct azimut
+26 09:39:36 - !!!  - course_speed_dlg.py - validate-139 -  5.0g is a not correct azimut
+26 09:39:53 - !!!  - course_speed_dlg.py - validate-139 -  5.0g is a not correct azimut
+26 09:40:02 - !!!  - course_speed_dlg.py - validate-139 -  5.21 is a not correct azimut
+26 09:40:07 - !!!  - course_speed_dlg.py - validate-139 -  5.2 is a not correct azimut
+26 09:40:32 - -  - course_speed_dlg.py - __init__-47 - geometry = "292x315"
+26 09:40:36 - !!!  - course_speed_dlg.py - validate-139 - 16-10-2022 is a not correct azimut
+26 09:40:36 - !!!  - course_speed_dlg.py - validate-139 -  5.0 is a not correct azimut
+26 09:42:29 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:42:29 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:42:29 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:42:29 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:42:31 - -  - course_speed_dlg.py - __init__-47 - geometry = "84x107"
+26 09:42:38 - !!!  - course_speed_dlg.py - validate-139 -  5.0 is a not correct azimut
+26 09:46:22 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:46:22 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:46:22 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:46:22 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:46:24 - -  - course_speed_dlg.py - __init__-47 - geometry = "136x159"
+26 09:46:28 - -  - course_speed_dlg.py - __init__-47 - geometry = "136x159"
+26 09:48:25 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:48:25 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:48:25 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:48:36 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:48:36 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:48:36 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:48:36 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:48:39 - -  - course_speed_dlg.py - __init__-47 - geometry = "188x211"
+26 09:49:58 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:49:58 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:49:58 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:49:58 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:50:02 - -  - course_speed_dlg.py - __init__-47 - geometry = "266x289"
+26 09:50:03 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
+26 09:50:05 - -  - course_speed_dlg.py - __init__-47 - geometry = "266x289"
+26 09:50:08 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
+26 09:57:50 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:57:50 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:57:50 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:57:50 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:57:52 - -  - course_speed_dlg.py - __init__-48 - geometry = "200x300"
+26 09:58:20 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:58:20 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:58:20 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:58:20 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:58:22 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
+26 09:58:34 -  - aa.py - init_log-43 - Starting astro version V2.0
+26 09:58:34 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 09:58:34 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 09:58:34 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 09:58:37 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
+26 11:41:47 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
+26 11:43:41 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 11:43:41 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 11:43:41 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 11:43:41 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 11:46:48 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 11:46:48 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 11:46:48 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 11:46:48 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 11:47:00 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 11:47:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 11:47:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 11:47:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 11:47:00 - -  - boat.py - format_current_position-36 - 1148.9 NM since last position at 5.0 Knots - course 180°
+26 11:47:09 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 11:47:09 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+26 11:47:09 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+26 11:47:09 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+26 11:47:09 - -  - boat.py - format_current_position-36 - 1148.9 NM since last position at 5.0 Knots - course 180°
+26 12:51:32 -  - astro.py - init_log-67 - Starting astro version V2.0
+26 12:51:32 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+26 12:51:32 - -  - astro.py - load_config-78 - log level set to "DEBUG"
+26 12:51:32 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
+26 12:51:36 -  - astro.py - display_last_position-314 - Last recorded position of the boat
+26 12:51:36 -  - astro.py - display_last_position-315 - at 16/10/2022 22:00:00 last position : (45°00.0'N , 005°00.0'E)
+26 12:51:40 -  - astro.py - display_current_position-318 - Current position of the boat based on last position and course and speed from that time
+26 12:51:40 -  - astro.py - display_current_position-321 - running 5.0 knots in the +180°
+26 12:51:40 - -  - boat.py - format_current_position-36 - 1154.3 NM since last position at 5.0 Knots - course 180°
+26 12:51:40 -  - astro.py - display_current_position-322 - now (26/10/2022 12:51:40) estimated : (25°45.7'N , 005°00.0'E)
+26 12:51:46 -  - astro.py - init_position-269 - Initialize the boat position
+26 12:51:48 - -  - astro.py - enter_date-199 - New date = 26-10-2022
+26 12:51:50 - -  - astro.py - enter_time-215 - New time = 12:51:50
+26 12:52:24 -  - astro.py - init_log-67 - Starting astro version V2.0
+26 12:52:24 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+26 12:52:24 - -  - astro.py - load_config-78 - log level set to "DEBUG"
+26 12:52:24 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
+26 12:52:33 -  - astro.py - init_position-269 - Initialize the boat position
+26 12:52:35 - -  - astro.py - enter_date-199 - New date = 26-10-2022
+26 12:53:06 -  - astro.py - init_log-67 - Starting astro version V2.0
+26 12:53:16 -  - astro.py - init_log-67 - Starting astro version V2.0
+26 12:53:16 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+26 12:53:16 - -  - astro.py - load_config-78 - log level set to "DEBUG"
+26 12:53:16 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
+26 12:53:20 -  - astro.py - init_position-268 - Initialize the boat position
+26 12:55:04 -  - astro.py - init_log-67 - Starting astro version V2.0
+26 12:55:04 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+26 12:55:04 - -  - astro.py - load_config-78 - log level set to "DEBUG"
+26 12:55:04 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
+26 12:55:08 -  - astro.py - init_position-269 - Initialize the boat position
+26 12:55:09 - -  - astro.py - enter_date-199 - New date = 26-10-2022
+26 12:55:11 - -  - astro.py - enter_time-215 - New time = 12:55:11
+26 12:56:28 -  - astro.py - init_log-67 - Starting astro version V2.0
+26 12:56:28 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+26 12:56:28 - -  - astro.py - load_config-78 - log level set to "DEBUG"
+26 12:56:28 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
+26 12:56:31 -  - astro.py - init_position-269 - Initialize the boat position
+26 12:56:31 - -  - astro.py - enter_date-199 - New date = 26/10/2022
+26 12:56:33 - -  - astro.py - enter_time-215 - New time = 12:56:33
+26 12:56:43 -  - astro.py - init_log-67 - Starting astro version V2.0
+26 12:56:43 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+26 12:56:43 - -  - astro.py - load_config-78 - log level set to "DEBUG"
+26 12:56:43 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
+26 12:56:47 -  - astro.py - display_last_position-314 - Last recorded position of the boat
+26 12:56:47 -  - astro.py - display_last_position-315 - at 16/10/2022 22:00:00 last position : (45°00.0'N , 005°00.0'E)
+26 12:56:54 -  - astro.py - init_position-269 - Initialize the boat position
+26 12:56:58 - -  - astro.py - enter_date-199 - New date = 16/10/2022
+26 12:57:07 - -  - astro.py - enter_time-215 - New time = 22:00:00
+26 12:57:15 -  - astro.py - display_current_position-318 - Current position of the boat based on last position and course and speed from that time
+26 12:57:15 -  - astro.py - display_current_position-321 - running 5.0 knots in the +180°
+26 12:57:15 - -  - boat.py - format_current_position-36 - 1154.8 NM since last position at 5.0 Knots - course 180°
+26 12:57:15 -  - astro.py - display_current_position-322 - now (26/10/2022 12:57:15) estimated : (25°45.2'N , 005°00.0'E)
+26 12:57:19 -  - astro.py - set_course_and_speed-278 - Set the course and the speed
+26 12:57:20 - -  - astro.py - enter_date-199 - New date = 16/10/2022
+26 12:57:22 - -  - astro.py - enter_time-215 - New time = 22:00:00
+26 12:58:11 -  - astro.py - init_log-67 - Starting astro version V2.0
+26 12:58:11 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
+26 12:58:11 - -  - astro.py - load_config-78 - log level set to "DEBUG"
+26 12:58:11 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
+26 12:58:13 -  - astro.py - set_course_and_speed-278 - Set the course and the speed
+26 12:58:15 - -  - astro.py - enter_date-199 - New date = 16/10/2022
+26 12:58:16 - -  - astro.py - enter_time-215 - New time = 22:00:00
+26 12:58:19 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
+26 12:58:22 -  - astro.py - new_astro-325 - Enter a new sun sight, and calculate the height angles, azimut and intercept
+26 12:58:24 - -  - astro.py - enter_date-199 - New date = 26/10/2022
+26 12:58:26 - -  - astro.py - enter_time-215 - New time = 12:58:26
+26 12:58:28 - -  - astro.py - enter_eye_height-265 - New eye_height = 2 m
+26 12:58:31 - -  - boat.py - get_position_at-28 - 1154.9 NM since last position at 5.0 Knots - course 180°
+26 12:58:31 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 26 00:00:00 : decl = 12°21.4'S (var -0.85'),  ahv0 = 183°59.8'(var 15.001°)
+26 12:58:31 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
+26 12:58:31 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 10.97389 hours
+26 12:58:31 -  - observation.py - calculate_decl_from_ho249-107 - at 12:58:26 decl = 12°30.7'S
+26 12:58:31 -  - observation.py - calculate_ahv0_from_ho249-117 - At 12:58:26 ahv0 = 348°37.0', ahvg = 353°37.0'
+26 12:58:31 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-147 - for angle : 32°, refraction = 1.6'
+26 12:58:31 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-152 - for eye height : 2 m, eye height correction = 2.7'
+26 12:58:31 - -  - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
+26 12:58:31 -  - observation.py - calculate_he_and_az-197 - Sextant height observed +32°00' - corrected : +32°12' 
+26 12:58:31 -  - observation.py - calculate_he-166 - Height estimated : +51°14' 
+26 12:58:31 - -  - observation.py - calculate_az-181 - Azimut by asin : -009° 
+26 12:58:31 - -  - observation.py - calculate_az-182 - Azimut by atan : +009° 
+26 12:58:31 -  - observation.py - calculate_az-183 - Azimut : +170° 
+26 12:58:31 -  - observation.py - calculate_he_and_az-205 - Intercept : -1142.4 NM
+26 12:59:54 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 12:59:54 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 12:59:54 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 12:59:54 -  - astro_data.py - load_config-67 - 3 observation(s) loaded from file "astro.ini"
+26 12:59:54 - -  - boat.py - format_current_position-36 - 1155.0 NM since last position at 5.0 Knots - course 180°
+26 13:00:28 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
+26 13:00:34 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:00:34 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 13:00:34 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 13:00:34 -  - astro_data.py - load_config-67 - 3 observation(s) loaded from file "astro.ini"
+26 13:00:34 - -  - boat.py - format_current_position-36 - 1155.0 NM since last position at 5.0 Knots - course 180°
+26 13:04:30 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:04:30 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 13:04:30 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 13:04:30 -  - astro_data.py - load_config-67 - 3 observation(s) loaded from file "astro.ini"
+26 13:04:30 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:04:46 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:04:46 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 13:04:46 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 13:04:54 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:04:54 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 13:04:54 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 13:04:54 -  - astro_data.py - load_config-67 - 3 observation(s) loaded from file "astro.ini"
+26 13:04:54 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:04:59 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:00 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:01 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:02 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:02 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:03 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:03 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:04 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:04 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:04 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:05 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:05 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:05 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:05 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:05 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:06 - -  - boat.py - format_current_position-36 - 1155.4 NM since last position at 5.0 Knots - course 180°
+26 13:05:50 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:05:50 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 13:05:50 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 13:05:50 -  - astro_data.py - load_config-67 - 3 observation(s) loaded from file "astro.ini"
+26 13:05:50 - -  - boat.py - format_current_position-36 - 1155.5 NM since last position at 5.0 Knots - course 180°
+26 13:05:55 - -  - boat.py - format_current_position-36 - 1155.5 NM since last position at 5.0 Knots - course 180°
+26 13:05:56 - -  - boat.py - format_current_position-36 - 1155.5 NM since last position at 5.0 Knots - course 180°
+26 13:05:57 - -  - boat.py - format_current_position-36 - 1155.5 NM since last position at 5.0 Knots - course 180°
+26 13:05:57 - -  - boat.py - format_current_position-36 - 1155.5 NM since last position at 5.0 Knots - course 180°
+26 13:11:57 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:11:57 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 13:11:57 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 13:11:57 -  - astro_data.py - load_config-67 - 3 observation(s) loaded from file "astro.ini"
+26 13:11:57 - -  - boat.py - format_current_position-36 - 1156.0 NM since last position at 5.0 Knots - course 180°
+26 13:12:28 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:12:28 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 13:12:28 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 13:12:28 -  - astro_data.py - load_config-67 - 3 observation(s) loaded from file "astro.ini"
+26 13:12:28 - -  - boat.py - format_current_position-36 - 1156.0 NM since last position at 5.0 Knots - course 180°
+26 13:12:51 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:12:51 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 13:12:51 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 13:12:51 -  - astro_data.py - load_config-67 - 3 observation(s) loaded from file "astro.ini"
+26 13:12:51 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:12:59 -  - aa.py - init_log-44 - Starting astro version V2.0
+26 13:12:59 -  - astro_data.py - load_config-38 - Loading configuration from file "astro.ini"
+26 13:12:59 - -  - astro_data.py - load_config-44 - log level set to "DEBUG"
+26 13:12:59 -  - astro_data.py - load_config-67 - 3 observation(s) loaded from file "astro.ini"
+26 13:13:00 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:06 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:07 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:09 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:09 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:10 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:11 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:12 -  - astro_view.py - on_button_new_obs-111 - Click on button "New obs"
+26 13:13:13 -  - astro_view.py - on_button_new_obs-111 - Click on button "New obs"
+26 13:13:14 -  - astro_view.py - on_button_new_obs-111 - Click on button "New obs"
+26 13:13:15 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:16 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:16 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:16 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:17 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:17 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:17 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:17 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:18 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:24 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:25 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:25 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:26 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:26 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:26 - -  - boat.py - format_current_position-36 - 1156.1 NM since last position at 5.0 Knots - course 180°
+26 13:13:27 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
+26 13:13:35 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
+26 13:13:35 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
+26 13:13:38 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
+26 13:13:39 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
+26 13:13:39 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
+26 13:13:39 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
+26 13:13:40 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
