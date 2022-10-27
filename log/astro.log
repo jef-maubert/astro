@@ -1,935 +1,141 @@
-26 13:13:40 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:13:40 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:13:41 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:13:41 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:13:42 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:13:42 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:13:42 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:18 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:18 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:19 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:19 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:19 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:22 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:23 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:23 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:24 -  - astro_view.py - on_button_new_obs-111 - Click on button "New obs"
-26 13:14:25 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:26 - -  - boat.py - format_current_position-36 - 1387.4 NM since last position at 6.0 Knots - course 180°
-26 13:14:26 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
-26 13:14:34 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 6.0 Knots - course 180°
-26 13:14:34 - -  - boat.py - format_current_position-36 - 2774.9 NM since last position at 12.0 Knots - course 180°
-26 13:14:38 - -  - boat.py - format_current_position-36 - 2774.9 NM since last position at 12.0 Knots - course 180°
-26 13:14:39 - -  - boat.py - format_current_position-36 - 2774.9 NM since last position at 12.0 Knots - course 180°
-26 13:14:39 - -  - boat.py - format_current_position-36 - 2774.9 NM since last position at 12.0 Knots - course 180°
-26 13:15:17 - -  - boat.py - format_current_position-36 - 2775.1 NM since last position at 12.0 Knots - course 180°
-26 13:15:19 - -  - boat.py - format_current_position-36 - 2775.1 NM since last position at 12.0 Knots - course 180°
-26 13:20:55 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:21:06 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:21:06 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:21:06 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:21:06 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:21:06 - -  - boat.py - format_current_position-36 - 1156.8 NM since last position at 5.0 Knots - course 180°
-26 13:21:17 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:21:17 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:21:17 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:21:17 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:21:26 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:21:26 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:21:26 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:21:26 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:21:27 - -  - boat.py - format_current_position-36 - 1156.8 NM since last position at 5.0 Knots - course 180°
-26 13:21:31 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
-26 13:21:34 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
-26 13:21:34 - -  - boat.py - format_current_position-36 - 1388.2 NM since last position at 6.0 Knots - course 180°
-26 13:21:41 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:21:41 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:21:41 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:21:41 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:21:41 - -  - boat.py - format_current_position-36 - 1388.2 NM since last position at 6.0 Knots - course 180°
-26 13:21:49 - -  - boat.py - format_current_position-36 - 1388.2 NM since last position at 6.0 Knots - course 180°
-26 13:21:50 - -  - boat.py - format_current_position-36 - 1388.2 NM since last position at 6.0 Knots - course 180°
-26 13:21:52 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
-26 13:21:55 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 6.0 Knots - course 180°
-26 13:21:55 - -  - boat.py - format_current_position-36 - 1156.8 NM since last position at 5.0 Knots - course 180°
-26 13:25:09 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:25:09 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:25:09 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:25:09 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:25:09 - -  - boat.py - format_current_position-36 - 1157.1 NM since last position at 5.0 Knots - course 180°
-26 13:25:15 - -  - boat.py - format_current_position-36 - 1157.1 NM since last position at 5.0 Knots - course 180°
-26 13:25:16 - -  - boat.py - format_current_position-36 - 1157.1 NM since last position at 5.0 Knots - course 180°
-26 13:25:17 - -  - boat.py - format_current_position-36 - 1157.1 NM since last position at 5.0 Knots - course 180°
-26 13:25:17 - -  - boat.py - format_current_position-36 - 1157.1 NM since last position at 5.0 Knots - course 180°
-26 13:26:10 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:26:10 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:26:10 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:26:10 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:26:10 - -  - boat.py - format_current_position-36 - 1157.2 NM since last position at 5.0 Knots - course 180°
-26 13:27:02 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:27:02 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:27:02 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:27:02 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:27:02 - -  - boat.py - format_current_position-36 - 1157.3 NM since last position at 5.0 Knots - course 180°
-26 13:27:39 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:27:39 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:27:39 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:27:39 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:27:39 - -  - boat.py - format_current_position-36 - 1157.3 NM since last position at 5.0 Knots - course 180°
-26 13:31:37 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:31:37 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:31:37 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:31:37 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:31:37 - -  - boat.py - format_current_position-36 - 1157.6 NM since last position at 5.0 Knots - course 180°
-26 13:31:56 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:31:56 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:31:56 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:31:56 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:31:56 - -  - boat.py - format_current_position-36 - 1157.7 NM since last position at 5.0 Knots - course 180°
-26 13:32:00 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:32:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:32:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:32:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:32:00 - -  - boat.py - format_current_position-36 - 1157.7 NM since last position at 5.0 Knots - course 180°
-26 13:33:00 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:33:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:33:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:33:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:33:00 - -  - boat.py - format_current_position-36 - 1157.8 NM since last position at 5.0 Knots - course 180°
-26 13:33:04 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:33:04 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:33:04 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:33:04 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:33:04 - -  - boat.py - format_current_position-36 - 1157.8 NM since last position at 5.0 Knots - course 180°
-26 13:33:08 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:33:08 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:33:08 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:33:08 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:33:08 - -  - boat.py - format_current_position-36 - 1157.8 NM since last position at 5.0 Knots - course 180°
-26 13:33:12 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
-26 13:33:15 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
-26 13:33:15 - -  - boat.py - format_current_position-36 - 1389.3 NM since last position at 6.0 Knots - course 180°
-26 13:33:19 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:33:19 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:33:19 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:33:19 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:33:19 - -  - boat.py - format_current_position-36 - 1389.3 NM since last position at 6.0 Knots - course 180°
-26 13:34:54 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:34:54 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:34:54 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:34:54 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:34:54 - -  - boat.py - format_current_position-36 - 1389.5 NM since last position at 6.0 Knots - course 180°
-26 13:34:55 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 13:54:16 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:54:16 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:54:16 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:54:16 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:54:16 - -  - boat.py - format_current_position-36 - 1391.4 NM since last position at 6.0 Knots - course 180°
-26 13:54:18 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 13:54:21 -  - astro.py - init_log-67 - Starting astro version V2.0
-26 13:54:21 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
-26 13:54:21 - -  - astro.py - load_config-78 - log level set to "DEBUG"
-26 13:54:21 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
-26 13:54:25 -  - astro.py - new_astro-326 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-26 13:54:25 - -  - astro.py - enter_date-200 - New date = 26/10/2022
-26 13:54:26 - -  - astro.py - enter_time-216 - New time = 13:54:26
-26 13:54:26 - -  - astro.py - enter_eye_height-266 - New eye_height = 2 m
-26 13:54:30 - -  - boat.py - get_position_at-28 - 1391.4 NM since last position at 6.0 Knots - course 180°
-26 13:54:30 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 26 00:00:00 : decl = 12°21.4'S (var -0.85'),  ahv0 = 183°59.8'(var 15.001°)
-26 13:54:30 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-26 13:54:30 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 11.90722 hours
-26 13:54:30 -  - observation.py - calculate_decl_from_ho249-107 - at 13:54:26 decl = 12°31.5'S
-26 13:54:30 -  - observation.py - calculate_ahv0_from_ho249-117 - At 13:54:26 ahv0 = 002°37.0', ahvg = 007°37.0'
-26 13:54:30 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-124 - for angle : 50°, refraction = 0.8'
-26 13:54:30 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-129 - for eye height : 2 m, eye height correction = 2.7'
-26 13:54:30 - -  - observation.py - calculate_half_sun_lumb_angle-133 - half_sun_lumb_angle = 16.0'
-26 13:54:30 -  - observation.py - calculate_he_and_az-173 - Sextant height observed +50°00' - corrected : +50°12' 
-26 13:54:30 -  - observation.py - calculate_he-143 - Height estimated : +54°52' 
-26 13:54:30 - -  - observation.py - calculate_az-158 - Azimut by asin : +012° 
-26 13:54:30 - -  - observation.py - calculate_az-159 - Azimut by atan : -012° 
-26 13:54:30 -  - observation.py - calculate_az-160 - Azimut : +192° 
-26 13:54:30 -  - observation.py - calculate_he_and_az-181 - Intercept : -279.2 NM
-26 13:58:46 -  - astro.py - save_config-124 - Configuration saved in file astro.ini
-26 13:58:49 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:58:49 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:58:49 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:58:49 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:58:49 - -  - boat.py - format_current_position-36 - 1391.9 NM since last position at 6.0 Knots - course 180°
-26 13:58:51 - -  - course_speed_dlg.py - __init__-48 - geometry = "300x200"
-26 13:58:57 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 13:59:32 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 13:59:32 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 13:59:32 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 13:59:32 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 13:59:32 - -  - boat.py - format_current_position-36 - 1392.0 NM since last position at 6.0 Knots - course 180°
-26 13:59:36 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 14:03:32 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 14:03:32 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 14:03:32 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 14:03:32 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 14:03:32 - -  - boat.py - format_current_position-36 - 1392.4 NM since last position at 6.0 Knots - course 180°
-26 14:03:40 - !!!  - course_speed_dlg.py - validate-135 - h22:00:00 is a not correct value for "^\d{1,2}:\d{1,2}:\d{1,2}$". it should match "time"
-26 14:03:49 - !!!  - course_speed_dlg.py - validate-135 - 6.0k is a not correct value for "^\d{1,2}\.?\d?$". it should match "speed"
-26 14:03:49 - !!!  - course_speed_dlg.py - validate-135 - 1800 is a not correct value for "^\d{1,3}$". it should match "course"
-26 14:04:08 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 6.0 Knots - course 180°
-26 14:04:08 - -  - boat.py - format_current_position-36 - 1160.3 NM since last position at 5.0 Knots - course 180°
-26 14:04:16 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 5.0 Knots - course 180°
-26 14:04:16 - -  - boat.py - format_current_position-36 - 928.3 NM since last position at 4.0 Knots - course 180°
-26 14:04:26 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 4.0 Knots - course 180°
-26 14:04:26 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 14:04:53 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 14:34:35 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 14:34:35 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 14:34:35 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 14:34:35 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 14:34:35 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 14:34:45 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 14:34:45 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 14:34:45 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 14:34:45 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 14:34:45 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 14:35:06 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 14:47:34 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 14:47:34 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 14:47:34 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 14:47:34 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 14:47:34 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 14:48:53 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 14:48:53 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 14:48:53 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 14:48:53 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 14:48:53 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 14:48:57 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 14:55:53 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 14:55:55 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 14:55:55 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 14:55:55 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 14:55:55 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 14:55:55 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 14:55:59 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 14:56:43 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 14:56:49 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 14:56:49 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 14:56:49 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 14:56:49 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 14:56:49 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 14:56:51 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 14:59:16 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 14:59:19 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 14:59:19 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 14:59:19 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 14:59:19 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 14:59:19 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 14:59:21 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 14:59:56 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 14:59:59 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 14:59:59 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 14:59:59 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 14:59:59 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 14:59:59 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:00:01 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 15:01:59 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 15:02:13 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:05:21 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:05:21 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:05:21 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:05:21 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:05:21 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:05:23 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 15:05:49 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:12:33 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:12:33 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:12:33 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:12:33 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:12:33 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:12:35 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 15:12:49 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:13:59 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:13:59 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:13:59 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:13:59 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:13:59 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:14:01 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 15:14:50 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:29:31 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:29:31 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:29:31 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:29:31 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:29:32 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:29:33 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 15:29:43 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:30:00 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:30:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:30:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:30:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:30:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:30:01 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 15:30:50 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:32:40 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:32:40 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:32:40 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:32:40 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:32:40 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:32:42 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°00.0'N", lattitude : "005°00.0'E"
-26 15:32:53 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:42:09 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:42:09 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:42:09 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:42:09 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:42:09 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:42:26 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°13.0'N", lattitude : "005°52.3'E"
-26 15:42:32 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:44:22 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:44:22 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:44:22 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:44:22 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:44:22 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:44:25 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 15:44:40 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:53:33 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:53:33 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:53:33 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:53:33 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:53:33 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:53:35 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 15:53:41 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:54:00 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:54:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:54:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:54:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:54:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:54:01 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 15:54:04 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:56:36 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:56:36 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:56:36 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:56:36 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:56:36 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:56:38 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 15:56:44 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 15:57:14 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 15:57:14 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 15:57:14 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 15:57:14 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 15:57:14 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 15:57:15 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 15:57:29 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 17:51:12 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 17:51:12 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 17:51:12 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 17:51:12 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 17:51:12 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 17:51:15 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:01:06 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:02:35 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:02:35 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:02:35 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:02:35 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:02:35 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:02:37 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:02:42 -  - init_pos_dlg.py - __init__-34 - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:05:15 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:05:15 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:05:15 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:05:15 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:05:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:05:18 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:05:22 -  - init_pos_dlg.py - apply-163 - Output - lattitude : "45°16.1N", lattitude : "005°52.3W"
-26 18:05:56 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:05:56 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:05:56 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:05:56 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:05:56 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:05:58 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:06:00 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:06:09 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:06:09 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:06:09 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:06:09 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:06:09 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:06:13 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:06:15 -  - init_pos_dlg.py - apply-163 - Output - lattitude : "45°16.1'N", lattitude : "005°52.3'W"
-26 18:06:56 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:06:56 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:06:56 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:06:56 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:06:56 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:07:00 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:07:04 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:07:45 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:07:45 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:07:45 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:07:45 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:07:45 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:07:48 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:07:51 -  - init_pos_dlg.py - apply-163 - Output - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:08:49 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:08:49 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:08:49 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:08:49 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:09:24 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:09:24 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:09:24 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:09:24 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:09:24 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:09:32 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:09:37 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:09:37 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:09:37 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:09:37 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:09:37 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:09:42 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:09:46 -  - init_pos_dlg.py - apply-163 - Output - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:13:36 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:13:36 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:13:36 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:13:36 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:13:36 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:13:37 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:13:38 -  - init_pos_dlg.py - apply-163 - Output - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:13:38 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:13:42 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:13:50 - !!!  - init_pos_dlg.py - validate-182 - 16.1j is a not correct value for "^\d{1,2}\.?\d?$". it should match "minute"
-26 18:13:58 -  - init_pos_dlg.py - apply-163 - Output - lattitude : "45°16.0'N", lattitude : "005°52.3'E"
-26 18:13:58 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:02 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.0'N", lattitude : "005°52.3'E"
-26 18:14:07 -  - init_pos_dlg.py - apply-163 - Output - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 18:14:07 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:13 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:13 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:14 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:14 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:14:16 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:14:25 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:14:25 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:14:25 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:14:25 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:14:25 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:15:51 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:15:55 -  - astro.py - init_log-67 - Starting astro version V2.0
-26 18:15:55 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
-26 18:15:55 - -  - astro.py - load_config-78 - log level set to "DEBUG"
-26 18:15:55 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
-26 18:16:17 -  - astro.py - save_config-124 - Configuration saved in file astro.ini
-26 18:16:19 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:16:19 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:16:19 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:16:19 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:16:19 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:16:54 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:18:56 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:18:56 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:18:56 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:18:56 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:18:57 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:18:58 -  - astro_view.py - on_button_new_obs-129 - Click on button "New obs"
-26 18:18:59 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:22:27 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:22:27 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:22:27 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:22:27 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:23:00 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:23:00 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:23:00 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:23:00 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:23:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:23:11 -  - astro_view.py - on_button_display_all_observations-140 - Click on button "Display all observations"
-26 18:23:11 -  - astro_view.py - on_button_fix_position-143 - Click on button "Fix position"
-26 18:23:16 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:23:18 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:23:18 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:23:18 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:23:18 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:23:18 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:23:20 -  - astro_view.py - on_button_new_observation-137 - Click on button "New observation"
-26 18:23:21 -  - astro_view.py - on_button_display_all_observations-140 - Click on button "Display all observations"
-26 18:23:22 -  - astro_view.py - on_button_fix_position-143 - Click on button "Fix position"
-26 18:23:23 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:34:10 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:34:10 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:34:10 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:34:10 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:34:11 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:34:16 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:34:17 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:34:18 -  - astro_view.py - on_button_new_observation-137 - Click on button "New observation"
-26 18:34:20 -  - astro_view.py - on_button_new_observation-137 - Click on button "New observation"
-26 18:34:21 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:37:51 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:37:51 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:37:51 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:37:51 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:37:51 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:38:28 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:38:30 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:38:30 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:38:30 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:38:30 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:38:30 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:42:14 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:42:18 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:42:18 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:42:18 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:42:18 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:42:18 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 18:43:31 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 18:43:32 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 18:43:32 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 18:43:32 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 18:43:32 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 18:43:32 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 19:24:26 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 23:32:12 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 23:32:12 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 23:32:12 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 23:32:12 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 23:32:12 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:32:22 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 23:32:43 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 23:33:21 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 23:34:28 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 23:34:31 -  - astro.py - init_log-67 - Starting astro version V2.0
-26 23:34:31 -  - astro.py - load_config-72 - Loading configuration from file "astro.ini"
-26 23:34:31 - -  - astro.py - load_config-78 - log level set to "DEBUG"
-26 23:34:31 -  - astro.py - load_config-101 - 3 observation(s) loaded from file "astro.ini"
-26 23:34:34 -  - astro.py - new_astro-326 - Enter a new sun sight, and calculate the height angles, azimut and intercept
-26 23:34:38 - -  - astro.py - enter_date-200 - New date = 26/10/2022
-26 23:34:40 - -  - astro.py - enter_time-216 - New time = 23:34:40
-26 23:34:46 - -  - astro.py - enter_eye_height-266 - New eye_height = 2 m
-26 23:35:06 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:35:06 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 26 00:00:00 : decl = 12°21.4'S (var -0.85'),  ahv0 = 183°59.8'(var 15.001°)
-26 23:35:06 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-26 23:35:06 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 21.57778 hours
-26 23:35:06 -  - observation.py - calculate_decl_from_ho249-107 - at 23:34:40 decl = 12°39.7'S
-26 23:35:06 -  - observation.py - calculate_ahv0_from_ho249-117 - At 23:34:40 ahv0 = 147°41.1', ahvg = 153°33.4'
-26 23:35:06 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-124 - for angle : 45°, refraction = 1.0'
-26 23:35:06 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-129 - for eye height : 2 m, eye height correction = 2.7'
-26 23:35:06 - -  - observation.py - calculate_half_sun_lumb_angle-133 - half_sun_lumb_angle = 16.0'
-26 23:35:06 -  - observation.py - calculate_he_and_az-173 - Sextant height observed +45°00' - corrected : +45°12' 
-26 23:35:06 -  - observation.py - calculate_he-143 - Height estimated : -50°24' 
-26 23:35:06 - -  - observation.py - calculate_az-158 - Azimut by asin : +042° 
-26 23:35:06 - -  - observation.py - calculate_az-159 - Azimut by atan : +042° 
-26 23:35:06 -  - observation.py - calculate_az-160 - Azimut : +317° 
-26 23:35:06 -  - observation.py - calculate_he_and_az-181 - Intercept : 5736.5 NM
-26 23:35:18 -  - astro.py - save_config-124 - Configuration saved in file astro.ini
-26 23:35:24 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 23:35:24 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 23:35:24 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 23:35:24 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 23:35:24 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:37:56 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 23:38:01 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 23:38:01 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 23:38:01 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 23:38:01 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 23:38:01 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:38:24 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 23:46:14 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 23:46:14 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 23:46:14 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 23:46:14 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 23:46:14 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:47:53 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 23:48:03 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 23:49:03 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 23:49:03 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 23:49:03 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 23:49:03 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 23:49:03 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:49:07 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 23:49:30 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 23:50:10 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 23:50:20 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 23:50:30 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 23:50:30 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 23:50:30 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 23:50:30 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 23:50:30 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:50:46 -  - init_pos_dlg.py - __init__-34 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
-26 23:52:11 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 23:52:14 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 23:52:14 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 23:52:14 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 23:52:14 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 23:52:14 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:52:35 - !!!  - observation_dlg.py - validate-158 - 2.0 is a not correct value for "^\d{1,3}$". it should match "height"
-26 23:52:48 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-26 23:53:33 -  - aa.py - init_log-44 - Starting astro version V2.0
-26 23:53:33 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-26 23:53:33 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-26 23:53:33 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-26 23:53:33 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:53:39 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-26 23:53:48 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:01:58 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:01:58 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:01:58 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:01:58 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:01:58 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:02:07 - !!!  - course_speed_dlg.py - validate-140 - 400 is too high ( it should be < 360)
-27 00:02:15 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:02:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 359°
-27 00:02:21 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 359°
-27 00:02:21 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:02:26 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:03:20 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:03:20 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:03:20 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:03:20 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:03:20 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:03:25 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:03:36 - !!!  - observation_dlg.py - validate-163 - 61 is too high ( it should be < 60)
-27 00:03:47 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:04:03 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:04:29 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:04:29 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:04:29 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:04:29 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:04:29 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:04:31 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:14:38 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:14:38 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:14:38 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:14:38 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:14:38 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:15:03 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:15:05 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:15:05 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:15:05 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:15:05 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:15:06 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:15:10 -  - astro_view.py - on_button_new_observation-144 - At 27/10/2022 00:15:08 with eye height = 2m angle onbserved = +1845°00'"
-27 00:15:10 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:15:54 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:15:57 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:15:57 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:15:57 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:15:57 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:15:57 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:16:00 -  - astro_view.py - on_button_new_observation-144 - At 27/10/2022 00:15:59 with eye height = 2m angle onbserved = +45°30'"
-27 00:16:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:17:02 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:17:03 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:17:03 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:17:03 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:17:03 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:17:03 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:17:06 -  - astro_view.py - on_button_new_observation-144 - At 27/10/2022 00:17:05 with eye height = 2m, Height observed = +45°30'
-27 00:17:06 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:17:47 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:18:05 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:18:05 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:18:05 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:18:05 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:18:05 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:18:07 - -  - astro_view.py - on_button_new_observation-144 - At 27/10/2022 00:18:06 with eye height = 2m, Height observed = +45°30'
-27 00:18:07 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:18:19 - -  - astro_view.py - on_button_new_observation-144 - At 27/10/2022 00:18:17 with eye height = 2m, Height observed = +45°30'
-27 00:18:19 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:18:21 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:23:23 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:23:23 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:23:23 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:23:23 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:23:23 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:23:27 - -  - astro_view.py - on_button_new_observation-145 - At 27/10/2022 00:23:25 with eye height = 2m, Height observed = +45°30'
-27 00:23:27 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:24:10 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:24:13 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:24:13 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:24:13 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:24:13 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:24:13 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:24:16 - -  - astro_view.py - on_button_new_observation-145 - At 27/10/2022 00:24:15 with eye height = 2m, Height observed = +45°30'
-27 00:24:16 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:24:16 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:24:16 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 00:24:16 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-27 00:24:16 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = -1.59583 hours
-27 00:24:16 -  - observation.py - calculate_decl_from_ho249-107 - at 00:24:15 decl = 12°40.6'S
-27 00:24:16 -  - observation.py - calculate_ahv0_from_ho249-117 - At 00:24:15 ahv0 = 160°05.0', ahvg = 165°57.3'
-27 00:24:16 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-124 - for angle : 46°, refraction = 1.0'
-27 00:24:16 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-129 - for eye height : 2 m, eye height correction = 2.7'
-27 00:24:16 - -  - observation.py - calculate_half_sun_lumb_angle-133 - half_sun_lumb_angle = 16.0'
-27 00:24:16 -  - observation.py - calculate_he_and_az-173 - Sextant height observed +45°30' - corrected : +45°42' 
-27 00:24:16 -  - observation.py - calculate_he-143 - Height estimated : -55°17' 
-27 00:24:16 - -  - observation.py - calculate_az-158 - Azimut by asin : +024° 
-27 00:24:16 - -  - observation.py - calculate_az-159 - Azimut by atan : +024° 
-27 00:24:16 -  - observation.py - calculate_az-160 - Azimut : +335° 
-27 00:24:16 -  - observation.py - calculate_he_and_az-181 - Intercept : 6059.4 NM
-27 00:25:24 - -  - astro_view.py - on_button_new_observation-145 - At 27/10/2022 00:25:08 with eye height = 2m, Height observed = +45°30'
-27 00:25:24 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:25:24 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:25:24 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 00:25:24 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-27 00:25:24 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = -1.58111 hours
-27 00:25:24 -  - observation.py - calculate_decl_from_ho249-107 - at 00:25:08 decl = 12°40.6'S
-27 00:25:24 -  - observation.py - calculate_ahv0_from_ho249-117 - At 00:25:08 ahv0 = 160°18.2', ahvg = 166°10.5'
-27 00:25:24 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-124 - for angle : 46°, refraction = 1.0'
-27 00:25:24 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-129 - for eye height : 2 m, eye height correction = 2.7'
-27 00:25:24 - -  - observation.py - calculate_half_sun_lumb_angle-133 - half_sun_lumb_angle = 16.0'
-27 00:25:24 -  - observation.py - calculate_he_and_az-173 - Sextant height observed +45°30' - corrected : +45°42' 
-27 00:25:24 -  - observation.py - calculate_he-143 - Height estimated : -55°21' 
-27 00:25:24 - -  - observation.py - calculate_az-158 - Azimut by asin : +024° 
-27 00:25:24 - -  - observation.py - calculate_az-159 - Azimut by atan : +024° 
-27 00:25:24 -  - observation.py - calculate_az-160 - Azimut : +335° 
-27 00:25:24 -  - observation.py - calculate_he_and_az-181 - Intercept : 6063.3 NM
-27 00:25:33 - !!!  - observation_dlg.py - validate-159 - 12:00 is a not correct value for "^\d{1,2}:\d{1,2}:\d{1,2}$". it should match "time"
-27 00:25:37 - -  - astro_view.py - on_button_new_observation-145 - At 27/10/2022 12:00:00 with eye height = 2m, Height observed = +45°30'
-27 00:25:37 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:25:37 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:25:37 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 00:25:37 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-27 00:25:37 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = 10.00000 hours
-27 00:25:37 -  - observation.py - calculate_decl_from_ho249-107 - at 12:00:00 decl = 12°50.3'S
-27 00:25:37 -  - observation.py - calculate_ahv0_from_ho249-117 - At 12:00:00 ahv0 = 334°01.9', ahvg = 339°54.2'
-27 00:25:37 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-124 - for angle : 46°, refraction = 1.0'
-27 00:25:37 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-129 - for eye height : 2 m, eye height correction = 2.7'
-27 00:25:37 - -  - observation.py - calculate_half_sun_lumb_angle-133 - half_sun_lumb_angle = 16.0'
-27 00:25:37 -  - observation.py - calculate_he_and_az-173 - Sextant height observed +45°30' - corrected : +45°42' 
-27 00:25:37 -  - observation.py - calculate_he-143 - Height estimated : +29°07' 
-27 00:25:37 - -  - observation.py - calculate_az-158 - Azimut by asin : -022° 
-27 00:25:37 - -  - observation.py - calculate_az-159 - Azimut by atan : +022° 
-27 00:25:37 -  - observation.py - calculate_az-160 - Azimut : +157° 
-27 00:25:37 -  - observation.py - calculate_he_and_az-181 - Intercept : 995.4 NM
-27 00:25:49 - -  - astro_view.py - on_button_new_observation-145 - At 27/10/2022 00:25:42 with eye height = 2m, Height observed = +45°30'
-27 00:25:49 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:25:49 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:25:49 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 00:25:49 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-27 00:25:49 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = -1.57167 hours
-27 00:25:49 -  - observation.py - calculate_decl_from_ho249-107 - at 00:25:42 decl = 12°40.6'S
-27 00:25:49 -  - observation.py - calculate_ahv0_from_ho249-117 - At 00:25:42 ahv0 = 160°26.7', ahvg = 166°19.0'
-27 00:25:49 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-124 - for angle : 46°, refraction = 1.0'
-27 00:25:49 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-129 - for eye height : 2 m, eye height correction = 2.7'
-27 00:25:49 - -  - observation.py - calculate_half_sun_lumb_angle-133 - half_sun_lumb_angle = 16.0'
-27 00:25:49 -  - observation.py - calculate_he_and_az-173 - Sextant height observed +45°30' - corrected : +45°42' 
-27 00:25:49 -  - observation.py - calculate_he-143 - Height estimated : -55°23' 
-27 00:25:49 - -  - observation.py - calculate_az-158 - Azimut by asin : +023° 
-27 00:25:49 - -  - observation.py - calculate_az-159 - Azimut by atan : +023° 
-27 00:25:49 -  - observation.py - calculate_az-160 - Azimut : +336° 
-27 00:25:49 -  - observation.py - calculate_he_and_az-181 - Intercept : 6065.7 NM
-27 00:26:01 - -  - astro_view.py - on_button_new_observation-145 - At 27/10/2022 00:25:57 with eye height = 3m, Height observed = +45°30'
-27 00:26:01 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:26:01 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:26:01 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 00:26:01 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-27 00:26:01 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = -1.56750 hours
-27 00:26:01 -  - observation.py - calculate_decl_from_ho249-107 - at 00:25:57 decl = 12°40.6'S
-27 00:26:01 -  - observation.py - calculate_ahv0_from_ho249-117 - At 00:25:57 ahv0 = 160°30.5', ahvg = 166°22.8'
-27 00:26:01 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-124 - for angle : 46°, refraction = 1.0'
-27 00:26:01 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-129 - for eye height : 3 m, eye height correction = 3.3'
-27 00:26:01 - -  - observation.py - calculate_half_sun_lumb_angle-133 - half_sun_lumb_angle = 16.0'
-27 00:26:01 -  - observation.py - calculate_he_and_az-173 - Sextant height observed +45°30' - corrected : +45°42' 
-27 00:26:01 -  - observation.py - calculate_he-143 - Height estimated : -55°24' 
-27 00:26:01 - -  - observation.py - calculate_az-158 - Azimut by asin : +023° 
-27 00:26:01 - -  - observation.py - calculate_az-159 - Azimut by atan : +023° 
-27 00:26:01 -  - observation.py - calculate_az-160 - Azimut : +336° 
-27 00:26:01 -  - observation.py - calculate_he_and_az-181 - Intercept : 6066.2 NM
-27 00:26:06 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:26:09 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:26:09 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:26:09 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:26:09 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:26:09 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:26:17 - -  - astro_view.py - on_button_new_observation-145 - At 27/10/2022 00:26:13 with eye height = 2m, Height observed = +45°30'
-27 00:26:17 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:26:17 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:26:17 - -  - observation.py - extract_ephemerides_from_ho249-83 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 00:26:17 - -  - observation.py - calculate_nb_utc_hour_since_midnight-99 - utc_offset_hour = -2 hours
-27 00:26:17 - -  - observation.py - calculate_nb_utc_hour_since_midnight-101 - utc_time = -1.56306 hours
-27 00:26:17 -  - observation.py - calculate_decl_from_ho249-107 - at 00:26:13 decl = 12°40.6'S
-27 00:26:17 -  - observation.py - calculate_ahv0_from_ho249-117 - At 00:26:13 ahv0 = 160°34.5', ahvg = 166°26.8'
-27 00:26:17 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-124 - for angle : 46°, refraction = 1.0'
-27 00:26:17 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-129 - for eye height : 2 m, eye height correction = 2.7'
-27 00:26:17 - -  - observation.py - calculate_half_sun_lumb_angle-133 - half_sun_lumb_angle = 16.0'
-27 00:26:17 -  - observation.py - calculate_he_and_az-173 - Sextant height observed +45°30' - corrected : +45°42' 
-27 00:26:17 -  - observation.py - calculate_he-143 - Height estimated : -55°26' 
-27 00:26:17 - -  - observation.py - calculate_az-158 - Azimut by asin : +023° 
-27 00:26:17 - -  - observation.py - calculate_az-159 - Azimut by atan : +023° 
-27 00:26:17 -  - observation.py - calculate_az-160 - Azimut : +336° 
-27 00:26:17 -  - observation.py - calculate_he_and_az-181 - Intercept : 6067.9 NM
-27 00:28:17 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:40:06 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:40:06 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:40:06 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:40:06 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:40:06 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:40:09 - -  - astro_view.py - on_button_new_observation-146 - At 27/10/2022 00:40:08 with eye height = 2m, Height observed = +45°30'
-27 00:40:09 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:40:09 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:40:09 - -  - observation.py - extract_ephemerides_from_ho249-89 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 00:40:09 - -  - observation.py - calculate_nb_utc_hour_since_midnight-105 - utc_offset_hour = -2 hours
-27 00:40:09 - -  - observation.py - calculate_nb_utc_hour_since_midnight-107 - utc_time = -1.33111 hours
-27 00:40:09 -  - observation.py - calculate_decl_from_ho249-113 - at 00:40:08 decl = 12°40.8'S
-27 00:40:09 -  - observation.py - calculate_ahv0_from_ho249-123 - At 00:40:08 ahv0 = 164°03.2', ahvg = 169°55.5'
-27 00:40:09 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-130 - for angle : 46°, refraction = 1.0'
-27 00:40:09 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-135 - for eye height : 2 m, eye height correction = 2.7'
-27 00:40:09 - -  - observation.py - calculate_half_sun_lumb_angle-139 - half_sun_lumb_angle = 16.0'
-27 00:40:09 -  - observation.py - calculate_he_and_az-179 - Sextant height observed +45°30' - corrected : +45°42' 
-27 00:40:09 -  - observation.py - calculate_he-149 - Height estimated : -56°18' 
-27 00:40:09 - -  - observation.py - calculate_az-164 - Azimut by asin : +017° 
-27 00:40:09 - -  - observation.py - calculate_az-165 - Azimut by atan : +017° 
-27 00:40:09 -  - observation.py - calculate_az-166 - Azimut : +342° 
-27 00:40:09 -  - observation.py - calculate_he_and_az-187 - Intercept : 6120.4 NM
-27 00:41:36 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 00:41:37 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 00:41:37 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 00:41:37 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 00:41:37 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 00:41:37 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:41:40 - -  - astro_view.py - on_button_new_observation-146 - At 27/10/2022 00:41:39 with eye height = 2m, Height observed = +45°30'
-27 00:41:40 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:41:40 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 00:41:40 - -  - observation.py - extract_ephemerides_from_ho249-89 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 00:41:40 - -  - observation.py - calculate_nb_utc_hour_since_midnight-105 - utc_offset_hour = -2 hours
-27 00:41:40 - -  - observation.py - calculate_nb_utc_hour_since_midnight-107 - utc_time = -1.30583 hours
-27 00:41:40 -  - observation.py - calculate_decl_from_ho249-113 - at 00:41:39 decl = 12°40.8'S
-27 00:41:40 -  - observation.py - calculate_ahv0_from_ho249-123 - At 00:41:39 ahv0 = 164°26.0', ahvg = 170°18.3'
-27 00:41:40 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-130 - for angle : 46°, refraction = 1.0'
-27 00:41:40 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-135 - for eye height : 2 m, eye height correction = 2.7'
-27 00:41:40 - -  - observation.py - calculate_half_sun_lumb_angle-139 - half_sun_lumb_angle = 16.0'
-27 00:41:40 -  - observation.py - calculate_he_and_az-179 - Sextant height observed +45°30' - corrected : +45°42' 
-27 00:41:40 -  - observation.py - calculate_he-149 - Height estimated : -56°23' 
-27 00:41:40 - -  - observation.py - calculate_az-164 - Azimut by asin : +017° 
-27 00:41:40 - -  - observation.py - calculate_az-165 - Azimut by atan : +017° 
-27 00:41:40 -  - observation.py - calculate_az-166 - Azimut : +342° 
-27 00:41:40 -  - observation.py - calculate_he_and_az-187 - Intercept : 6125.3 NM
-27 00:41:54 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 01:01:19 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 01:01:19 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 01:01:19 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 01:01:19 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 01:01:19 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:01:22 - -  - astro_view.py - on_button_new_observation-146 - At 27/10/2022 01:01:21 with eye height = 2m, Height observed = +45°30'
-27 01:01:22 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:01:22 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:01:22 - -  - observation.py - extract_ephemerides_from_ho249-99 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 01:01:22 - -  - observation.py - calculate_nb_utc_hour_since_midnight-115 - utc_offset_hour = -2 hours
-27 01:01:22 - -  - observation.py - calculate_nb_utc_hour_since_midnight-118 - utc_time = -0.97750 hours
-27 01:01:22 -  - observation.py - calculate_decl_from_ho249-125 - at 01:01:21 decl = 12°41.1'S
-27 01:01:22 -  - observation.py - calculate_ahv0_from_ho249-138 - At 01:01:21 ahv0 = 169°21.5', ahvg = 175°13.8'
-27 01:01:22 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-145 - for angle : 46°, refraction = 1.0'
-27 01:01:22 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-150 - for eye height : 2 m, eye height correction = 2.7'
-27 01:01:22 - -  - observation.py - calculate_half_sun_lumb_angle-154 - half_sun_lumb_angle = 16.0'
-27 01:01:22 -  - observation.py - calculate_he_and_az-194 - Sextant height observed +45°30' - corrected : +45°42' 
-27 01:01:22 -  - observation.py - calculate_he-164 - Height estimated : -57°10' 
-27 01:01:22 - -  - observation.py - calculate_az-179 - Azimut by asin : +008° 
-27 01:01:22 - -  - observation.py - calculate_az-180 - Azimut by atan : +008° 
-27 01:01:22 -  - observation.py - calculate_az-181 - Azimut : +351° 
-27 01:01:22 -  - observation.py - calculate_he_and_az-202 - Intercept : 6172.1 NM
-27 01:03:18 - -  - astro_view.py - on_button_new_observation-146 - At 27/10/2022 01:03:16 with eye height = 2m, Height observed = +45°30'
-27 01:03:18 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:03:18 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:03:18 - -  - observation.py - extract_ephemerides_from_ho249-99 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 01:03:18 - -  - observation.py - calculate_nb_utc_hour_since_midnight-115 - utc_offset_hour = -2 hours
-27 01:03:18 - -  - observation.py - calculate_nb_utc_hour_since_midnight-118 - utc_time = -0.94556 hours
-27 01:03:18 -  - observation.py - calculate_decl_from_ho249-125 - at 01:03:16 decl = 12°41.1'S
-27 01:03:18 -  - observation.py - calculate_ahv0_from_ho249-138 - At 01:03:16 ahv0 = 169°50.2', ahvg = 175°42.5'
-27 01:03:18 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-145 - for angle : 46°, refraction = 1.0'
-27 01:03:18 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-150 - for eye height : 2 m, eye height correction = 2.7'
-27 01:03:18 - -  - observation.py - calculate_half_sun_lumb_angle-154 - half_sun_lumb_angle = 16.0'
-27 01:03:18 -  - observation.py - calculate_he_and_az-194 - Sextant height observed +45°30' - corrected : +45°42' 
-27 01:03:18 -  - observation.py - calculate_he-164 - Height estimated : -57°13' 
-27 01:03:18 - -  - observation.py - calculate_az-179 - Azimut by asin : +007° 
-27 01:03:18 - -  - observation.py - calculate_az-180 - Azimut by atan : +007° 
-27 01:03:18 -  - observation.py - calculate_az-181 - Azimut : +352° 
-27 01:03:18 -  - observation.py - calculate_he_and_az-202 - Intercept : 6175.0 NM
-27 01:18:36 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 01:18:39 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 01:18:39 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 01:18:39 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 01:18:39 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 01:18:39 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:18:42 - -  - astro_view.py - on_button_new_observation-146 - At 27/10/2022 01:18:41 with eye height = 2m, Height observed = +45°30'
-27 01:18:42 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:18:42 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:18:42 - -  - observation.py - extract_ephemerides_from_ho249-99 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 01:18:42 - -  - observation.py - calculate_nb_utc_hour_since_midnight-115 - utc_offset_hour = -2 hours
-27 01:18:42 - -  - observation.py - calculate_nb_utc_hour_since_midnight-118 - utc_time = -0.68861 hours
-27 01:18:42 -  - observation.py - calculate_decl_from_ho249-125 - at 01:18:41 decl = 12°41.3'S
-27 01:18:42 -  - observation.py - calculate_ahv0_from_ho249-138 - At 01:18:41 ahv0 = 173°41.5', ahvg = 179°33.8'
-27 01:18:42 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-145 - for angle : 46°, refraction = 1.0'
-27 01:18:42 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-151 - for eye height : 2 m, eye height correction = 2.7'
-27 01:18:42 - -  - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-27 01:18:42 -  - observation.py - calculate_he_and_az-201 - Sextant height observed +45°30' - corrected : +45°42' 
-27 01:18:42 -  - observation.py - calculate_he-167 - Height estimated : -57°25' 
-27 01:18:42 - -  - observation.py - calculate_az-183 - Azimut by asin = +000° 
-27 01:18:42 - -  - observation.py - calculate_az-184 - Azimut by atan = +000° 
-27 01:18:42 -  - observation.py - calculate_az-185 - Azimut = +359° 
-27 01:18:42 -  - observation.py - calculate_he_and_az-209 - Intercept : 6187.4 NM
-27 01:19:12 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 01:22:30 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 01:22:30 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 01:22:30 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 01:22:30 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 01:22:30 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:22:34 - -  - astro_view.py - on_button_new_observation-146 - At 27/10/2022 01:22:32 with eye height = 2m, Height observed = +45°30'
-27 01:22:34 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:22:34 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:22:34 - -  - observation.py - extract_ephemerides_from_ho249-99 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 01:22:34 - -  - observation.py - calculate_nb_utc_hour_since_midnight-115 - utc_offset_hour = -2 hours
-27 01:22:34 - -  - observation.py - calculate_nb_utc_hour_since_midnight-118 - utc_time = -0.62444 hours
-27 01:22:34 -  - observation.py - calculate_decl_from_ho249-125 - at 01:22:32 decl = 12°41.4'S
-27 01:22:34 -  - observation.py - calculate_ahv0_from_ho249-138 - At 01:22:32 ahv0 = 174°39.3', ahvg = 180°31.6'
-27 01:22:34 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-145 - for angle : 46°, refraction = 1.0'
-27 01:22:34 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-151 - for eye height : 2 m, eye height correction = 2.7'
-27 01:22:34 - -  - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-27 01:22:34 -  - observation.py - calculate_he_and_az-201 - Sextant height observed +45°30' - corrected : +45°42' 
-27 01:22:34 -  - observation.py - calculate_he-167 - Height estimated : -57°25' 
-27 01:22:34 - -  - observation.py - calculate_az-183 - Azimut by asin = -000° 
-27 01:22:34 - -  - observation.py - calculate_az-184 - Azimut by atan = -000° 
-27 01:22:34 -  - observation.py - calculate_az-185 - Azimut = +000° 
-27 01:22:34 -  - observation.py - calculate_he_and_az-209 - Intercept : 6187.4 NM
-27 01:23:08 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 01:23:13 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 01:23:13 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 01:23:13 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 01:23:13 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
-27 01:23:13 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:23:15 - -  - astro_view.py - on_button_new_observation-146 - At 27/10/2022 01:23:14 with eye height = 2m, Height observed = +45°30'
-27 01:23:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:23:15 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:23:15 - -  - observation.py - extract_ephemerides_from_ho249-99 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 01:23:15 - -  - observation.py - calculate_nb_utc_hour_since_midnight-115 - utc_offset_hour = -2 hours
-27 01:23:15 - -  - observation.py - calculate_nb_utc_hour_since_midnight-118 - utc_time = -0.61278 hours
-27 01:23:15 -  - observation.py - calculate_decl_from_ho249-125 - at 01:23:14 decl = 12°41.4'S
-27 01:23:15 -  - observation.py - calculate_ahv0_from_ho249-138 - At 01:23:14 ahv0 = 174°49.8', ahvg = 180°42.1'
-27 01:23:15 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-145 - for angle : 46°, refraction = 1.0'
-27 01:23:15 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-151 - for eye height : 2 m, eye height correction = 2.7'
-27 01:23:15 - -  - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-27 01:23:15 -  - observation.py - calculate_he_and_az-201 - Sextant height observed +45°30' - corrected : +45°42' 
-27 01:23:15 -  - observation.py - calculate_he-167 - Height estimated : -57°25' 
-27 01:23:15 - -  - observation.py - calculate_az-183 - Azimut by asin = -001° 
-27 01:23:15 - -  - observation.py - calculate_az-184 - Azimut by atan = -001° 
-27 01:23:15 -  - observation.py - calculate_az-185 - Azimut = +001° 
-27 01:23:15 -  - observation.py - calculate_he_and_az-209 - Intercept : 6187.2 NM
-27 01:23:22 - -  - astro_view.py - on_button_new_observation-146 - At 27/10/2022 01:23:20 with eye height = 2m, Height observed = +45°30'
-27 01:23:22 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:23:22 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:23:22 - -  - observation.py - extract_ephemerides_from_ho249-99 - at 2022 OCT 27 00:00:00 : decl = 12°41.9'S (var -0.84'),  ahv0 = 184°01.3'(var 15.001°)
-27 01:23:22 - -  - observation.py - calculate_nb_utc_hour_since_midnight-115 - utc_offset_hour = -2 hours
-27 01:23:22 - -  - observation.py - calculate_nb_utc_hour_since_midnight-118 - utc_time = -0.61111 hours
-27 01:23:22 -  - observation.py - calculate_decl_from_ho249-125 - at 01:23:20 decl = 12°41.4'S
-27 01:23:22 -  - observation.py - calculate_ahv0_from_ho249-138 - At 01:23:20 ahv0 = 174°51.3', ahvg = 180°43.6'
-27 01:23:22 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-145 - for angle : 46°, refraction = 1.0'
-27 01:23:22 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-151 - for eye height : 2 m, eye height correction = 2.7'
-27 01:23:22 - -  - observation.py - calculate_half_sun_lumb_angle-156 - half_sun_lumb_angle = 16.0'
-27 01:23:22 -  - observation.py - calculate_he_and_az-201 - Sextant height observed +45°30' - corrected : +45°42' 
-27 01:23:22 -  - observation.py - calculate_he-167 - Height estimated : -57°25' 
-27 01:23:22 - -  - observation.py - calculate_az-183 - Azimut by asin = -001° 
-27 01:23:22 - -  - observation.py - calculate_az-184 - Azimut by atan = -001° 
-27 01:23:22 -  - observation.py - calculate_az-185 - Azimut = +001° 
-27 01:23:22 -  - observation.py - calculate_he_and_az-209 - Intercept : 6187.2 NM
-27 01:23:23 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 01:23:28 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
-27 01:23:29 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 01:23:29 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
-27 01:23:29 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
-27 01:23:29 -  - astro_data.py - load_config-68 - 4 observation(s) loaded from file "astro.ini"
-27 01:23:29 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 01:23:32 -  - astro_data.py - save_config-92 - Configuration saved in file astro.ini
+27 09:37:34 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+27 09:37:34 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+27 09:37:34 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+27 09:37:34 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
+27 09:37:45 -  - astro_data.py - save_config-111 - Configuration saved in file astro.ini
+27 09:47:06 -  - aa.py - init_log-44 - Starting astro version V2.0
+27 09:47:06 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+27 09:47:06 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+27 09:47:06 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+27 09:47:06 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 09:47:08 -  - astro_data.py - load_observations-82 - 3 observation(s) loaded from configuration file
+27 09:47:08 -  - astro_data.py - load_observations-85 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+27 09:47:08 -  - astro_data.py - load_observations-85 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+27 09:47:08 -  - astro_data.py - load_observations-85 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+27 09:47:08 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+27 09:47:08 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+27 09:47:08 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+27 09:47:08 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+27 09:47:08 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+27 09:47:08 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
+27 09:47:14 -  - astro_data.py - save_config-111 - Configuration saved in file astro.ini
+27 09:47:28 -  - aa.py - init_log-44 - Starting astro version V2.0
+27 09:47:28 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+27 09:47:28 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+27 09:47:28 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+27 09:47:28 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 09:47:30 -  - astro_data.py - load_observations-82 - 3 observation(s) loaded from configuration file
+27 09:47:30 -  - astro_data.py - load_observations-85 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+27 09:47:30 -  - astro_data.py - load_observations-85 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+27 09:47:30 -  - astro_data.py - load_observations-85 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+27 09:47:30 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+27 09:47:30 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+27 09:47:30 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+27 09:47:30 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+27 09:47:30 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+27 09:47:30 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
+27 09:47:35 -  - astro_data.py - save_config-111 - Configuration saved in file astro.ini
+27 09:51:39 -  - aa.py - init_log-44 - Starting astro version V2.0
+27 09:51:39 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+27 09:51:39 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+27 09:51:39 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+27 09:51:40 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 09:51:41 -  - astro_data.py - load_observations-82 - 3 observation(s) loaded from configuration file
+27 09:51:41 -  - astro_data.py - load_observations-85 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+27 09:51:41 -  - astro_data.py - load_observations-85 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+27 09:51:41 -  - astro_data.py - load_observations-85 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+27 09:51:41 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+27 09:51:41 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+27 09:51:41 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+27 09:51:41 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+27 09:51:41 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+27 09:51:41 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
+27 09:51:56 -  - astro_data.py - save_config-111 - Configuration saved in file astro.ini
+27 09:55:29 -  - aa.py - init_log-44 - Starting astro version V2.0
+27 09:55:29 -  - astro_data.py - load_config-39 - Loading configuration from file "astro.ini"
+27 09:55:29 - -  - astro_data.py - load_config-45 - log level set to "DEBUG"
+27 09:55:29 -  - astro_data.py - load_config-68 - 3 observation(s) loaded from file "astro.ini"
+27 09:55:29 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 09:55:31 -  - astro_data.py - load_observations-82 - 3 observation(s) loaded from configuration file
+27 09:55:31 -  - astro_data.py - load_observations-85 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+27 09:55:31 -  - astro_data.py - load_observations-85 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+27 09:55:31 -  - astro_data.py - load_observations-85 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+27 09:55:31 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+27 09:55:31 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+27 09:55:31 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+27 09:55:31 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+27 09:55:31 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+27 09:55:31 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
+27 09:55:53 -  - astro_data.py - save_config-111 - Configuration saved in file astro.ini
+27 09:59:13 -  - aa.py - init_log-44 - Starting astro version V2.0
+27 09:59:13 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+27 09:59:13 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+27 09:59:13 -  - astro_data.py - load_config-61 - 3 observation(s) loaded from file "astro.ini"
+27 09:59:13 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 09:59:15 -  - astro_data.py - load_observations-75 - 3 observation(s) loaded from configuration file
+27 09:59:15 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+27 09:59:15 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+27 09:59:15 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+27 09:59:15 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+27 09:59:15 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+27 09:59:15 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+27 09:59:15 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+27 09:59:15 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+27 09:59:15 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
+27 10:01:33 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+27 10:01:36 -  - aa.py - init_log-44 - Starting astro version V2.0
+27 10:01:36 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+27 10:01:36 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+27 10:01:36 -  - astro_data.py - load_config-61 - 3 observation(s) loaded from file "astro.ini"
+27 10:01:37 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 10:01:38 -  - astro_data.py - load_observations-75 - 3 observation(s) loaded from configuration file
+27 10:01:38 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+27 10:01:38 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+27 10:01:38 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+27 10:01:38 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+27 10:01:38 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+27 10:01:38 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+27 10:01:38 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+27 10:01:38 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+27 10:01:38 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
+27 10:01:39 -  - astro_data.py - remove_all_observations-122 - Removing section "OBSERVATION_1"
+27 10:01:39 -  - astro_data.py - remove_all_observations-122 - Removing section "OBSERVATION_2"
+27 10:01:39 -  - astro_data.py - remove_all_observations-122 - Removing section "OBSERVATION_3"
+27 10:01:39 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+27 10:01:39 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 10:01:46 -  - astro_data.py - load_observations-75 - 0 observation(s) loaded from configuration file
+27 10:05:25 -  - astro_data.py - load_observations-75 - 0 observation(s) loaded from configuration file
+27 10:05:33 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+27 10:06:02 -  - aa.py - init_log-44 - Starting astro version V2.0
+27 10:06:02 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+27 10:06:02 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+27 10:06:02 -  - astro_data.py - load_config-61 - 0 observation(s) loaded from file "astro.ini"
+27 10:06:02 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 10:06:05 -  - astro_data.py - load_observations-75 - 0 observation(s) loaded from configuration file
+27 10:06:09 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+27 10:06:10 -  - aa.py - init_log-44 - Starting astro version V2.0
+27 10:06:10 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+27 10:06:10 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+27 10:06:10 -  - astro_data.py - load_config-61 - 0 observation(s) loaded from file "astro.ini"
+27 10:06:10 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 10:06:11 -  - astro_data.py - load_observations-75 - 0 observation(s) loaded from configuration file
+27 10:06:15 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+27 10:06:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 10:06:16 -  - astro_data.py - load_observations-75 - 0 observation(s) loaded from configuration file
+27 10:06:23 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+27 10:07:10 -  - aa.py - init_log-44 - Starting astro version V2.0
+27 10:07:10 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+27 10:07:10 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+27 10:07:10 -  - astro_data.py - load_config-61 - 3 observation(s) loaded from file "astro.ini"
+27 10:07:11 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+27 10:07:12 -  - astro_data.py - load_observations-75 - 3 observation(s) loaded from configuration file
+27 10:07:12 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+27 10:07:12 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+27 10:07:12 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+27 10:07:12 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+27 10:07:12 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+27 10:07:12 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+27 10:07:12 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+27 10:07:12 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+27 10:07:12 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 17-10-2022 12:00:00
+27 10:07:23 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini

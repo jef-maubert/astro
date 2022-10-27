@@ -23,7 +23,6 @@ class InitPosDlg(tk.Toplevel):
         self.app_logger = self.parent.app_logger
         self.result = None
 
-
         self.date_var = tk.StringVar()
         self.date_var.set(last_modif_dt.strftime(constants.DATE_DISPLAY_FORMATTER).split(" ")[0])
         self.time_var = tk.StringVar()

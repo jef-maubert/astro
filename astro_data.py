@@ -4,16 +4,9 @@ Created on Mon Oct 24 17:34:57 2022
 
 @author: jef
 """
-import os
-import sys
-import re
-import logging
-import logging.handlers
 import configparser
 from configparser import NoSectionError, DuplicateSectionError
-import tkinter as tk
 import datetime
-import platform
 
 import constants
 from waypoint import Waypoint, format_angle
@@ -67,6 +60,25 @@ class AstroData ():
         except NoSectionError:
             self.app_logger.info('%d observation(s) loaded from file "%s"', self.next_observation_number-1, my_config_filename )
 
+    def load_observations(self):
+        observation_number = 1
+        list_of_observations = []
+        try:
+            while True:
+                section_name = 'OBSERVATION_{}'.format(observation_number)
+                intercept = float(self.app_config.get(section_name, 'intercept'))
+                azimut = float(self.app_config.get(section_name, 'azimut'))
+                observation_dt = self.app_config.get(section_name, 'date_time')
+                list_of_observations.append({"date_time":observation_dt, "azimut":azimut, "intercept": intercept})
+                observation_number += 1
+        except NoSectionError:
+            self.app_logger.info('%d observation(s) loaded from configuration file', observation_number-1)
+        observation_rank = 1
+        for observation in list_of_observations :
+            self.app_logger.info('%d) %s intercept = %.1f NM, Az = %03.0f°', observation_rank, observation["date_time"],
+                                 observation["intercept"], observation["azimut"])
+            observation_rank += 1
+        return list_of_observations
 
     def save_config(self):
         try:
