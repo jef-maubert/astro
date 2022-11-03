@@ -198,7 +198,7 @@ class DisplayHat:
         self.tess.pensize(old_pen)
 
     def calculate_legende_size(self, min_map_size):
-        self.legend_length = 1.0
+        self.legend_length = 2.0
         
     def draw_legend(self, color=LEGEND_COLOR):
         self.app_logger.debug('Drawing legend')

@@ -17,6 +17,7 @@ from course_speed_dlg import CourseSpeedDlg
 from init_pos_dlg import InitPosDlg
 from observation_dlg import ObservationdDlg
 from fix_position_dlg import FixPositionDlg
+from display_observations_dlg import DisplayObservationsDlg
 
 PADX_STD = 2
 PADY_STD = 4
@@ -35,13 +36,14 @@ class AstroTk(tk.Tk):
         self.title("Astro {}".format(constants.VERSION))
         self.grid()
         self.grid_columnconfigure(0, weight=1)
+
         next_row = 0
         title = tk.Label(self, text="Astro {}".format (constants.VERSION), background="green")
         title.grid(row=next_row, column=0, columnspan=2, padx=PADX_STD, sticky="NSEW")
+        self.grid_rowconfigure(next_row, weight=1)
+
         next_row += 1
-
         grid_dict =  {"padx": 5, "pady": 2, "sticky": "nsew"}
-
         last_pos_frame = tk.LabelFrame(self, text="Last position", borderwidth=2, relief=tk.GROOVE)
         last_pos_frame.grid(row=next_row, column=0, **grid_dict)
         last_pos_frame.grid_columnconfigure(0, weight=1)
@@ -52,6 +54,7 @@ class AstroTk(tk.Tk):
         self.last_pos.grid(row=1, column=0, **grid_dict)
         self.btn_modif_last_pos = tk.Button(last_pos_frame, text="Modify", command=self.on_button_init_last_pos)
         self.btn_modif_last_pos.grid(row=0, column=1, rowspan=2, **grid_dict)
+        self.grid_rowconfigure(next_row, weight=1)
 
         next_row += 1
         course_and_speed_frame = tk.LabelFrame(self, text="Course and speed", borderwidth=2, relief=tk.GROOVE)
@@ -64,6 +67,7 @@ class AstroTk(tk.Tk):
         self.speed.grid(row=1, column=0, **grid_dict)
         self.btn_modif_course_and_speed = tk.Button(course_and_speed_frame, text="Modify", command=self.on_button_modif_course_and_speed)
         self.btn_modif_course_and_speed.grid(row=0, column=1, rowspan=2, **grid_dict)
+        self.grid_rowconfigure(next_row, weight=1)
 
         next_row += 1
         current_pos_frame = tk.LabelFrame(self, text="Current position", borderwidth=2, relief=tk.GROOVE)
@@ -76,22 +80,27 @@ class AstroTk(tk.Tk):
         self.current_pos.grid(row=1, column=0, **grid_dict)
         self.btn_refresh_current_pos = tk.Button(current_pos_frame, text="Refresh", command=self.on_button_refresh_pos)
         self.btn_refresh_current_pos.grid(row=0, column=1, rowspan=2, **grid_dict)
+        self.grid_rowconfigure(next_row, weight=1)
 
         next_row += 1
         self.btn_modif_current_pos = tk.Button(self, text="New Observation", command=self.on_button_new_observation)
         self.btn_modif_current_pos.grid(column=0, row=next_row, **grid_dict)
+        self.grid_rowconfigure(next_row, weight=4)
 
         next_row += 1
         self.btn_modif_current_pos = tk.Button(self, text="Display all observations", command=self.on_button_display_all_observations)
         self.btn_modif_current_pos.grid(column=0, row=next_row, **grid_dict)
+        self.grid_rowconfigure(next_row, weight=4)
 
         next_row += 1
         self.btn_modif_current_pos = tk.Button(self, text="Fix position", command=self.on_button_fix_position)
         self.btn_modif_current_pos.grid(column=0, row=next_row, **grid_dict)
+        self.grid_rowconfigure(next_row, weight=1)
 
         next_row += 1
         self.btn_quit = tk.Button(self, text="Quit", command=self.on_button_quit)
         self.btn_quit.grid(column=0, row=next_row, **grid_dict)
+        self.grid_rowconfigure(next_row, weight=1)
 
     def on_button_quit(self):
         self.destroy()
@@ -151,6 +160,9 @@ class AstroTk(tk.Tk):
 
 
     def on_button_display_all_observations(self):
+        list_of_observations = self.data.load_observations()
+        my_display_observations_dlg = DisplayObservationsDlg(self, "All sun observations", self.data.my_boat, list_of_observations)
+        return
 #TOFIX
 #TODO how to launch turtle twice
         turtle_available = True
