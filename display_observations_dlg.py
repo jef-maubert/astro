@@ -21,7 +21,7 @@ SMALL_PEN = 1
 LEGEND_COLOR = "black"
 LAST_POSITION_COLOR = "black"
 TARGET_COLOR = "lightgrey"
-FONT_SIZE = 10
+FONT_SIZE = 8
 RATIO_IMAGE_INTERCEPT = 3
 
 def degree2radian (angle_degree):
@@ -218,7 +218,7 @@ class DisplayObservationsDlg(tk.Toplevel):
         self.drawing_canvas.create_oval(bottom_left, upper_right, outline = LAST_POSITION_COLOR, width = BIG_PEN)
 
         fix_summary = "{:.1f} NM / {}".format(suggested_fix["distance"], format_angle(suggested_fix["azimut"], INPUT_TYPE_AZIMUT))
-        self.drawing_canvas.create_text (upper_right, anchor=tk.W, text=fix_summary, 
+        self.drawing_canvas.create_text (upper_right, anchor=tk.W, text=fix_summary,
                                          font="Arial {}".format(FONT_SIZE), fill=LAST_POSITION_COLOR)
 
     def display_hat_by_canvas(self):

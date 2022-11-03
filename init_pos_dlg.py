@@ -28,10 +28,10 @@ class InitPosDlg(tk.Toplevel):
         self.time_var = tk.StringVar()
         self.time_var.set(last_modif_dt.strftime(constants.DATE_DISPLAY_FORMATTER).split(" ")[1])
 
-        latitude_str = format_angle (waypoint.latitude,INPUT_TYPE_LATITUDE) 
-        longitude_str = format_angle (waypoint.longitude,INPUT_TYPE_LONGITUDE) 
+        latitude_str = format_angle (waypoint.latitude,INPUT_TYPE_LATITUDE)
+        longitude_str = format_angle (waypoint.longitude,INPUT_TYPE_LONGITUDE)
         self.app_logger.info('Input - lattitude : "%s", lattitude : "%s"', latitude_str, longitude_str)
-        
+
         self.lat_deg_var = tk.StringVar()
         self.lat_deg_var.set(latitude_str.split("°")[0])
         self.lat_min_var = tk.StringVar()
@@ -99,9 +99,9 @@ class InitPosDlg(tk.Toplevel):
         self.lat_min_wid = tk.Entry(master, textvariable= self.lat_min_var, width=MIN_WIDTH)
         self.lat_min_wid.grid(row=next_prop_row, column=3, rowspan=2, **grid_dict)
         tk.Label (master, text="'").grid (row=next_prop_row, column=4, rowspan=2, **grid_unit_dict)
-        self.lat_sign_wid = tk.Radiobutton(master, text="N", variable = self.lat_sign_var, value = "N").grid (row=next_prop_row, column=5, **grid_unit_dict)
+        tk.Radiobutton(master, text="N", variable = self.lat_sign_var, value = "N").grid (row=next_prop_row, column=5, **grid_unit_dict)
         next_prop_row+=1
-        self.lat_sign_wid = tk.Radiobutton(master, text="S", variable = self.lat_sign_var, value = "S").grid (row=next_prop_row, column=5, **grid_unit_dict)
+        tk.Radiobutton(master, text="S", variable = self.lat_sign_var, value = "S").grid (row=next_prop_row, column=5, **grid_unit_dict)
         next_prop_row+=1
 
         tk.Label (master, text="Long").grid (row=next_prop_row, column=0, rowspan=2, **grid_dict)
@@ -111,9 +111,9 @@ class InitPosDlg(tk.Toplevel):
         self.long_min_wid = tk.Entry(master, textvariable= self.long_min_var, width=MIN_WIDTH)
         self.long_min_wid.grid(row=next_prop_row, column=3, rowspan=2, **grid_dict)
         tk.Label (master, text="'").grid (row=next_prop_row, column=4, rowspan=2, **grid_unit_dict)
-        self.long_sign_wid = tk.Radiobutton(master, text="W", variable = self.long_sign_var, value = "W").grid (row=next_prop_row, column=5, **grid_unit_dict)
+        tk.Radiobutton(master, text="W", variable = self.long_sign_var, value = "W").grid (row=next_prop_row, column=5, **grid_unit_dict)
         next_prop_row+=1
-        self.long_sign_wid = tk.Radiobutton(master, text="E", variable = self.long_sign_var, value = "E").grid (row=next_prop_row, column=5, **grid_unit_dict)
+        tk.Radiobutton(master, text="E", variable = self.long_sign_var, value = "E").grid (row=next_prop_row, column=5, **grid_unit_dict)
         next_prop_row+=1
 
         self.list_of_entry_validation.append({"category":"date", "variable":self.date_var, "widget":self.date_wid, "pattern":"^\d{1,2}\/\d{1,2}(\/\d{2,4})?$"})

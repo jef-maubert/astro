@@ -13,7 +13,6 @@ from waypoint import Waypoint, format_angle
 from waypoint import INPUT_TYPE_LATITUDE, INPUT_TYPE_LONGITUDE, INPUT_TYPE_AZIMUT
 from boat import Boat
 from observation import Observation
-from display_hat import DisplayHat
 
 class AstroData ():
     def __init__(self, app_name, app_logger, console_log_handler):

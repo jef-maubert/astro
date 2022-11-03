@@ -6,7 +6,6 @@ Created on Mon Oct 24 17:34:57 2022
 """
 import tkinter as tk
 import datetime
-import platform
 
 import constants
 from waypoint import Waypoint, format_angle
@@ -145,8 +144,8 @@ class AstroTk(tk.Tk):
             self.data.my_boat.eye_height = my_observation_dlg.result[1]
 
             obs_height = my_observation_dlg.result[2]
-            self.app_logger.debug('At %s with eye height = %dm, Height observed = %s', 
-                                 observation_dt.strftime(constants.DATE_DISPLAY_FORMATTER), 
+            self.app_logger.debug('At %s with eye height = %dm, Height observed = %s',
+                                 observation_dt.strftime(constants.DATE_DISPLAY_FORMATTER),
                                  self.data.my_boat.eye_height,
                                  format_angle(obs_height, INPUT_TYPE_HEIGHT))
             self.update_display()
@@ -162,29 +161,6 @@ class AstroTk(tk.Tk):
     def on_button_display_all_observations(self):
         list_of_observations = self.data.load_observations()
         my_display_observations_dlg = DisplayObservationsDlg(self, "All sun observations", self.data.my_boat, list_of_observations)
-        return
-#TOFIX
-#TODO how to launch turtle twice
-        turtle_available = True
-        if platform.system().lower()  == "windows" :
-            turtle_available = True
-        elif platform.system().lower()  == "linux":
-            try :
-                platform.system().fredesktop_os_release()
-            except AttributeError:
-                turtle_available = False
-
-        if self.turtle_already_started : 
-            turtle_available = False
-
-        self.data.load_observations()
-
-        self.turtle_already_started = True 
-        if turtle_available:
-            my_hat_display = DisplayHat(verbose=False)
-            my_hat_display.launch_display_hat(self.app_logger, self.data.app_name)
-        else:
-            tk.messagebox.showinfo("Info", 'Please quit and launch "display_hat.py"')
 
     def on_button_fix_position(self):
         my_hat_display = DisplayHat(verbose=False)
@@ -192,14 +168,14 @@ class AstroTk(tk.Tk):
         suggested_fix = {"azimut":0.0, "distance":0.0}
         if (len(list_of_observations)):
             suggested_fix = my_hat_display.calculate_intersection (list_of_observations, self.app_logger)
-        my_fix_position = FixPositionDlg(self, "Fix position", suggested_fix["azimut"], suggested_fix["distance"]) 
+        my_fix_position = FixPositionDlg(self, "Fix position", suggested_fix["azimut"], suggested_fix["distance"])
         if my_fix_position.result:
             new_dt_str = my_fix_position.result[0]
             new_waypoint_dt = datetime.datetime.strptime(new_dt_str, constants.DATE_DISPLAY_FORMATTER)
             azimut = my_fix_position.result[1]
             distance = my_fix_position.result[2]
             new_position = self.data.my_boat.last_waypoint.move_to(azimut, distance, "estimated")
-    
+
             new_latitude_str = format_angle(new_position.latitude, input_type = INPUT_TYPE_LATITUDE)
             new_longitude_str = format_angle(new_position.longitude, input_type = INPUT_TYPE_LONGITUDE)
             self.data.my_boat.set_new_position(Waypoint ("last position", new_latitude_str, new_longitude_str), new_waypoint_dt)

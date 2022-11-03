@@ -82,7 +82,7 @@ class FixPositionDlg(tk.Toplevel):
 NOTE : pressing 'OK' will : 
 * move the boat to (azimut,distance) and,
 * will erase all the sun observations""", justify=tk.LEFT, anchor="w").grid (row=next_prop_row, **grid_note_dict)
-        
+
         self.list_of_entry_validation.append({"category":"date", "variable":self.date_var, "widget":self.date_wid, "pattern":"^\d{1,2}\/\d{1,2}(\/\d{2,4})?$"})
         self.list_of_entry_validation.append({"category":"time", "variable":self.time_var, "widget":self.time_wid, "pattern":"^\d{1,2}:\d{1,2}:\d{1,2}$"})
         self.list_of_entry_validation.append({"category":"distance", "variable":self.distance_var, "widget":self.distance_wid, "pattern":"^\d{1,3}\.?\d?$"})

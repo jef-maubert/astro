@@ -95,7 +95,6 @@ class ObservationdDlg(tk.Toplevel):
 
         tk.Label (master, text=" '").grid (row=next_prop_row, column=4, **grid_unit_dict)
 
-        
         self.list_of_entry_validation.append({"category":"date", "variable":self.date_var, "widget":self.date_wid, "pattern":"^\d{1,2}\/\d{1,2}(\/\d{2,4})?$"})
         self.list_of_entry_validation.append({"category":"time", "variable":self.time_var, "widget":self.time_wid, "pattern":"^\d{1,2}:\d{1,2}:\d{1,2}$"})
         self.list_of_entry_validation.append({"category":"degre", "variable":self.obs_height_deg_var, "widget":self.obs_height_deg_wid, "pattern":"^\d{1,2}$", "max":90})
