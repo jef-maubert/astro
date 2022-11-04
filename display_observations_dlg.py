@@ -9,11 +9,9 @@ canvas tutiorial : http://pascal.ortiz.free.fr/contents/tkinter/tkinter/le_canev
 
 import math
 import tkinter as tk
-from waypoint import Waypoint, format_angle, INPUT_TYPE_AZIMUT
+from waypoint import format_angle, INPUT_TYPE_AZIMUT
 import constants
 
-SCREEN_SIZE_X = 800
-SCREEN_SIZE_Y = 800
 
 BIG_PEN = 2
 SMALL_PEN = 1
@@ -21,8 +19,16 @@ SMALL_PEN = 1
 LEGEND_COLOR = "black"
 LAST_POSITION_COLOR = "black"
 TARGET_COLOR = "lightgrey"
-FONT_SIZE = 8
 RATIO_IMAGE_INTERCEPT = 3
+
+if constants.get_os() == "android":
+    SCREEN_SIZE_X = 900
+    SCREEN_SIZE_Y = 900
+    FONT = "Arial 6"
+else:
+    SCREEN_SIZE_X = 800
+    SCREEN_SIZE_Y = 800
+    FONT = "Arial 10"
 
 def degree2radian (angle_degree):
     return angle_degree * math.pi / 180.0
@@ -44,14 +50,12 @@ class DisplayObservationsDlg(tk.Toplevel):
         self.legend_x = -20.0
         self.legend_y = -20.0
         self.zoom_factor = 1.0
-        self.scale_length = 1.0
         self.map_size_x = SCREEN_SIZE_X
         self.map_size_y = SCREEN_SIZE_Y
         self.list_of_intercept_color = ["blue", "orange", "green", "red", "violet"]
 
         dlg_body = tk.Frame(self)
         self.calculate_map_size()
-        self.calculate_legende_size()
         self.create_dlg_body(dlg_body)
         self.display_hat_by_canvas()
         dlg_body.pack(padx=5, pady=5)
@@ -68,8 +72,8 @@ class DisplayObservationsDlg(tk.Toplevel):
                                         width = SCREEN_SIZE_X, height = SCREEN_SIZE_Y)
         self.drawing_canvas.pack(side=tk.LEFT)
         # self.screen = tk.screen(self.drawing_canvas)
-        # screenTk = self.screen.getcanvas().winfo_toplevel()
-        # screenTk.attributes("-fullscreen", True)
+        # screenTk = self.parent.getcanvas().winfo_toplevel()
+        self.attributes("-fullscreen", True)
 
         # screen_width = self.screen.getcanvas().winfo_screenwidth()
         # screen_height = self.screen.getcanvas().winfo_screenheight()
@@ -103,7 +107,7 @@ class DisplayObservationsDlg(tk.Toplevel):
                                              outline = LAST_POSITION_COLOR, width = SMALL_PEN)
         last_position_time_str = self.my_boat.last_waypoint_datetime.strftime(constants.DATE_DISPLAY_FORMATTER.split(" ")[1])
         text_pos = (square_size, -square_size)
-        self.drawing_canvas.create_text(text_pos, anchor=tk.W, text=last_position_time_str, font="Arial {}".format(FONT_SIZE))
+        self.drawing_canvas.create_text(text_pos, anchor=tk.W, text=last_position_time_str, font=FONT)
 
     def calculate_map_size(self):
         max_intercept = 1.0
@@ -116,18 +120,17 @@ class DisplayObservationsDlg(tk.Toplevel):
         self.app_logger.debug('min map size = %.1fNM', self.min_map_size)
         self.zoom_factor = SCREEN_SIZE_X / (2.0*self.min_map_size)
 
-    def calculate_legende_size(self):
-        #TODO : could dependf on "self.min_map_size"
-        self.scale_length = 1.0
-
     def draw_scale(self):
         self.app_logger.debug('Drawing scale')
+        # TODO : could dependf on "self.min_map_size"
+        # scale_length = int(self.min_map_size / 10)
+        scale_length = 1.0
         start_scale_point = (self.legend_x, self.legend_y)
-        end_scale_point = (self.legend_x + self.scale_length, self.legend_y)
+        end_scale_point = (self.legend_x + scale_length, self.legend_y)
         self.drawing_canvas.create_line(start_scale_point, end_scale_point, width = SMALL_PEN, fill = LEGEND_COLOR)
 
-        scale_text = " {:.0f} NM".format(self.scale_length)
-        self.drawing_canvas.create_text(end_scale_point, anchor=tk.W, text=scale_text, font="Arial {}".format(FONT_SIZE))
+        scale_text = " {:.0f} NM".format(scale_length)
+        self.drawing_canvas.create_text(end_scale_point, anchor=tk.W, text=scale_text, font=FONT)
         self.legend_y += 1.0
 
     def draw_intercept(self, observation_rank, date_time, azimut, intercept, verbose = False):
@@ -150,7 +153,7 @@ class DisplayObservationsDlg(tk.Toplevel):
         date_time_str = date_time.split(" ")[1]
         observation_title = "{} : {:.1f} NM / {:03.0f}°".format(date_time_str, intercept, azimut)
         legend_point = (self.legend_x, self.legend_y)
-        self.drawing_canvas.create_text(legend_point, anchor=tk.W, text=observation_title, font="Arial {}".format(FONT_SIZE), fill=pen_color)
+        self.drawing_canvas.create_text(legend_point, anchor=tk.W, text=observation_title, font=FONT, fill=pen_color)
         self.legend_y += 1
 
     def calculate_intersection (self, list_of_observations, app_logger):
@@ -219,7 +222,7 @@ class DisplayObservationsDlg(tk.Toplevel):
 
         fix_summary = "{:.1f} NM / {}".format(suggested_fix["distance"], format_angle(suggested_fix["azimut"], INPUT_TYPE_AZIMUT))
         self.drawing_canvas.create_text (upper_right, anchor=tk.W, text=fix_summary,
-                                         font="Arial {}".format(FONT_SIZE), fill=LAST_POSITION_COLOR)
+                                         font=FONT, fill=LAST_POSITION_COLOR)
 
     def display_hat_by_canvas(self):
         for radius in range(1,11):

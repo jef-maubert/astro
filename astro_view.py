@@ -28,7 +28,6 @@ class AstroTk(tk.Tk):
         self.parent = parent
         self.data = data
         self.app_logger = app_logger
-        self.turtle_already_started = False
         self.initialize()
 
     def initialize(self):
@@ -160,7 +159,7 @@ class AstroTk(tk.Tk):
 
     def on_button_display_all_observations(self):
         list_of_observations = self.data.load_observations()
-        my_display_observations_dlg = DisplayObservationsDlg(self, "All sun observations", self.data.my_boat, list_of_observations)
+        DisplayObservationsDlg(self, "All sun observations", self.data.my_boat, list_of_observations)
 
     def on_button_fix_position(self):
         my_hat_display = DisplayHat(verbose=False)
