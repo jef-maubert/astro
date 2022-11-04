@@ -35,16 +35,16 @@ def degree2radian (angle_degree):
 
 class DisplayObservationsDlg(tk.Toplevel):
 
-    def __init__(self, parent, title, my_boat, list_of_observations):
+    def __init__(self, astro_view, title, my_boat, list_of_observations):
+        self.astro_view = astro_view
+        self.app_logger = self.astro_view.app_logger
+        self.my_boat = my_boat
 
-        tk.Toplevel.__init__(self, parent)
-        self.transient(parent)
+        tk.Toplevel.__init__(self, astro_view)
+        self.transient(astro_view)
 
         if title:
             self.title(title)
-        self.parent = parent
-        self.app_logger = self.parent.app_logger
-        self.my_boat = my_boat
         self.list_of_observations = list_of_observations
         self.min_map_size = 20.0
         self.legend_x = -20.0
@@ -71,21 +71,20 @@ class DisplayObservationsDlg(tk.Toplevel):
         self.drawing_canvas = tk.Canvas(master, scrollregion =(-self.map_size_x/2, -self.map_size_y/2, self.map_size_x/2, self.map_size_y/2),
                                         width = SCREEN_SIZE_X, height = SCREEN_SIZE_Y)
         self.drawing_canvas.pack(side=tk.LEFT)
-        # self.screen = tk.screen(self.drawing_canvas)
-        # screenTk = self.parent.getcanvas().winfo_toplevel()
         self.attributes("-fullscreen", True)
 
-        # screen_width = self.screen.getcanvas().winfo_screenwidth()
-        # screen_height = self.screen.getcanvas().winfo_screenheight()
-        # self.app_logger.debug("screen width = %d, screen_height = %d", screen_width,  screen_height)
-        # ratio_x_y = float(screen_width) / float(screen_height)
-        # if ratio_x_y >1:
-        #     self.map_size_x = self.min_map_size * ratio_x_y
-        #     self.map_size_y =self.min_map_size
-        # else:
-        #     self.map_size_x = self.min_map_size
-        #     self.map_size_y = self.min_map_size / ratio_x_y
-        # self.app_logger.debug('map size %.1f NM * %.1f NM', self.map_size_x , self.map_size_y)
+        screen_width = self.astro_view.winfo_screenwidth()
+        screen_height = self.astro_view.winfo_screenheight()
+        self.app_logger.debug("screen width = %d, screen_height = %d", screen_width,  screen_height)
+        ratio_x_y = float(screen_width) / float(screen_height)
+        
+        if ratio_x_y >1:
+            self.map_size_x = self.min_map_size * ratio_x_y
+            self.map_size_y =self.min_map_size
+        else:
+            self.map_size_x = self.min_map_size
+            self.map_size_y = self.min_map_size / ratio_x_y
+        self.app_logger.debug('map size %.1f NM * %.1f NM', self.map_size_x , self.map_size_y)
 
     def add_close_buttons(self):
         box = tk.Frame(self)
@@ -95,8 +94,8 @@ class DisplayObservationsDlg(tk.Toplevel):
         box.pack()
 
     def on_close_button(self, event=None):
-        # put focus back to the parent window
-        self.parent.focus_set()
+        # put focus back to the astro_view window
+        self.astro_view.focus_set()
         self.destroy()
 
     def draw_last_position(self, square_size):
