@@ -94,13 +94,17 @@ class DisplayObservationsDlg(tk.Toplevel):
             self.map_size_y = self.min_map_size / ratio_x_y
         self.app_logger.debug('map size %.1f NM * %.1f NM', self.map_size_x , self.map_size_y)
         self.legend_x = -self.map_size_x * 0.95
-        self.legend_y = -self.map_size_y * 0.95
+        self.legend_y = -self.map_size_y * 0.90
         self.zoom_factor = self.screen_width / (2.0*self.map_size_x)
         
     def create_dlg_body(self, master):
         self.attributes("-fullscreen", True)
-        self.drawing_canvas = tk.Canvas(master, scrollregion =(-self.screen_width/2, -self.screen_height/2, self.screen_width/2, self.screen_height/2),
-                                        width = self.screen_width, height = self.screen_height - CLOSE_BUTTON_HEIGHT)
+        width = self.screen_width
+        height = self.screen_height - CLOSE_BUTTON_HEIGHT
+        # self.drawing_canvas = tk.Canvas(master, scrollregion =(-self.screen_width/2, -self.screen_height/2, self.screen_width/2, self.screen_height/2),
+        #                                 width = self.screen_width, height = self.screen_height - CLOSE_BUTTON_HEIGHT)
+        self.drawing_canvas = tk.Canvas(master, scrollregion =(-width/2, -height/2, width/2, height/2),
+                                        width = width, height = height)
         self.drawing_canvas.pack(side=tk.LEFT)
 
     def add_close_buttons(self):
