@@ -21,14 +21,15 @@ LAST_POSITION_COLOR = "black"
 TARGET_COLOR = "lightgrey"
 RATIO_IMAGE_INTERCEPT = 3
 
+DEF_SCREEN_SIZE_X = 900
+DEF_SCREEN_SIZE_Y = 900
 if constants.get_os() == "android":
-    SCREEN_SIZE_X = 900
-    SCREEN_SIZE_Y = 900
     FONT = "Arial 6"
+    CLOSE_BUTTON_HEIGHT = 50
 else:
-    SCREEN_SIZE_X = 800
-    SCREEN_SIZE_Y = 800
     FONT = "Arial 10"
+    CLOSE_BUTTON_HEIGHT = 50
+
 
 def degree2radian (angle_degree):
     return angle_degree * math.pi / 180.0
@@ -47,19 +48,24 @@ class DisplayObservationsDlg(tk.Toplevel):
             self.title(title)
         self.list_of_observations = list_of_observations
         self.min_map_size = 20.0
-        self.legend_x = -20.0
-        self.legend_y = -20.0
+        self.legend_x = -self.min_map_size 
+        self.legend_y = -self.min_map_size 
         self.zoom_factor = 1.0
-        self.map_size_x = SCREEN_SIZE_X
-        self.map_size_y = SCREEN_SIZE_Y
+        self.scale_length = 1.0
+        self.map_size_x = self.min_map_size
+        self.map_size_y = self.min_map_size
+        self.screen_width = DEF_SCREEN_SIZE_X
+        self.screen_height = DEF_SCREEN_SIZE_Y
         self.list_of_intercept_color = ["blue", "orange", "green", "red", "violet"]
 
         dlg_body = tk.Frame(self)
+        
         self.calculate_map_size()
+        self.calculate_screen_size()
+
         self.create_dlg_body(dlg_body)
         self.display_hat_by_canvas()
         dlg_body.pack(padx=5, pady=5)
-
         self.add_close_buttons()
 
         self.drawing_canvas.scale("all", 0, 0, self.zoom_factor, self.zoom_factor)
@@ -67,17 +73,19 @@ class DisplayObservationsDlg(tk.Toplevel):
         self.grab_set()
         self.wait_window(self)
 
-    def create_dlg_body(self, master):
-        self.drawing_canvas = tk.Canvas(master, scrollregion =(-self.map_size_x/2, -self.map_size_y/2, self.map_size_x/2, self.map_size_y/2),
-                                        width = SCREEN_SIZE_X, height = SCREEN_SIZE_Y)
-        self.drawing_canvas.pack(side=tk.LEFT)
-        self.attributes("-fullscreen", True)
-
-        screen_width = self.astro_view.winfo_screenwidth()
-        screen_height = self.astro_view.winfo_screenheight()
-        self.app_logger.debug("screen width = %d, screen_height = %d", screen_width,  screen_height)
-        ratio_x_y = float(screen_width) / float(screen_height)
+    def calculate_map_size(self):
+        max_intercept = 1.0
+        for observation in self.list_of_observations :
+            if max_intercept < abs(observation["intercept"]) :
+                max_intercept = abs(observation["intercept"])
+        self.min_map_size = max_intercept * RATIO_IMAGE_INTERCEPT
+        self.app_logger.debug('min map size = %.1fNM', self.min_map_size)
         
+    def calculate_screen_size(self):
+        self.screen_width = self.astro_view.winfo_screenwidth()
+        self.screen_height = self.astro_view.winfo_screenheight()
+        self.app_logger.debug("screen width = %d, screen height = %d", self.screen_width,  self.screen_height)
+        ratio_x_y = float(self.screen_width) / float(self.screen_height)
         if ratio_x_y >1:
             self.map_size_x = self.min_map_size * ratio_x_y
             self.map_size_y =self.min_map_size
@@ -85,6 +93,15 @@ class DisplayObservationsDlg(tk.Toplevel):
             self.map_size_x = self.min_map_size
             self.map_size_y = self.min_map_size / ratio_x_y
         self.app_logger.debug('map size %.1f NM * %.1f NM', self.map_size_x , self.map_size_y)
+        self.legend_x = -self.map_size_x * 0.95
+        self.legend_y = -self.map_size_y * 0.95
+        self.zoom_factor = self.screen_width / (2.0*self.map_size_x)
+        
+    def create_dlg_body(self, master):
+        self.attributes("-fullscreen", True)
+        self.drawing_canvas = tk.Canvas(master, scrollregion =(-self.screen_width/2, -self.screen_height/2, self.screen_width/2, self.screen_height/2),
+                                        width = self.screen_width, height = self.screen_height - CLOSE_BUTTON_HEIGHT)
+        self.drawing_canvas.pack(side=tk.LEFT)
 
     def add_close_buttons(self):
         box = tk.Frame(self)
@@ -99,7 +116,6 @@ class DisplayObservationsDlg(tk.Toplevel):
         self.destroy()
 
     def draw_last_position(self, square_size):
-        self.app_logger.debug('Drawing last position')
         self.drawing_canvas.create_rectangle((-square_size/2, -square_size/2, square_size/2, square_size/2),
                                              outline = LAST_POSITION_COLOR, width = SMALL_PEN)
         self.drawing_canvas.create_rectangle((0, 0, 0, 0),
@@ -108,27 +124,15 @@ class DisplayObservationsDlg(tk.Toplevel):
         text_pos = (square_size, -square_size)
         self.drawing_canvas.create_text(text_pos, anchor=tk.W, text=last_position_time_str, font=FONT)
 
-    def calculate_map_size(self):
-        max_intercept = 1.0
-        for observation in self.list_of_observations :
-            if max_intercept < abs(observation["intercept"]) :
-                max_intercept = abs(observation["intercept"])
-        self.min_map_size = max_intercept * RATIO_IMAGE_INTERCEPT
-        self.legend_x = -self.min_map_size * 0.95
-        self.legend_y = -self.min_map_size * 0.95
-        self.app_logger.debug('min map size = %.1fNM', self.min_map_size)
-        self.zoom_factor = SCREEN_SIZE_X / (2.0*self.min_map_size)
-
     def draw_scale(self):
-        self.app_logger.debug('Drawing scale')
         # TODO : could dependf on "self.min_map_size"
-        # scale_length = int(self.min_map_size / 10)
-        scale_length = 1.0
+        # self.scale_length = int(self.min_map_size / 10)
+        self.scale_length = 1.0
         start_scale_point = (self.legend_x, self.legend_y)
-        end_scale_point = (self.legend_x + scale_length, self.legend_y)
+        end_scale_point = (self.legend_x + self.scale_length, self.legend_y)
         self.drawing_canvas.create_line(start_scale_point, end_scale_point, width = SMALL_PEN, fill = LEGEND_COLOR)
 
-        scale_text = " {:.0f} NM".format(scale_length)
+        scale_text = " {:.0f} NM".format(self.scale_length)
         self.drawing_canvas.create_text(end_scale_point, anchor=tk.W, text=scale_text, font=FONT)
         self.legend_y += 1.0
 
@@ -175,7 +179,7 @@ class DisplayObservationsDlg(tk.Toplevel):
         for observation_index in range (nb_observations):
             observation_1 = self.list_of_observations[observation_index]
             observation_2 = self.list_of_observations[(observation_index+1) % nb_observations]
-            self.app_logger.debug('calculate intersection of observations %s and %s', observation_1["date_time"], observation_2["date_time"])
+            #self.app_logger.debug('calculate intersection of observations %s and %s', observation_1["date_time"], observation_2["date_time"])
             line_1_a = observation_1["lin_eq_a"]
             line_1_b = observation_1["lin_eq_b"]
             line_2_a = observation_2["lin_eq_a"]
@@ -224,7 +228,8 @@ class DisplayObservationsDlg(tk.Toplevel):
                                          font=FONT, fill=LAST_POSITION_COLOR)
 
     def display_hat_by_canvas(self):
-        for radius in range(1,11):
+        for index in range(1,21):
+            radius = index * self.scale_length
             pen_size = BIG_PEN if radius % 5 == 0 else SMALL_PEN
             self.drawing_canvas.create_oval((-radius,-radius), (radius, radius), outline=TARGET_COLOR, width = pen_size)
         AZIMUT_SPACE = 10.0
