@@ -25,7 +25,7 @@ DEF_SCREEN_SIZE_X = 900
 DEF_SCREEN_SIZE_Y = 900
 if constants.get_os() == "android":
     FONT = "Arial 6"
-    CLOSE_BUTTON_HEIGHT = 50
+    CLOSE_BUTTON_HEIGHT = 100
 else:
     FONT = "Arial 10"
     CLOSE_BUTTON_HEIGHT = 50
