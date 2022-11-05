@@ -491,3 +491,39 @@
 05 01:43:19 - -  - display_observations_dlg.py - calculate_intersection-176 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
 05 01:43:19 - -  - display_observations_dlg.py - calculate_intersection-176 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
 05 01:43:24 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 01:45:39 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 01:45:39 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 01:45:39 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 01:45:39 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 01:45:39 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 01:45:41 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 01:45:41 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 01:45:41 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 01:45:41 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 01:45:41 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 01:45:41 - -  - display_observations_dlg.py - calculate_map_size-82 - min map size = 11.4NM
+05 01:45:41 - -  - display_observations_dlg.py - calculate_screen_size-87 - screen width = 1920, screen height = 1080
+05 01:45:41 - -  - display_observations_dlg.py - calculate_screen_size-95 - map size 20.3 NM * 11.4 NM
+05 01:45:41 - -  - display_observations_dlg.py - calculate_intersection-174 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 01:45:41 - -  - display_observations_dlg.py - calculate_intersection-174 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 01:45:41 - -  - display_observations_dlg.py - calculate_intersection-174 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 01:45:41 - -  - display_observations_dlg.py - calculate_intersection-174 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 01:45:47 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 01:46:01 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 01:46:01 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 01:46:01 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 01:46:01 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 01:46:01 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 01:46:03 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 01:46:03 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 01:46:03 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 01:46:03 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 01:46:03 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 01:46:03 - -  - display_observations_dlg.py - calculate_map_size-82 - min map size = 11.4NM
+05 01:46:03 - -  - display_observations_dlg.py - calculate_screen_size-87 - screen width = 1920, screen height = 1080
+05 01:46:03 - -  - display_observations_dlg.py - calculate_screen_size-95 - map size 20.3 NM * 11.4 NM
+05 01:46:03 - -  - display_observations_dlg.py - calculate_intersection-174 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 01:46:03 - -  - display_observations_dlg.py - calculate_intersection-174 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 01:46:03 - -  - display_observations_dlg.py - calculate_intersection-174 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 01:46:03 - -  - display_observations_dlg.py - calculate_intersection-174 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 01:48:30 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
