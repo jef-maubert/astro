@@ -23,3 +23,6 @@ log/astro.log
 log/astro.log.3
 *.log
 *.log
+*.log
+*.3
+*.log

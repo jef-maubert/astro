@@ -97,7 +97,7 @@ class DisplayObservationsDlg(tk.Toplevel):
             self.map_size_y = self.min_map_size / ratio_x_y
         self.app_logger.debug('map size %.1f NM * %.1f NM', self.map_size_x , self.map_size_y)
         self.legend_x = -self.map_size_x * 0.95
-        self.legend_y = -self.map_size_y * 0.90
+        self.legend_y = -self.map_size_y * 0.80
         self.zoom_factor = self.screen_width / (2.0*self.map_size_x)
         
     def create_dlg_body(self, master):
@@ -131,14 +131,14 @@ class DisplayObservationsDlg(tk.Toplevel):
                                         command = self.on_obs_select_change, variable = obs_select_var)
             if observation["validity"]:
                 obs_select.select()
-            obs_select.pack(side=tk.LEFT, padx=5, pady=5)
+            obs_select.pack(side=tk.LEFT, padx=5, pady=0)
 
         close_box = tk.Frame(self)
         close_button = tk.Button(close_box, text="Close", width=10, command=self.on_close_button)
-        close_button.pack()
+        close_button.pack( pady=0)
         self.bind("<Escape>", self.on_close_button)
-        buttons_box.pack()
-        close_box.pack()
+        buttons_box.pack( pady=0)
+        close_box.pack( pady=0)
 
     def on_close_button(self, event=None):
         # put focus back to the astro_view window
