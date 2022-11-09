@@ -59,23 +59,29 @@ class AstroData ():
         except NoSectionError:
             self.app_logger.info('%d observation(s) loaded from file "%s"', self.next_observation_number-1, my_config_filename )
 
-    def load_observations(self):
+    def load_observations(self, valid_only=False):
         observation_number = 1
         list_of_observations = []
+        validity = True
         try:
             while True:
                 section_name = 'OBSERVATION_{}'.format(observation_number)
                 intercept = float(self.app_config.get(section_name, 'intercept'))
                 azimut = float(self.app_config.get(section_name, 'azimut'))
                 observation_dt = self.app_config.get(section_name, 'date_time')
-                list_of_observations.append({"date_time":observation_dt, "azimut":azimut, "intercept": intercept})
+                validity_input = self.app_config.get(section_name, 'validity', fallback="True")
+                validity = validity_input.lower() in ("yes", "true", "t", "1")
+                if not valid_only or validity:
+                    list_of_observations.append({"date_time":observation_dt, "azimut":azimut, "intercept": intercept, "validity":validity})
                 observation_number += 1
         except NoSectionError:
-            self.app_logger.info('%d observation(s) loaded from configuration file', observation_number-1)
+            pass
+        self.app_logger.info('%d observation(s) loaded from configuration file', len(list_of_observations))
         observation_rank = 1
         for observation in list_of_observations :
-            self.app_logger.info('%d) %s intercept = %.1f NM, Az = %03.0f°', observation_rank, observation["date_time"],
-                                 observation["intercept"], observation["azimut"])
+            validity_str = "(OK)" if observation["validity"] else "(disabled)"
+            self.app_logger.info('%d) %s intercept = %.1f NM, Az = %03.0f° %s', observation_rank, observation["date_time"],
+                                 observation["intercept"], observation["azimut"], validity_str)
             observation_rank += 1
         return list_of_observations
 
@@ -112,7 +118,13 @@ class AstroData ():
         self.app_config.set(section_name, 'intercept', "{:.1f}".format(observation.intercept))
         self.app_config.set(section_name, 'azimut', "{:.1f}".format(observation.azimut))
         self.app_config.set(section_name, 'date_time', observation.date_time.strftime(constants.DATE_SERIAL_FORMATTER))
+        self.app_config.set(section_name, 'validity', observation.validity)
         self.save_config()
+
+    def update_observation_validity_in_config(self, observation_number, observation_validity):
+        observation_validity_str = str(observation_validity)
+        section_name = 'OBSERVATION_{}'.format(observation_number)
+        self.app_config.set(section_name, 'validity', observation_validity_str)
 
     def remove_all_observations(self):
         observation_index = 1

@@ -36,17 +36,20 @@ def degree2radian (angle_degree):
 
 class DisplayObservationsDlg(tk.Toplevel):
 
-    def __init__(self, astro_view, title, my_boat, list_of_observations):
+    def __init__(self, astro_view, title, data):
         self.astro_view = astro_view
         self.app_logger = self.astro_view.app_logger
-        self.my_boat = my_boat
+        self.data = data
+        self.my_boat = data.my_boat
 
         tk.Toplevel.__init__(self, astro_view)
         self.transient(astro_view)
 
         if title:
             self.title(title)
-        self.list_of_observations = list_of_observations
+        self.list_of_obs_select_var= []
+        self.list_of_valid_observations = []
+        self.list_of_all_observations = data.load_observations(valid_only=False)
         self.min_map_size = 20.0
         self.legend_x = -self.min_map_size 
         self.legend_y = -self.min_map_size 
@@ -62,11 +65,11 @@ class DisplayObservationsDlg(tk.Toplevel):
         
         self.calculate_map_size()
         self.calculate_screen_size()
-
         self.create_dlg_body(dlg_body)
+
         self.display_hat_by_canvas()
         dlg_body.pack(padx=5, pady=5)
-        self.add_close_buttons()
+        self.add_obs_select_and_close_buttons()
 
         self.drawing_canvas.scale("all", 0, 0, self.zoom_factor, self.zoom_factor)
 
@@ -75,7 +78,7 @@ class DisplayObservationsDlg(tk.Toplevel):
 
     def calculate_map_size(self):
         max_intercept = 1.0
-        for observation in self.list_of_observations :
+        for observation in self.list_of_all_observations :
             if max_intercept < abs(observation["intercept"]) :
                 max_intercept = abs(observation["intercept"])
         self.min_map_size = max_intercept * RATIO_IMAGE_INTERCEPT
@@ -105,12 +108,34 @@ class DisplayObservationsDlg(tk.Toplevel):
                                         width = width, height = height, bg="white")
         self.drawing_canvas.pack(side=tk.LEFT)
 
-    def add_close_buttons(self):
-        box = tk.Frame(self)
-        close_button = tk.Button(box, text="Close", width=10, command=self.on_close_button)
-        close_button.pack(side=tk.LEFT, padx=5, pady=5)
+    def on_obs_select_change(self):
+        self.app_logger.debug("on_obs_select_change")
+        observation_index = 1
+        for obs_select_var in self.list_of_obs_select_var:
+            self.app_logger.debug("observation [%d] == %d", observation_index, obs_select_var.get())
+            self.data.update_observation_validity_in_config(observation_index, obs_select_var.get()==True)
+            observation_index += 1
+
+        self.calculate_screen_size()
+        self.drawing_canvas.delete("all")
+        self.display_hat_by_canvas()
+        self.drawing_canvas.scale("all", 0, 0, self.zoom_factor, self.zoom_factor)
+        
+    def add_obs_select_and_close_buttons(self):
+        buttons_box = tk.Frame(self)
+        self.list_of_obs_select_var= []
+        for observation in self.list_of_all_observations:
+            obs_select_var = tk.IntVar()
+            self.list_of_obs_select_var.append(obs_select_var)
+            obs_select = tk.Checkbutton(buttons_box, text = observation["date_time"].split(" ")[1], 
+                                        command = self.on_obs_select_change, variable = obs_select_var)
+            if observation["validity"]:
+                obs_select.select()
+            obs_select.pack(side=tk.LEFT, padx=5, pady=5)
+        close_button = tk.Button(buttons_box, text="Close", width=10, command=self.on_close_button)
+        close_button.pack(side=tk.RIGHT, padx=5, pady=5)
         self.bind("<Escape>", self.on_close_button)
-        box.pack()
+        buttons_box.pack()
 
     def on_close_button(self, event=None):
         # put focus back to the astro_view window
@@ -161,11 +186,9 @@ class DisplayObservationsDlg(tk.Toplevel):
         self.drawing_canvas.create_text(legend_point, anchor=tk.W, text=observation_title, font=FONT, fill=pen_color)
         self.legend_y += 1
 
-    def calculate_intersection (self, list_of_observations, app_logger):
-        self.app_logger = app_logger
-        self.list_of_observations = list_of_observations
+    def calculate_intersection (self):
         # Calculate linear_equation
-        for observation in self.list_of_observations :
+        for observation in self.list_of_valid_observations :
             azimut = degree2radian(observation["azimut"])
             lin_eq_a = -math.tan(azimut)
             lin_eq_b = observation["intercept"] / math.cos(azimut)
@@ -175,12 +198,12 @@ class DisplayObservationsDlg(tk.Toplevel):
 
         # calculate intersection points (x,y)
         observation_index = 0
-        nb_observations = len(self.list_of_observations)
+        nb_observations = len(self.list_of_valid_observations)
         sum_cross_point_x = 0.0
         sum_cross_point_y = 0.0
         for observation_index in range (nb_observations):
-            observation_1 = self.list_of_observations[observation_index]
-            observation_2 = self.list_of_observations[(observation_index+1) % nb_observations]
+            observation_1 = self.list_of_valid_observations[observation_index]
+            observation_2 = self.list_of_valid_observations[(observation_index+1) % nb_observations]
             #self.app_logger.debug('calculate intersection of observations %s and %s', observation_1["date_time"], observation_2["date_time"])
             line_1_a = observation_1["lin_eq_a"]
             line_1_b = observation_1["lin_eq_b"]
@@ -230,6 +253,7 @@ class DisplayObservationsDlg(tk.Toplevel):
                                          font=FONT, fill=LAST_POSITION_COLOR)
 
     def display_hat_by_canvas(self):
+        self.list_of_valid_observations =self.data.load_observations(valid_only=True)
         for index in range(1,21):
             radius = index * self.scale_length
             pen_size = BIG_PEN if radius % 5 == 0 else SMALL_PEN
@@ -247,8 +271,10 @@ class DisplayObservationsDlg(tk.Toplevel):
 
         observation_rank = 1
         self.draw_scale()
-        for observation in self.list_of_observations :
+        for observation in self.list_of_valid_observations :
             self.draw_intercept(observation_rank, observation["date_time"], observation["azimut"], observation["intercept"])
             observation_rank += 1
-        suggested_fix = self.calculate_intersection (self.list_of_observations, self.app_logger)
-        self.display_intersection (suggested_fix, self.min_map_size / 25.0 / 2)
+            
+        if len(self.list_of_valid_observations) >= 2 :
+            suggested_fix = self.calculate_intersection ()
+            self.display_intersection (suggested_fix, self.min_map_size / 25.0 / 2)

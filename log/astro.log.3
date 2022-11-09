@@ -1,1089 +1,832 @@
-27 10:43:10 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
-27 10:43:30 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-27 10:43:30 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-27 10:43:30 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-27 10:43:30 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-27 10:43:30 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-27 10:43:30 - !!!  - astro_view.py - on_button_display_all_observations-168 - BEFORE : self.turtle_already_started : True
-27 10:43:30 - !!!  - astro_view.py - on_button_display_all_observations-169 - BEFORE : turtle_available : False
-27 10:43:32 - !!!  - astro_view.py - on_button_display_all_observations-177 - AFTER : self.turtle_already_started : True
-27 10:43:39 - !!!  - astro_view.py - on_button_display_all_observations-177 - AFTER : self.turtle_already_started : True
-27 10:43:39 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 10:44:43 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 10:44:43 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 10:44:43 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 10:44:43 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 10:44:44 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 10:44:45 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-27 10:44:45 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-27 10:44:45 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-27 10:44:45 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-27 10:44:45 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-27 10:44:45 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-27 10:44:45 - -  - display_hat.py - display_hat-327 - min map size = 11.4NM
-27 10:44:45 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-27 10:44:45 - -  - display_hat.py - start_turtle-123 - map size 20.3 NM * 11.4 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-27 10:44:45 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-27 10:44:45 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-27 10:44:45 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-27 10:44:45 - -  - display_hat.py - draw_legend-204 - Drawing legend
-27 10:44:46 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-27 10:44:46 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-27 10:44:46 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-27 10:44:46 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
-27 10:44:46 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-27 10:44:46 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-27 10:44:46 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
-27 10:44:46 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
-27 10:44:47 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-27 10:44:47 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-27 10:44:47 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-27 10:44:47 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-27 10:44:47 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-27 10:44:53 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 10:44:54 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 10:44:54 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 10:44:54 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 10:44:54 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 10:44:54 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 10:44:56 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-27 10:44:56 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-27 10:44:56 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-27 10:44:56 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-27 10:44:56 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-27 10:44:56 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-27 10:44:56 - -  - display_hat.py - display_hat-327 - min map size = 11.4NM
-27 10:44:56 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-27 10:44:56 - -  - display_hat.py - start_turtle-123 - map size 20.3 NM * 11.4 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-27 10:44:56 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-27 10:44:56 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-27 10:44:56 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-27 10:44:56 - -  - display_hat.py - draw_legend-204 - Drawing legend
-27 10:44:56 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-27 10:44:56 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-27 10:44:56 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-27 10:44:56 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
-27 10:44:56 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-27 10:44:56 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-27 10:44:56 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
-27 10:44:56 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
-27 10:45:01 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:04:39 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:04:39 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:04:39 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:04:39 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:04:39 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:04:41 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-27 13:04:41 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-27 13:04:41 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-27 13:04:41 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-27 13:04:41 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-27 13:04:41 -  - display_hat.py - load_config-85 - Loading configuration from file "astro.ini"
-27 13:04:41 - -  - display_hat.py - display_hat-327 - min map size = 11.4NM
-27 13:04:41 - -  - display_hat.py - start_turtle-112 - screen width = 1920, screen_height = 1080
-27 13:04:41 - -  - display_hat.py - start_turtle-123 - map size 20.3 NM * 11.4 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 0 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 1 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 2 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 3 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 4 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 5 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 6 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 7 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 8 NM
-27 13:04:41 - -  - display_hat.py - draw_target_circle-164 - Drawing circle 9 NM
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 0°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 10°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 20°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 30°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 40°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 50°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 60°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 70°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 80°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 90°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 100°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 110°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 120°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 130°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 140°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 150°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 160°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 170°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 180°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 190°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 200°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 210°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 220°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 230°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 240°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 250°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 260°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 270°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 280°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 290°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 300°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 310°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 320°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 330°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 340°
-27 13:04:41 - -  - display_hat.py - draw_azimut-184 - Drawing azimut 350°
-27 13:04:41 - -  - display_hat.py - draw_last_position-141 - Drawing last position
-27 13:04:41 - -  - display_hat.py - draw_legend-204 - Drawing legend
-27 13:04:41 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
-27 13:04:41 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
-27 13:04:41 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
-27 13:04:41 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
-27 13:04:41 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
-27 13:04:41 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
-27 13:04:41 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
-27 13:04:41 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
-27 13:08:01 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:08:03 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:08:03 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:08:03 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:08:03 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:08:03 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:16:30 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:16:32 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:16:32 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:16:32 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:16:32 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:16:32 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:16:44 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:16:48 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:16:48 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:16:48 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:16:48 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:16:48 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:16:53 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:18:14 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:18:14 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:18:14 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:18:14 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:18:14 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:18:19 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:19:56 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:19:56 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:19:56 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:19:56 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:19:56 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:20:07 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:32:35 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:32:35 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:32:35 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:32:35 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:32:35 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:32:38 -  - hat_view.py - __init__-25 - Creating turtle view
-27 13:32:38 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-27 13:32:45 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:32:58 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:32:58 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:32:58 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:32:58 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:32:58 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:33:01 -  - hat_view.py - __init__-25 - Creating turtle view
-27 13:33:01 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-27 13:33:08 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:33:46 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:33:46 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:33:46 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:33:46 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:33:46 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:33:48 -  - hat_view.py - __init__-25 - Creating turtle view
-27 13:33:48 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-27 13:33:48 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg.!frame.!canvas"
-27 13:38:34 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:38:35 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:38:35 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:38:35 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:38:35 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:38:35 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:38:37 -  - hat_view.py - __init__-25 - Creating turtle view
-27 13:38:37 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-27 13:38:37 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg.!frame.!canvas", size = (200 * 200)
-27 13:40:26 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:40:28 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:40:28 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:40:28 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:40:28 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:40:28 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:40:31 -  - hat_view.py - __init__-25 - Creating turtle view
-27 13:40:31 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-27 13:40:31 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg.!frame.!canvas", size = (200 * 200)
-27 13:40:43 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:40:43 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:40:43 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:40:43 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:40:43 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:40:47 -  - hat_view.py - __init__-25 - Creating turtle view
-27 13:40:47 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-27 13:40:47 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg.!frame.!canvas", size = (200 * 200)
-27 13:41:55 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-27 13:41:59 -  - aa.py - init_log-44 - Starting astro version V2.0
-27 13:41:59 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-27 13:41:59 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-27 13:41:59 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-27 13:41:59 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-27 13:42:01 -  - hat_view.py - __init__-25 - Creating turtle view
-27 13:42:01 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-27 13:42:01 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg.!frame.!canvas", size = (200 * 200)
-27 13:42:15 -  - hat_view.py - __init__-25 - Creating turtle view
-27 13:42:15 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-27 13:42:15 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg2.!frame.!canvas", size = (200 * 200)
-30 17:13:10 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 11:13:44 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 11:13:44 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 11:13:44 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 11:13:44 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 11:13:44 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 11:13:48 -  - hat_view.py - __init__-25 - Creating turtle view
-02 11:13:48 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-02 11:13:48 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg.!frame.!canvas", size = (200 * 200)
-02 11:13:53 -  - hat_view.py - __init__-25 - Creating turtle view
-02 11:13:53 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-02 11:13:53 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg2.!frame.!canvas", size = (200 * 200)
-02 11:14:05 -  - hat_view.py - __init__-25 - Creating turtle view
-02 11:14:05 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-02 11:14:05 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg3.!frame.!canvas", size = (200 * 200)
-02 11:14:13 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 15:23:53 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 15:23:53 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 15:23:53 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 15:23:53 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 15:23:53 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 15:23:57 -  - hat_view.py - __init__-25 - Creating turtle view
-02 15:23:57 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-02 15:23:57 -  - hat_view.py - init_screen_2-34 - Initializing turtle in tkinter frame, canvas =".!displayobservationsdlg.!frame.!canvas", size = (200 * 200)
-02 15:26:10 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 15:52:21 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 15:52:21 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 15:52:21 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 15:52:21 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 15:52:21 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 15:52:25 -  - hat_view.py - __init__-23 - Creating turtle view
-02 15:52:25 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-02 21:39:37 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 21:40:16 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 21:40:16 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 21:40:16 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 21:40:16 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 21:40:16 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 21:40:21 -  - hat_view.py - __init__-23 - Creating turtle view
-02 21:40:21 -  - display_observations_dlg.py - attach_turtle-59 - Attaching turtle to the application frame
-02 21:51:14 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 21:51:17 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 21:51:17 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 21:51:17 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 21:51:17 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 21:51:17 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 21:55:07 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 21:55:12 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 21:55:12 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 21:55:12 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 21:55:12 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 21:55:12 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 21:55:20 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 21:55:45 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 21:55:45 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 21:55:45 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 21:55:45 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 21:55:45 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 21:56:50 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 21:56:53 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 21:56:53 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 21:56:53 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 21:56:53 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 21:56:53 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 21:57:16 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 21:57:39 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 21:57:39 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 21:57:39 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 21:57:39 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 21:57:39 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 21:57:59 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 21:59:22 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 21:59:22 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 21:59:22 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 21:59:22 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 21:59:22 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 21:59:29 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:16:57 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:16:57 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:16:57 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:16:57 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:16:57 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:17:04 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:17:49 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:17:49 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:17:49 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:17:49 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:17:49 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:17:58 - -  - display_observations_dlg.py - display_hat-137 - min map size = 3.0NM
-02 22:17:58 - -  - display_observations_dlg.py - draw_target_circle-94 - Drawing circle 0 NM
-02 22:18:09 - -  - display_observations_dlg.py - display_hat-137 - min map size = 3.0NM
-02 22:18:09 - -  - display_observations_dlg.py - draw_target_circle-94 - Drawing circle 0 NM
-02 22:18:12 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:19:09 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:19:09 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:19:09 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:19:09 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:19:09 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:19:36 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:19:39 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:19:39 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:19:39 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:19:39 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:19:39 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:19:41 - -  - display_observations_dlg.py - display_hat-138 - min map size = 3.0NM
-02 22:19:41 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 0 NM
-02 22:19:45 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 1 NM
-02 22:19:49 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 2 NM
-02 22:19:52 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 3 NM
-02 22:19:57 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 4 NM
-02 22:20:01 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 5 NM
-02 22:20:05 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 6 NM
-02 22:20:09 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 7 NM
-02 22:20:13 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 8 NM
-02 22:20:16 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 9 NM
-02 22:20:23 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 0°
-02 22:20:24 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 10°
-02 22:20:24 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 20°
-02 22:20:25 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 30°
-02 22:20:25 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 40°
-02 22:20:26 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 50°
-02 22:20:26 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 60°
-02 22:20:27 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 70°
-02 22:20:27 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 80°
-02 22:20:28 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 90°
-02 22:20:28 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 100°
-02 22:20:29 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 110°
-02 22:20:29 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 120°
-02 22:20:30 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 130°
-02 22:20:30 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 140°
-02 22:20:31 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 150°
-02 22:20:31 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 160°
-02 22:20:31 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 170°
-02 22:20:32 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 180°
-02 22:20:32 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 190°
-02 22:20:33 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 200°
-02 22:20:33 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 210°
-02 22:20:34 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 220°
-02 22:20:34 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 230°
-02 22:20:35 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 240°
-02 22:20:35 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 250°
-02 22:20:36 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 260°
-02 22:20:36 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 270°
-02 22:20:37 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 280°
-02 22:20:37 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 290°
-02 22:20:38 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 300°
-02 22:20:38 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 310°
-02 22:20:38 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 320°
-02 22:20:39 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 330°
-02 22:20:39 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 340°
-02 22:20:40 - -  - display_observations_dlg.py - draw_azimut-115 - Drawing azimut 350°
-02 22:20:40 - -  - display_observations_dlg.py - draw_last_position-72 - Drawing last position
-02 22:20:48 - -  - display_observations_dlg.py - display_hat-138 - min map size = 3.0NM
-02 22:20:48 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 0 NM
-02 22:20:57 - -  - display_observations_dlg.py - display_hat-138 - min map size = 3.0NM
-02 22:20:57 - -  - display_observations_dlg.py - draw_target_circle-95 - Drawing circle 0 NM
-02 22:21:05 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:22:11 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:22:11 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:22:11 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:22:11 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:22:11 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:22:16 - -  - display_observations_dlg.py - display_hat-140 - min map size = 3.0NM
-02 22:22:16 - -  - display_observations_dlg.py - draw_target_circle-97 - Drawing circle 0 NM
-02 22:22:20 - -  - display_observations_dlg.py - draw_target_circle-97 - Drawing circle 1 NM
-02 22:22:23 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:22:47 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:22:47 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:22:47 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:22:47 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:22:47 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:22:49 - -  - display_observations_dlg.py - display_hat-140 - min map size = 3.0NM
-02 22:22:49 - -  - display_observations_dlg.py - draw_target_circle-97 - Drawing circle 0 NM
-02 22:22:53 - -  - display_observations_dlg.py - draw_target_circle-97 - Drawing circle 1 NM
-02 22:23:04 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:24:57 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:24:57 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:24:57 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:24:57 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:24:57 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:24:59 - -  - display_observations_dlg.py - display_hat-154 - min map size = 3.0NM
-02 22:24:59 - -  - display_observations_dlg.py - draw_target_circle-97 - Drawing circle 0 NM
-02 22:25:02 - -  - display_observations_dlg.py - draw_target_circle-97 - Drawing circle 1 NM
-02 22:25:05 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:25:43 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:25:43 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:25:43 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:25:43 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:25:43 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:26:19 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:27:24 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:27:24 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:27:24 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:27:24 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:27:24 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:27:32 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:30:41 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:30:41 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:30:41 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:30:41 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:30:41 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:31:02 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:31:45 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:31:45 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:31:45 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:31:45 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:31:45 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:31:58 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-02 22:32:38 -  - aa.py - init_log-44 - Starting astro version V2.0
-02 22:32:38 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-02 22:32:38 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-02 22:32:38 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-02 22:32:38 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-02 22:32:46 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 12:41:41 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 12:41:41 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 12:41:41 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 12:41:41 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 12:41:41 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 12:41:54 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 12:42:24 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 12:42:24 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 12:42:24 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 12:42:24 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 12:42:24 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 12:42:31 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:02:49 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:02:49 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:02:49 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:02:49 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:02:49 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:03:11 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:05:00 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:05:00 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:05:00 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:05:00 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:05:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:05:01 - -  - display_observations_dlg.py - display_hat-155 - min map size = 3.0NM
-03 13:05:01 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 0 NM
-03 13:05:05 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 1 NM
-03 13:05:09 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 2 NM
-03 13:05:12 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 3 NM
-03 13:05:16 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 4 NM
-03 13:05:20 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 5 NM
-03 13:05:24 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 6 NM
-03 13:05:28 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 7 NM
-03 13:05:31 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 8 NM
-03 13:05:35 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 9 NM
-03 13:05:39 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 0°
-03 13:05:39 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 10°
-03 13:05:40 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 20°
-03 13:05:40 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 30°
-03 13:05:41 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 40°
-03 13:05:41 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 50°
-03 13:05:42 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 60°
-03 13:05:42 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 70°
-03 13:05:43 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 80°
-03 13:05:43 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 90°
-03 13:05:44 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 100°
-03 13:05:44 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 110°
-03 13:05:45 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 120°
-03 13:05:45 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 130°
-03 13:05:46 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 140°
-03 13:05:46 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 150°
-03 13:05:46 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 160°
-03 13:05:47 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 170°
-03 13:05:47 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 180°
-03 13:05:48 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 190°
-03 13:05:48 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 200°
-03 13:05:49 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 210°
-03 13:05:49 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 220°
-03 13:05:50 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 230°
-03 13:05:50 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 240°
-03 13:05:51 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 250°
-03 13:05:51 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 260°
-03 13:05:52 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 270°
-03 13:05:52 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 280°
-03 13:05:53 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 290°
-03 13:05:53 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 300°
-03 13:05:53 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 310°
-03 13:05:54 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 320°
-03 13:05:54 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 330°
-03 13:05:55 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 340°
-03 13:05:55 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 350°
-03 13:05:56 - -  - display_observations_dlg.py - draw_last_position-75 - Drawing last position
-03 13:06:28 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:06:30 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:06:30 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:06:30 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:06:30 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:06:30 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:06:32 - -  - display_observations_dlg.py - display_hat-155 - min map size = 3.0NM
-03 13:06:32 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 0 NM
-03 13:06:36 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 1 NM
-03 13:06:40 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 2 NM
-03 13:06:44 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 3 NM
-03 13:06:47 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 4 NM
-03 13:06:51 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 5 NM
-03 13:06:55 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 6 NM
-03 13:06:59 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 7 NM
-03 13:07:03 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 8 NM
-03 13:07:06 - -  - display_observations_dlg.py - draw_target_circle-98 - Drawing circle 9 NM
-03 13:07:10 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 0°
-03 13:07:11 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 10°
-03 13:07:11 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 20°
-03 13:07:11 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 30°
-03 13:07:12 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 40°
-03 13:07:12 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 50°
-03 13:07:13 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 60°
-03 13:07:13 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 70°
-03 13:07:14 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 80°
-03 13:07:14 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 90°
-03 13:07:15 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 100°
-03 13:07:15 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 110°
-03 13:07:16 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 120°
-03 13:07:16 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 130°
-03 13:07:17 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 140°
-03 13:07:17 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 150°
-03 13:07:18 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 160°
-03 13:07:18 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 170°
-03 13:07:19 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 180°
-03 13:07:19 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 190°
-03 13:07:19 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 200°
-03 13:07:20 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 210°
-03 13:07:20 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 220°
-03 13:07:21 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 230°
-03 13:07:21 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 240°
-03 13:07:22 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 250°
-03 13:07:22 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 260°
-03 13:07:23 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 270°
-03 13:07:23 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 280°
-03 13:07:24 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 290°
-03 13:07:24 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 300°
-03 13:07:25 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 310°
-03 13:07:25 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 320°
-03 13:07:26 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 330°
-03 13:07:26 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 340°
-03 13:07:26 - -  - display_observations_dlg.py - draw_azimut-118 - Drawing azimut 350°
-03 13:07:27 - -  - display_observations_dlg.py - draw_last_position-75 - Drawing last position
-03 13:07:48 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:14:13 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:14:13 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:14:13 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:14:13 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:14:13 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:14:15 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:14:15 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:14:15 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:14:15 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:14:15 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:14:15 - -  - display_observations_dlg.py - display_hat-155 - min map size = 11.4NM
-03 13:14:15 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 0 NM
-03 13:14:19 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 1 NM
-03 13:14:23 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 2 NM
-03 13:14:27 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 3 NM
-03 13:14:30 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 4 NM
-03 13:14:34 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 5 NM
-03 13:14:38 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 6 NM
-03 13:14:42 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 7 NM
-03 13:14:46 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 8 NM
-03 13:14:49 - -  - display_observations_dlg.py - draw_target_circle-99 - Drawing circle 9 NM
-03 13:14:53 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 0°
-03 13:14:54 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 10°
-03 13:14:54 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 20°
-03 13:14:55 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 30°
-03 13:14:55 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 40°
-03 13:14:56 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 50°
-03 13:14:56 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 60°
-03 13:14:56 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 70°
-03 13:14:57 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 80°
-03 13:14:57 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 90°
-03 13:14:58 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 100°
-03 13:14:58 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 110°
-03 13:14:59 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 120°
-03 13:14:59 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 130°
-03 13:15:00 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 140°
-03 13:15:00 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 150°
-03 13:15:01 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 160°
-03 13:15:01 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 170°
-03 13:15:02 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 180°
-03 13:15:02 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 190°
-03 13:15:03 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 200°
-03 13:15:03 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 210°
-03 13:15:03 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 220°
-03 13:15:04 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 230°
-03 13:15:04 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 240°
-03 13:15:05 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 250°
-03 13:15:05 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 260°
-03 13:15:06 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 270°
-03 13:15:06 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 280°
-03 13:15:07 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 290°
-03 13:15:07 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 300°
-03 13:15:08 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 310°
-03 13:15:08 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 320°
-03 13:15:09 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 330°
-03 13:15:09 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 340°
-03 13:15:10 - -  - display_observations_dlg.py - draw_azimut-119 - Drawing azimut 350°
-03 13:15:10 - -  - display_observations_dlg.py - draw_last_position-76 - Drawing last position
-03 13:15:21 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:18:39 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:18:39 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:18:39 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:18:39 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:18:39 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:18:40 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:18:40 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:18:40 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:18:40 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:18:40 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:18:40 - -  - display_observations_dlg.py - display_hat-156 - min map size = 11.4NM
-03 13:18:40 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 0 NM
-03 13:18:41 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 1 NM
-03 13:18:41 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 2 NM
-03 13:18:41 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 3 NM
-03 13:18:41 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 4 NM
-03 13:18:42 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 5 NM
-03 13:18:42 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 6 NM
-03 13:18:42 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 7 NM
-03 13:18:43 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 8 NM
-03 13:18:43 - -  - display_observations_dlg.py - draw_target_circle-100 - Drawing circle 9 NM
-03 13:18:43 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 0°
-03 13:18:43 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 15°
-03 13:18:43 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 30°
-03 13:18:44 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 45°
-03 13:18:44 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 60°
-03 13:18:44 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 75°
-03 13:18:44 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 90°
-03 13:18:44 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 105°
-03 13:18:45 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 120°
-03 13:18:45 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 135°
-03 13:18:45 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 150°
-03 13:18:45 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 165°
-03 13:18:45 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 180°
-03 13:18:46 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 195°
-03 13:18:46 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 210°
-03 13:18:46 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 225°
-03 13:18:46 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 240°
-03 13:18:46 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 255°
-03 13:18:46 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 270°
-03 13:18:47 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 285°
-03 13:18:47 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 300°
-03 13:18:47 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 315°
-03 13:18:47 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 330°
-03 13:18:47 - -  - display_observations_dlg.py - draw_azimut-120 - Drawing azimut 345°
-03 13:18:48 - -  - display_observations_dlg.py - draw_last_position-77 - Drawing last position
-03 13:18:55 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:19:39 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:19:39 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:19:39 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:19:39 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:19:39 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:19:40 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:19:40 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:19:40 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:19:40 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:19:40 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:19:40 - -  - display_observations_dlg.py - display_hat-157 - min map size = 11.4NM
-03 13:19:40 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 0 NM
-03 13:19:40 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 1 NM
-03 13:19:41 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 2 NM
-03 13:19:41 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 3 NM
-03 13:19:41 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 4 NM
-03 13:19:42 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 5 NM
-03 13:19:42 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 6 NM
-03 13:19:42 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 7 NM
-03 13:19:42 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 8 NM
-03 13:19:43 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 9 NM
-03 13:19:43 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 0°
-03 13:19:43 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 15°
-03 13:19:43 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 30°
-03 13:19:43 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 45°
-03 13:19:44 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 60°
-03 13:19:44 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 75°
-03 13:19:44 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 90°
-03 13:19:44 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 105°
-03 13:19:44 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 120°
-03 13:19:45 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 135°
-03 13:19:45 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 150°
-03 13:19:45 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 165°
-03 13:19:45 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 180°
-03 13:19:45 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 195°
-03 13:19:46 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 210°
-03 13:19:46 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 225°
-03 13:19:46 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 240°
-03 13:19:46 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 255°
-03 13:19:46 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 270°
-03 13:19:46 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 285°
-03 13:19:47 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 300°
-03 13:19:47 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 315°
-03 13:19:47 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 330°
-03 13:19:47 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 345°
-03 13:19:47 - -  - display_observations_dlg.py - draw_last_position-78 - Drawing last position
-03 13:19:52 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:21:15 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:21:15 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:21:15 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:21:15 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:21:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:21:17 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:21:17 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:21:17 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:21:17 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:21:17 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:21:17 - -  - display_observations_dlg.py - display_hat-157 - min map size = 11.4NM
-03 13:21:17 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 0 NM
-03 13:21:17 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 1 NM
-03 13:21:17 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 2 NM
-03 13:21:18 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 3 NM
-03 13:21:18 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 4 NM
-03 13:21:18 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 5 NM
-03 13:21:18 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 6 NM
-03 13:21:19 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 7 NM
-03 13:21:19 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 8 NM
-03 13:21:19 - -  - display_observations_dlg.py - draw_target_circle-101 - Drawing circle 9 NM
-03 13:21:20 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 0°
-03 13:21:20 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 15°
-03 13:21:20 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 30°
-03 13:21:20 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 45°
-03 13:21:20 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 60°
-03 13:21:20 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 75°
-03 13:21:21 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 90°
-03 13:21:21 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 105°
-03 13:21:21 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 120°
-03 13:21:21 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 135°
-03 13:21:21 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 150°
-03 13:21:22 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 165°
-03 13:21:22 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 180°
-03 13:21:22 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 195°
-03 13:21:22 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 210°
-03 13:21:22 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 225°
-03 13:21:23 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 240°
-03 13:21:23 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 255°
-03 13:21:23 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 270°
-03 13:21:23 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 285°
-03 13:21:23 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 300°
-03 13:21:23 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 315°
-03 13:21:24 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 330°
-03 13:21:24 - -  - display_observations_dlg.py - draw_azimut-121 - Drawing azimut 345°
-03 13:21:24 - -  - display_observations_dlg.py - draw_last_position-78 - Drawing last position
-03 13:21:29 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:25:31 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:25:31 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:25:31 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:25:31 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:25:31 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:25:33 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:25:33 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:25:33 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:25:33 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:25:33 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:25:33 - -  - display_observations_dlg.py - calculate_map_size-159 - min map size = 11.4NM
-03 13:27:05 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:27:12 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:27:12 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:27:12 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:27:12 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:27:12 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:27:21 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:27:21 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:27:21 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:27:21 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:27:21 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:27:21 - -  - display_observations_dlg.py - calculate_map_size-165 - min map size = 11.4NM
-03 13:27:21 - -  - display_observations_dlg.py - create_dlg_body-65 - screen width = 1920, screen_height = 1080
-03 13:30:40 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:30:43 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:30:43 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:30:43 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:30:43 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:30:43 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:30:45 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:30:45 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:30:45 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:30:45 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:30:45 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:30:45 - -  - display_observations_dlg.py - calculate_map_size-172 - min map size = 11.4NM
-03 13:30:45 - -  - display_observations_dlg.py - create_dlg_body-65 - screen width = 1920, screen_height = 1080
-03 13:30:45 - -  - display_observations_dlg.py - create_dlg_body-73 - map size 20.3 NM * 11.4 NM
-03 13:30:45 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 0 NM
-03 13:30:46 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 1 NM
-03 13:30:46 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 2 NM
-03 13:30:46 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 3 NM
-03 13:30:46 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 4 NM
-03 13:30:47 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 5 NM
-03 13:30:47 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 6 NM
-03 13:30:47 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 7 NM
-03 13:30:47 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 8 NM
-03 13:30:48 - -  - display_observations_dlg.py - draw_target_circle-116 - Drawing circle 9 NM
-03 13:30:48 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 0°
-03 13:30:48 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 15°
-03 13:30:48 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 30°
-03 13:30:49 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 45°
-03 13:30:49 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 60°
-03 13:30:49 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 75°
-03 13:30:49 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 90°
-03 13:30:49 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 105°
-03 13:30:49 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 120°
-03 13:30:50 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 135°
-03 13:30:50 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 150°
-03 13:30:50 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 165°
-03 13:30:50 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 180°
-03 13:30:50 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 195°
-03 13:30:51 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 210°
-03 13:30:51 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 225°
-03 13:30:51 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 240°
-03 13:30:51 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 255°
-03 13:30:51 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 270°
-03 13:30:52 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 285°
-03 13:30:52 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 300°
-03 13:30:52 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 315°
-03 13:30:52 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 330°
-03 13:30:52 - -  - display_observations_dlg.py - draw_azimut-136 - Drawing azimut 345°
-03 13:30:52 - -  - display_observations_dlg.py - draw_last_position-93 - Drawing last position
-03 13:31:02 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:35:30 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:35:30 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:35:30 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:35:30 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:35:30 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:35:32 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:35:32 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:35:32 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:35:32 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:35:32 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:36:09 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:36:12 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:36:12 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:36:12 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:36:12 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:36:12 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:36:13 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:36:13 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:36:13 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:36:13 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:36:13 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:36:13 - -  - display_observations_dlg.py - calculate_map_size-176 - min map size = 11.4NM
-03 13:36:13 - -  - display_observations_dlg.py - create_dlg_body-69 - screen width = 1920, screen_height = 1080
-03 13:36:13 - -  - display_observations_dlg.py - create_dlg_body-77 - map size 20.3 NM * 11.4 NM
-03 13:36:14 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 0 NM
-03 13:36:14 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 1 NM
-03 13:36:14 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 2 NM
-03 13:36:14 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 3 NM
-03 13:36:15 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 4 NM
-03 13:36:15 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 5 NM
-03 13:36:15 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 6 NM
-03 13:36:15 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 7 NM
-03 13:36:16 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 8 NM
-03 13:36:16 - -  - display_observations_dlg.py - draw_target_circle-120 - Drawing circle 9 NM
-03 13:36:16 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 0°
-03 13:36:16 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 15°
-03 13:36:17 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 30°
-03 13:36:17 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 45°
-03 13:36:17 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 60°
-03 13:36:17 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 75°
-03 13:36:17 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 90°
-03 13:36:18 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 105°
-03 13:36:18 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 120°
-03 13:36:18 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 135°
-03 13:36:18 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 150°
-03 13:36:18 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 165°
-03 13:36:19 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 180°
-03 13:36:19 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 195°
-03 13:36:19 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 210°
-03 13:36:19 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 225°
-03 13:36:19 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 240°
-03 13:36:20 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 255°
-03 13:36:20 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 270°
-03 13:36:20 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 285°
-03 13:36:20 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 300°
-03 13:36:20 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 315°
-03 13:36:20 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 330°
-03 13:36:21 - -  - display_observations_dlg.py - draw_azimut-140 - Drawing azimut 345°
-03 13:36:21 - -  - display_observations_dlg.py - draw_last_position-97 - Drawing last position
-03 13:36:46 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:38:45 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:38:45 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:38:45 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:38:45 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:38:45 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:38:46 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:38:46 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:38:46 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:38:46 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:38:46 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:38:46 - -  - display_observations_dlg.py - calculate_map_size-177 - min map size = 11.4NM
-03 13:38:46 - -  - display_observations_dlg.py - create_dlg_body-68 - screen width = 1920, screen_height = 1080
-03 13:38:46 - -  - display_observations_dlg.py - create_dlg_body-76 - map size 20.3 NM * 11.4 NM
-03 13:38:46 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 0 NM
-03 13:38:47 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 1 NM
-03 13:38:47 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 2 NM
-03 13:38:47 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 3 NM
-03 13:38:47 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 4 NM
-03 13:38:48 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 5 NM
-03 13:38:48 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 6 NM
-03 13:38:48 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 7 NM
-03 13:38:48 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 8 NM
-03 13:38:49 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 9 NM
-03 13:38:49 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 0°
-03 13:38:49 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 15°
-03 13:38:49 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 30°
-03 13:38:50 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 45°
-03 13:38:50 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 60°
-03 13:38:50 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 75°
-03 13:38:50 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 90°
-03 13:38:50 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 105°
-03 13:38:51 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 120°
-03 13:38:51 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 135°
-03 13:38:51 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 150°
-03 13:38:51 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 165°
-03 13:38:51 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 180°
-03 13:38:51 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 195°
-03 13:38:52 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 210°
-03 13:38:52 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 225°
-03 13:38:52 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 240°
-03 13:38:52 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 255°
-03 13:38:52 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 270°
-03 13:38:53 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 285°
-03 13:38:53 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 300°
-03 13:38:53 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 315°
-03 13:38:53 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 330°
-03 13:38:53 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 345°
-03 13:38:54 - -  - display_observations_dlg.py - draw_last_position-98 - Drawing last position
-03 13:39:28 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
-03 13:39:35 -  - aa.py - init_log-44 - Starting astro version V2.0
-03 13:39:35 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
-03 13:39:35 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
-03 13:39:35 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
-03 13:39:35 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
-03 13:39:37 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
-03 13:39:37 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
-03 13:39:37 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
-03 13:39:37 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
-03 13:39:37 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
-03 13:39:37 - -  - display_observations_dlg.py - calculate_map_size-177 - min map size = 11.4NM
-03 13:39:37 - -  - display_observations_dlg.py - create_dlg_body-68 - screen width = 1920, screen_height = 1080
-03 13:39:37 - -  - display_observations_dlg.py - create_dlg_body-76 - map size 20.3 NM * 11.4 NM
-03 13:39:37 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 0 NM
-03 13:39:37 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 1 NM
-03 13:39:37 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 2 NM
-03 13:39:37 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 3 NM
-03 13:39:38 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 4 NM
-03 13:39:38 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 5 NM
-03 13:39:38 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 6 NM
-03 13:39:38 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 7 NM
-03 13:39:39 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 8 NM
-03 13:39:39 - -  - display_observations_dlg.py - draw_target_circle-121 - Drawing circle 9 NM
-03 13:39:39 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 0°
-03 13:39:39 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 15°
-03 13:39:40 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 30°
-03 13:39:40 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 45°
-03 13:39:40 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 60°
-03 13:39:40 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 75°
-03 13:39:40 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 90°
-03 13:39:41 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 105°
-03 13:39:41 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 120°
-03 13:39:41 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 135°
-03 13:39:41 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 150°
-03 13:39:41 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 165°
-03 13:39:42 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 180°
-03 13:39:42 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 195°
-03 13:39:42 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 210°
-03 13:39:42 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 225°
-03 13:39:42 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 240°
-03 13:39:42 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 255°
-03 13:39:43 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 270°
-03 13:39:43 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 285°
-03 13:39:43 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 300°
-03 13:39:43 - -  - display_observations_dlg.py - draw_azimut-141 - Drawing azimut 315°
+03 16:53:57 - -  - display_observations_dlg.py - draw_last_position-98 - Drawing last position
+03 16:53:57 - -  - display_observations_dlg.py - draw_scale-123 - Drawing scale
+03 16:53:57 - -  - display_observations_dlg.py - calculate_intersection-164 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 16:53:57 - -  - display_observations_dlg.py - calculate_intersection-164 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 16:53:57 - -  - display_observations_dlg.py - calculate_intersection-164 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 16:53:57 - -  - display_observations_dlg.py - calculate_intersection-164 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 16:53:57 - -  - display_observations_dlg.py - calculate_intersection-174 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 16:53:57 - -  - display_observations_dlg.py - calculate_intersection-174 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 16:53:57 - -  - display_observations_dlg.py - calculate_intersection-174 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 16:53:57 - -  - display_observations_dlg.py - calculate_intersection-174 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 16:54:13 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 16:54:13 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 16:54:13 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 16:54:13 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 16:54:13 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 16:54:13 - -  - display_observations_dlg.py - calculate_map_size-115 - min map size = 11.4NM
+03 16:54:13 - -  - display_observations_dlg.py - draw_last_position-98 - Drawing last position
+03 16:54:13 - -  - display_observations_dlg.py - draw_scale-123 - Drawing scale
+03 16:54:13 - -  - display_observations_dlg.py - calculate_intersection-164 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 16:54:13 - -  - display_observations_dlg.py - calculate_intersection-164 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 16:54:13 - -  - display_observations_dlg.py - calculate_intersection-164 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 16:54:13 - -  - display_observations_dlg.py - calculate_intersection-164 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 16:54:13 - -  - display_observations_dlg.py - calculate_intersection-174 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 16:54:13 - -  - display_observations_dlg.py - calculate_intersection-174 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 16:54:13 - -  - display_observations_dlg.py - calculate_intersection-174 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 16:54:13 - -  - display_observations_dlg.py - calculate_intersection-174 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 16:54:21 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 16:56:00 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 16:56:00 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 16:56:00 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 16:56:00 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 16:56:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 16:56:02 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 16:56:02 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 16:56:02 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 16:56:02 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 16:56:02 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 16:56:02 - -  - display_observations_dlg.py - calculate_map_size-115 - min map size = 11.4NM
+03 16:56:02 - -  - display_observations_dlg.py - draw_last_position-98 - Drawing last position
+03 16:56:02 - -  - display_observations_dlg.py - draw_scale-123 - Drawing scale
+03 16:56:02 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 16:56:02 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 16:56:02 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 16:56:02 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 16:56:02 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 16:56:02 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 16:56:02 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 16:56:02 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 16:56:06 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 16:56:06 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 16:56:06 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 16:56:06 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 16:56:06 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 16:56:06 - -  - display_observations_dlg.py - calculate_map_size-115 - min map size = 11.4NM
+03 16:56:06 - -  - display_observations_dlg.py - draw_last_position-98 - Drawing last position
+03 16:56:06 - -  - display_observations_dlg.py - draw_scale-123 - Drawing scale
+03 16:56:06 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 16:56:06 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 16:56:06 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 16:56:06 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 16:56:06 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 16:56:06 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 16:56:06 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 16:56:06 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 16:56:18 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 16:56:18 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 16:56:18 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 16:56:18 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 16:56:18 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 16:56:18 - -  - display_observations_dlg.py - calculate_map_size-115 - min map size = 11.4NM
+03 16:56:18 - -  - display_observations_dlg.py - draw_last_position-98 - Drawing last position
+03 16:56:18 - -  - display_observations_dlg.py - draw_scale-123 - Drawing scale
+03 16:56:18 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 16:56:18 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 16:56:18 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 16:56:18 - -  - display_observations_dlg.py - calculate_intersection-165 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 16:56:18 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 16:56:18 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 16:56:18 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 16:56:18 - -  - display_observations_dlg.py - calculate_intersection-175 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 16:56:21 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 17:24:05 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 17:24:05 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 17:24:05 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 17:24:05 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 17:24:05 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:24:07 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 17:24:07 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:24:07 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:24:07 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:24:07 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:24:07 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:24:07 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:24:07 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:24:07 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:24:07 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:24:07 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:24:07 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:24:07 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:24:07 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:24:07 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:24:07 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:24:13 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 17:24:27 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 17:24:27 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 17:24:27 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 17:24:27 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 17:24:27 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:24:28 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 17:24:28 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:24:28 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:24:28 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:24:28 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:24:28 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:24:28 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:24:28 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:24:28 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:24:28 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:24:28 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:24:28 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:24:28 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:24:28 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:24:28 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:24:28 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:24:40 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 17:25:50 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 17:25:50 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 17:25:50 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 17:25:50 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 17:25:51 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:25:52 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 17:25:52 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:25:52 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:25:52 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:25:52 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:25:52 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:25:52 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:25:52 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:25:52 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:25:52 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:25:52 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:25:52 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:25:52 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:25:52 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:25:52 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:25:52 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:25:59 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 17:27:41 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 17:27:41 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 17:27:41 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 17:27:41 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 17:27:41 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:27:43 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 17:27:43 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:27:43 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:27:43 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:27:43 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:27:43 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:27:43 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:27:43 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:27:43 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:27:43 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:27:43 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:27:43 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:27:43 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:27:43 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:27:43 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:27:43 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:28:14 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 17:29:03 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 17:29:03 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 17:29:03 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 17:29:03 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 17:29:03 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:29:04 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 17:29:04 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:29:04 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:29:04 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:29:04 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:29:04 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:29:04 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:29:04 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:29:04 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:29:04 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:29:04 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:29:04 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:29:04 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:29:04 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:29:04 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:29:04 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:29:10 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 17:29:42 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 17:29:42 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 17:29:42 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 17:29:42 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 17:29:42 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:29:43 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 17:29:43 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:29:43 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:29:43 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:29:43 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:29:43 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:29:43 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:29:43 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:29:43 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:29:43 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:29:43 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:29:43 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:29:43 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:29:43 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:29:43 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:29:43 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:30:01 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 17:30:14 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 17:30:14 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 17:30:14 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 17:30:14 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 17:30:14 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:30:19 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 17:30:19 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:30:19 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:30:19 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:30:19 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:30:19 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:30:19 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:30:19 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:30:19 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:30:19 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:30:19 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:30:19 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:30:19 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:30:19 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:30:19 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:30:19 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:30:28 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 17:30:56 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 17:30:56 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 17:30:56 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 17:30:56 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 17:31:05 -  - aa.py - init_log-44 - Starting astro version V2.0
+03 17:31:05 -  - astro_data.py - load_config-32 - Loading configuration from file "astro.ini"
+03 17:31:05 - -  - astro_data.py - load_config-38 - log level set to "DEBUG"
+03 17:31:05 -  - astro_data.py - load_config-61 - 4 observation(s) loaded from file "astro.ini"
+03 17:31:05 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:31:10 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 17:31:10 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:31:10 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:31:10 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:31:10 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:31:10 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:31:10 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:31:10 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:31:10 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:31:10 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:31:10 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:31:10 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:31:10 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:31:10 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:31:10 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:31:10 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:31:19 -  - init_pos_dlg.py - __init__-33 - Input - lattitude : "45°16.1'N", lattitude : "005°52.3'E"
+03 17:31:32 - -  - astro_view.py - on_button_new_observation-148 - At 03/11/2022 17:31:26 with eye height = 2m, Height observed = +45°30'
+03 17:31:32 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:31:32 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:31:32 - -  - observation.py - extract_ephemerides_from_ho249-98 - at 2022 NOV  3 00:00:00 : decl = 14°59.0'S (var -0.78'),  ahv0 = 184°06.6'(var 15.0°)
+03 17:31:32 - -  - observation.py - calculate_nb_utc_hour_since_midnight-114 - utc_offset_hour = -1 hours
+03 17:31:32 - -  - observation.py - calculate_nb_utc_hour_since_midnight-117 - utc_time = 16.52389 hours
+03 17:31:32 -  - observation.py - calculate_decl_from_ho249-124 - at 17:31:26 decl = 15°11.9'S
+03 17:31:32 -  - observation.py - calculate_ahv0_from_ho249-137 - At 17:31:26 ahv0 = 071°58.1', ahvg = 077°50.4'
+03 17:31:32 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-144 - for angle : 46°, refraction = -1.0'
+03 17:31:32 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-150 - for eye height : 2 m, eye height correction = -2.7'
+03 17:31:32 - -  - observation.py - calculate_half_sun_lumb_angle-155 - half_sun_lumb_angle = 16.0'
+03 17:31:32 -  - observation.py - calculate_he_and_az-199 - Sextant height observed +45°30' - corrected : +45°42' 
+03 17:31:32 -  - observation.py - calculate_he-166 - Height estimated : -02°28' 
+03 17:31:32 - -  - observation.py - calculate_az-182 - Azimut by asin = +070° 
+03 17:31:32 - -  - observation.py - calculate_az-183 - Azimut by atan = -070° 
+03 17:31:32 -  - observation.py - calculate_az-184 - Azimut = +250° 
+03 17:31:32 -  - observation.py - calculate_he_and_az-209 - Intercept : 2890.8 NM
+03 17:31:38 -  - astro_data.py - load_observations-75 - 4 observation(s) loaded from configuration file
+03 17:31:38 -  - astro_data.py - load_observations-78 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:31:38 -  - astro_data.py - load_observations-78 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:31:38 -  - astro_data.py - load_observations-78 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:31:38 -  - astro_data.py - load_observations-78 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:31:38 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:31:38 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:31:38 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:31:38 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:31:38 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:31:38 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:31:38 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:31:38 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:31:38 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:31:38 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:31:38 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:31:52 -  - astro_data.py - save_config-104 - Configuration saved in file astro.ini
+03 17:51:54 -  - astro.py - init_log-44 - Starting astro version V3.0
+03 17:51:54 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+03 17:51:54 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+03 17:51:54 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+03 17:51:54 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 17:51:56 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+03 17:51:56 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 17:51:56 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 17:51:56 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 17:51:56 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 17:51:56 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 17:51:56 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 17:51:56 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 17:51:56 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 17:51:56 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 17:51:56 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 17:51:56 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 17:51:56 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 17:51:56 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 17:51:56 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 17:51:56 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 17:52:04 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+03 18:36:12 -  - astro.py - init_log-44 - Starting astro version V3.0
+03 18:36:12 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+03 18:36:12 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+03 18:36:12 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+03 18:36:12 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+03 18:36:13 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+03 18:36:13 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+03 18:36:13 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+03 18:36:13 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+03 18:36:13 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+03 18:36:13 - -  - display_observations_dlg.py - calculate_map_size-116 - min map size = 11.4NM
+03 18:36:13 - -  - display_observations_dlg.py - draw_last_position-99 - Drawing last position
+03 18:36:13 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+03 18:36:13 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+03 18:36:13 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+03 18:36:13 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+03 18:36:13 - -  - display_observations_dlg.py - calculate_intersection-166 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+03 18:36:13 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+03 18:36:13 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+03 18:36:13 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+03 18:36:13 - -  - display_observations_dlg.py - calculate_intersection-176 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+03 18:36:26 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:15:37 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:15:37 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:15:37 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:15:37 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:15:38 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:15:40 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:15:40 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:15:40 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:15:40 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:15:40 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:15:40 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:15:40 - -  - display_observations_dlg.py - draw_last_position-103 - Drawing last position
+04 09:15:40 - -  - display_observations_dlg.py - draw_scale-128 - Drawing scale
+04 09:15:40 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+04 09:15:40 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+04 09:15:40 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+04 09:15:40 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+04 09:15:40 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+04 09:15:40 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+04 09:15:40 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+04 09:15:40 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+04 09:15:47 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:16:07 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:16:07 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:16:07 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:16:07 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:16:07 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:16:08 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:16:08 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:16:08 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:16:08 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:16:08 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:16:08 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:16:08 - -  - display_observations_dlg.py - draw_last_position-103 - Drawing last position
+04 09:16:08 - -  - display_observations_dlg.py - draw_scale-128 - Drawing scale
+04 09:16:08 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+04 09:16:08 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+04 09:16:08 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+04 09:16:08 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+04 09:16:08 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+04 09:16:08 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+04 09:16:08 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+04 09:16:08 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+04 09:16:18 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:18:01 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:18:01 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:18:01 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:18:01 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:18:01 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:18:04 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:18:04 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:18:04 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:18:04 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:18:04 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:18:04 - -  - display_observations_dlg.py - calculate_map_size-122 - min map size = 11.4NM
+04 09:18:04 - -  - display_observations_dlg.py - draw_last_position-105 - Drawing last position
+04 09:18:04 - -  - display_observations_dlg.py - draw_scale-130 - Drawing scale
+04 09:18:04 - -  - display_observations_dlg.py - calculate_intersection-172 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+04 09:18:04 - -  - display_observations_dlg.py - calculate_intersection-172 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+04 09:18:04 - -  - display_observations_dlg.py - calculate_intersection-172 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+04 09:18:04 - -  - display_observations_dlg.py - calculate_intersection-172 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+04 09:18:04 - -  - display_observations_dlg.py - calculate_intersection-182 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+04 09:18:04 - -  - display_observations_dlg.py - calculate_intersection-182 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+04 09:18:04 - -  - display_observations_dlg.py - calculate_intersection-182 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+04 09:18:04 - -  - display_observations_dlg.py - calculate_intersection-182 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+04 09:18:23 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:26:07 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:26:07 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:26:07 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:26:07 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:26:07 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:26:09 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:26:09 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:26:09 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:26:09 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:26:09 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:26:09 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:26:09 - -  - display_observations_dlg.py - draw_last_position-103 - Drawing last position
+04 09:26:09 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+04 09:26:09 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+04 09:26:09 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+04 09:26:09 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+04 09:26:09 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+04 09:26:09 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+04 09:26:09 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+04 09:26:09 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+04 09:26:09 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+04 09:26:24 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:27:58 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:27:58 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:27:58 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:27:58 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:27:58 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:28:00 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:28:00 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:28:00 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:28:00 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:28:00 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:28:00 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:28:06 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:28:41 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:28:41 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:28:41 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:28:41 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:28:41 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:28:43 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:28:43 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:28:43 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:28:43 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:28:43 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:28:43 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:28:48 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:29:12 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:29:12 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:29:12 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:29:12 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:29:12 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:29:14 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:29:14 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:29:14 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:29:14 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:29:14 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:29:14 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:29:18 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:29:36 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:29:36 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:29:36 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:29:36 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:29:36 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:29:37 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:29:37 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:29:37 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:29:37 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:29:37 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:29:37 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:29:44 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:30:11 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:30:11 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:30:11 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:30:11 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:30:11 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:30:13 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:30:13 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:30:13 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:30:13 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:30:13 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:30:13 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:30:18 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+04 09:36:30 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 09:36:30 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 09:36:30 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 09:36:30 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 09:36:30 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 09:36:36 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:36:36 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:36:36 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:36:36 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:36:36 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:36:36 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:36:36 - -  - display_observations_dlg.py - draw_last_position-103 - Drawing last position
+04 09:36:36 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+04 09:36:36 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+04 09:36:36 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+04 09:36:36 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+04 09:36:36 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+04 09:36:36 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+04 09:36:36 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+04 09:36:36 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+04 09:36:36 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+04 09:36:41 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:36:41 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:36:41 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:36:41 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:36:41 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:36:41 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:36:41 - -  - display_observations_dlg.py - draw_last_position-103 - Drawing last position
+04 09:36:41 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+04 09:36:41 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+04 09:36:41 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+04 09:36:41 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+04 09:36:41 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+04 09:36:41 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+04 09:36:41 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+04 09:36:41 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+04 09:36:41 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+04 09:36:55 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+04 09:36:55 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+04 09:36:55 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+04 09:36:55 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+04 09:36:55 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+04 09:36:55 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+04 09:36:55 - -  - display_observations_dlg.py - draw_last_position-103 - Drawing last position
+04 09:36:55 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+04 09:36:55 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+04 09:36:55 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+04 09:36:55 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+04 09:36:55 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+04 09:36:55 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+04 09:36:55 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+04 09:36:55 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+04 09:36:55 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+04 09:37:05 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:26:25 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:26:25 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:26:25 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:26:25 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:26:25 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:26:27 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:26:27 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:26:27 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:26:27 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:26:27 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:26:27 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+05 00:26:36 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:27:00 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:27:00 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:27:00 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:27:00 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:27:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:27:01 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:27:01 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:27:01 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:27:01 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:27:01 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:27:01 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+05 00:28:57 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:29:00 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:29:00 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:29:00 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:29:00 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:29:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:29:06 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:29:06 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:29:06 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:29:06 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:29:06 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:29:06 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+05 00:31:20 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:31:27 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:31:27 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:31:27 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:31:27 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:31:27 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:31:30 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:31:30 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:31:30 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:31:30 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:31:30 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:31:30 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+05 00:31:30 - -  - display_observations_dlg.py - create_dlg_body-80 - screen width = 1920, screen_height = 1080
+05 00:31:30 - -  - display_observations_dlg.py - draw_last_position-103 - Drawing last position
+05 00:31:30 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+05 00:31:30 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:31:30 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:31:30 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:31:30 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:31:30 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:31:30 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:31:30 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:31:30 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:31:38 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:31:39 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:31:39 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:31:39 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:31:39 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:31:40 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:31:44 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:31:44 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:31:44 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:31:44 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:31:44 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:31:44 - -  - display_observations_dlg.py - calculate_map_size-120 - min map size = 11.4NM
+05 00:31:44 - -  - display_observations_dlg.py - create_dlg_body-80 - screen width = 1920, screen_height = 1080
+05 00:31:44 - -  - display_observations_dlg.py - draw_last_position-103 - Drawing last position
+05 00:31:44 - -  - display_observations_dlg.py - draw_scale-124 - Drawing scale
+05 00:31:44 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:31:44 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:31:44 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:31:44 - -  - display_observations_dlg.py - calculate_intersection-169 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:31:44 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:31:44 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:31:44 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:31:44 - -  - display_observations_dlg.py - calculate_intersection-179 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:31:55 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:32:53 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:32:53 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:32:53 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:32:53 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:32:53 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:32:55 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:32:55 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:32:55 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:32:55 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:32:55 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:32:55 - -  - display_observations_dlg.py - calculate_map_size-121 - min map size = 11.4NM
+05 00:32:55 - -  - display_observations_dlg.py - create_dlg_body-81 - screen width = 1920, screen_height = 1080
+05 00:32:55 - -  - display_observations_dlg.py - draw_last_position-104 - Drawing last position
+05 00:32:55 - -  - display_observations_dlg.py - draw_scale-125 - Drawing scale
+05 00:32:55 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:32:55 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:32:55 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:32:55 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:32:55 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:32:55 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:32:55 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:32:55 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:33:04 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:33:04 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:33:04 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:33:04 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:33:04 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:33:04 - -  - display_observations_dlg.py - calculate_map_size-121 - min map size = 11.4NM
+05 00:33:04 - -  - display_observations_dlg.py - create_dlg_body-81 - screen width = 1920, screen_height = 1080
+05 00:33:04 - -  - display_observations_dlg.py - draw_last_position-104 - Drawing last position
+05 00:33:04 - -  - display_observations_dlg.py - draw_scale-125 - Drawing scale
+05 00:33:04 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:33:04 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:33:04 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:33:04 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:33:04 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:33:04 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:33:04 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:33:04 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:34:50 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:34:53 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:34:53 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:34:53 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:34:53 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:34:53 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:34:55 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:34:55 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:34:55 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:34:55 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:34:55 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:34:55 - -  - display_observations_dlg.py - calculate_map_size-121 - min map size = 11.4NM
+05 00:34:55 - -  - display_observations_dlg.py - create_dlg_body-81 - screen width = 1920, screen_height = 1080
+05 00:34:55 - -  - display_observations_dlg.py - draw_last_position-104 - Drawing last position
+05 00:34:55 - -  - display_observations_dlg.py - draw_scale-125 - Drawing scale
+05 00:34:55 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:34:55 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:34:55 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:34:55 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:34:55 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:34:55 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:34:55 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:34:55 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:34:59 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:34:59 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:34:59 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:34:59 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:34:59 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:34:59 - -  - display_observations_dlg.py - calculate_map_size-121 - min map size = 11.4NM
+05 00:34:59 - -  - display_observations_dlg.py - create_dlg_body-81 - screen width = 1920, screen_height = 1080
+05 00:34:59 - -  - display_observations_dlg.py - draw_last_position-104 - Drawing last position
+05 00:34:59 - -  - display_observations_dlg.py - draw_scale-125 - Drawing scale
+05 00:34:59 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:34:59 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:34:59 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:34:59 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:34:59 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:34:59 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:34:59 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:34:59 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:35:01 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:35:01 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:35:01 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:35:01 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:35:01 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:35:01 - -  - display_observations_dlg.py - calculate_map_size-121 - min map size = 11.4NM
+05 00:35:01 - -  - display_observations_dlg.py - create_dlg_body-81 - screen width = 1920, screen_height = 1080
+05 00:35:01 - -  - display_observations_dlg.py - draw_last_position-104 - Drawing last position
+05 00:35:01 - -  - display_observations_dlg.py - draw_scale-125 - Drawing scale
+05 00:35:01 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:35:01 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:35:01 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:35:01 - -  - display_observations_dlg.py - calculate_intersection-170 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:35:01 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:35:01 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:35:01 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:35:01 - -  - display_observations_dlg.py - calculate_intersection-180 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:35:04 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:37:37 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:37:37 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:37:37 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:37:37 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:37:37 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:37:39 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:37:39 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:37:39 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:37:39 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:37:39 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:37:39 - -  - display_observations_dlg.py - calculate_map_size-119 - min map size = 11.4NM
+05 00:37:39 - -  - display_observations_dlg.py - create_dlg_body-78 - screen width = 1920, screen_height = 1080
+05 00:37:39 - -  - display_observations_dlg.py - create_dlg_body-87 - map size 20.3 NM * 11.4 NM
+05 00:37:39 - -  - display_observations_dlg.py - draw_last_position-102 - Drawing last position
+05 00:37:39 - -  - display_observations_dlg.py - draw_scale-123 - Drawing scale
+05 00:37:39 - -  - display_observations_dlg.py - calculate_intersection-168 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:37:39 - -  - display_observations_dlg.py - calculate_intersection-168 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:37:39 - -  - display_observations_dlg.py - calculate_intersection-168 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:37:39 - -  - display_observations_dlg.py - calculate_intersection-168 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:37:39 - -  - display_observations_dlg.py - calculate_intersection-178 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:37:39 - -  - display_observations_dlg.py - calculate_intersection-178 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:37:39 - -  - display_observations_dlg.py - calculate_intersection-178 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:37:39 - -  - display_observations_dlg.py - calculate_intersection-178 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:37:46 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:37:46 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:37:46 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:37:46 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:37:46 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:37:46 - -  - display_observations_dlg.py - calculate_map_size-119 - min map size = 11.4NM
+05 00:37:46 - -  - display_observations_dlg.py - create_dlg_body-78 - screen width = 1920, screen_height = 1080
+05 00:37:46 - -  - display_observations_dlg.py - create_dlg_body-87 - map size 20.3 NM * 11.4 NM
+05 00:37:46 - -  - display_observations_dlg.py - draw_last_position-102 - Drawing last position
+05 00:37:46 - -  - display_observations_dlg.py - draw_scale-123 - Drawing scale
+05 00:37:46 - -  - display_observations_dlg.py - calculate_intersection-168 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:37:46 - -  - display_observations_dlg.py - calculate_intersection-168 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:37:46 - -  - display_observations_dlg.py - calculate_intersection-168 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:37:46 - -  - display_observations_dlg.py - calculate_intersection-168 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:37:46 - -  - display_observations_dlg.py - calculate_intersection-178 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:37:46 - -  - display_observations_dlg.py - calculate_intersection-178 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:37:46 - -  - display_observations_dlg.py - calculate_intersection-178 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:37:46 - -  - display_observations_dlg.py - calculate_intersection-178 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:37:57 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:42:34 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:42:34 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:42:34 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:42:34 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:42:34 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:42:35 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:42:35 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:42:35 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:42:35 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:42:35 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:42:35 - -  - display_observations_dlg.py - calculate_map_size-122 - min map size = 11.4NM
+05 00:42:35 - -  - display_observations_dlg.py - create_dlg_body-78 - screen width = 1920, screen_height = 1080
+05 00:42:35 - -  - display_observations_dlg.py - create_dlg_body-87 - map size 20.3 NM * 11.4 NM
+05 00:42:35 - -  - display_observations_dlg.py - draw_last_position-105 - Drawing last position
+05 00:42:35 - -  - display_observations_dlg.py - draw_scale-126 - Drawing scale
+05 00:42:35 - -  - display_observations_dlg.py - calculate_intersection-171 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:42:35 - -  - display_observations_dlg.py - calculate_intersection-171 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:42:35 - -  - display_observations_dlg.py - calculate_intersection-171 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:42:35 - -  - display_observations_dlg.py - calculate_intersection-171 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:42:35 - -  - display_observations_dlg.py - calculate_intersection-181 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:42:35 - -  - display_observations_dlg.py - calculate_intersection-181 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:42:35 - -  - display_observations_dlg.py - calculate_intersection-181 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:42:35 - -  - display_observations_dlg.py - calculate_intersection-181 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:42:44 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:48:00 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:48:00 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:48:00 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:48:00 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:48:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:48:02 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:48:02 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:48:02 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:48:02 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:48:02 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:48:02 - -  - display_observations_dlg.py - calculate_map_size-122 - min map size = 11.4NM
+05 00:48:02 - -  - display_observations_dlg.py - create_dlg_body-78 - screen width = 1920, screen_height = 1080
+05 00:48:02 - -  - display_observations_dlg.py - create_dlg_body-87 - map size 20.3 NM * 11.4 NM
+05 00:48:02 - -  - display_observations_dlg.py - draw_last_position-105 - Drawing last position
+05 00:48:02 - -  - display_observations_dlg.py - draw_scale-126 - Drawing scale
+05 00:48:02 - -  - display_observations_dlg.py - calculate_intersection-171 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:48:02 - -  - display_observations_dlg.py - calculate_intersection-171 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:48:02 - -  - display_observations_dlg.py - calculate_intersection-171 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:48:02 - -  - display_observations_dlg.py - calculate_intersection-171 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:48:02 - -  - display_observations_dlg.py - calculate_intersection-181 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:48:02 - -  - display_observations_dlg.py - calculate_intersection-181 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:48:02 - -  - display_observations_dlg.py - calculate_intersection-181 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+05 00:48:02 - -  - display_observations_dlg.py - calculate_intersection-181 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+05 00:48:10 -  - astro_data.py - save_config-103 - Configuration saved in file astro.ini
+05 00:50:24 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:50:24 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:50:24 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:50:24 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:50:24 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:50:25 -  - astro_data.py - load_observations-74 - 4 observation(s) loaded from configuration file
+05 00:50:25 -  - astro_data.py - load_observations-77 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155°
+05 00:50:25 -  - astro_data.py - load_observations-77 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183°
+05 00:50:25 -  - astro_data.py - load_observations-77 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226°
+05 00:50:25 -  - astro_data.py - load_observations-77 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134°
+05 00:50:25 - -  - display_observations_dlg.py - calculate_map_size-124 - min map size = 11.4NM
+05 00:50:25 - -  - display_observations_dlg.py - create_dlg_body-80 - screen width = 1920, screen_height = 1080
+05 00:50:25 - -  - display_observations_dlg.py - create_dlg_body-89 - map size 20.3 NM * 11.4 NM
+05 00:50:25 - -  - display_observations_dlg.py - draw_last_position-107 - Drawing last position
+05 00:50:25 - -  - display_observations_dlg.py - draw_scale-128 - Drawing scale
+05 00:50:25 - -  - display_observations_dlg.py - calculate_intersection-173 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+05 00:50:25 - -  - display_observations_dlg.py - calculate_intersection-173 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+05 00:50:25 - -  - display_observations_dlg.py - calculate_intersection-173 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+05 00:50:25 - -  - display_observations_dlg.py - calculate_intersection-173 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+05 00:50:25 - -  - display_observations_dlg.py - calculate_intersection-183 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+05 00:50:25 - -  - display_observations_dlg.py - calculate_intersection-183 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+05 00:50:25 - -  - display_observations_dlg.py - calculate_intersection-183 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01

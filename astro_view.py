@@ -158,8 +158,7 @@ class AstroTk(tk.Tk):
 
 
     def on_button_display_all_observations(self):
-        list_of_observations = self.data.load_observations()
-        DisplayObservationsDlg(self, "All sun observations", self.data.my_boat, list_of_observations)
+        DisplayObservationsDlg(self, "All sun observations", self.data)
 
     def on_button_fix_position(self):
         my_hat_display = DisplayHat(verbose=False)
