@@ -162,7 +162,7 @@ class AstroTk(tk.Tk):
 
     def on_button_fix_position(self):
         my_hat_display = DisplayHat(verbose=False)
-        list_of_observations = self.data.load_observations()
+        list_of_observations = self.data.load_observations(valid_only=True)
         suggested_fix = {"azimut":0.0, "distance":0.0}
         if (len(list_of_observations)):
             suggested_fix = my_hat_display.calculate_intersection (list_of_observations, self.app_logger)

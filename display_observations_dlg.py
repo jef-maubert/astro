@@ -103,7 +103,7 @@ class DisplayObservationsDlg(tk.Toplevel):
     def create_dlg_body(self, master):
         self.attributes("-fullscreen", True)
         width = self.screen_width
-        height = self.screen_height - CLOSE_BUTTON_HEIGHT
+        height = self.screen_height - 2*CLOSE_BUTTON_HEIGHT
         self.drawing_canvas = tk.Canvas(master, scrollregion =(-width/2, -height/2, width/2, height/2),
                                         width = width, height = height, bg="white")
         self.drawing_canvas.pack(side=tk.LEFT)
@@ -132,10 +132,13 @@ class DisplayObservationsDlg(tk.Toplevel):
             if observation["validity"]:
                 obs_select.select()
             obs_select.pack(side=tk.LEFT, padx=5, pady=5)
-        close_button = tk.Button(buttons_box, text="Close", width=10, command=self.on_close_button)
-        close_button.pack(side=tk.RIGHT, padx=5, pady=5)
+
+        close_box = tk.Frame(self)
+        close_button = tk.Button(close_box, text="Close", width=10, command=self.on_close_button)
+        close_button.pack()
         self.bind("<Escape>", self.on_close_button)
         buttons_box.pack()
+        close_box.pack()
 
     def on_close_button(self, event=None):
         # put focus back to the astro_view window
