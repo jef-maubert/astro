@@ -136,7 +136,7 @@ class CourseSpeedDlg(tk.Toplevel):
                 self.app_logger.warning('%s is a not correct value for "%s". it should match "%s"', value, pattern, category)
                 widget.configure(fg="red")
                 all_entry_ok = False
-            elif max_value and int(value) >= max_value:
+            elif max_value and float(value) >= max_value:
                 self.app_logger.warning('%s is too high ( it should be < %d)', value, max_value)
                 widget.configure(fg="red")
                 all_entry_ok = False
