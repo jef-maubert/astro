@@ -1,7 +1,4 @@
-﻿
-
-
-                            EPHEMERIDES NAUTIQUES DU SOLEIL A 0H UT - ANNEE 2024
+﻿                            EPHEMERIDES NAUTIQUES DU SOLEIL A 0H UT - ANNEE 2024
                             ====================================================
 
 |     Date    |Jr.|   AHvo   |Var AHvo|    Dec    |Var Dec|   AHso   |  T.Pass  |   Lever    |   Coucher   |

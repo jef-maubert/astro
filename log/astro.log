@@ -235,3 +235,131 @@
 15 09:43:03 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
 15 09:43:03 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180�
 15 09:43:07 -  - astro_data.py - save_config-109 - Configuration saved in file astro.ini
+09 16:25:28 -  - astro.py - init_log-44 - Starting astro version V3.0
+09 16:25:28 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+09 16:25:28 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+09 16:25:28 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+09 16:25:28 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180�
+09 16:25:33 -  - astro_data.py - load_observations-79 - 4 observation(s) loaded from configuration file
+09 16:25:33 -  - astro_data.py - load_observations-83 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155� (OK)
+09 16:25:33 -  - astro_data.py - load_observations-83 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183� (OK)
+09 16:25:33 -  - astro_data.py - load_observations-83 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226� (OK)
+09 16:25:33 -  - astro_data.py - load_observations-83 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134� (OK)
+09 16:25:33 - -  - display_observations_dlg.py - calculate_map_size-85 - min map size = 11.4NM
+09 16:25:33 - -  - display_observations_dlg.py - calculate_screen_size-90 - screen width = 1920, screen height = 1080
+09 16:25:33 - -  - display_observations_dlg.py - calculate_screen_size-98 - map size 20.3 NM * 11.4 NM
+09 16:25:33 -  - astro_data.py - load_observations-79 - 4 observation(s) loaded from configuration file
+09 16:25:33 -  - astro_data.py - load_observations-83 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155� (OK)
+09 16:25:33 -  - astro_data.py - load_observations-83 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183� (OK)
+09 16:25:33 -  - astro_data.py - load_observations-83 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226� (OK)
+09 16:25:33 -  - astro_data.py - load_observations-83 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134� (OK)
+09 16:25:33 - -  - display_observations_dlg.py - calculate_intersection-200 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+09 16:25:33 - -  - display_observations_dlg.py - calculate_intersection-200 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+09 16:25:33 - -  - display_observations_dlg.py - calculate_intersection-200 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+09 16:25:33 - -  - display_observations_dlg.py - calculate_intersection-200 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+09 16:25:38 -  - astro_data.py - save_config-109 - Configuration saved in file astro.ini
+04 23:09:00 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 23:09:00 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 23:09:00 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 23:09:00 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 23:09:00 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:09:13 -  - astro_data.py - load_observations-79 - 4 observation(s) loaded from configuration file
+04 23:09:13 -  - astro_data.py - load_observations-83 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155° (OK)
+04 23:09:13 -  - astro_data.py - load_observations-83 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183° (OK)
+04 23:09:13 -  - astro_data.py - load_observations-83 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226° (OK)
+04 23:09:13 -  - astro_data.py - load_observations-83 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134° (OK)
+04 23:09:13 - -  - display_observations_dlg.py - calculate_map_size-85 - min map size = 11.4NM
+04 23:09:13 - -  - display_observations_dlg.py - calculate_screen_size-90 - screen width = 1920, screen height = 1080
+04 23:09:13 - -  - display_observations_dlg.py - calculate_screen_size-98 - map size 20.3 NM * 11.4 NM
+04 23:09:13 -  - astro_data.py - load_observations-79 - 4 observation(s) loaded from configuration file
+04 23:09:13 -  - astro_data.py - load_observations-83 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155° (OK)
+04 23:09:13 -  - astro_data.py - load_observations-83 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183° (OK)
+04 23:09:13 -  - astro_data.py - load_observations-83 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226° (OK)
+04 23:09:13 -  - astro_data.py - load_observations-83 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134° (OK)
+04 23:09:13 - -  - display_observations_dlg.py - calculate_intersection-200 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+04 23:09:13 - -  - display_observations_dlg.py - calculate_intersection-200 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+04 23:09:13 - -  - display_observations_dlg.py - calculate_intersection-200 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+04 23:09:13 - -  - display_observations_dlg.py - calculate_intersection-200 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+04 23:09:32 - -  - astro_view.py - on_button_new_observation-146 - At 04/12/2024 23:09:22 with eye height = 2m, Height observed = +45°30'
+04 23:09:32 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:09:32 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:09:32 - -  - observation.py - extract_ephemerides_from_ho249-98 - at 2024 DEC  4 00:00:00 : decl = 22°16.2'S (var -0.32'),  ahv0 = 182°27.4'(var 14.996°)
+04 23:09:32 - -  - observation.py - calculate_nb_utc_hour_since_midnight-114 - utc_offset_hour = -1 hours
+04 23:09:32 - -  - observation.py - calculate_nb_utc_hour_since_midnight-117 - utc_time = 22.15611 hours
+04 23:09:32 -  - observation.py - calculate_decl_from_ho249-124 - at 23:09:22 decl = 22°23.3'S
+04 23:09:32 -  - observation.py - calculate_ahv0_from_ho249-137 - At 23:09:22 ahv0 = 154°42.6', ahvg = 160°34.9'
+04 23:09:32 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-144 - for angle : 46°, refraction = -1.0'
+04 23:09:32 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-150 - for eye height : 2 m, eye height correction = -2.7'
+04 23:09:32 - -  - observation.py - calculate_half_sun_lumb_angle-155 - half_sun_lumb_angle = 16.0'
+04 23:09:32 -  - observation.py - calculate_he_and_az-199 - Sextant height observed +45°30' - corrected : +45°42' 
+04 23:09:32 -  - observation.py - calculate_he-166 - Height estimated : -62°10' 
+04 23:09:32 - -  - observation.py - calculate_az-182 - Azimut by asin = +041° 
+04 23:09:32 - -  - observation.py - calculate_az-183 - Azimut by atan = +041° 
+04 23:09:32 -  - observation.py - calculate_az-184 - Azimut = +318° 
+04 23:09:32 -  - observation.py - calculate_he_and_az-209 - Intercept : 6472.2 NM
+04 23:11:11 - -  - astro_view.py - on_button_new_observation-146 - At 04/12/2024 13:10:59 with eye height = 2m, Height observed = +25°30'
+04 23:11:11 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:11:11 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:11:11 - -  - observation.py - extract_ephemerides_from_ho249-98 - at 2024 DEC  4 00:00:00 : decl = 22°16.2'S (var -0.32'),  ahv0 = 182°27.4'(var 14.996°)
+04 23:11:11 - -  - observation.py - calculate_nb_utc_hour_since_midnight-114 - utc_offset_hour = -1 hours
+04 23:11:11 - -  - observation.py - calculate_nb_utc_hour_since_midnight-117 - utc_time = 12.18306 hours
+04 23:11:11 -  - observation.py - calculate_decl_from_ho249-124 - at 13:10:59 decl = 22°20.1'S
+04 23:11:11 -  - observation.py - calculate_ahv0_from_ho249-137 - At 13:10:59 ahv0 = 005°09.2', ahvg = 011°01.5'
+04 23:11:11 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-144 - for angle : 26°, refraction = -2.1'
+04 23:11:11 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-150 - for eye height : 2 m, eye height correction = -2.7'
+04 23:11:11 - -  - observation.py - calculate_half_sun_lumb_angle-155 - half_sun_lumb_angle = 16.0'
+04 23:11:11 -  - observation.py - calculate_he_and_az-199 - Sextant height observed +25°30' - corrected : +25°41' 
+04 23:11:11 -  - observation.py - calculate_he-166 - Height estimated : +21°39' 
+04 23:11:11 - -  - observation.py - calculate_az-182 - Azimut by asin = +010° 
+04 23:11:11 - -  - observation.py - calculate_az-183 - Azimut by atan = -010° 
+04 23:11:11 -  - observation.py - calculate_az-184 - Azimut = +190° 
+04 23:11:11 -  - observation.py - calculate_he_and_az-209 - Intercept : 241.9 NM
+04 23:12:25 -  - astro_data.py - load_observations-79 - 4 observation(s) loaded from configuration file
+04 23:12:25 -  - astro_data.py - load_observations-83 - 1) 17-10-2022 12:00:00 intercept = -1.0 NM, Az = 155° (OK)
+04 23:12:25 -  - astro_data.py - load_observations-83 - 2) 17-10-2022 14:00:00 intercept = -1.6 NM, Az = 183° (OK)
+04 23:12:25 -  - astro_data.py - load_observations-83 - 3) 17-10-2022 17:00:00 intercept = -1.2 NM, Az = 226° (OK)
+04 23:12:25 -  - astro_data.py - load_observations-83 - 4) 27-10-2022 10:22:01 intercept = -3.8 NM, Az = 134° (OK)
+04 23:12:25 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 12:00:00 : y = 0.470564 * x + 1.105184 
+04 23:12:25 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 14:00:00 : y = -0.048908 * x + 1.601912 
+04 23:12:25 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 17-10-2022 17:00:00 : y = -1.039154 * x + 1.730598 
+04 23:12:25 - -  - display_hat.py - calculate_intersection-281 - linear equation of observation 27-10-2022 10:22:01 : y = 1.053780 * x + 5.520411 
+04 23:12:25 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 12:00:00 and 17-10-2022 14:00:00
+04 23:12:25 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 14:00:00 and 17-10-2022 17:00:00
+04 23:12:25 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 17-10-2022 17:00:00 and 27-10-2022 10:22:01
+04 23:12:25 - -  - display_hat.py - calculate_intersection-291 - calculate intersection of observations 27-10-2022 10:22:01 and 17-10-2022 12:00:00
+04 23:20:18 - -  - astro_view.py - on_button_new_observation-146 - At 04/12/2025 13:20:07 with eye height = 2m, Height observed = +45°30'
+04 23:20:18 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:20:18 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:23:38 -  - astro_data.py - save_config-109 - Configuration saved in file astro.ini
+04 23:23:48 -  - astro.py - init_log-44 - Starting astro version V3.0
+04 23:23:48 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+04 23:23:48 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+04 23:23:48 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+04 23:23:48 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:24:04 - -  - astro_view.py - on_button_new_observation-146 - At 04/12/2025 13:23:53 with eye height = 2m, Height observed = +23°30'
+04 23:24:04 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:24:04 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+04 23:25:20 -  - astro_data.py - save_config-109 - Configuration saved in file astro.ini
+05 00:22:14 -  - astro.py - init_log-44 - Starting astro version V3.0
+05 00:22:14 -  - astro_data.py - load_config-31 - Loading configuration from file "astro.ini"
+05 00:22:14 - -  - astro_data.py - load_config-37 - log level set to "DEBUG"
+05 00:22:14 -  - astro_data.py - load_config-60 - 4 observation(s) loaded from file "astro.ini"
+05 00:22:15 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:22:52 - -  - astro_view.py - on_button_new_observation-146 - At 05/12/2025 12:22:24 with eye height = 2m, Height observed = +15°30'
+05 00:22:52 - -  - boat.py - format_current_position-36 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:22:52 - -  - boat.py - get_position_at-28 - 0.0 NM since last position at 0.0 Knots - course 180°
+05 00:22:52 - -  - observation.py - extract_ephemerides_from_ho249-100 - at 2025 DEC  5 00:00:00 : decl = 22°22.1'S (var -0.31'),  ahv0 = 182°22.7'(var 14.996°)
+05 00:22:52 - -  - observation.py - calculate_nb_utc_hour_since_midnight-120 - utc_offset_hour = -1 hours
+05 00:22:52 - -  - observation.py - calculate_nb_utc_hour_since_midnight-123 - utc_time = 11.37333 hours
+05 00:22:52 -  - observation.py - calculate_decl_from_ho249-130 - at 12:22:24 decl = 22°25.6'S
+05 00:22:52 -  - observation.py - calculate_ahv0_from_ho249-143 - At 12:22:24 ahv0 = 352°56.0', ahvg = 358°48.3'
+05 00:22:52 - -  - observation.py - calculate_athmospheric_refraction_minute_by_tan-150 - for angle : 16°, refraction = -3.6'
+05 00:22:52 - -  - observation.py - calculate_horizon_dip_function_of_eye_height-156 - for eye height : 2 m, eye height correction = -2.7'
+05 00:22:52 - -  - observation.py - calculate_half_sun_lumb_angle-161 - half_sun_lumb_angle = 16.0'
+05 00:22:52 -  - observation.py - calculate_he_and_az-205 - Sextant height observed +15°30' - corrected : +15°40' 
+05 00:22:52 -  - observation.py - calculate_he-172 - Height estimated : +22°18' 
+05 00:22:52 - -  - observation.py - calculate_az-188 - Azimut by asin = -001° 
+05 00:22:52 - -  - observation.py - calculate_az-189 - Azimut by atan = +001° 
+05 00:22:52 -  - observation.py - calculate_az-190 - Azimut = +178° 
+05 00:22:52 -  - observation.py - calculate_he_and_az-215 - Intercept : -398.1 NM
+05 00:23:07 -  - astro_data.py - save_config-109 - Configuration saved in file astro.ini

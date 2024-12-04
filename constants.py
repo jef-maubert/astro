@@ -6,7 +6,7 @@ Created on Tue Oct 11 00:25:41 2022
 """
 import platform
 
-VERSION = "V3.0"
+VERSION = "V3.1"
 
 LOG_DIRECTORY = "log"
 DEFAULT_LOG_LEVEL = "DEBUG"

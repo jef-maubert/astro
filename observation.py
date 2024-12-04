@@ -9,6 +9,7 @@ import constants
 from waypoint import format_angle
 from waypoint import INPUT_TYPE_DECL, INPUT_TYPE_AHV, INPUT_TYPE_HEIGHT, INPUT_TYPE_AZIMUT
 EARTH_RADIUS_KM  = 6366.0
+HO_249_SOURCE = "https://navastro.com/downloads/catalogue.php"
 
 def convert_ho249_angle_to_angle(ho249_angle, display_trace=False):
     ho249_angle = ho249_angle.strip(" ")
@@ -69,42 +70,47 @@ class Observation:
         ho249_file_name = "Ephemerides {}.txt".format(self.date_time.year)
         date_target = "{:4d} {} {:2d}".format (self.date_time.year, month_name_french[self.date_time.month].upper(), self.date_time.day)
         ho249_results = dict()
-        with open(ho249_file_name, encoding="cp1256") as ho249_file:
-            for line in ho249_file.readlines():
-                list_of_fields = line.split("|")
-                if len(list_of_fields) < 10 :
-                    continue
-                if list_of_fields[1].upper().strip(" ") == date_target:
-                    ahv0 = convert_ho249_angle_to_angle(list_of_fields[3])
-                    ho249_results.update({"ahv0":ahv0})
-
-                    ahv0_var = float(list_of_fields[4].strip(" "))
-                    ho249_results.update({"ahv0_var":ahv0_var})
-
-                    decl_raw = list_of_fields[5]
-                    decl_sign = -1.0 if "S" in decl_raw else 1.0
-                    decl_raw = decl_raw.replace("S", "").replace("N", "")
-                    decl = decl_sign * convert_ho249_angle_to_angle(decl_raw)
-                    ho249_results.update({"decl":decl})
-
-                    decl_var = float(list_of_fields[6].strip(" "))
-                    sign_decl_bool = (decl>0) * (decl_var>0)
-                    if not sign_decl_bool:
-                        decl_var *= -1.0
-                    ho249_results.update({"decl_var":decl_var})
-                    self.result_header_append ('At {} 00:00:00'.format(date_target))
-                    self.result_text_append ('decl = {} (var {})'.format(format_angle(decl, INPUT_TYPE_DECL), decl_var))
-                    self.result_text_append ('ahv0 = {} (var {})'.format(format_angle(ahv0, INPUT_TYPE_DECL), ahv0_var))
-                    self.app_logger.debug ('at %s 00:00:00 : decl = %s (var %s\'),  ahv0 = %s(var %s°)',
-                                          date_target,
-                                          format_angle(decl, INPUT_TYPE_DECL), decl_var,
-                                          format_angle(ahv0, INPUT_TYPE_AHV), ahv0_var)
-                    return ho249_results
-                # else:
-                #     self.app_logger.debug('skipping entry for "%s"', list_of_fields[1])
-        self.result_warning_append ('Can\'t find any entry for "{}" in file "{}"'.format(date_target, ho249_file_name))
-        self.app_logger.warning('Can\'t find any entry for "%s" in file "%s"', date_target, ho249_file_name)
-        return None
+        try:
+            with open(ho249_file_name, encoding="cp1256") as ho249_file:
+                for line in ho249_file.readlines():
+                    list_of_fields = line.split("|")
+                    if len(list_of_fields) < 10 :
+                        continue
+                    if list_of_fields[1].upper().strip(" ") == date_target:
+                        ahv0 = convert_ho249_angle_to_angle(list_of_fields[3])
+                        ho249_results.update({"ahv0":ahv0})
+    
+                        ahv0_var = float(list_of_fields[4].strip(" "))
+                        ho249_results.update({"ahv0_var":ahv0_var})
+    
+                        decl_raw = list_of_fields[5]
+                        decl_sign = -1.0 if "S" in decl_raw else 1.0
+                        decl_raw = decl_raw.replace("S", "").replace("N", "")
+                        decl = decl_sign * convert_ho249_angle_to_angle(decl_raw)
+                        ho249_results.update({"decl":decl})
+    
+                        decl_var = float(list_of_fields[6].strip(" "))
+                        sign_decl_bool = (decl>0) * (decl_var>0)
+                        if not sign_decl_bool:
+                            decl_var *= -1.0
+                        ho249_results.update({"decl_var":decl_var})
+                        self.result_header_append ('At {} 00:00:00'.format(date_target))
+                        self.result_text_append ('decl = {} (var {})'.format(format_angle(decl, INPUT_TYPE_DECL), decl_var))
+                        self.result_text_append ('ahv0 = {} (var {})'.format(format_angle(ahv0, INPUT_TYPE_DECL), ahv0_var))
+                        self.app_logger.debug ('at %s 00:00:00 : decl = %s (var %s\'),  ahv0 = %s(var %s°)',
+                                              date_target,
+                                              format_angle(decl, INPUT_TYPE_DECL), decl_var,
+                                              format_angle(ahv0, INPUT_TYPE_AHV), ahv0_var)
+                        return ho249_results
+                    # else:
+                    #     self.app_logger.debug('skipping entry for "%s"', list_of_fields[1])
+            self.result_warning_append ('Can\'t find any entry for "{}" in file "{}"'.format(date_target, ho249_file_name))
+            self.app_logger.warning('Can\'t find any entry for "%s" in file "%s"', date_target, ho249_file_name)
+            return None
+        except FileNotFoundError:
+            self.result_warning_append ('Can\'t read file "{}", download it from {}'.format(ho249_file_name, HO_249_SOURCE))
+            self.app_logger.warning('Can\'t read file "%s", download it from %s', ho249_file_name,HO_249_SOURCE)
+            return None
 
     def calculate_nb_utc_hour_since_midnight(self):
         nb_local_hour_since_midnight = self.date_time.hour + self.date_time.minute/60.0 + self.date_time.second/3600.0
